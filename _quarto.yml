@@ -6,6 +6,8 @@ project:
 website:
   title: "Saeed Salehi"
   description: "Associate Professor of Fluid Mechanics, Linköping University"
+  site-url: "https://saeedsalehi.com"
+  google-analytics: "G-Y03H51EZR6"
   navbar:
     right:
       - text: "Home"
