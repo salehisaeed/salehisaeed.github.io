@@ -1,0 +1,27 @@
+/* css styles */
+
+/* profile card buttons - larger size */
+.iconbtn {
+  width: 50px;      /* bigger button box */
+  height: 50px;
+}
+
+.iconbtn i {
+  font-size: 1.8rem;  /* larger icon inside */
+}
+
+.icon-row {
+  justify-content: center;
+}
+
+
+/* remove bottom border from section headers */
+h2, h3, h4 {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.6em;  /* keep some spacing */
+}
+
+.csl-entry {
+  margin-bottom: 0.75em;   /* space between publications */
+}

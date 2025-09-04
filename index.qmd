@@ -1,0 +1,54 @@
+---
+title: "Home"
+page-layout: full
+---
+
+# Saeed Salehi
+**Associate Professor of Fluid Mechanics**  
+Division of Applied Thermodynamics and Fluid Mechanics  
+Department of Management and Engineering  
+Linköping University  
+
+<!--
+_Data-driven and AI methods for high-fidelity CFD_
+-->
+
+---
+
+## Background
+
+::: {.columns}
+::: {.column width="28%"}
+![](img/saeed2.jpg){width=85% fig-align="left"}
+<div class="icon-row">
+  <a href="https://liu.se/en/employee/saesa86" class="iconbtn" aria-label="LiU Profile"><i class="fa-solid fa-university"></i></a>
+  <a href="mailto:saeed.salehi@liu.se" class="iconbtn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate" class="iconbtn" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+  <a href="https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf" class="iconbtn" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+  <a href="https://github.com/salehisaeed" class="iconbtn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/saeed-salehi-3b97685a/" class="iconbtn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+  <!-- Optional:
+  <a href="https://twitter.com/USERNAME" class="iconbtn" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+  -->
+</div>
+
+:::
+::: {.column width="72%"}
+
+I am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.
+
+I am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additinally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.
+
+More recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows.
+
+:::
+:::
+
+---
+
+<!--
+### Quick links
+- Email `saeed.salehi@liu.se`
+- LiU profile (EN) · LiU-profil (SV)
+- Google Scholar · ORCID · GitHub
+-->

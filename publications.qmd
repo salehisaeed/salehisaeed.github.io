@@ -1,0 +1,15 @@
+---
+title: "Publications"
+bibliography: pubs.bib
+nocite: '@*'   # include all entries
+csl: nature.csl
+---
+
+
+See my full publication list on  
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate)  
+- [ORCID](https://orcid.org/my-orcid?orcid=0000-0002-2037-8284)  
+- [ResearchGate](https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf)  
+
+
+All peer-reviewed articles are listed below.

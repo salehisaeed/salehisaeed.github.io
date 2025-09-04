@@ -1,0 +1,52 @@
+---
+title: "Curriculum Vitae"
+---
+
+## Appointments
+- **Associate Professor of Fluid Mechanics**, Linköping University (2025– )  
+  Division of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering.  
+
+- **Researcher**, Chalmers Industriteknik (2023–2025)  
+  Worked on applying AI and machine learning in CFD for hydraulic turbines in collaboration with Chalmers University of Technology.  
+
+- **Postdoctoral Researcher**, Chalmers University of Technology (2019–2023)  
+  Project on new operating procedures of hydropower for a sustainable energy system. Developed advanced CFD methods in OpenFOAM for transient hydropower simulations and explored data-driven techniques.
+
+## Education
+- **PhD in Mechanical Engineering**, University of Tehran (2012–2018)  
+  Thesis: *Uncertainty quantification of turbulent flows in hydraulic machinery*.
+
+- **MSc in Mechanical Engineering (Energy Conversion)**, University of Tehran (2010–2012)  
+  Thesis: *Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with adverse pressure gradient*.  
+
+- **BSc in Mechanical Engineering**, University of Tehran (2006–2010)  
+  Thesis: *Large eddy simulation of stall development around airfoils*.  
+
+## Selected Grants and Awards
+- **Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime**  
+  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.  
+
+- **Hydropower Operation and Lifetime Analysis**  
+  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.  
+
+- **Multi-Fidelity Physics-Informed Neural Network to Solve PDEs**  
+  Chalmers University of Technology, 2023–2027. Co-PI.  
+
+
+## Supervision
+- **PhD co-supervisor** of three PhD students working on contra-rotating pump-turbines (ALPHEUS EU project), hydropower lifetime analysis, and multi-fidelity PINNs at Chalmers University of Technology.  
+- **MSc supervision** of a few students at Chalmers University of Technology
+
+## Teaching Experience and Qualification
+- Lecturer and examiner in multiple courses on CFD, turbomachinery, and fluid dynamics.  
+- Diploma in Teaching and Learning in Higher Education, (15 ECTS), 2023
+
+
+## Publications
+- Author of **25+ peer-reviewed journal articles** and multiple conference contributions.  
+- Research published in journals including *Physics of Fluids*, *Renewable Energy*, *Computer Physics Communications*, and *International Journal of Heat and Mass Transfer*.  
+- Complete publication list available [here](publications.qmd).  
+
+
+## Complete Academic CV
+For more details, see my [complete academic CV on GitHub](https://github.com/salehisaeed/CV).  

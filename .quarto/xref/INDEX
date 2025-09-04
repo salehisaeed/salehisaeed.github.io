@@ -1,0 +1,44 @@
+{
+  "about.qmd": {
+    "about.html": "0a036e62"
+  },
+  "index.qmd": {
+    "index.html": "35726467"
+  },
+  "cv.qmd": {
+    "cv.html": "a887f147"
+  },
+  "publications.qmd": {
+    "publications.html": "8667d2b5"
+  },
+  "research.qmd": {
+    "research.html": "697b3a98"
+  },
+  "contact.qmd": {
+    "contact.html": "a10b95fc"
+  },
+  "research_backup.qmd": {
+    "research_backup.html": "60c9324c"
+  },
+  "drl.qmd": {
+    "drl.html": "757c02c3"
+  },
+  "pinn.qmd": {
+    "pinn.html": "60171549"
+  },
+  "rom.qmd": {
+    "rom.html": "ceb58cf0"
+  },
+  "transient.qmd": {
+    "transient.html": "b88b3734"
+  },
+  "uq.qmd": {
+    "uq.html": "6656191d"
+  },
+  "alpheus.qmd": {
+    "alpheus.html": "17df7e57"
+  },
+  "kaplan.qmd": {
+    "kaplan.html": "74d66187"
+  }
+}

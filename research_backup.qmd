@@ -1,0 +1,43 @@
+---
+title: "Research"
+---
+
+## Overview
+My research combines Computational Fluid Dynamics (CFD) with data science and machine learning to better understand, predict, and control complex flow systems. I focus on methods that are efficient, robust, and generalizable for both fundamental studies and applications in turbulent flows and turbomachinery.
+
+---
+
+## Robust and efficient flow control
+A major line of work is **Deep Reinforcement Learning (DRL)** for active flow control. DRL promises sophisticated control strategies beyond classical methods, but current DRL–CFD frameworks struggle with efficiency, robustness, and generalization. My approach combines multifidelity learning, transfer learning, and robust learning under uncertainty to push DRL toward realistic high-Reynolds-number flows and deliver controllers that transfer across operating conditions.
+
+![Overview of multifidelity DRL pipeline](img/Project_2025.png){#fig-drl width=100%}
+
+---
+
+## High-fidelity simulation of turbomachinery flows
+I develop and use high-fidelity CFD to study complex, transient turbomachinery flows. During my postdoc at Chalmers, I created semi-implicit mesh-deformation techniques in OpenFOAM to enable simulating complex mesh motion of hydraulic turbines during transient operation. These simulations provide the detailed data needed for **validation**, **reduced-order modeling**, and **data-driven analysis**. :contentReference[oaicite:2]{index=2}
+
+> _Suggested figures:_  
+> • DES of the Timișoara swirl generator (vortex rope visualisation)  
+> • Francis-99 shutdown vortical structures / stagnant regions (blue–red isosurface)  
+> • Link to startup video of Francis-99
+
+---
+
+## Reduced-order modeling and data-driven analysis
+To explore fluid physics at scale, I use **reduced-order models (ROMs)** and data-driven decompositions, including **POD**, **SPOD**, **DMD**, and **sparsity-promoting DMD**, as well as **non-linear autoencoders**. These methods extract **coherent structures** from large datasets and yield **low-dimensional models** for prediction and control; I have applied them to **hydropower turbines** and **transient operating conditions**. :contentReference[oaicite:3]{index=3}
+
+> _Suggested media:_ short DMD/POD animation or mode visualisation.
+
+---
+
+## Uncertainty quantification and robust optimization
+I develop **efficient UQ** algorithms for turbulent and industrial flows, including **sparse polynomial chaos**, **compressed sensing**, and **multifidelity \(\ell_1\)** minimization, to cut computational cost while retaining accuracy. I investigate **operational** and **geometrical** uncertainties and use the resulting models for **robust optimization** so designs remain reliable under variability. :contentReference[oaicite:4]{index=4}
+
+> _Suggested figure:_ schematic of robust design loop or a turbine case study.
+
+---
+
+### Notes
+- All sections above are condensed from your LiU page to keep the website crisp while preserving your emphasis on **high-fidelity CFD** and **data-driven methods**. :contentReference[oaicite:5]{index=5}
+- We can link figures/videos already on the LiU page or host them locally in `img/` and embed with standard Markdown.
