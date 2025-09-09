@@ -32,6 +32,8 @@ Upcoming thesis project exploring **PINNs** for turbulent flow problems.
 ::::
 :::
 
+---
+
 ::: {.section-background style="background-color:#ffffff; padding: 1em; border-radius: 8px;"}
 # PhD and Postdoc Opportunities
 
@@ -40,6 +42,8 @@ When positions become available, they will be announced here as well as on the U
 
 If you have your own funding or plan to apply for scholarships, I am open to discussing possible projects.  
 :::
+
+---
 
 ::: {.section-background style="background-color:#f5f8fc; padding: 1em; border-radius: 8px;"}
 # Information for Prospective PhDs and Postdocs
@@ -62,5 +66,5 @@ If you are interested in joining, please send me:
 1. A short CV  
 2. A brief description of your research interests and how they connect to my research  
 3. Information about your background in CFD, programming, and machine learning  
-4. (If relevant) a detailed plan for applying for a scholarship or external funding  
+4. (If relevant) A detailed plan for applying for a scholarship or external funding  
 :::
