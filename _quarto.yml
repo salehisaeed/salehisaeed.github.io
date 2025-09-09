@@ -16,6 +16,8 @@ website:
         href: index.qmd
       - text: "Research"
         href: research.qmd
+      - href: opportunities.qmd
+        text: Opportunities        
       - text: "Publications"
         href: publications.qmd
       - text: "CV"

@@ -84,18 +84,39 @@
     "text": "Under construction"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "kaplan.html",
+    "href": "kaplan.html",
+    "title": "Under construction",
     "section": "",
-    "text": "Associate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n\n\n\n\n\n\n\n\n      \n\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additinally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
+    "text": "Under construction"
   },
   {
-    "objectID": "index.html#background",
-    "href": "index.html#background",
-    "title": "Home",
+    "objectID": "drl.html",
+    "href": "drl.html",
+    "title": "Under construction",
     "section": "",
-    "text": "I am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additinally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
+    "text": "Under construction"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Saeed Salehi\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics (MVS)\nDepartment of Management and Engineering\nLinköping University\n📧 Email: saeed.salehi@liu.se\n📍 Visiting Address: Room 3A:970, A-huset, Valla Campus, SE-581 83 Linköping, Sweden\n🌐 LiU Staff Page (English) · LiU profilsida (Svenska)\n🔗 Google Scholar · ORCID · ResearchGate · GitHub · LinkedIn"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "alpheus.html",
+    "href": "alpheus.html",
+    "title": "Under construction",
+    "section": "",
+    "text": "Under construction"
   },
   {
     "objectID": "cv.html",
@@ -154,39 +175,53 @@
     "text": "Complete Academic CV\nFor more details, see my complete academic CV on GitHub."
   },
   {
-    "objectID": "alpheus.html",
-    "href": "alpheus.html",
-    "title": "Under construction",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "Under construction"
+    "text": "Associate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n\n\n\n\n\n\n\n\n      \n\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additinally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "Home",
     "section": "",
-    "text": "About this site"
+    "text": "I am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additinally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "opportunities.html",
+    "href": "opportunities.html",
+    "title": "Opportunities",
     "section": "",
-    "text": "Saeed Salehi\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics (MVS)\nDepartment of Management and Engineering\nLinköping University\n📧 Email: saeed.salehi@liu.se\n📍 Visiting Address: Room 3A:970, A-huset, Valla Campus, SE-581 83 Linköping, Sweden\n🌐 LiU Staff Page (English) · LiU profilsida (Svenska)\n🔗 Google Scholar · ORCID · ResearchGate · GitHub · LinkedIn"
+    "text": "I enjoy working with motivated students and researchers who are interested in computational fluid dynamics, high-fidelity simulations, and data-driven methods."
   },
   {
-    "objectID": "drl.html",
-    "href": "drl.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "objectID": "opportunities.html#available-msc-thesis-proposals",
+    "href": "opportunities.html#available-msc-thesis-proposals",
+    "title": "Opportunities",
+    "section": "Available MSc Thesis Proposals",
+    "text": "Available MSc Thesis Proposals\n\n\nAccelerating reinforcement-learning-based flow control using transfer learning\n📄 Download proposal (PDF)"
   },
   {
-    "objectID": "kaplan.html",
-    "href": "kaplan.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "objectID": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
+    "href": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
+    "title": "Opportunities",
+    "section": "Examples of funding opportunities for PhD candidates",
+    "text": "Examples of funding opportunities for PhD candidates\n\nSwedish national graduate schools (e.g. WASP)\n\nMarie Skłodowska-Curie Actions (MSCA) Doctoral Networks\n\nOther national or EU-based PhD scholarship programs"
+  },
+  {
+    "objectID": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
+    "href": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
+    "title": "Opportunities",
+    "section": "Examples of funding opportunities for postdoctoral researchers",
+    "text": "Examples of funding opportunities for postdoctoral researchers\n\nKnut and Alice Wallenberg Foundation postdoc grants\n\nMarie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowships\n\nNational mobility or international exchange programs"
+  },
+  {
+    "objectID": "opportunities.html#how-to-get-in-touch",
+    "href": "opportunities.html#how-to-get-in-touch",
+    "title": "Opportunities",
+    "section": "How to Get in Touch",
+    "text": "How to Get in Touch\nIf you are interested in joining, please send me:\n1. A short CV\n2. A brief description of your research interests and how they connect to my research\n3. Information about your background in CFD, programming, and machine learning\n4. (If relevant) a detailed plan for applying for a scholarship or external funding"
   },
   {
     "objectID": "publications.html",
