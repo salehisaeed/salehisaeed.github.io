@@ -7,10 +7,12 @@ project:
 
 website:
   title: "Saeed Salehi"
+  favicon: img/icon.png
   description: "Associate Professor of Fluid Mechanics, Linköping University"
   site-url: "https://saeedsalehi.com"
   google-analytics: "G-Y03H51EZR6"
   navbar:
+    logo: img/icon.png
     right:
       - text: "Home"
         href: index.qmd
