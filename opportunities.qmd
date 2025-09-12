@@ -8,6 +8,7 @@ I enjoy working with motivated students and researchers who are interested in **
 # MSc and BSc Thesis Projects
 
 I supervise thesis projects in areas such as:  
+
 - Development of CFD methods in OpenFOAM  
 - High-fidelity simulations of turbulent and unsteady flows  
 - Data-driven and machine learning methods for flow analysis and control  
