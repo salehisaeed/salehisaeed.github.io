@@ -8,10 +8,9 @@ I enjoy working with motivated students and researchers who are interested in **
 # MSc and BSc Thesis Projects
 
 I supervise thesis projects in areas such as:    
-
-- Development of CFD methods in OpenFOAM  
-- High-fidelity simulations of turbulent and unsteady flows  
-- Data-driven and machine learning methods for flow analysis and control  
+ - Development of CFD methods in OpenFOAM  
+ - High-fidelity simulations of turbulent and unsteady flows  
+ - Data-driven and machine learning methods for flow analysis and control  
 
 If you are studying at Linköping University and would like to align your thesis with my research, feel free to reach out.  
 
@@ -23,13 +22,12 @@ If you are studying at Linköping University and would like to align your thesis
 [📄 Download proposal (PDF)](files/MasterThesis_CFD_DRL_TL.pdf)
 :::
 
-<!--
+
 ::: {.card}
-#### Physics-Informed Neural Networks for Flow Modeling
-Upcoming thesis project exploring **PINNs** for turbulent flow problems.  
-*(Proposal will be uploaded soon.)*
+#### Spectral POD and autoencoders for compression and prediction of vortex rope
+[📄 Download proposal (PDF)](files/MasterThesis_Modal_Vortex.pdf)
 :::
--->
+
 ::::
 :::
 
