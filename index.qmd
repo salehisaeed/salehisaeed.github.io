@@ -1,6 +1,6 @@
 ---
 title: "Saeed Salehi"
-description: "Associate Professor of Fluid Mechanics at Linköping University — CFD, data-driven methods, and machine learning for complex flows."
+description: "Associate Professor of Fluid Mechanics at Linköping University. CFD, data-driven methods, and machine learning for complex flows."
 page-layout: full
 toc: false
 ---

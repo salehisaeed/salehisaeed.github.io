@@ -1,6 +1,6 @@
 ---
 title: "Curriculum Vitae"
-description: "Academic CV of Saeed Salehi — appointments, education, grants, supervision, and publications."
+description: "Academic CV of Saeed Salehi. Appointments, education, grants, supervision, and publications."
 ---
 
 ## Appointments

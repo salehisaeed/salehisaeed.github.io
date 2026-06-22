@@ -12,7 +12,7 @@ project:
 website:
   title: "Saeed Salehi"
   favicon: img/icon.png
-  description: "Associate Professor of Fluid Mechanics at Linköping University — CFD, data-driven methods, and machine learning for complex flows."
+  description: "Associate Professor of Fluid Mechanics at Linköping University. CFD, data-driven methods, and machine learning for complex flows."
   site-url: "https://saeedsalehi.com"
   google-analytics: "G-Y03H51EZR6"
   open-graph: true
