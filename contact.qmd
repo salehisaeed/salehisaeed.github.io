@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+description: "Contact information and office location for Saeed Salehi at Linköping University."
 ---
 
 **Saeed Salehi**  
@@ -26,5 +27,5 @@ Enter the division corridor (call me if it is locked) and my office, Room 3A:970
 🌐 [English staff page](https://liu.se/en/employee/saesa86)  
 🌐 [Svensk profilsida](https://liu.se/medarbetare/saesa86)  
 
-**Other Links**  
-🔗 [Google Scholar](https://scholar.google.com/) · [ORCID](https://orcid.org/) · [ResearchGate](https://www.researchgate.net/) · [GitHub](https://github.com/salehisaeed) · [LinkedIn](https://www.linkedin.com/)  
+**Other Links**
+🔗 [Google Scholar](https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate) · [ORCID](https://orcid.org/0000-0002-2037-8284) · [ResearchGate](https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf) · [GitHub](https://github.com/salehisaeed) · [LinkedIn](https://www.linkedin.com/in/saeed-salehi-3b97685a/)  

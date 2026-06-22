@@ -3,14 +3,20 @@ project:
   resources:
     - CNAME
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!research_backup.qmd"
+    - "!about.qmd"
 
 
 website:
   title: "Saeed Salehi"
   favicon: img/icon.png
-  description: "Associate Professor of Fluid Mechanics, Linköping University"
+  description: "Associate Professor of Fluid Mechanics at Linköping University — CFD, data-driven methods, and machine learning for complex flows."
   site-url: "https://saeedsalehi.com"
   google-analytics: "G-Y03H51EZR6"
+  open-graph: true
+  twitter-card: true
   navbar:
     logo: img/icon.png
     right:
@@ -19,19 +25,70 @@ website:
       - text: "Research"
         href: research.qmd
       - href: opportunities.qmd
-        text: Opportunities        
+        text: Opportunities
       - text: "Publications"
         href: publications.qmd
+      - text: "Teaching"
+        href: teaching.qmd
       - text: "CV"
         href: cv.qmd
       - text: "Contact"
         href: contact.qmd
+  page-footer:
+    left: "© 2025 Saeed Salehi"
+    right:
+      - icon: envelope
+        href: mailto:saeed.salehi@liu.se
+      - icon: mortarboard
+        href: "https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate"
+      - icon: github
+        href: "https://github.com/salehisaeed"
+      - icon: linkedin
+        href: "https://www.linkedin.com/in/saeed-salehi-3b97685a/"
 
 format:
   html:
-    theme: cosmo
+    theme:
+      dark: darkly
+      light: cosmo
     css: styles.css
     toc: true
     include-in-header:
       text: |
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Saeed Salehi",
+          "givenName": "Saeed",
+          "familyName": "Salehi",
+          "url": "https://saeedsalehi.com",
+          "image": "https://saeedsalehi.com/img/saeed2.jpg",
+          "jobTitle": "Associate Professor of Fluid Mechanics",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Linköping University",
+            "url": "https://liu.se"
+          },
+          "alumniOf": [
+            {
+              "@type": "Organization",
+              "name": "University of Tehran"
+            },
+            {
+              "@type": "Organization",
+              "name": "Chalmers University of Technology"
+            }
+          ],
+          "sameAs": [
+            "https://scholar.google.com/citations?user=6bn6bn0AAAAJ",
+            "https://orcid.org/0000-0002-2037-8284",
+            "https://www.researchgate.net/profile/Saeed-Salehi-3",
+            "https://github.com/salehisaeed",
+            "https://www.linkedin.com/in/saeed-salehi-3b97685a/",
+            "https://liu.se/en/employee/saesa86"
+          ],
+          "knowsAbout": ["Computational Fluid Dynamics", "OpenFOAM", "Deep Reinforcement Learning", "Uncertainty Quantification", "Reduced-Order Modeling", "Physics-Informed Neural Networks", "Turbomachinery"]
+        }
+        </script>

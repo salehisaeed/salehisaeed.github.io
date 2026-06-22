@@ -1,5 +1,6 @@
 ---
 title: "Opportunities"
+description: "MSc thesis proposals, PhD and postdoc opportunities in CFD and data-driven methods at Linköping University."
 ---
 
 I enjoy working with motivated students and researchers who are interested in **computational fluid dynamics**, **high-fidelity simulations**, and **data-driven methods**.  

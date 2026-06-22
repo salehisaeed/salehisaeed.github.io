@@ -1,0 +1,26 @@
+---
+title: "Teaching"
+description: "Courses taught by Saeed Salehi at Linköping University."
+---
+
+I am lecturer and examiner for the following courses at Linköping University.
+
+---
+
+## Applied Computational Fluid Dynamics (TMMV59)
+
+**6 credits | Second cycle (Master's level)**
+
+This course provides practical training in CFD for complex flow and heat transfer problems. The curriculum covers end-to-end CFD workflows, including formulation of modeling strategies, selection of physical models and numerical methods, meshing strategies, verification and validation. Students learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results scientifically. The instruction combines lectures, workshops, computer exercises, and project-based learning with input from industrial professionals.
+
+[Course page at LiU](https://studieinfo.liu.se/en/kurs/TMMV59/ht-2026)
+
+---
+
+## Machine Learning for Mechanical Engineering (TMMV64)
+
+**6 credits | Second cycle (Master's level)**
+
+This course introduces data-driven modeling and machine learning techniques tailored for mechanical engineering applications. Students learn to process, analyze, and visualize datasets from mechanical and energy systems while implementing predictive and classification models using Python. The curriculum combines lectures with hands-on laboratory sessions and culminates in a capstone project applying these methods to real engineering problems.
+
+[Course page at LiU](https://studieinfo.liu.se/en/kurs/TMMV64)

@@ -1,27 +1,87 @@
-/* css styles */
+/* === Hero banner === */
+.hero-banner {
+  padding: 2rem 0 1rem;
+}
 
-/* profile card buttons - larger size */
+/* no special photo styling — use default rectangular display */
+
+/* === Social icon buttons === */
+.icon-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 85%;
+  margin-top: 0.75rem;
+}
+
 .iconbtn {
-  width: 50px;      /* bigger button box */
-  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.iconbtn:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+  transform: scale(1.15);
+  text-decoration: none;
 }
 
 .iconbtn i {
-  font-size: 1.5rem;  /* larger icon inside */
+  font-size: 1.1rem;
 }
 
-.icon-row {
-  justify-content: center;
-}
-
-
-/* remove bottom border from section headers */
+/* === Section headings === */
 h2, h3, h4 {
   border-bottom: none !important;
   padding-bottom: 0 !important;
-  margin-bottom: 0.6em;  /* keep some spacing */
+  margin-bottom: 0.6em;
 }
 
+/* === Research cards === */
+.research-card {
+  max-width: 560px;
+  margin: 0.5rem 0 1rem;
+}
+
+.research-card img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.research-card img:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+/* === Publications === */
 .csl-entry {
-  margin-bottom: 0.75em;   /* space between publications */
+  margin-bottom: 0.75em;
+}
+
+/* === Responsive: stack columns on small screens === */
+@media (max-width: 768px) {
+  .hero-banner .columns {
+    flex-direction: column;
+  }
+  .hero-banner .column {
+    width: 100% !important;
+    text-align: center;
+  }
+  .hero-banner .column:last-child {
+    text-align: left;
+  }
+  .hero-photo {
+    max-width: 180px;
+    margin-bottom: 1rem;
+  }
 }

@@ -1,7 +1,8 @@
 ---
 title: "Publications"
-bibliography: pubs.bib
-nocite: '@*'   # include all entries
+description: "Peer-reviewed journal articles and conference contributions by Saeed Salehi."
+bibliography: Pubs.bib
+nocite: '@*'
 csl: nature.csl
 ---
 
