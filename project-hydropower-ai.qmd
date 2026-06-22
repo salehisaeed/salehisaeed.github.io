@@ -118,7 +118,7 @@ For more details on the scientific background and methods behind this project, s
 
 Feel free to reach out if you have any questions about the project or the PhD position.
 
-**Saeed Salehi**
-Associate Professor of Fluid Mechanics
-Linköping University
+**Saeed Salehi**\
+Associate Professor of Fluid Mechanics\
+Linköping University\
 [saeed.salehi@liu.se](mailto:saeed.salehi@liu.se)

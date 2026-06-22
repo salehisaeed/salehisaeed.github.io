@@ -24,23 +24,26 @@ description: "Academic CV of Saeed Salehi. Appointments, education, grants, supe
   Thesis: *Large eddy simulation of stall development around airfoils*.  
 
 ## Selected Grants and Awards
-- **Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime**  
-  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.  
+- **Enabling Flexible Hydropower Operation by AI-Based Active Flow Control**
+  ÅForsk Foundation, 2026–2031. PI.
 
-- **Hydropower Operation and Lifetime Analysis**  
-  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.  
+- **Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime**
+  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.
 
-- **Multi-Fidelity Physics-Informed Neural Network to Solve PDEs**  
-  Chalmers University of Technology, 2023–2027. Co-PI.  
+- **Hydropower Operation and Lifetime Analysis**
+  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.
+
+- **Multi-Fidelity Physics-Informed Neural Network to Solve PDEs**
+  Chalmers University of Technology, 2023–2027. Co-PI.
 
 
 ## Supervision
-- **PhD co-supervisor** of three PhD students working on contra-rotating pump-turbines (ALPHEUS EU project), hydropower lifetime analysis, and multi-fidelity PINNs at Chalmers University of Technology.  
+- **PhD co-supervisor** of three PhD students working on contra-rotating pump-turbines (ALPHEUS EU project), hydropower lifetime analysis, and multi-fidelity PINNs at Chalmers University of Technology.
 - **MSc supervision** of a few students at Chalmers University of Technology
 
-## Teaching Experience and Qualification
-- Lecturer and examiner in multiple courses on CFD, turbomachinery, and fluid dynamics.  
-- Diploma in Teaching and Learning in Higher Education, (15 ECTS), 2023
+## Teaching
+- Lecturer and examiner for [Applied Computational Fluid Dynamics (TMMV59)](https://studieinfo.liu.se/en/kurs/TMMV59/ht-2026) and [Machine Learning for Mechanical Engineering (TMMV64)](https://studieinfo.liu.se/en/kurs/TMMV64) at Linköping University.
+- Diploma in Teaching and Learning in Higher Education (15 ECTS), 2023
 
 
 ## Publications
