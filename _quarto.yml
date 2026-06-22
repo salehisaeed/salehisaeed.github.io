@@ -35,7 +35,9 @@ website:
       - text: "Contact"
         href: contact.qmd
   page-footer:
-    left: "© 2025 Saeed Salehi"
+    left: |
+        <span id="footer-year">© Saeed Salehi</span>
+        <script>document.getElementById('footer-year').textContent = '© ' + new Date().getFullYear() + ' Saeed Salehi';</script>
     right:
       - icon: envelope
         href: mailto:saeed.salehi@liu.se
@@ -49,8 +51,9 @@ website:
 format:
   html:
     theme:
-      dark: darkly
       light: cosmo
+      dark: darkly
+    theme-toggle: true
     css: styles.css
     toc: true
     include-in-header:

@@ -91,39 +91,102 @@
     "text": "Analysis of Flow-Induced Loads in Kaplan Turbine\nThis project examined the effects of flexible hydropower operation on turbine lifetime. CFD simulations on a Kaplan turbine model reveal how flow-induced forces, pressure pulsations, and rotating vortex rope dynamics impact loads during part-load and transient conditions. The results provide input for fatigue lifetime analysis of turbine runners.\n\n\n\n\nFlow-induced loads in a Kaplan turbine\n\n\n(Contributor: PhD student Martina Nobilo)"
   },
   {
-    "objectID": "pinn.html",
-    "href": "pinn.html",
-    "title": "Under construction",
+    "objectID": "project-hydropower-ai.html",
+    "href": "project-hydropower-ai.html",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
     "section": "",
-    "text": "Under construction"
+    "text": "This page provides detailed information about the research project for prospective PhD applicants. See the job advertisement for application details."
   },
   {
-    "objectID": "kaplan.html",
-    "href": "kaplan.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "objectID": "project-hydropower-ai.html#project-summary",
+    "href": "project-hydropower-ai.html#project-summary",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Project summary",
+    "text": "Project summary\nThis project develops a novel AI-based active flow control strategy for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation in future energy systems.\n\n\n\nConceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.\n\n\nThe project is funded by: ÅForsk Foundation, with co-funding from the Linköping University.\nPrincipal investigator: Saeed Salehi, Linköping University\nCo-supervisor: Håkan Nilsson, Chalmers University of Technology\nThe project is carried out as a collaboration between the Division of Applied Thermodynamics and Fluid Mechanics at Linköping University and the Division of Fluid Dynamics at Chalmers University of Technology."
   },
   {
-    "objectID": "drl.html",
-    "href": "drl.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "objectID": "project-hydropower-ai.html#background-and-motivation",
+    "href": "project-hydropower-ai.html#background-and-motivation",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Background and motivation",
+    "text": "Background and motivation\nThe increasing penetration of intermittent energy sources such as wind and solar power places greater demands on hydropower to operate more flexibly to balance the electric grid. This flexible operation involves frequent starts and stops, continuous regulation, and prolonged operation at off-design conditions. These operations are known to promote strong self-induced flow instabilities that generate harmful pressure pulsations (Salehi and Nilsson, 2021; Salehi and Nilsson, 2022), accelerate structural fatigue, reduce lifetime, and limit the safe operating range of hydraulic turbines (Nobilo et al., 2026).\n\n\n\nFlow instability during shutdown operation of a Francis turbine, showing helical vortex rope structures in the draft tube (Salehi and Nilsson, 2021).\n\n\nSeveral strategies have been proposed to mitigate flow instabilities in hydraulic turbines. Passive approaches rely on geometric modifications of the runner or draft tube to weaken instabilities or stabilize the flow. Active flow control techniques typically employ air admission or water injection supplied by external energy sources. Air admission redistributes low-pressure regions to damp pulsations, whereas water injection directly alters the angular momentum of the swirling flow.\nDespite the progress in passive and active mitigation strategies, most reported approaches rely on predefined geometric modifications or actuation settings tailored to specific operating conditions, without adaptive feedback from the evolving flow field. While these strategies may reduce pressure fluctuations and their associated vibrations, their performance is limited to specific operating regimes and is sensitive to tuning. In addition, most active control strategies do not explicitly account for performance optimality; instability mitigation is often achieved at the expense of increased actuation energy or reduced turbine efficiency.\nThese limitations motivate the development of feedback-based control strategies that maintain effective instability mitigation across varying operating conditions while minimizing additional energy consumption and limiting turbine efficiency degradation. This is the main purpose of this project."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Saeed Salehi\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n📧 Email: saeed.salehi@liu.se\n📞 Phone: +46 13 28 26 82\n📍 Visiting Address\nRoom 3A:970\nA-huset, Campus Valla\nSE-581 83 Linköping, Sweden\nGoogle Maps (Campus Valla) · MazeMap (Office 3A:970)\nDirections inside A-huset\nUse Entrance 13 of the A-huset building, which is closest entrance to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the hall to the Division of Applied Thermodynamics and Fluid Mechanics, located at the end on the right. Enter the division corridor (call me if it is locked) and my office, Room 3A:970, is in the middle of the corridor.\nLiU Staff Pages\n🌐 English staff page\n🌐 Svensk profilsida\nOther Links 🔗 Google Scholar · ORCID · ResearchGate · GitHub · LinkedIn"
+    "objectID": "project-hydropower-ai.html#approach",
+    "href": "project-hydropower-ai.html#approach",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Approach",
+    "text": "Approach\nThe high-dimensional and nonlinear dynamics of turbine instabilities limit the practical applicability of conventional model-based control methods. Deep Reinforcement Learning (DRL) offers an alternative by enabling systematic optimization of control policies directly from flow observations in complex dynamical systems. Recent advances in DRL have demonstrated the ability to construct feedback control policies for complex, nonlinear flow systems, including laminar (Rabault et al., 2019), weakly turbulent (Ren et al., 2021), and fully turbulent flows (Sonoda et al., 2023), though predominantly in simplified settings rather than realistic engineering systems.\nIn the proposed framework, a deep neural network (the agent) interacts with a high-fidelity CFD simulation in a closed loop: the agent observes the flow state, selects a control action (e.g., jet actuation), and receives a reward signal reflecting the degree of instability suppression. Through iterative training, the agent learns a control policy that adapts to the flow dynamics, without requiring an explicit mathematical model of the instability.\nWith DRL-based flow control reaching methodological maturity in canonical configurations, extending these approaches to practical engineering systems, particularly turbine-related instability problems, represents a natural and necessary next step."
   },
   {
-    "objectID": "alpheus.html",
-    "href": "alpheus.html",
-    "title": "Under construction",
+    "objectID": "project-hydropower-ai.html#research-foundation",
+    "href": "project-hydropower-ai.html#research-foundation",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Research foundation",
+    "text": "Research foundation\nThe project builds on our established experience in high-fidelity simulation of hydraulic turbine flows and reinforcement learning-based flow control. Much of this groundwork was carried out while the PI was a researcher at Chalmers University of Technology, funded by the Swedish Centre for Sustainable Hydropower (SVC).\n\nHigh-fidelity simulation of hydraulic turbines\nWe have long-standing experience in high-fidelity simulations of hydraulic turbines under steady, off-design, and transient operations. Previous work includes detailed numerical investigations of vortex rope dynamics, shutdown and start-up transients, and uncertainty quantification in Francis turbines, Kaplan turbines, pump-turbines, and swirl generator configurations. These efforts have resulted in numerous peer-reviewed publications (e.g., Salehi and Nilsson, 2021; Salehi and Nilsson, 2022; Salehi and Nilsson, 2023; Salehi and Nilsson, 2024; Masoodi et al., 2024a; Masoodi et al., 2024b). This extensive background provides validated numerical frameworks and a detailed understanding of swirl-induced flow instabilities and associated pressure pulsations.\n\n\nDRL-CFD coupling framework\nIn parallel, we have developed a computational framework for coupling DRL with the CFD solver OpenFOAM (Salehi, 2025). The framework enables efficient closed-loop integration between learning algorithms and high-fidelity flow simulations and has been released as open-source software: TensorforceFoam on GitHub.\nThe methodology has been applied to active flow control problems. The figures below illustrate representative results, including successful control of vortex-dominated flow structures in both 2D and 3D configurations.\n\n\n\nUncontrolled (left) and DRL-controlled (right) flow past a 2D cylinder (Salehi, 2025). The learned control policy suppresses the vortex shedding.\n\n\n\n\n\n\n\n\nUncontrolled 3D cylinder wake\n\n\n\n\n\n\n\nDRL-controlled 3D cylinder wake\n\n\n\n\n\n\n\nProof-of-concept: DRL control of draft tube instability\nAs a first step toward the present project, we conducted a proof-of-concept study on a swirl generator configuration representing a simplified hydraulic turbine draft tube. A DRL controller was coupled to a 3D CFD model with localized axial jet actuation at the runner cone.\n\n\n\n\n\n\nUncontrolled vortex rope\n\n\n\n\n\n\n\nDRL-controlled vortex rope\n\n\n\n\n\nUnder closed-loop control, the strength of the helical flow instability is significantly reduced compared to the uncontrolled case. The corresponding time evolution of the rotating pressure mode is shown below. When the controller is activated at \\(t = 1\\) s (dashed red line), the rotating mode amplitude decreases rapidly and stabilizes at a substantially lower level, demonstrating effective suppression of the dominant instability.\n\n\n\nTime evolution of the rotating pressure mode. The DRL controller is activated at \\(t = 1\\) s (dashed red line), after which the pressure oscillation amplitude is rapidly suppressed.\n\n\nThis preliminary study considered a simplified geometry, a single operating condition, and a basic actuation setup to establish feasibility. Extending this framework to realistic turbine configurations, multiple operating regimes, advanced actuator concepts, and higher-fidelity simulations is the next step and constitutes the core of this project."
+  },
+  {
+    "objectID": "project-hydropower-ai.html#scientific-innovation",
+    "href": "project-hydropower-ai.html#scientific-innovation",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Scientific innovation",
+    "text": "Scientific innovation\nThis project introduces the first DRL-based closed-loop control framework for instability mitigation in realistic hydraulic turbine configurations. By integrating DRL directly with high-fidelity CFD of turbines, the project enables a novel control paradigm that moves beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions."
+  },
+  {
+    "objectID": "project-hydropower-ai.html#selected-related-publications",
+    "href": "project-hydropower-ai.html#selected-related-publications",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Selected related publications",
+    "text": "Selected related publications\nFor more details on the scientific background and methods behind this project, see the following selected publications. A complete list is available on the Publications page.\n\nM. Nobilo, S. Salehi, and H. Nilsson, “Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – A review,” Renewable and Sustainable Energy Reviews, 2026. DOI: 10.1016/j.rser.2025.116578\nS. Salehi, “An efficient intrusive deep reinforcement learning framework for OpenFOAM,” Meccanica, vol. 60, no. 6, pp. 1673-1693, 2025. DOI: 10.1007/s11012-024-01830-1\nF. A. Masoodi, S. Salehi, and R. Goyal, “Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine,” Physics of Fluids, vol. 36, no. 9, p. 094110, 2024. DOI: 10.1063/5.0222739\nS. Salehi and H. Nilsson, “Modal analysis of vortex rope using dynamic mode decomposition,” Physics of Fluids, vol. 36, no. 2, p. 024122, 2024. DOI: 10.1063/5.0186871\nF. A. Masoodi, S. Salehi, and R. Goyal, “Formation and evolution of vortex breakdown consequent to post design flow increase in a Francis turbine,” Physics of Fluids, vol. 36, no. 2, p. 025116, 2024. DOI: 10.1063/5.0187104\nS. Salehi and H. Nilsson, “A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM,” Computer Physics Communications, vol. 287, p. 108703, 2023. DOI: 10.1016/j.cpc.2023.108703\nS. Salehi and H. Nilsson, “Flow-induced pulsations in Francis turbines during startup,” Renewable Energy, 2022. DOI: 10.1016/j.renene.2022.01.111\nS. Salehi, H. Nilsson, E. Lillberg, and N. Edh, “An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown,” Renewable Energy, vol. 179, pp. 2322-2347, 2021. DOI: 10.1016/j.renene.2021.07.107"
+  },
+  {
+    "objectID": "project-hydropower-ai.html#contact",
+    "href": "project-hydropower-ai.html#contact",
+    "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
+    "section": "Contact",
+    "text": "Contact\nFeel free to reach out if you have any questions about the project or the PhD position.\nSaeed Salehi Associate Professor of Fluid Mechanics Linköping University saeed.salehi@liu.se"
+  },
+  {
+    "objectID": "opportunities.html",
+    "href": "opportunities.html",
+    "title": "Opportunities",
     "section": "",
-    "text": "Under construction"
+    "text": "I enjoy working with motivated students and researchers who are interested in computational fluid dynamics, high-fidelity simulations, and data-driven methods."
+  },
+  {
+    "objectID": "opportunities.html#available-msc-thesis-proposals",
+    "href": "opportunities.html#available-msc-thesis-proposals",
+    "title": "Opportunities",
+    "section": "Available MSc Thesis Proposals",
+    "text": "Available MSc Thesis Proposals\n\n\nAccelerating reinforcement-learning-based flow control using transfer learning\n📄 Download proposal (PDF)\n\n\nSpectral POD and autoencoders for compression and prediction of vortex rope\n📄 Download proposal (PDF)"
+  },
+  {
+    "objectID": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
+    "href": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
+    "title": "Opportunities",
+    "section": "Examples of funding opportunities for PhD candidates",
+    "text": "Examples of funding opportunities for PhD candidates\n\nSwedish national graduate schools (e.g. WASP)\n\nMarie Skłodowska-Curie Actions (MSCA) Doctoral Networks\n\nOther national or EU-based PhD scholarship programs"
+  },
+  {
+    "objectID": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
+    "href": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
+    "title": "Opportunities",
+    "section": "Examples of funding opportunities for postdoctoral researchers",
+    "text": "Examples of funding opportunities for postdoctoral researchers\n\nKnut and Alice Wallenberg Foundation postdoc grants\n\nMarie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowships\n\nNational mobility or international exchange programs"
+  },
+  {
+    "objectID": "opportunities.html#how-to-get-in-touch",
+    "href": "opportunities.html#how-to-get-in-touch",
+    "title": "Opportunities",
+    "section": "How to Get in Touch",
+    "text": "How to Get in Touch\nIf you are interested in joining, please send me:\n1. A short CV\n2. A brief description of your research interests and how they connect to my research\n3. Information about your background in CFD, programming, and machine learning\n4. (If relevant) A detailed plan for applying for a scholarship or external funding"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Saeed Salehi",
+    "section": "",
+    "text": "Saeed Salehi\n\n\n\n     \n\n\nAssociate Professor of Fluid Mechanics Division of Applied Thermodynamics and Fluid Mechanics Department of Management and Engineering Linköping University\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
   },
   {
     "objectID": "cv.html",
@@ -182,46 +245,39 @@
     "text": "Complete Academic CV\nFor more details, see my complete academic CV on GitHub."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Saeed Salehi",
+    "objectID": "alpheus.html",
+    "href": "alpheus.html",
+    "title": "Under construction",
     "section": "",
-    "text": "Saeed Salehi\n\n\n\n     \n\n\nAssociate Professor of Fluid Mechanics Division of Applied Thermodynamics and Fluid Mechanics Department of Management and Engineering Linköping University\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
+    "text": "Under construction"
   },
   {
-    "objectID": "opportunities.html",
-    "href": "opportunities.html",
-    "title": "Opportunities",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "I enjoy working with motivated students and researchers who are interested in computational fluid dynamics, high-fidelity simulations, and data-driven methods."
+    "text": "Saeed Salehi\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n📧 Email: saeed.salehi@liu.se\n📞 Phone: +46 13 28 26 82\n📍 Visiting Address\nRoom 3A:970\nA-huset, Campus Valla\nSE-581 83 Linköping, Sweden\nGoogle Maps (Campus Valla) · MazeMap (Office 3A:970)\nDirections inside A-huset\nUse Entrance 13 of the A-huset building, which is closest entrance to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the hall to the Division of Applied Thermodynamics and Fluid Mechanics, located at the end on the right. Enter the division corridor (call me if it is locked) and my office, Room 3A:970, is in the middle of the corridor.\nLiU Staff Pages\n🌐 English staff page\n🌐 Svensk profilsida\nOther Links 🔗 Google Scholar · ORCID · ResearchGate · GitHub · LinkedIn"
   },
   {
-    "objectID": "opportunities.html#available-msc-thesis-proposals",
-    "href": "opportunities.html#available-msc-thesis-proposals",
-    "title": "Opportunities",
-    "section": "Available MSc Thesis Proposals",
-    "text": "Available MSc Thesis Proposals\n\n\nAccelerating reinforcement-learning-based flow control using transfer learning\n📄 Download proposal (PDF)\n\n\nSpectral POD and autoencoders for compression and prediction of vortex rope\n📄 Download proposal (PDF)"
+    "objectID": "drl.html",
+    "href": "drl.html",
+    "title": "Under construction",
+    "section": "",
+    "text": "Under construction"
   },
   {
-    "objectID": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
-    "href": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
-    "title": "Opportunities",
-    "section": "Examples of funding opportunities for PhD candidates",
-    "text": "Examples of funding opportunities for PhD candidates\n\nSwedish national graduate schools (e.g. WASP)\n\nMarie Skłodowska-Curie Actions (MSCA) Doctoral Networks\n\nOther national or EU-based PhD scholarship programs"
+    "objectID": "kaplan.html",
+    "href": "kaplan.html",
+    "title": "Under construction",
+    "section": "",
+    "text": "Under construction"
   },
   {
-    "objectID": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
-    "href": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
-    "title": "Opportunities",
-    "section": "Examples of funding opportunities for postdoctoral researchers",
-    "text": "Examples of funding opportunities for postdoctoral researchers\n\nKnut and Alice Wallenberg Foundation postdoc grants\n\nMarie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowships\n\nNational mobility or international exchange programs"
-  },
-  {
-    "objectID": "opportunities.html#how-to-get-in-touch",
-    "href": "opportunities.html#how-to-get-in-touch",
-    "title": "Opportunities",
-    "section": "How to Get in Touch",
-    "text": "How to Get in Touch\nIf you are interested in joining, please send me:\n1. A short CV\n2. A brief description of your research interests and how they connect to my research\n3. Information about your background in CFD, programming, and machine learning\n4. (If relevant) A detailed plan for applying for a scholarship or external funding"
+    "objectID": "pinn.html",
+    "href": "pinn.html",
+    "title": "Under construction",
+    "section": "",
+    "text": "Under construction"
   },
   {
     "objectID": "publications.html",
