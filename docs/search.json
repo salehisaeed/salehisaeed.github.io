@@ -186,7 +186,28 @@
     "href": "index.html",
     "title": "Saeed Salehi",
     "section": "",
-    "text": "Saeed Salehi\n\n\n\n     \n\n\nAssociate Professor of Fluid Mechanics Division of Applied Thermodynamics and Fluid Mechanics Department of Management and Engineering Linköping University\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
+    "text": "Saeed Salehi\n\n\n\n     \n\n\n\n\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Saeed Salehi",
+    "section": "News",
+    "text": "News\n\nPhD position available in AI-based flow control for hydraulic turbines (ÅForsk-funded project)\nNew paper: Lifetime analysis of hydro turbines published in Renewable and Sustainable Energy Reviews (2026)\nNew paper: Physics-informed neural networks for linear free surface waves published in Physics of Fluids (2025)"
+  },
+  {
+    "objectID": "index.html#computational-and-data-driven-fluid-dynamics-for-complex-flows",
+    "href": "index.html#computational-and-data-driven-fluid-dynamics-for-complex-flows",
+    "title": "Saeed Salehi",
+    "section": "Computational and data-driven fluid dynamics for complex flows",
+    "text": "Computational and data-driven fluid dynamics for complex flows\n\n\n\n\n\nDRL for flow control\nDeep reinforcement learning for active control of turbulent flows\n\n\n\n\nTransient turbine CFD\nHigh-fidelity simulation of hydraulic turbines during transient operation\n\n\n\n\nUncertainty quantification\nEfficient UQ methods for turbulent and industrial flows\n\n\n\n\nSee all research projects →"
+  },
+  {
+    "objectID": "index.html#recent-publications",
+    "href": "index.html#recent-publications",
+    "title": "Saeed Salehi",
+    "section": "Recent publications",
+    "text": "Recent publications\n\nM. Nobilo, S. Salehi, and H. Nilsson, “Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system,” Renewable and Sustainable Energy Reviews, 2026. DOI\nM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost, and H. Nilsson, “Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves,” Physics of Fluids, 2025. DOI\nS. Salehi, “An efficient intrusive deep reinforcement learning framework for OpenFOAM,” Meccanica, vol. 60, no. 6, pp. 1673-1693, 2025. DOI\nS. Salehi and H. Nilsson, “Modal analysis of vortex rope using dynamic mode decomposition,” Physics of Fluids, vol. 36, no. 2, 2024. DOI\n\nFull publication list →"
   },
   {
     "objectID": "cv.html",

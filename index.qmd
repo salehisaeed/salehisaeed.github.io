@@ -1,8 +1,9 @@
 ---
-title: "Saeed Salehi"
+pagetitle: "Saeed Salehi"
 description: "Associate Professor of Fluid Mechanics at Linköping University. CFD, data-driven methods, and machine learning for complex flows."
 page-layout: full
 toc: false
+title-block-style: none
 ---
 
 ::: {.hero-banner}
@@ -23,9 +24,11 @@ toc: false
 :::
 ::: {.column width="75%"}
 
-**Associate Professor of Fluid Mechanics**
-Division of Applied Thermodynamics and Fluid Mechanics
-Department of Management and Engineering
+# Saeed Salehi
+
+**Associate Professor of Fluid Mechanics**\
+Division of Applied Thermodynamics and Fluid Mechanics\
+Department of Management and Engineering\
 Linköping University
 
 ---
@@ -40,3 +43,64 @@ More recently, my research has focused on integrating Artificial Intelligence (A
 :::
 
 :::
+
+---
+
+## News
+
+- **[PhD position available](project-hydropower-ai.html)** in AI-based flow control for hydraulic turbines (ÅForsk-funded project)
+- New paper: [Lifetime analysis of hydro turbines](https://doi.org/10.1016/j.rser.2025.116578) published in *Renewable and Sustainable Energy Reviews* (2026)
+- New paper: [Physics-informed neural networks for linear free surface waves](https://doi.org/10.1063/5.0277421) published in *Physics of Fluids* (2025)
+
+---
+
+## Computational and data-driven fluid dynamics for complex flows
+
+::: {.grid-cards}
+
+::: {.columns}
+::: {.column width="33%"}
+::: {.home-card}
+[![](img/drl_thumb.png){fig-alt="Deep reinforcement learning for flow control"}](research.qmd#deep-reinforcement-learning-for-flow-control)
+
+[**DRL for flow control**](research.qmd#deep-reinforcement-learning-for-flow-control)\
+Deep reinforcement learning for active control of turbulent flows
+:::
+:::
+
+::: {.column width="33%"}
+::: {.home-card}
+[![](img/transient_thumb.jpg){fig-alt="Transient simulation of hydraulic turbines"}](research.qmd#resolved-simulation-of-hydraulic-turbines-during-transient-operation)
+
+[**Transient turbine CFD**](research.qmd#resolved-simulation-of-hydraulic-turbines-during-transient-operation)\
+High-fidelity simulation of hydraulic turbines during transient operation
+:::
+:::
+
+::: {.column width="33%"}
+::: {.home-card}
+[![](img/uq_thumb.jpg){fig-alt="Uncertainty quantification of turbulent flows"}](research.qmd#uncertainty-quantification-of-turbulent-flows)
+
+[**Uncertainty quantification**](research.qmd#uncertainty-quantification-of-turbulent-flows)\
+Efficient UQ methods for turbulent and industrial flows
+:::
+:::
+:::
+
+:::
+
+[See all research projects &rarr;](research.qmd)
+
+---
+
+## Recent publications
+
+- M. Nobilo, S. Salehi, and H. Nilsson, "Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system," *Renewable and Sustainable Energy Reviews*, 2026. [DOI](https://doi.org/10.1016/j.rser.2025.116578)
+
+- M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost, and H. Nilsson, "Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves," *Physics of Fluids*, 2025. [DOI](https://doi.org/10.1063/5.0277421)
+
+- S. Salehi, "An efficient intrusive deep reinforcement learning framework for OpenFOAM," *Meccanica*, vol. 60, no. 6, pp. 1673-1693, 2025. [DOI](https://doi.org/10.1007/s11012-024-01830-1)
+
+- S. Salehi and H. Nilsson, "Modal analysis of vortex rope using dynamic mode decomposition," *Physics of Fluids*, vol. 36, no. 2, 2024. [DOI](https://doi.org/10.1063/5.0186871)
+
+[Full publication list &rarr;](publications.qmd)
