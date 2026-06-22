@@ -13,7 +13,7 @@ title-block-style: none
 ![Saeed Salehi](img/saeed2.jpg){width=85% fig-align="left"}
 
 <div class="icon-row">
-  <a href="https://liu.se/en/employee/saesa86" class="iconbtn" aria-label="LiU Profile"><i class="fa-solid fa-university"></i></a>
+  <a href="https://liu.se/en/employee/saesa86" class="iconbtn" aria-label="LiU Profile"><i class="fa-solid fa-globe"></i></a>
   <a href="mailto:saeed.salehi@liu.se" class="iconbtn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
   <a href="https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate" class="iconbtn" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
   <a href="https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf" class="iconbtn" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
