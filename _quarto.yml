@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - CNAME
+    - robots.txt
   output-dir: docs
   render:
     - "*.qmd"

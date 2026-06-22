@@ -7,11 +7,14 @@
 
 /* === Social icon buttons === */
 .icon-row {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
   width: 85%;
-  margin-top: 0.75rem;
+}
+
+.icon-row p {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 0;
 }
 
 .iconbtn {
@@ -19,8 +22,8 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   color: var(--bs-body-color);
   text-decoration: none;
@@ -35,7 +38,7 @@
 }
 
 .iconbtn i {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 /* === Section headings === */
