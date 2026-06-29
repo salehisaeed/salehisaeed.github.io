@@ -11,7 +11,7 @@ This page provides detailed information about the research project for prospecti
 
 ## Project summary
 
-This project develops a novel AI-based active flow control strategy for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation in future energy systems.
+This project investigates AI-based active flow control for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation.
 
 ![Conceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.](img/framework.png){fig-alt="Conceptual illustration of the AI-based active flow control framework for hydraulic turbines" width=85%}
 
@@ -42,17 +42,17 @@ The high-dimensional and nonlinear dynamics of turbine instabilities limit the p
 
 In the proposed framework, a deep neural network (the agent) interacts with a high-fidelity CFD simulation in a closed loop: the agent observes the flow state, selects a control action (e.g., jet actuation), and receives a reward signal reflecting the degree of instability suppression. Through iterative training, the agent learns a control policy that adapts to the flow dynamics, without requiring an explicit mathematical model of the instability.
 
-With DRL-based flow control reaching methodological maturity in canonical configurations, extending these approaches to practical engineering systems, particularly turbine-related instability problems, represents a natural and necessary next step.
+With DRL-based flow control showing promising results in canonical configurations, extending these approaches to practical engineering systems such as turbine instability problems is a logical next step.
 
 ---
 
-## Research foundation
+## Previous research
 
-The project builds on our established experience in high-fidelity simulation of hydraulic turbine flows and reinforcement learning-based flow control. Much of this groundwork was carried out while the PI was a researcher at Chalmers University of Technology, funded by the [Swedish Centre for Sustainable Hydropower (SVC)](https://svc.energiforsk.se/).
+The project builds on previous work in high-fidelity simulation of hydraulic turbine flows and reinforcement learning-based flow control. Much of this groundwork was carried out while the PI was a researcher at Chalmers University of Technology, funded by the [Swedish Centre for Sustainable Hydropower (SVC)](https://svc.energiforsk.se/).
 
 ### High-fidelity simulation of hydraulic turbines
 
-We have long-standing experience in high-fidelity simulations of hydraulic turbines under steady, off-design, and transient operations. Previous work includes detailed numerical investigations of vortex rope dynamics, shutdown and start-up transients, and uncertainty quantification in Francis turbines, Kaplan turbines, pump-turbines, and swirl generator configurations. These efforts have resulted in numerous peer-reviewed publications (e.g., [Salehi and Nilsson, 2021](https://doi.org/10.1016/j.renene.2021.07.107); [Salehi and Nilsson, 2022](https://doi.org/10.1016/j.renene.2022.01.111); [Salehi and Nilsson, 2023](https://doi.org/10.1016/j.cpc.2023.108703); [Salehi and Nilsson, 2024](https://doi.org/10.1063/5.0186871); [Masoodi et al., 2024a](https://doi.org/10.1063/5.0187104); [Masoodi et al., 2024b](https://doi.org/10.1063/5.0222739)). This extensive background provides validated numerical frameworks and a detailed understanding of swirl-induced flow instabilities and associated pressure pulsations.
+Previous work includes high-fidelity simulations of hydraulic turbines under steady, off-design, and transient operations, covering vortex rope dynamics, shutdown and start-up transients, and uncertainty quantification in Francis turbines, Kaplan turbines, pump-turbines, and swirl generator configurations (e.g., [Salehi and Nilsson, 2021](https://doi.org/10.1016/j.renene.2021.07.107); [Salehi and Nilsson, 2022](https://doi.org/10.1016/j.renene.2022.01.111); [Salehi and Nilsson, 2023](https://doi.org/10.1016/j.cpc.2023.108703); [Salehi and Nilsson, 2024](https://doi.org/10.1063/5.0186871); [Masoodi et al., 2024a](https://doi.org/10.1063/5.0187104); [Masoodi et al., 2024b](https://doi.org/10.1063/5.0222739)).
 
 ### DRL-CFD coupling framework
 
@@ -78,7 +78,7 @@ As a first step toward the present project, we conducted a proof-of-concept stud
 ![DRL-controlled vortex rope](img/vortex_controlled.png){fig-alt="Vortex rope significantly reduced under DRL-based closed-loop control"}
 :::
 
-Under closed-loop control, the strength of the helical flow instability is significantly reduced compared to the uncontrolled case. The corresponding time evolution of the rotating pressure mode is shown below. When the controller is activated at $t = 1$ s (dashed red line), the rotating mode amplitude decreases rapidly and stabilizes at a substantially lower level, demonstrating effective suppression of the dominant instability.
+Under closed-loop control, the strength of the helical flow instability is reduced compared to the uncontrolled case. The corresponding time evolution of the rotating pressure mode is shown below. When the controller is activated at $t = 1$ s (dashed red line), the rotating mode amplitude decreases and stabilizes at a lower level.
 
 ![Time evolution of the rotating pressure mode. The DRL controller is activated at $t = 1$ s (dashed red line), after which the pressure oscillation amplitude is rapidly suppressed.](img/pressure_modes.png){fig-alt="Time series showing rapid suppression of pressure pulsations after DRL controller activation" width=80%}
 
@@ -86,9 +86,9 @@ This preliminary study considered a simplified geometry, a single operating cond
 
 ---
 
-## Scientific innovation
+## What is new in this project
 
-This project introduces the first DRL-based closed-loop control framework for instability mitigation in realistic hydraulic turbine configurations. By integrating DRL directly with high-fidelity CFD of turbines, the project enables a novel control paradigm that moves beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.
+To date, no DRL-based closed-loop control framework has been applied to instability mitigation in realistic hydraulic turbine configurations. This project aims to fill that gap by integrating DRL directly with high-fidelity CFD of turbines, moving beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.
 
 ---
 
