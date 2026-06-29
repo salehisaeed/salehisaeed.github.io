@@ -51,7 +51,7 @@ More recently, my research has focused on integrating Artificial Intelligence (A
 
 ## News
 
-- **[PhD position available](project-hydropower-ai.html)** in AI-based flow control for hydraulic turbines (ÅForsk-funded project)
+- **[PhD position available](https://liu.se/en/work-at-liu/vacancies/29533)** in AI-based flow control for hydraulic turbines. [Read more about the project](project-hydropower-ai.html). Deadline: Aug 31, 2026.
 - New paper: [Lifetime analysis of hydro turbines](https://doi.org/10.1016/j.rser.2025.116578) published in *Renewable and Sustainable Energy Reviews* (2026)
 - New paper: [Physics-informed neural networks for linear free surface waves](https://doi.org/10.1063/5.0277421) published in *Physics of Fluids* (2025)
 

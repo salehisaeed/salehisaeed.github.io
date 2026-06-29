@@ -6,7 +6,7 @@ listing: false
 ---
 
 ::: {.callout-note appearance="simple"}
-This page provides detailed information about the research project for prospective PhD applicants. See the [job advertisement](#) for application details.
+This page provides detailed information about the research project for prospective PhD applicants. See the [job advertisement](https://liu.se/en/work-at-liu/vacancies/29533) for application details. Application deadline: **August 31, 2026**.
 :::
 
 ## Project summary
