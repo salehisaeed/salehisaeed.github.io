@@ -37,10 +37,18 @@ If you are studying at Linköping University and would like to align your thesis
 ::: {.section-background style="background-color:#ffffff; padding: 1em; border-radius: 8px;"}
 # PhD and Postdoc Opportunities
 
-At the moment there are **no funded PhD or Postdoc openings** in the group.  
-When positions become available, they will be announced here as well as on the University’s website.  
+## Open PhD Position
 
-If you have your own funding or plan to apply for scholarships, I am open to discussing possible projects.  
+There is currently an open PhD position in the group on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation.
+
+**Application deadline: August 31, 2026**
+
+- [Read more about the project](project-hydropower-ai.html)
+- [Apply at LiU vacancies](https://liu.se/en/work-at-liu/vacancies/29533)
+
+## Postdoc Opportunities
+
+At the moment there are no funded postdoc openings. If you have your own funding or plan to apply for a fellowship, I am open to discussing possible projects.
 :::
 
 ---
