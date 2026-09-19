@@ -9,14 +9,14 @@ quarto preview        # live preview while editing
 quarto render         # full build into docs/, then commit docs/ together with the sources
 ```
 
-Rendering first runs `scripts/build_publications.py` (plain Python 3, no packages), which turns `Pubs.bib` into `_generated/publications.md` and `_generated/recent.md`. Afterwards `scripts/postrender.py` adds canonical URLs, sets the home page title and `<h1>`, and marks redirect pages `noindex`.
+Rendering first runs `scripts/build_publications.py` (plain Python 3), which turns `Pubs.bib` into `_generated/publications.md` and `_generated/recent.md`, and `scripts/build_news.py` (needs PyYAML), which turns `news.yml` into `_generated/news-recent.md` and `_generated/news-all.md`. The generated files are committed, because Quarto resolves includes before the pre-render scripts run. Afterwards `scripts/postrender.py` adds canonical URLs, sets the home page title and `<h1>`, and marks redirect pages `noindex`.
 
 ## Common updates
 
 | What | Where |
 |---|---|
 | Publications | Replace `Pubs.bib` with the CV's `Publications.bib` and re-render. The publication page and the home page's recent list update automatically. If a DOI stops resolving on the publisher's side, add a working URL to `LINK_OVERRIDES` in `scripts/build_publications.py`. |
-| News | `index.qmd`, the `news-list` block. Keep about 6–8 dated items. |
+| News | Add an entry at the top of `news.yml`. The home page shows the latest 5 summaries; the News page shows every item with its details. |
 | Research themes | `research.qmd`. The home page cards in `index.qmd` link to its anchors. |
 | Teaching, supervision | `teaching.qmd` |
 | CV summary | `cv.qmd`. The full PDF is linked from the CV repository. |

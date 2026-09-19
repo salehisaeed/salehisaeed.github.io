@@ -140,53 +140,25 @@
     "text": "Contact\nFeel free to reach out if you have any questions about the project.\nSaeed Salehi\nAssociate Professor of Fluid Mechanics\nLinköping University\nsaeed.salehi@liu.se"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Saeed Salehi",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
     "section": "",
-    "text": "Saeed Salehi\n    Associate Professor of Fluid Mechanics, Docent\n    Division of Applied Thermodynamics and Fluid Mechanics · Department of Management and Engineering · Linköping University, Sweden\n    I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. My applications range from canonical flows to engineering systems such as turbomachinery and energy systems.\n    I am first and foremost a CFD specialist and an active OpenFOAM developer. My current focus is deep reinforcement learning for active flow control, coupled directly to CFD.\n  \n\n\n  LiU profile\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n\n\n  Research themes\n  All research →\n\n\n  \n    \n    Reinforcement-learning flow controlDeep reinforcement learning coupled with CFD for active control of unsteady and turbulent flows.\n  \n  \n    \n    Hydraulic turbine transientsResolved simulation of start-up, shutdown and load changes, with new mesh-motion methods in OpenFOAM.\n  \n  \n    \n    Modal analysis and reduced-order modelsPOD, SPOD and DMD to extract coherent structures and dominant frequencies from simulation data.\n  \n  \n    \n    Physics-informed neural networksMulti-fidelity PINNs for solving partial differential equations, including free-surface waves.\n  \n  \n    \n    Uncertainty quantificationSparse and multi-fidelity polynomial chaos methods and robust design under uncertainty.\n  \n  \n    \n    Flexible hydropowerFlow-induced loads, turbine lifetime and contra-rotating pump-turbines for energy storage.\n  \n\n\n\nNews\n\n  Sep 2026The application period for the PhD position in AI-based flow control for hydropower has closed, and assessment and recruitment are under way. We received a large number of applications, so this will take some time. Thank you to all applicants for your patience.\n  Aug 2026New review paper: State-of-the-art implementations of PINNs for the lid-driven cavity problem, in Results in Engineering.\n  Jul 2026Talk on closed-loop control of the vortex rope in a swirl generator with deep reinforcement learning, and session chair, at the 21st OpenFOAM Workshop in Guimarães, Portugal.\n  Jun 2026Appointed Section Editor of the OpenFOAM Journal.\n  Jun 2026New PhD position in AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation (see the project page). Application deadline: 31 August 2026.\n  May 2026Invited talk, Towards efficient control of turbulence, at the Swedish Society for Industrial Flow and Heat Transfer in Lund.\n  Mar 2026Talk on transfer learning for reinforcement-learning-based flow control, and session chair, at the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics in Amsterdam.\n  Feb 2026Awarded the title of Docent in Fluid Mechanics at Linköping University.\n  Dec 2025New review paper: Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system, in Renewable and Sustainable Energy Reviews.\n  Oct 2025Preprint: Transfer learning strategies for accelerating reinforcement-learning-based flow control.\n  Aug 2025Joined Linköping University as Associate Professor of Fluid Mechanics.\n\n\n\nCurrent project\n\n  ÅForsk Early-Career Research Grant\n  Enabling flexible hydropower operation by AI-based active flow control\n  Deep reinforcement learning coupled with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines at off-design operation. A PhD student is being recruited at Linköping University.\n  About the project →\n\n\n  Students\n  Thesis projects and PhD opportunities\n  I supervise MSc and BSc theses in CFD, OpenFOAM development and machine learning for fluid flows, and I support applications for external PhD and postdoc fellowships.\n  Opportunities →\n\n\n\n\n  Recent publications\n  All publications →\n\n\n\nState-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectivesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonResults in Engineering, 32, 112399 (2026) DOI\nLifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – A reviewM. Nobilo, S. Salehi and H. NilssonRenewable and Sustainable Energy Reviews, 228, 116578 (2026) DOI\nPhysics-informed neural networks with hard and soft boundary conditions for linear free surface wavesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonPhysics of Fluids, 37(8), 087158 (2025) DOI\nAn efficient intrusive deep reinforcement learning framework for OpenFOAMS. SalehiMeccanica, 60(6), 1673–1693 (2025) DOI\nTransfer learning strategies for accelerating reinforcement-learning-based flow controlS. SalehiarXiv preprint arXiv:2510.16016 (2025) arXiv"
+    "text": "September 2026\nThe application period for the PhD position in the project Enabling flexible hydropower operation by AI-based active flow control closed on 31 August 2026, and the assessment and recruitment process has now started.\nWe received a large number of applications, so the process will take some time. Thank you to all applicants for your patience. The position is expected to start in autumn 2026.\nRead more about the research on the project page.\n\n\n\nAugust 2026\nOur paper State-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectives is published in Results in Engineering (vol. 32, 112399).\nAuthors: M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson. The work is part of Mohammad Sheikholeslami’s PhD project on multi-fidelity physics-informed neural networks at Chalmers University of Technology, which I co-supervise. See also the PINN research theme.\nRead the paper (DOI: 10.1016/j.rineng.2026.112399)\n\n\n\nJuly 2026\nAt the 21st OpenFOAM Workshop (OFW21) in Guimarães, Portugal, I presented Closed-loop control of vortex rope in a swirl generator using deep reinforcement learning and chaired the Multiphase Flows I session.\nA swirl generator is a simplified model of the flow in a hydraulic turbine draft tube. For background, see the flow control research theme.\n\n\n\nJune 2026\nI have joined the editorial team of the OpenFOAM Journal as Section Editor. I also serve on the OpenFOAM Turbomachinery Technical Committee within the OpenFOAM Governance.\n\n\n\nJune 2026\nA PhD position was advertised in the project Enabling flexible hydropower operation by AI-based active flow control, funded by an ÅForsk Foundation Early-Career Research Grant with co-funding from Linköping University. The project couples deep reinforcement learning with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines.\nThe student will be based at Linköping University, with Håkan Nilsson (Chalmers University of Technology) as co-supervisor. The application deadline was 31 August 2026.\nAbout the project\n\n\n\nMay 2026\nI gave the invited talk Towards efficient control of turbulence at a meeting of the Swedish Society for Industrial Flow and Heat Transfer in Lund.\n\n\n\nMarch 2026\nAt the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics at CWI in Amsterdam, I presented Transfer learning strategies for accelerating reinforcement-learning-based flow control and chaired the Reinforcement Learning (RL3) session.\nThe talk is based on the arXiv preprint of the same title.\n\n\n\nFebruary 2026\nI have been awarded the title of Docent in Fluid Mechanics at Linköping University. The title recognises independent scientific and pedagogical competence and supports principal supervision of doctoral students.\n\n\n\nFebruary 2026\nI gave the invited talk Engineering applications of computational and data-driven fluid dynamics for LKAB, Kiruna (held online)."
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "news.html#year-2026",
+    "href": "news.html#year-2026",
+    "title": "News",
     "section": "",
-    "text": "saeed.salehi@liu.se\n+46 13 28 26 82\n\n\n\nSaeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden\n\n\n\nRoom 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
+    "text": "September 2026\nThe application period for the PhD position in the project Enabling flexible hydropower operation by AI-based active flow control closed on 31 August 2026, and the assessment and recruitment process has now started.\nWe received a large number of applications, so the process will take some time. Thank you to all applicants for your patience. The position is expected to start in autumn 2026.\nRead more about the research on the project page.\n\n\n\nAugust 2026\nOur paper State-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectives is published in Results in Engineering (vol. 32, 112399).\nAuthors: M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson. The work is part of Mohammad Sheikholeslami’s PhD project on multi-fidelity physics-informed neural networks at Chalmers University of Technology, which I co-supervise. See also the PINN research theme.\nRead the paper (DOI: 10.1016/j.rineng.2026.112399)\n\n\n\nJuly 2026\nAt the 21st OpenFOAM Workshop (OFW21) in Guimarães, Portugal, I presented Closed-loop control of vortex rope in a swirl generator using deep reinforcement learning and chaired the Multiphase Flows I session.\nA swirl generator is a simplified model of the flow in a hydraulic turbine draft tube. For background, see the flow control research theme.\n\n\n\nJune 2026\nI have joined the editorial team of the OpenFOAM Journal as Section Editor. I also serve on the OpenFOAM Turbomachinery Technical Committee within the OpenFOAM Governance.\n\n\n\nJune 2026\nA PhD position was advertised in the project Enabling flexible hydropower operation by AI-based active flow control, funded by an ÅForsk Foundation Early-Career Research Grant with co-funding from Linköping University. The project couples deep reinforcement learning with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines.\nThe student will be based at Linköping University, with Håkan Nilsson (Chalmers University of Technology) as co-supervisor. The application deadline was 31 August 2026.\nAbout the project\n\n\n\nMay 2026\nI gave the invited talk Towards efficient control of turbulence at a meeting of the Swedish Society for Industrial Flow and Heat Transfer in Lund.\n\n\n\nMarch 2026\nAt the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics at CWI in Amsterdam, I presented Transfer learning strategies for accelerating reinforcement-learning-based flow control and chaired the Reinforcement Learning (RL3) session.\nThe talk is based on the arXiv preprint of the same title.\n\n\n\nFebruary 2026\nI have been awarded the title of Docent in Fluid Mechanics at Linköping University. The title recognises independent scientific and pedagogical competence and supports principal supervision of doctoral students.\n\n\n\nFebruary 2026\nI gave the invited talk Engineering applications of computational and data-driven fluid dynamics for LKAB, Kiruna (held online)."
   },
   {
-    "objectID": "contact.html#email-and-phone",
-    "href": "contact.html#email-and-phone",
-    "title": "Contact",
-    "section": "",
-    "text": "saeed.salehi@liu.se\n+46 13 28 26 82"
-  },
-  {
-    "objectID": "contact.html#postal-address",
-    "href": "contact.html#postal-address",
-    "title": "Contact",
-    "section": "",
-    "text": "Saeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden"
-  },
-  {
-    "objectID": "contact.html#office",
-    "href": "contact.html#office",
-    "title": "Contact",
-    "section": "",
-    "text": "Room 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
-  },
-  {
-    "objectID": "contact.html#finding-my-office",
-    "href": "contact.html#finding-my-office",
-    "title": "Contact",
-    "section": "Finding my office",
-    "text": "Finding my office\nUse entrance 13 of the A-huset building, the entrance closest to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the corridor to the Division of Applied Thermodynamics and Fluid Mechanics at the end on the right. Enter the division corridor (call me if it is locked). Room 3A:970 is in the middle of the corridor."
-  },
-  {
-    "objectID": "contact.html#online-profiles",
-    "href": "contact.html#online-profiles",
-    "title": "Contact",
-    "section": "Online profiles",
-    "text": "Online profiles\n\n  LiU profile\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n\nLiU staff pages: English · Svenska"
+    "objectID": "news.html#year-2025",
+    "href": "news.html#year-2025",
+    "title": "News",
+    "section": "2025",
+    "text": "2025\n\nReview paper on the lifetime of hydro turbines\nDecember 2025\nOur review Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system is published in Renewable and Sustainable Energy Reviews (vol. 228, 116578).\nAuthors: M. Nobilo, S. Salehi and H. Nilsson. The paper reviews how transient and off-design operation, increasingly common as hydropower balances wind and solar power, affects fatigue damage and lifetime of hydro turbines. It is part of Martina Nobilo’s doctoral work at Chalmers University of Technology, which I co-supervised. See also the flexible hydropower research theme.\nRead the paper (DOI: 10.1016/j.rser.2025.116578)\n\n\nPreprint on transfer learning for reinforcement-learning-based flow control\nOctober 2025\nThe preprint Transfer learning strategies for accelerating reinforcement-learning-based flow control is available on arXiv (2510.16016). See the flow control research theme for background.\n\n\nJoined Linköping University\nAugust 2025\nI joined Linköping University as Associate Professor of Fluid Mechanics in the Division of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering. Before that I was a researcher at Chalmers Industriteknik and a postdoctoral researcher at Chalmers University of Technology."
   },
   {
     "objectID": "cv.html",
@@ -236,6 +208,55 @@
     "title": "Curriculum vitae",
     "section": "Skills and languages",
     "text": "Skills and languages\n\nCFD: OpenFOAM (use and development), Fluent, CFX\nProgramming and HPC: C++, Python, MATLAB, MPI\nMachine learning: TensorFlow, PyTorch\nLanguages: English (fluent), Swedish (fluent), Persian (native)"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "saeed.salehi@liu.se\n+46 13 28 26 82\n\n\n\nSaeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden\n\n\n\nRoom 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
+  },
+  {
+    "objectID": "contact.html#email-and-phone",
+    "href": "contact.html#email-and-phone",
+    "title": "Contact",
+    "section": "",
+    "text": "saeed.salehi@liu.se\n+46 13 28 26 82"
+  },
+  {
+    "objectID": "contact.html#postal-address",
+    "href": "contact.html#postal-address",
+    "title": "Contact",
+    "section": "",
+    "text": "Saeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden"
+  },
+  {
+    "objectID": "contact.html#office",
+    "href": "contact.html#office",
+    "title": "Contact",
+    "section": "",
+    "text": "Room 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
+  },
+  {
+    "objectID": "contact.html#finding-my-office",
+    "href": "contact.html#finding-my-office",
+    "title": "Contact",
+    "section": "Finding my office",
+    "text": "Finding my office\nUse entrance 13 of the A-huset building, the entrance closest to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the corridor to the Division of Applied Thermodynamics and Fluid Mechanics at the end on the right. Enter the division corridor (call me if it is locked). Room 3A:970 is in the middle of the corridor."
+  },
+  {
+    "objectID": "contact.html#online-profiles",
+    "href": "contact.html#online-profiles",
+    "title": "Contact",
+    "section": "Online profiles",
+    "text": "Online profiles\n\n  LiU profile\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n\nLiU staff pages: English · Svenska"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Saeed Salehi",
+    "section": "",
+    "text": "Saeed Salehi\n    Associate Professor of Fluid Mechanics, Docent\n    Division of Applied Thermodynamics and Fluid Mechanics · Department of Management and Engineering · Linköping University, Sweden\n    I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. My applications range from canonical flows to engineering systems such as turbomachinery and energy systems.\n    I am first and foremost a CFD specialist and an active OpenFOAM developer. My current focus is deep reinforcement learning for active flow control, coupled directly to CFD.\n  \n\n\n  LiU profile\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n\n\n  Research themes\n  All research →\n\n\n  \n    \n    Reinforcement-learning flow controlDeep reinforcement learning coupled with CFD for active control of unsteady and turbulent flows.\n  \n  \n    \n    Hydraulic turbine transientsResolved simulation of start-up, shutdown and load changes, with new mesh-motion methods in OpenFOAM.\n  \n  \n    \n    Modal analysis and reduced-order modelsPOD, SPOD and DMD to extract coherent structures and dominant frequencies from simulation data.\n  \n  \n    \n    Physics-informed neural networksMulti-fidelity PINNs for solving partial differential equations, including free-surface waves.\n  \n  \n    \n    Uncertainty quantificationSparse and multi-fidelity polynomial chaos methods and robust design under uncertainty.\n  \n  \n    \n    Flexible hydropowerFlow-induced loads, turbine lifetime and contra-rotating pump-turbines for energy storage.\n  \n\n\n\n\n  News\n  All news →\n\n\n\n\nSep 2026\nThe application period for the PhD position in AI-based flow control for hydropower has closed, and assessment and recruitment are under way. We received a large number of applications, so this will take some time. Thank you to all applicants for your patience.\n\n\nAug 2026\nNew review paper: State-of-the-art implementations of PINNs for the lid-driven cavity problem, in Results in Engineering.\n\n\nJul 2026\nTalk on closed-loop control of the vortex rope in a swirl generator with deep reinforcement learning, and session chair, at the 21st OpenFOAM Workshop in Guimarães, Portugal.\n\n\nJun 2026\nAppointed Section Editor of the OpenFOAM Journal.\n\n\nJun 2026\nNew PhD position in AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation (see the project page). Application deadline: 31 August 2026.\n\n\n\n\nCurrent project\n\n  ÅForsk Early-Career Research Grant\n  Enabling flexible hydropower operation by AI-based active flow control\n  Deep reinforcement learning coupled with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines at off-design operation. A PhD student is being recruited at Linköping University.\n  About the project →\n\n\n  Students\n  Thesis projects and PhD opportunities\n  I supervise MSc and BSc theses in CFD, OpenFOAM development and machine learning for fluid flows, and I support applications for external PhD and postdoc fellowships.\n  Opportunities →\n\n\n\n\n  Recent publications\n  All publications →\n\n\n\nState-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectivesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonResults in Engineering, 32, 112399 (2026) DOI\nLifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – A reviewM. Nobilo, S. Salehi and H. NilssonRenewable and Sustainable Energy Reviews, 228, 116578 (2026) DOI\nPhysics-informed neural networks with hard and soft boundary conditions for linear free surface wavesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonPhysics of Fluids, 37(8), 087158 (2025) DOI\nAn efficient intrusive deep reinforcement learning framework for OpenFOAMS. SalehiMeccanica, 60(6), 1673–1693 (2025) DOI\nTransfer learning strategies for accelerating reinforcement-learning-based flow controlS. SalehiarXiv preprint arXiv:2510.16016 (2025) arXiv"
   },
   {
     "objectID": "opportunities.html",

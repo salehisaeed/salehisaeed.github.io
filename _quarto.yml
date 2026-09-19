@@ -1,8 +1,10 @@
 project:
   type: website
   output-dir: docs
-  # Regenerates the publication lists from Pubs.bib before every render.
-  pre-render: scripts/build_publications.py
+  # Regenerate the publication lists (Pubs.bib) and news (news.yml) before every render.
+  pre-render:
+    - scripts/build_publications.py
+    - scripts/build_news.py
   # Canonical URLs, home-page title and h1, noindex on redirects (see script).
   post-render: scripts/postrender.py
   resources:
@@ -44,6 +46,8 @@ website:
         href: software.qmd
       - text: "Teaching"
         href: teaching.qmd
+      - text: "News"
+        href: news.qmd
       - text: "Opportunities"
         href: opportunities.qmd
       - text: "CV"

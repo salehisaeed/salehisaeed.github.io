@@ -1,0 +1,162 @@
+# News items, newest first. The home page shows the first HOME_COUNT items
+# (see scripts/build_news.py) with their `summary`; the News page shows all
+# items with their `details`. Both fields accept Markdown.
+#
+#   id:      short unique slug, used as the anchor on the News page
+#   date:    YYYY-MM
+#   title:   heading on the News page
+#   summary: one or two sentences for the home page
+#   details: fuller text for the News page (optional; falls back to summary)
+
+- id: phd-recruitment-update
+  date: 2026-09
+  title: PhD recruitment under way
+  summary: >-
+    The application period for the [PhD position in AI-based flow control for hydropower](project-hydropower-ai.qmd)
+    has closed, and assessment and recruitment are under way. We received a large number of applications,
+    so this will take some time. Thank you to all applicants for your patience.
+  details: |
+    The application period for the PhD position in the project *Enabling flexible hydropower operation by
+    AI-based active flow control* closed on 31 August 2026, and the assessment and recruitment process has
+    now started.
+
+    We received a large number of applications, so the process will take some time. Thank you to all
+    applicants for your patience. The position is expected to start in autumn 2026.
+
+    Read more about the research on the [project page](project-hydropower-ai.qmd).
+
+- id: pinn-cavity-review
+  date: 2026-08
+  title: Review paper on PINNs for the lid-driven cavity problem
+  summary: >-
+    New review paper: [State-of-the-art implementations of PINNs for the lid-driven cavity problem](https://doi.org/10.1016/j.rineng.2026.112399),
+    in *Results in Engineering*.
+  details: |
+    Our paper *State-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical
+    review with future perspectives* is published in *Results in Engineering* (vol. 32, 112399).
+
+    Authors: M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson. The work is part of
+    Mohammad Sheikholeslami's PhD project on multi-fidelity physics-informed neural networks at Chalmers
+    University of Technology, which I co-supervise. See also the [PINN research theme](research.qmd#pinns).
+
+    [Read the paper (DOI: 10.1016/j.rineng.2026.112399)](https://doi.org/10.1016/j.rineng.2026.112399)
+
+- id: ofw21
+  date: 2026-07
+  title: Talk and session chair at the 21st OpenFOAM Workshop
+  summary: >-
+    Talk on closed-loop control of the vortex rope in a swirl generator with deep reinforcement learning,
+    and session chair, at the 21st OpenFOAM Workshop in Guimarães, Portugal.
+  details: |
+    At the 21st OpenFOAM Workshop (OFW21) in Guimarães, Portugal, I presented *Closed-loop control of vortex
+    rope in a swirl generator using deep reinforcement learning* and chaired the Multiphase Flows I session.
+
+    A swirl generator is a simplified model of the flow in a hydraulic turbine draft tube. For background,
+    see the [flow control research theme](research.qmd#flow-control).
+
+- id: ofj-section-editor
+  date: 2026-06
+  title: Section Editor of the OpenFOAM Journal
+  summary: >-
+    Appointed Section Editor of the [OpenFOAM Journal](https://journal.openfoam.com/index.php/ofj/about/editorialTeam).
+  details: |
+    I have joined the editorial team of the [OpenFOAM Journal](https://journal.openfoam.com/index.php/ofj/about/editorialTeam)
+    as Section Editor. I also serve on the OpenFOAM Turbomachinery Technical Committee within the
+    [OpenFOAM Governance](https://www.openfoam.com/governance/overview).
+
+- id: phd-position
+  date: 2026-06
+  title: New PhD position in AI-based flow control for hydropower
+  summary: >-
+    New PhD position in AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation
+    (see the [project page](project-hydropower-ai.qmd)). Application deadline: 31 August 2026.
+  details: |
+    A PhD position was advertised in the project *Enabling flexible hydropower operation by AI-based active
+    flow control*, funded by an ÅForsk Foundation Early-Career Research Grant with co-funding from Linköping
+    University. The project couples deep reinforcement learning with high-fidelity CFD to suppress harmful
+    flow instabilities in hydraulic turbines.
+
+    The student will be based at Linköping University, with Håkan Nilsson (Chalmers University of
+    Technology) as co-supervisor. The application deadline was 31 August 2026.
+
+    [About the project](project-hydropower-ai.qmd)
+
+- id: svs-lund-2026
+  date: 2026-05
+  title: Invited talk in Lund
+  summary: >-
+    Invited talk, *Towards efficient control of turbulence*, at the Swedish Society for Industrial Flow and
+    Heat Transfer in Lund.
+  details: |
+    I gave the invited talk *Towards efficient control of turbulence* at a meeting of the Swedish Society
+    for Industrial Flow and Heat Transfer in Lund.
+
+- id: ercoftac-ml4fluids-2026
+  date: 2026-03
+  title: Talk and session chair at the ERCOFTAC Workshop on Machine Learning for Fluid Dynamics
+  summary: >-
+    Talk on transfer learning for reinforcement-learning-based flow control, and session chair, at the 3rd
+    ERCOFTAC Workshop on Machine Learning for Fluid Dynamics in Amsterdam.
+  details: |
+    At the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics at CWI in Amsterdam, I presented
+    *Transfer learning strategies for accelerating reinforcement-learning-based flow control* and chaired
+    the Reinforcement Learning (RL3) session.
+
+    The talk is based on the [arXiv preprint](https://arxiv.org/abs/2510.16016) of the same title.
+
+- id: docent
+  date: 2026-02
+  title: Docent in Fluid Mechanics
+  summary: >-
+    Awarded the title of Docent in Fluid Mechanics at Linköping University.
+  details: |
+    I have been awarded the title of Docent in Fluid Mechanics at Linköping University. The title
+    recognises independent scientific and pedagogical competence and supports principal supervision of
+    doctoral students.
+
+- id: lkab-2026
+  date: 2026-02
+  title: Invited talk at LKAB
+  summary: >-
+    Invited talk, *Engineering applications of computational and data-driven fluid dynamics*, at LKAB.
+  details: |
+    I gave the invited talk *Engineering applications of computational and data-driven fluid dynamics* for
+    LKAB, Kiruna (held online).
+
+- id: lifetime-review
+  date: 2025-12
+  title: Review paper on the lifetime of hydro turbines
+  summary: >-
+    New review paper: [Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system](https://doi.org/10.1016/j.rser.2025.116578),
+    in *Renewable and Sustainable Energy Reviews*.
+  details: |
+    Our review *Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy
+    system* is published in *Renewable and Sustainable Energy Reviews* (vol. 228, 116578).
+
+    Authors: M. Nobilo, S. Salehi and H. Nilsson. The paper reviews how transient and off-design operation,
+    increasingly common as hydropower balances wind and solar power, affects fatigue damage and lifetime of
+    hydro turbines. It is part of Martina Nobilo's doctoral work at Chalmers University of Technology, which
+    I co-supervised. See also the [flexible hydropower research theme](research.qmd#hydropower).
+
+    [Read the paper (DOI: 10.1016/j.rser.2025.116578)](https://doi.org/10.1016/j.rser.2025.116578)
+
+- id: transfer-learning-preprint
+  date: 2025-10
+  title: Preprint on transfer learning for reinforcement-learning-based flow control
+  summary: >-
+    Preprint: [Transfer learning strategies for accelerating reinforcement-learning-based flow control](https://arxiv.org/abs/2510.16016).
+  details: |
+    The preprint *Transfer learning strategies for accelerating reinforcement-learning-based flow control*
+    is available on [arXiv (2510.16016)](https://arxiv.org/abs/2510.16016). See the
+    [flow control research theme](research.qmd#flow-control) for background.
+
+- id: joined-liu
+  date: 2025-08
+  title: Joined Linköping University
+  summary: >-
+    Joined Linköping University as Associate Professor of Fluid Mechanics.
+  details: |
+    I joined Linköping University as Associate Professor of Fluid Mechanics in the Division of Applied
+    Thermodynamics and Fluid Mechanics, Department of Management and Engineering. Before that I was a
+    researcher at Chalmers Industriteknik and a postdoctoral researcher at Chalmers University of
+    Technology.

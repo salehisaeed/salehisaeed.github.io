@@ -1,0 +1,8 @@
+---
+title: "News"
+description: "News from Saeed Salehi, Linköping University: papers, talks, positions and appointments."
+toc: true
+toc-depth: 2
+---
+
+{{< include _generated/news-all.md >}}
