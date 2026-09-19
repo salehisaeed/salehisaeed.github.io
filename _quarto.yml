@@ -3,6 +3,8 @@ project:
   output-dir: docs
   # Regenerates the publication lists from Pubs.bib before every render.
   pre-render: scripts/build_publications.py
+  # Canonical URLs, home-page title and h1, noindex on redirects (see script).
+  post-render: scripts/postrender.py
   resources:
     - CNAME
     - robots.txt
@@ -80,4 +82,3 @@ format:
     include-in-header:
       - text: |
           <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-      - _includes/jsonld.html

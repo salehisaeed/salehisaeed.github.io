@@ -9,7 +9,7 @@ quarto preview        # live preview while editing
 quarto render         # full build into docs/, then commit docs/ together with the sources
 ```
 
-Rendering first runs `scripts/build_publications.py` (plain Python 3, no packages), which turns `Pubs.bib` into `_generated/publications.md` and `_generated/recent.md`.
+Rendering first runs `scripts/build_publications.py` (plain Python 3, no packages), which turns `Pubs.bib` into `_generated/publications.md` and `_generated/recent.md`. Afterwards `scripts/postrender.py` adds canonical URLs, sets the home page title and `<h1>`, and marks redirect pages `noindex`.
 
 ## Common updates
 
@@ -22,7 +22,7 @@ Rendering first runs `scripts/build_publications.py` (plain Python 3, no package
 | CV summary | `cv.qmd`. The full PDF is linked from the CV repository. |
 | Openings, thesis proposals | `opportunities.qmd`, PDFs in `files/` |
 | Profile links | `_includes/profile-links.md`, used on the home and contact pages |
-| Structured data | `_includes/jsonld.html` |
+| Structured data (ProfilePage, home page only) | `_includes/jsonld.html` |
 | Styling | `theme.scss` (light) and `theme-dark.scss` (dark overrides) |
 
 ## Images
