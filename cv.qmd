@@ -50,7 +50,7 @@ A summary of my academic career. The full CV, including the complete publication
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">2026 – present</span><span class="what"><strong>Section Editor</strong>, <a href="https://journal.openfoam.com/index.php/ofj/about/editorialTeam">OpenFOAM Journal</a></span></li>
+  <li><span class="when">Jun 2026 – present</span><span class="what"><strong>Section Editor</strong>, <a href="https://journal.openfoam.com/index.php/ofj/about/editorialTeam">OpenFOAM Journal</a></span></li>
   <li><span class="when">2022 – present</span><span class="what"><strong>Technical Committee Member</strong>, OpenFOAM Turbomachinery Technical Committee, <a href="https://www.openfoam.com/governance/overview">OpenFOAM Governance</a></span></li>
   <li><span class="when">2026</span><span class="what"><strong>Session chair</strong>, 21st OpenFOAM Workshop, Guimarães (July), and 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics, Amsterdam (March)</span></li>
   <li><span class="when">2024 – 2026</span><span class="what"><strong>Doctoral examination</strong><br><span class="sub">External thesis examiner, Indian Institute of Technology Delhi (2026) · Discussion leader, half-time seminar, Linköping University (2026) · External reviewer, 90% seminar, University of Gävle (2026) · External examiner on defence committee, Universitat Rovira i Virgili (2024)</span></span></li>
