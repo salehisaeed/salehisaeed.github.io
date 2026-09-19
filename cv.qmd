@@ -1,56 +1,79 @@
 ---
-title: "Curriculum Vitae"
-description: "Academic CV of Saeed Salehi. Appointments, education, grants, supervision, and publications."
+title: "Curriculum vitae"
+description: "Academic CV of Saeed Salehi: appointments, education, research grants, academic service and invited talks."
+toc: true
 ---
 
+A summary of my academic career. The full CV, including the complete publication list and teaching record, is available as a PDF.
+
+::: {.btn-row}
+[Full CV (PDF)](https://github.com/salehisaeed/CV/blob/main/SaeedSalehi_CV.pdf){.btn .btn-primary}
+[Publications](publications.qmd){.btn .btn-outline-primary}
+[Teaching and supervision](teaching.qmd){.btn .btn-outline-primary}
+:::
+
 ## Appointments
-- **Associate Professor of Fluid Mechanics**, Linköping University (2025– )  
-  Division of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering.  
 
-- **Researcher**, Chalmers Industriteknik (2023–2025)  
-  Worked on applying AI and machine learning in CFD for hydraulic turbines in collaboration with Chalmers University of Technology.  
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">Aug 2025 – present</span><span class="what"><strong>Associate Professor of Fluid Mechanics</strong>, Linköping University<br><span class="sub">Division of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering</span></span></li>
+  <li><span class="when">2023 – 2025</span><span class="what"><strong>Researcher</strong>, Chalmers Industriteknik, based at Chalmers University of Technology<br><span class="sub">Artificial intelligence and machine learning in CFD, in the project <em>Artificial Intelligence in Fluid Dynamics for Improving the Lifetime of Hydraulic Turbines</em></span></span></li>
+  <li><span class="when">2019 – 2023</span><span class="what"><strong>Postdoctoral Researcher</strong>, Chalmers University of Technology<br><span class="sub">New operating procedures of hydropower for a sustainable energy system: numerical methods in OpenFOAM for transient operation of hydraulic turbines, and reduced-order modelling (POD, DMD)</span></span></li>
+  <li><span class="when">2018 – 2019</span><span class="what"><strong>Lecturer</strong>, University of Science and Culture, Tehran</span></li>
+</ul>
+```
 
-- **Postdoctoral Researcher**, Chalmers University of Technology (2019–2023)  
-  Project on new operating procedures of hydropower for a sustainable energy system. Developed advanced CFD methods in OpenFOAM for transient hydropower simulations and explored data-driven techniques.
+## Education and qualifications
 
-## Education
-- **PhD in Mechanical Engineering**, University of Tehran (2012–2018)  
-  Thesis: *Uncertainty quantification of turbulent flows in hydraulic machinery*.
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">Feb 2026</span><span class="what"><strong>Docent in Fluid Mechanics</strong>, Linköping University</span></li>
+  <li><span class="when">2012 – 2018</span><span class="what"><strong>PhD in Mechanical Engineering</strong> (Hydraulic Machinery), University of Tehran<br><span class="sub">Thesis: <em>Uncertainty quantification of turbulent flows in hydraulic machinery</em>. Supervisors: Prof. Mehrdad Raisee, Prof. Michel Cervantes, Prof. Ahmad Nourbakhsh</span></span></li>
+  <li><span class="when">2010 – 2012</span><span class="what"><strong>MSc in Mechanical Engineering</strong> (Energy Conversion), University of Tehran<br><span class="sub">Thesis: <em>Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with moderate adverse pressure gradient</em></span></span></li>
+  <li><span class="when">2006 – 2010</span><span class="what"><strong>BSc in Mechanical Engineering</strong>, University of Tehran<br><span class="sub">Thesis: <em>Large eddy simulation of stall development around airfoils</em></span></span></li>
+  <li><span class="when">2023</span><span class="what"><strong>Diploma in Teaching and Learning in Higher Education</strong> (15 ECTS), Chalmers University of Technology</span></li>
+</ul>
+```
 
-- **MSc in Mechanical Engineering (Energy Conversion)**, University of Tehran (2010–2012)  
-  Thesis: *Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with adverse pressure gradient*.  
+## Research grants
 
-- **BSc in Mechanical Engineering**, University of Tehran (2006–2010)  
-  Thesis: *Large eddy simulation of stall development around airfoils*.  
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">2027 – 2031</span><span class="what"><strong>Enabling Flexible Hydropower Operation by AI-Based Active Flow Control</strong><br><span class="sub">ÅForsk Foundation, Early-Career Research Grant · 4.0 MSEK · <strong>PI</strong> · funds a PhD student at Linköping University</span></span></li>
+  <li><span class="when">2023 – 2027</span><span class="what"><strong>Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime</strong><br><span class="sub">Swedish Hydropower Centre (SVC) · 7.4 MSEK · Co-PI (PI: Prof. Håkan Nilsson) · developed the project concept and led the application</span></span></li>
+  <li><span class="when">2023 – 2027</span><span class="what"><strong>Hydropower Operation and Lifetime Analysis</strong><br><span class="sub">Swedish Hydropower Centre (SVC) · 5.3 MSEK · Co-PI (PI: Prof. Håkan Nilsson)</span></span></li>
+  <li><span class="when">2023 – 2027</span><span class="what"><strong>Multi-Fidelity Physics-Informed Neural Network to Solve Partial Differential Equations</strong><br><span class="sub">Chalmers University of Technology, internal competitive funding · 5.5 MSEK · Co-PI (joint application)</span></span></li>
+</ul>
+```
 
-## Selected Grants and Awards
-- **Enabling Flexible Hydropower Operation by AI-Based Active Flow Control**
-  ÅForsk Foundation, 2026–2031. PI.
+## Academic service
 
-- **Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime**
-  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">2026 – present</span><span class="what"><strong>Section Editor</strong>, <a href="https://journal.openfoam.com/index.php/ofj/about/editorialTeam">OpenFOAM Journal</a></span></li>
+  <li><span class="when">2022 – present</span><span class="what"><strong>Technical Committee Member</strong>, OpenFOAM Turbomachinery Technical Committee, <a href="https://www.openfoam.com/governance/overview">OpenFOAM Governance</a></span></li>
+  <li><span class="when">2026</span><span class="what"><strong>Session chair</strong>, 21st OpenFOAM Workshop, Guimarães (July), and 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics, Amsterdam (March)</span></li>
+  <li><span class="when">2024 – 2026</span><span class="what"><strong>Doctoral examination</strong><br><span class="sub">External thesis examiner, Indian Institute of Technology Delhi (2026) · Discussion leader, half-time seminar, Linköping University (2026) · External reviewer, 90% seminar, University of Gävle (2026) · External examiner on defence committee, Universitat Rovira i Virgili (2024)</span></span></li>
+  <li><span class="when">2026</span><span class="what"><strong>Grant reviewer</strong>, Olle Engkvist Foundation</span></li>
+  <li><span class="when">Ongoing</span><span class="what"><strong>Journal reviewer</strong><br><span class="sub">Physics of Fluids, AIAA Journal, Computers &amp; Fluids, Applied Mathematical Modelling, Journal of Fluids Engineering, Biomechanics and Modeling in Mechanobiology, Science Progress, Fluids, Energies, Algorithms, Processes, Journal of Applied Fluid Mechanics</span></span></li>
+</ul>
+```
 
-- **Hydropower Operation and Lifetime Analysis**
-  Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.
+## Invited talks
 
-- **Multi-Fidelity Physics-Informed Neural Network to Solve PDEs**
-  Chalmers University of Technology, 2023–2027. Co-PI.
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">May 2026</span><span class="what"><em>Towards efficient control of turbulence</em><br><span class="sub">Swedish Society for Industrial Flow and Heat Transfer, Lund</span></span></li>
+  <li><span class="when">Feb 2026</span><span class="what"><em>Engineering applications of computational and data-driven fluid dynamics</em><br><span class="sub">LKAB, Kiruna (online)</span></span></li>
+  <li><span class="when">May 2024</span><span class="what"><em>Artificial intelligence and data-driven algorithms for flow feature extraction and control</em><br><span class="sub">Swedish Society for Industrial Flow and Heat Transfer, Finspång</span></span></li>
+  <li><span class="when">Jul 2023</span><span class="what"><em>Deep reinforcement learning in CFD, implementation in OpenFOAM</em><br><span class="sub">Dutch OpenFOAM User Group meeting</span></span></li>
+  <li><span class="when">Jan 2023</span><span class="what"><strong>Invited OpenFOAM expert</strong>, OpenFOAM Student Workshop, Delft University of Technology</span></li>
+</ul>
+```
 
+## Skills and languages
 
-## Supervision
-- **PhD co-supervisor** of three PhD students working on contra-rotating pump-turbines (ALPHEUS EU project), hydropower lifetime analysis, and multi-fidelity PINNs at Chalmers University of Technology.
-- **MSc supervision** of a few students at Chalmers University of Technology
-
-## Teaching
-- Lecturer and examiner for [Applied Computational Fluid Dynamics (TMMV59)](https://studieinfo.liu.se/en/kurs/TMMV59/ht-2026) and [Machine Learning for Mechanical Engineering (TMMV64)](https://studieinfo.liu.se/en/kurs/TMMV64) at Linköping University.
-- Diploma in Teaching and Learning in Higher Education (15 ECTS), 2023
-
-
-## Publications
-- Author of **25+ peer-reviewed journal articles** and multiple conference contributions.  
-- Research published in journals including *Physics of Fluids*, *Renewable Energy*, *Computer Physics Communications*, and *International Journal of Heat and Mass Transfer*.  
-- Complete publication list available [here](publications.qmd).  
-
-
-## Complete Academic CV
-For more details, see my [complete academic CV on GitHub](https://github.com/salehisaeed/CV).  
+- **CFD:** OpenFOAM (use and development), Fluent, CFX
+- **Programming and HPC:** C++, Python, MATLAB, MPI
+- **Machine learning:** TensorFlow, PyTorch
+- **Languages:** English (fluent), Swedish (fluent), Persian (native)

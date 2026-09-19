@@ -1,77 +1,146 @@
 ---
-title: "Research Highlights"
-description: "Research projects in CFD, deep reinforcement learning, reduced-order modeling, uncertainty quantification, and physics-informed neural networks."
-toc: true
+title: "Research"
+description: "High-fidelity CFD combined with data-driven methods and machine learning: reinforcement-learning-based flow control, hydraulic turbine transients, reduced-order modelling, physics-informed neural networks and uncertainty quantification."
+aliases:
+  - drl.html
+  - transient.html
+  - rom.html
+  - uq.html
+  - pinn.html
+  - alpheus.html
+  - kaplan.html
 ---
 
-## Overview
-My research combines Computational Fluid Dynamics (CFD) with data science and machine learning to better understand, predict, and control complex flow systems. I focus on methods that are efficient, robust, and generalizable for both fundamental studies and applications in turbulent flows and turbomachinery. The following highlights several key projects and results in these areas.
+My research combines computational fluid dynamics (CFD) with data science and machine learning to understand, predict and control complex flows. I aim for methods that are efficient, robust and general enough to be used beyond canonical test cases, and I test them on demanding applications, above all hydraulic turbines, where flexible operation leads to strong flow instabilities. Most of the methods are developed in OpenFOAM and released as [open-source software](software.qmd).
 
----
+```{=html}
+<ul class="toc-chips" aria-label="Research themes">
+  <li><a href="#flow-control">Reinforcement-learning flow control</a></li>
+  <li><a href="#turbine-transients">Hydraulic turbine transients</a></li>
+  <li><a href="#modal-analysis">Modal analysis and ROM</a></li>
+  <li><a href="#pinns">Physics-informed neural networks</a></li>
+  <li><a href="#uq">Uncertainty quantification</a></li>
+  <li><a href="#hydropower">Flexible hydropower</a></li>
+</ul>
+```
 
-## [Deep Reinforcement Learning for Flow Control](drl.qmd)
-A major line of work is deep reinforcement learning (DRL) for active flow control. DRL promises sophisticated control strategies beyond classical methods, but current DRL–CFD frameworks struggle with efficiency, robustness, and generalization. My approach combines multifidelity learning, transfer learning, and robust learning under uncertainty to push DRL toward realistic high-Reynolds-number flows and deliver controllers that transfer across operating conditions.
+::: {.research-theme}
+::: {}
+## Reinforcement-learning-based flow control {#flow-control}
 
-::: {.research-card}
-[![Overview of the multifidelity deep reinforcement learning pipeline for flow control](img/drl_thumb.png){fig-alt="Schematic of the deep reinforcement learning pipeline for CFD-based flow control"}](drl.qmd)
+Deep reinforcement learning (DRL) can discover feedback control strategies for nonlinear flows that are hard to design with classical methods. Current DRL–CFD frameworks, however, struggle with efficiency, robustness and generalisation. My work pushes DRL towards realistic flows by combining it with multi-fidelity learning, transfer learning and robust learning under uncertainty.
+
+I developed an intrusive DRL framework in which the agent runs inside the OpenFOAM solver, avoiding external data exchange during training and running parallel environments with MPI. It has been applied to vortex shedding behind 2D and 3D cylinders and to the vortex rope in a swirl generator, a simplified model of a turbine draft tube. The ongoing [ÅForsk project](project-hydropower-ai.qmd) extends this to realistic hydraulic turbines.
+
+**Key work**
+
+- S. Salehi, [An efficient intrusive deep reinforcement learning framework for OpenFOAM](https://doi.org/10.1007/s11012-024-01830-1), *Meccanica*, 2025
+- S. Salehi, [Transfer learning strategies for accelerating reinforcement-learning-based flow control](https://arxiv.org/abs/2510.16016), arXiv preprint, 2025
+- S. Salehi and H. Nilsson, [A parametric study of axial flow jets for mitigation of vortex rope instabilities](https://doi.org/10.1088/1755-1315/1561/1/012023), *IOP Conf. Ser.: Earth Environ. Sci.*, 2025
+
+[Software: [TensorforceFoam](https://github.com/salehisaeed/TensorforceFoam) · [agentJet](https://github.com/salehisaeed/agentJet)]{.meta-line}
 :::
 
----
+::: {.research-figure}
+![Uncontrolled (left) and DRL-controlled (right) flow past a 2D cylinder. The learned policy suppresses vortex shedding.](img/cylinder2d-drl.webp){fig-alt="Vorticity contours behind a cylinder without control and with deep reinforcement learning control" width="1800" height="210"}
 
-## [Resolved Simulation of Hydraulic Turbines During Transient Operation](transient.qmd)
-I develop and use high-fidelity CFD to study complex, transient turbomachinery flows. I created semi-implicit mesh-deformation techniques in OpenFOAM to simulate the complex mesh motion of hydraulic turbines during transient operation. These simulations provide detailed analysis of complex physics during such operations, providing insights into transient flow instabilities.
-
-::: {.research-card}
-[![Transient CFD simulation of a hydraulic turbine](img/transient_thumb.jpg){fig-alt="CFD visualization of transient flow in a hydraulic turbine during shutdown"}](transient.qmd)
+![Vortex rope in a swirl generator without control (left) and under closed-loop DRL control (right).](img/swirl-controlled-pair.webp){fig-alt="Iso-surfaces of the helical vortex rope in a swirl generator without control and with DRL control" width="1400" height="215"}
+:::
 :::
 
----
+::: {.research-theme}
+::: {}
+## Transient operation of hydraulic turbines {#turbine-transients}
 
-## [High-Resolved Simulations and Reduced-Order Modeling of Turbomachinery Flows](rom.qmd)
-High-fidelity CFD and dynamic mode decomposition (DMD) were used to analyze vortex rope instabilities in hydraulic turbines, revealing key coherent structures and dominant frequency modes that inform future control strategies.
+Start-up, shutdown and load changes are becoming frequent as hydropower balances intermittent wind and solar power, and they expose turbines to strong pressure pulsations. Simulating them requires the mesh to follow moving guide vanes and runner blades. I developed a semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM, and used it for resolved simulations of Francis and Kaplan turbines during transient operation.
 
-::: {.research-card}
-[![Vortex rope analysis using dynamic mode decomposition](img/rom_thumb.png){fig-alt="DMD analysis of vortex rope instabilities in a hydraulic turbine"}](rom.qmd)
+These simulations reveal how flow instabilities such as the rotating vortex rope form and decay during transients. The mesh-motion library is released as open source and is used by the R&D department of Vattenfall to study transient operation of their hydropower systems.
+
+**Key work**
+
+- S. Salehi, H. Nilsson, E. Lillberg and N. Edh, [An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown](https://doi.org/10.1016/j.renene.2021.07.107), *Renewable Energy*, 2021
+- S. Salehi and H. Nilsson, [Flow-induced pulsations in Francis turbines during startup](https://doi.org/10.1016/j.renene.2022.01.111), *Renewable Energy*, 2022
+- S. Salehi and H. Nilsson, [A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM](https://doi.org/10.1016/j.cpc.2023.108703), *Computer Physics Communications*, 2023
+- F. A. Masoodi, S. Salehi and R. Goyal, [Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine](https://doi.org/10.1063/5.0222739), *Physics of Fluids*, 2024
+
+[Software: [semiImplicitSlip](https://github.com/salehisaeed/semiImplicitSlip) · [Francis-99 transients](https://doi.org/10.7910/DVN/31JGOM)]{.meta-line}
 :::
 
----
-
-## [Uncertainty Quantification of Turbulent Flows](uq.qmd)
-I have developed efficient uncertainty quantification (UQ) methods for turbulent and industrial flows. I introduced sparse polynomial chaos, compressed sensing, and multifidelity $\ell_1$-minimization to reduce computational cost while retaining accuracy. These methods were applied to operational and geometrical uncertainties in turbomachinery and used for robust optimization.
-
-::: {.research-card}
-[![Uncertainty quantification of turbulent flows](img/uq_thumb.jpg){fig-alt="Visualization of uncertainty quantification results for turbulent flow simulation"}](uq.qmd)
+::: {.research-figure}
+![Rotating vortex rope in the draft tube of a Francis turbine during shutdown (Salehi et al., 2021).](img/francis-shutdown-rvr.webp){fig-alt="Helical vortex rope in the draft tube of a Francis turbine during shutdown" width="1000" height="861"}
+:::
 :::
 
----
+::: {.research-theme}
+::: {}
+## Modal analysis and reduced-order modelling {#modal-analysis}
 
-## [Physics-Informed Neural Networks for PDEs](pinn.qmd)
-Physics-informed neural networks (PINNs) were applied to the linear wave problem from potential flow theory, exploring both soft and hard enforcement of boundary conditions.
+High-fidelity simulations produce large, detailed data sets. Modal decompositions such as proper orthogonal decomposition (POD), spectral POD, dynamic mode decomposition (DMD) and sparsity-promoting DMD extract the coherent structures and dominant frequencies hidden in them. I have used these methods to analyse the vortex rope in hydraulic turbines, identifying the modes that govern the instability. This is a basis for reduced-order models and for designing control strategies.
 
-::: {.research-card}
-[![Physics-informed neural network for wave problems](img/pinn_thumb.png){fig-alt="PINN solution of a linear wave problem from potential flow theory"}](pinn.qmd)
+**Key work**
 
-(Contributor: PhD student Mohammad Sheikholeslami)
+- S. Salehi and H. Nilsson, [Modal analysis of vortex rope using dynamic mode decomposition](https://doi.org/10.1063/5.0186871), *Physics of Fluids*, 2024
+- S. Salehi and H. Nilsson, Dynamic mode decomposition of rotating vortex rope instability, *9th IAHR Meeting of the Work Group on Cavitation and Dynamic Problems in Hydraulic Machinery and Systems*, 2024
 :::
 
----
-
-## [Flow in Contra-Rotating Pump-Turbine](alpheus.qmd)
-This project studied contra-rotating pump-turbines (CRPT) for low-head pumped hydro storage. CFD simulations show high efficiency in both pump and turbine modes, while transient and cavitation analyses highlight the need for careful valve control and reveal performance degradation under cavitating conditions.
-
-::: {.research-card}
-[![Contra-rotating pump-turbine simulation](img/alpheus.png){fig-alt="CFD simulation of a contra-rotating pump-turbine for pumped hydro storage"}](alpheus.qmd)
-
-(Contributor: PhD student Jonathan Fahlbeck)
+::: {.research-figure}
+![Instantaneous flow structures of the vortex rope in a hydraulic turbine, used for modal analysis.](img/vortex-rope-dmd.webp){fig-alt="Vortex rope structures in a turbine draft tube, annotated with blade wakes, separated boundary layer and disintegrated vortex rope" width="900" height="927"}
+:::
 :::
 
----
+::: {.research-theme}
+::: {}
+## Physics-informed neural networks {#pinns}
 
-## [Analysis of Flow-Induced Loads in Kaplan Turbine](kaplan.qmd)
-This project examined the effects of flexible hydropower operation on turbine lifetime. CFD simulations on a Kaplan turbine model reveal how flow-induced forces, pressure pulsations, and rotating vortex rope dynamics impact loads during part-load and transient conditions. The results provide input for fatigue lifetime analysis of turbine runners.
+Physics-informed neural networks (PINNs) embed the governing equations in the loss function of a neural network. Together with colleagues at Chalmers University of Technology, I study multi-fidelity PINNs for solving partial differential equations, with applications to the linear wave problem from potential flow theory, comparing soft and hard enforcement of boundary conditions. This work is the PhD project of Mohammad Sheikholeslami, whom I co-supervise.
 
-::: {.research-card}
-[![Flow-induced loads in a Kaplan turbine](img/kaplan.png){fig-alt="CFD analysis of flow-induced forces on a Kaplan turbine runner"}](kaplan.qmd)
+**Key work**
 
-(Contributor: PhD student Martina Nobilo)
+- M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, [Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves](https://doi.org/10.1063/5.0277421), *Physics of Fluids*, 2025
+- M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, [State-of-the-art implementations of PINNs for the lid-driven cavity problem: a critical review with future perspectives](https://doi.org/10.1016/j.rineng.2026.112399), *Results in Engineering*, 2026
+:::
+
+::: {.research-figure}
+![Network architecture of a PINN for the linear wave problem.](img/pinn-architecture.webp){fig-alt="Diagram of a physics-informed neural network: inputs, periodic layer, hidden layers, trial function and loss function with Adam and L-BFGS optimisers" width="1300" height="858"}
+:::
+:::
+
+::: {.research-theme}
+::: {}
+## Uncertainty quantification {#uq}
+
+In my doctoral research I developed efficient uncertainty quantification (UQ) methods for turbulent and industrial flows. Sparse polynomial chaos with compressed sensing, and a multi-fidelity ℓ₁-minimisation method, reduce the number of expensive CFD simulations needed while retaining accuracy. Applied to hydraulic pumps, the methods showed that combined operational and geometrical uncertainties significantly affect flow and performance. They were also used for probabilistic CFD and robust optimisation of a cooled gas turbine vane.
+
+**Key work**
+
+- S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, [Efficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensing](https://doi.org/10.1016/j.compfluid.2017.06.016), *Computers & Fluids*, 2017
+- S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, [An efficient multifidelity ℓ₁-minimization method for sparse polynomial chaos](https://doi.org/10.1016/j.cma.2018.01.055), *Computer Methods in Applied Mechanics and Engineering*, 2018
+- S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, [On the flow field and performance of a centrifugal pump under operational and geometrical uncertainties](https://doi.org/10.1016/j.apm.2018.05.008), *Applied Mathematical Modelling*, 2018
+- M. S. Karimi, M. Raisee, S. Salehi, P. Hendrick and A. Nourbakhsh, [Robust optimization of the NASA C3X gas turbine vane under uncertain operational conditions](https://doi.org/10.1016/j.ijheatmasstransfer.2020.120537), *Int. J. Heat and Mass Transfer*, 2021
+:::
+
+::: {.research-figure}
+![Baseline and robust-optimum designs of a cooled turbine vane under uncertain operating conditions.](img/uq-robust-vane.webp){fig-alt="Surface temperature contours on a baseline turbine vane and a robust-optimum vane with larger cooling holes" width="740" height="486"}
+:::
+:::
+
+::: {.research-theme}
+::: {}
+## Flexible hydropower: loads, lifetime and energy storage {#hydropower}
+
+Together with PhD students at Chalmers University of Technology, I study how flexible operation affects hydropower machines. CFD of a Kaplan turbine model shows how flow-induced forces, pressure pulsations and rotating vortex rope dynamics load the runner at part load and during load reduction, giving input for fatigue lifetime analysis (PhD student Martina Nobilo). In the EU Horizon 2020 project [ALPHEUS](https://alpheus-h2020.eu/) we studied contra-rotating pump-turbines for low-head pumped hydro storage, including start-up and shutdown sequences and cavitating conditions (PhD student Jonathan Fahlbeck).
+
+**Key work**
+
+- M. Nobilo, S. Salehi and H. Nilsson, [Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system: a review](https://doi.org/10.1016/j.rser.2025.116578), *Renewable and Sustainable Energy Reviews*, 2026
+- M. Nobilo, S. Salehi and H. Nilsson, [On the flow-induced pulsating forces during load reduction of a Kaplan turbine model](https://doi.org/10.1088/1755-1315/1483/1/012022), *IOP Conf. Ser.: Earth Environ. Sci.*, 2025
+- J. Fahlbeck, H. Nilsson, M. H. Arabnejad and S. Salehi, [Performance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditions](https://doi.org/10.1016/j.renene.2024.121605), *Renewable Energy*, 2024
+- J. Fahlbeck, H. Nilsson and S. Salehi, [Surrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine](https://doi.org/10.1016/j.est.2023.106902), *Journal of Energy Storage*, 2023
+:::
+
+::: {.research-figure}
+![Kaplan turbine model at the best efficiency point (left) and at part load with a rotating vortex rope (right).](img/kaplan-vortex-rope.webp){fig-alt="Kaplan turbine runner and draft tube at best efficiency point and at part load showing a vortex rope" width="1400" height="638"}
+
+![Flow in a contra-rotating pump-turbine at successive instants of a transient sequence (ALPHEUS project).](img/crpt-alpheus.webp){fig-alt="Sequence of six snapshots of flow structures in a contra-rotating pump-turbine at increasing flow rate" width="1600" height="544"}
+:::
 :::

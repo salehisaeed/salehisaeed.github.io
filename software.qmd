@@ -1,0 +1,64 @@
+---
+title: "Software"
+description: "Open-source software by Saeed Salehi: deep reinforcement learning for OpenFOAM, mesh motion for hydraulic turbine transients, and OpenFOAM utilities."
+---
+
+I release the methods I develop as open-source code, so that they can be used and checked by both academic and industrial users. Most of the projects extend [OpenFOAM](https://www.openfoam.com/). All code is on [GitHub](https://github.com/salehisaeed).
+
+::: {.callout-note appearance="simple"}
+**In industrial use:** the `semiImplicitSlip` mesh-motion library, developed during my postdoc to simulate transients in hydraulic turbines, is used by the R&D department of Vattenfall to study the transient operation of their hydropower systems.
+:::
+
+## Reinforcement learning and flow control
+
+::: {.software-item}
+### TensorforceFoam
+
+An intrusive deep reinforcement learning (DRL) framework for OpenFOAM, built on TensorFlow and the Tensorforce package. *Intrusive* means the DRL agent is integrated directly into the CFD environment, so no external information exchange is needed during DRL episodes. Parallel environments for expensive CFD cases are handled through MPI (mpi4py).
+
+[[Code on GitHub](https://github.com/salehisaeed/TensorforceFoam) · Paper: [Salehi, *Meccanica*, 2025](https://doi.org/10.1007/s11012-024-01830-1)]{.meta-line}
+:::
+
+::: {.software-item}
+### agentJet
+
+An OpenFOAM boundary condition that deploys a trained DRL policy as a jet actuator directly inside the CFD solver. The saved TensorFlow policy is evaluated through the TensorFlow C++ API (cppflow), so no Python coupling is needed at run time. At each control period the flow state is sampled at probe locations, and the policy returns a jet velocity that is ramped smoothly from the previous action.
+
+[[Code on GitHub](https://github.com/salehisaeed/agentJet)]{.meta-line}
+:::
+
+## Hydraulic turbines and mesh motion
+
+::: {.software-item}
+### semiImplicitSlip
+
+A mesh-motion library for OpenFOAM with a robust semi-implicit algorithm for slipping mesh points along curved surfaces: an explicit step based on the general slip condition followed by an implicit step based on a Dirichlet condition, with Laplacian smoothing to spread the deformation into the domain. A solid-body rotation can be added on top, for example to model the runner of a Kaplan turbine during transient operation.
+
+[[Code on GitHub](https://github.com/salehisaeed/semiImplicitSlip) · Paper: [Salehi and Nilsson, *Computer Physics Communications*, 2023](https://doi.org/10.1016/j.cpc.2023.108703)]{.meta-line}
+:::
+
+::: {.software-item}
+### Francis-99 transients
+
+Open case files and code for CFD simulation of the transient operation of a Francis turbine in OpenFOAM.
+
+[[Dataset on Harvard Dataverse](https://doi.org/10.7910/DVN/31JGOM) · Paper: [Salehi and Nilsson, *OpenFOAM Journal*, 2021](https://doi.org/10.51560/ofj.v1.26)]{.meta-line}
+:::
+
+::: {.software-item}
+### OpenFOAM-Swirl-Number
+
+A pipeline for computing the swirl number, the ratio of the axial flux of angular momentum to the axial flux of axial momentum, in OpenFOAM. Modular function objects extract and transform the velocity field and integrate the momentum fluxes over a sampled cross-section. A Python script then computes and plots the swirl number over time.
+
+[[Code on GitHub](https://github.com/salehisaeed/OpenFOAM-Swirl-Number)]{.meta-line}
+:::
+
+## Teaching
+
+::: {.software-item}
+### OSCFD
+
+Test codes and examples for the PhD course *CFD with Open-Source Software* at Chalmers University of Technology, complementing lectures on memory management in C++ and OpenFOAM. They range from standalone C++ examples (dynamic allocation, copy semantics, smart pointers) to OpenFOAM applications that examine `autoPtr` and `tmp`.
+
+[[Code on GitHub](https://github.com/salehisaeed/OSCFD)]{.meta-line}
+:::

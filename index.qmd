@@ -1,109 +1,112 @@
 ---
-pagetitle: "Saeed Salehi"
-description: "Associate Professor of Fluid Mechanics at Linköping University. CFD, data-driven methods, and machine learning for complex flows."
+pagetitle: "Associate Professor of Fluid Mechanics, Linköping University"
+description: "Saeed Salehi is Associate Professor of Fluid Mechanics at Linköping University, combining high-fidelity CFD with data-driven methods and machine learning for the simulation and control of complex flows."
 page-layout: full
-toc: false
 title-block-style: none
+toc: false
 ---
 
-::: {.hero-banner}
+::: {.home}
 
-::: {.columns}
-::: {.column width="25%"}
-![](img/saeed2.jpg){width=85% fig-align="left"}
+```{=html}
+<section class="hero" aria-labelledby="hero-name">
+  <div class="hero-photo">
+    <img src="img/saeed-salehi.jpg" width="640" height="960" alt="Portrait of Saeed Salehi">
+  </div>
+  <div>
+    <p id="hero-name" class="hero-name" role="heading" aria-level="1">Saeed Salehi</p>
+    <p class="hero-role">Associate Professor of Fluid Mechanics, Docent</p>
+    <p class="hero-affil">Division of Applied Thermodynamics and Fluid Mechanics · Department of Management and Engineering · Linköping University, Sweden</p>
+    <p class="hero-intro">I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. Much of my work concerns hydraulic turbines and the flexible operation of hydropower.</p>
+    <p class="hero-intro">I am first and foremost a CFD specialist and an active OpenFOAM developer. My current focus is deep reinforcement learning for active flow control, coupled directly to CFD.</p>
+  </div>
+</section>
+```
 
-<div class="icon-row">
-  <a href="https://liu.se/en/employee/saesa86" class="iconbtn" aria-label="LiU Profile"><i class="fa-solid fa-globe"></i></a>
-  <a href="mailto:saeed.salehi@liu.se" class="iconbtn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-  <a href="https://www.linkedin.com/in/saeed-salehi-3b97685a/" class="iconbtn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+{{< include _includes/profile-links.md >}}
+
+```{=html}
+<div class="section-head">
+  <h2 id="research">Research themes</h2>
+  <a href="research.html">All research →</a>
 </div>
-<div class="icon-row">
-  <a href="https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate" class="iconbtn" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-  <a href="https://orcid.org/0000-0002-2037-8284" class="iconbtn" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
-  <a href="https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf" class="iconbtn" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
-  <a href="https://github.com/salehisaeed" class="iconbtn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+<div class="theme-grid">
+  <a class="theme-card" href="research.html#flow-control">
+    <div class="theme-img"><img src="img/drl-loop.webp" width="874" height="679" loading="lazy" alt="Schematic of a reinforcement learning agent interacting with a turbulent flow simulation through states, rewards and actions"></div>
+    <div class="theme-body"><h3>Reinforcement-learning flow control</h3><p>Deep reinforcement learning coupled with CFD for active control of unsteady and turbulent flows.</p></div>
+  </a>
+  <a class="theme-card" href="research.html#turbine-transients">
+    <div class="theme-img"><img src="img/francis-shutdown-rvr.webp" width="1000" height="861" loading="lazy" alt="Vortex rope in the draft tube of a Francis turbine during shutdown"></div>
+    <div class="theme-body"><h3>Hydraulic turbine transients</h3><p>Resolved simulation of start-up, shutdown and load changes, with new mesh-motion methods in OpenFOAM.</p></div>
+  </a>
+  <a class="theme-card" href="research.html#modal-analysis">
+    <div class="theme-img"><img src="img/vortex-rope-dmd.webp" width="900" height="927" loading="lazy" alt="Coherent flow structures of a vortex rope extracted by dynamic mode decomposition"></div>
+    <div class="theme-body"><h3>Modal analysis and reduced-order models</h3><p>POD, SPOD and DMD to extract coherent structures and dominant frequencies from simulation data.</p></div>
+  </a>
+  <a class="theme-card" href="research.html#pinns">
+    <div class="theme-img"><img src="img/pinn-architecture.webp" width="1300" height="858" loading="lazy" alt="Architecture of a physics-informed neural network with periodic input layer and loss function"></div>
+    <div class="theme-body"><h3>Physics-informed neural networks</h3><p>Multi-fidelity PINNs for solving partial differential equations, including free-surface waves.</p></div>
+  </a>
+  <a class="theme-card" href="research.html#uq">
+    <div class="theme-img"><img src="img/uq-robust-vane.webp" width="740" height="486" loading="lazy" alt="Temperature contours on a baseline and a robust-optimum cooled turbine vane"></div>
+    <div class="theme-body"><h3>Uncertainty quantification</h3><p>Sparse and multi-fidelity polynomial chaos methods and robust design under uncertainty.</p></div>
+  </a>
+  <a class="theme-card" href="research.html#hydropower">
+    <div class="theme-img"><img src="img/kaplan-vortex-rope.webp" width="1400" height="638" loading="lazy" alt="Kaplan turbine at best efficiency point and at part load with a rotating vortex rope"></div>
+    <div class="theme-body"><h3>Flexible hydropower</h3><p>Flow-induced loads, turbine lifetime and contra-rotating pump-turbines for energy storage.</p></div>
+  </a>
 </div>
+```
+
+::: {.home-columns}
+
+::: {}
+
+```{=html}
+<div class="section-head"><h2 id="news">News</h2></div>
+<ul class="news-list">
+  <li><span class="news-date">Jul 2026</span><span>Talk on closed-loop control of the vortex rope in a swirl generator with deep reinforcement learning, and session chair, at the 21st OpenFOAM Workshop in Guimarães, Portugal.</span></li>
+  <li><span class="news-date">May 2026</span><span>Invited talk, <em>Towards efficient control of turbulence</em>, at the Swedish Society for Industrial Flow and Heat Transfer in Lund.</span></li>
+  <li><span class="news-date">Mar 2026</span><span>Talk on transfer learning for reinforcement-learning-based flow control, and session chair, at the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics in Amsterdam.</span></li>
+  <li><span class="news-date">Feb 2026</span><span>Awarded the title of Docent in Fluid Mechanics at Linköping University.</span></li>
+  <li><span class="news-date">2026</span><span>Appointed Section Editor of the <a href="https://journal.openfoam.com/index.php/ofj/about/editorialTeam">OpenFOAM Journal</a>.</span></li>
+  <li><span class="news-date">2026</span><span>New review papers on <a href="https://doi.org/10.1016/j.rineng.2026.112399">PINNs for the lid-driven cavity problem</a> (<em>Results in Engineering</em>) and on <a href="https://doi.org/10.1016/j.rser.2025.116578">lifetime analysis of hydro turbines</a> (<em>Renewable and Sustainable Energy Reviews</em>).</span></li>
+  <li><span class="news-date">Oct 2025</span><span>Preprint: <a href="https://arxiv.org/abs/2510.16016">Transfer learning strategies for accelerating reinforcement-learning-based flow control</a>.</span></li>
+  <li><span class="news-date">Aug 2025</span><span>Joined Linköping University as Associate Professor of Fluid Mechanics.</span></li>
+</ul>
+```
 
 :::
-::: {.column width="75%"}
 
-# Saeed Salehi
+::: {}
 
-**Associate Professor of Fluid Mechanics**\
-Division of Applied Thermodynamics and Fluid Mechanics\
-Department of Management and Engineering\
-Linköping University
+```{=html}
+<div class="section-head"><h2 id="current-project">Current project</h2></div>
+<div class="callout-box">
+  <p class="eyebrow">ÅForsk Early-Career Research Grant</p>
+  <h3>Enabling flexible hydropower operation by AI-based active flow control</h3>
+  <p>Deep reinforcement learning coupled with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines at off-design operation. A PhD student is being recruited at Linköping University.</p>
+  <p><a href="project-hydropower-ai.html">About the project →</a></p>
+</div>
+<div class="callout-box">
+  <p class="eyebrow">Students</p>
+  <h3>Thesis projects and PhD opportunities</h3>
+  <p>I supervise MSc and BSc theses in CFD, OpenFOAM development and machine learning for fluid flows, and I support applications for external PhD and postdoc fellowships.</p>
+  <p><a href="opportunities.html">Opportunities →</a></p>
+</div>
+```
 
----
-
-I am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.
-
-I am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.
-
-More recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows.
-
-:::
-:::
-
-:::
-
----
-
-## News
-
-- **[PhD position available](https://liu.se/en/work-at-liu/vacancies/29533)** in AI-based flow control for hydraulic turbines. [Read more about the project](project-hydropower-ai.html). Deadline: Aug 31, 2026.
-- New paper: [Lifetime analysis of hydro turbines](https://doi.org/10.1016/j.rser.2025.116578) published in *Renewable and Sustainable Energy Reviews* (2026)
-- New paper: [Physics-informed neural networks for linear free surface waves](https://doi.org/10.1063/5.0277421) published in *Physics of Fluids* (2025)
-
----
-
-## Computational and data-driven fluid dynamics for complex flows
-
-::: {.grid-cards}
-
-::: {.columns}
-::: {.column width="33%"}
-::: {.home-card}
-[![](img/drl_thumb.png){fig-alt="Deep reinforcement learning for flow control"}](research.qmd#deep-reinforcement-learning-for-flow-control)
-
-[**DRL for flow control**](research.qmd#deep-reinforcement-learning-for-flow-control)\
-Deep reinforcement learning for active control of turbulent flows
-:::
-:::
-
-::: {.column width="33%"}
-::: {.home-card}
-[![](img/transient_thumb.jpg){fig-alt="Transient simulation of hydraulic turbines"}](research.qmd#resolved-simulation-of-hydraulic-turbines-during-transient-operation)
-
-[**Transient turbine CFD**](research.qmd#resolved-simulation-of-hydraulic-turbines-during-transient-operation)\
-High-fidelity simulation of hydraulic turbines during transient operation
-:::
-:::
-
-::: {.column width="33%"}
-::: {.home-card}
-[![](img/uq_thumb.jpg){fig-alt="Uncertainty quantification of turbulent flows"}](research.qmd#uncertainty-quantification-of-turbulent-flows)
-
-[**Uncertainty quantification**](research.qmd#uncertainty-quantification-of-turbulent-flows)\
-Efficient UQ methods for turbulent and industrial flows
-:::
-:::
 :::
 
 :::
 
-[See all research projects &rarr;](research.qmd)
+```{=html}
+<div class="section-head">
+  <h2 id="recent-publications">Recent publications</h2>
+  <a href="publications.html">All publications →</a>
+</div>
+```
 
----
+{{< include _generated/recent.md >}}
 
-## Recent publications
-
-- M. Nobilo, S. Salehi, and H. Nilsson, "Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system," *Renewable and Sustainable Energy Reviews*, 2026. [DOI](https://doi.org/10.1016/j.rser.2025.116578)
-
-- M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost, and H. Nilsson, "Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves," *Physics of Fluids*, 2025. [DOI](https://doi.org/10.1063/5.0277421)
-
-- S. Salehi, "An efficient intrusive deep reinforcement learning framework for OpenFOAM," *Meccanica*, vol. 60, no. 6, pp. 1673-1693, 2025. [DOI](https://doi.org/10.1007/s11012-024-01830-1)
-
-- S. Salehi and H. Nilsson, "Modal analysis of vortex rope using dynamic mode decomposition," *Physics of Fluids*, vol. 36, no. 2, 2024. [DOI](https://doi.org/10.1063/5.0186871)
-
-[Full publication list &rarr;](publications.qmd)
+:::

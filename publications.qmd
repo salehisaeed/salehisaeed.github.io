@@ -1,16 +1,42 @@
 ---
 title: "Publications"
-description: "Peer-reviewed journal articles and conference contributions by Saeed Salehi."
-bibliography: Pubs.bib
-nocite: '@*'
-csl: nature.csl
+description: "Journal articles, conference papers and presentations by Saeed Salehi on CFD, reinforcement-learning-based flow control, hydraulic turbines, reduced-order modelling and uncertainty quantification."
 ---
 
+Listed by type, most recent first. Current citation data is on [Google Scholar](https://scholar.google.com/citations?user=6bn6bn0AAAAJ&hl=en), [ORCID](https://orcid.org/0000-0002-2037-8284) and [ResearchGate](https://www.researchgate.net/profile/Saeed-Salehi-3). Open-source code accompanying several papers is listed under [Software](software.qmd).
 
-See my full publication list on  
-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate)  
-- [ORCID](https://orcid.org/my-orcid?orcid=0000-0002-2037-8284)  
-- [ResearchGate](https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf)  
+```{=html}
+<div class="pub-filter">
+  <label for="pub-filter-input" class="visually-hidden">Filter publications</label>
+  <input id="pub-filter-input" type="search" placeholder="Filter by title, author, venue or year" autocomplete="off">
+  <div class="pub-filter-status" id="pub-filter-status" aria-live="polite"></div>
+</div>
+```
 
+{{< include _generated/publications.md >}}
 
-All peer-reviewed articles are listed below.
+```{=html}
+<script>
+(function () {
+  var input = document.getElementById("pub-filter-input");
+  var status = document.getElementById("pub-filter-status");
+  if (!input) return;
+  var items = Array.prototype.slice.call(document.querySelectorAll(".pub-section .pub"));
+  var norm = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+  items.forEach(function (li) { li.dataset.text = norm(li.textContent + " " + (li.closest(".pub-year-group") ? li.closest(".pub-year-group").querySelector(".pub-year").textContent : "")); });
+  input.addEventListener("input", function () {
+    var terms = norm(input.value).split(/\s+/).filter(Boolean);
+    var shown = 0;
+    items.forEach(function (li) {
+      var match = terms.every(function (t) { return li.dataset.text.indexOf(t) !== -1; });
+      li.hidden = !match;
+      if (match) shown++;
+    });
+    document.querySelectorAll(".pub-year-group, .pub-section").forEach(function (g) {
+      g.hidden = terms.length > 0 && !g.querySelector(".pub:not([hidden])");
+    });
+    status.textContent = terms.length ? shown + " of " + items.length + " entries match" : "";
+  });
+})();
+</script>
+```

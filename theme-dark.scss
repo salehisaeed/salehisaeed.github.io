@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+
+// Dark variant: layered on top of theme.scss (see _quarto.yml).
+$body-bg: #14181d;
+$body-color: #dde3ea;
+$text-muted: #a3adb9;
+$border-color: #2c333c;
+$surface: #1b2129;
+$card-bg: #181d24;
+// Scientific figures have white backgrounds; keep them on white for legibility.
+$figure-bg: #ffffff;
+$accent: #9cc3ef;
+$primary: #7fb0e6;
+$link-color: #8fbcf0;
+$navbar-bg: #14181d;
+$navbar-fg: #dde3ea;
+$navbar-hl: #9cc3ef;
+$footer-bg: #181d24;
+$footer-fg: #a3adb9;
+$code-color: #f09cc0;
+$input-bg: #181d24;
+$input-color: #dde3ea;
+
+/*-- scss:rules --*/

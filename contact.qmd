@@ -1,31 +1,37 @@
 ---
 title: "Contact"
-description: "Contact information and office location for Saeed Salehi at Linköping University."
+description: "Contact details and office directions for Saeed Salehi, Linköping University, Campus Valla."
 ---
 
-**Saeed Salehi**  
-Associate Professor of Fluid Mechanics  
-Division of Applied Thermodynamics and Fluid Mechanics  
-Department of Management and Engineering  
-Linköping University  
+::: {.card-grid}
+::: {.info-card}
+## Email and phone
+[saeed.salehi@liu.se](mailto:saeed.salehi@liu.se)\
+[+46 13 28 26 82](tel:+4613282682)
+:::
 
-📧 Email: [saeed.salehi@liu.se](mailto:saeed.salehi@liu.se)  
-📞 Phone: +46 13 28 26 82  
+::: {.info-card}
+## Postal address
+Saeed Salehi\
+Division of Applied Thermodynamics and Fluid Mechanics\
+Department of Management and Engineering\
+Linköping University\
+SE-581 83 Linköping, Sweden
+:::
 
-📍 **Visiting Address**  
-Room 3A:970  
-A-huset, Campus Valla  
-SE-581 83 Linköping, Sweden  
-[Google Maps (Campus Valla)](https://maps.app.goo.gl/dU7HSq9z3WH3yH7L7) · [MazeMap (Office 3A:970)](https://use.mazemap.com/#v=1&config=liu&campusid=742&zlevel=3&center=15.577453,58.402581&zoom=18&sharepoitype=poi&sharepoi=1000929759)  
+::: {.info-card}
+## Office
+Room 3A:970, A-huset, Campus Valla\
+[Google Maps](https://maps.app.goo.gl/dU7HSq9z3WH3yH7L7) · [MazeMap (room 3A:970)](https://use.mazemap.com/#v=1&config=liu&campusid=742&zlevel=3&center=15.577453,58.402581&zoom=18&sharepoitype=poi&sharepoi=1000929759)
+:::
+:::
 
-***Directions inside A-huset***  
-Use Entrance 13 of the A-huset building, which is closest entrance to my office. Take the staircase directly ahead and go up one floor. 
-Turn back and follow the hall to the Division of Applied Thermodynamics and Fluid Mechanics, located at the end on the right. 
-Enter the division corridor (call me if it is locked) and my office, Room 3A:970, is in the middle of the corridor.  
+## Finding my office
 
-**LiU Staff Pages**  
-🌐 [English staff page](https://liu.se/en/employee/saesa86)  
-🌐 [Svensk profilsida](https://liu.se/medarbetare/saesa86)  
+Use **entrance 13** of the A-huset building, the entrance closest to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the corridor to the Division of Applied Thermodynamics and Fluid Mechanics at the end on the right. Enter the division corridor (call me if it is locked). Room 3A:970 is in the middle of the corridor.
 
-**Other Links**
-🔗 [Google Scholar](https://scholar.google.com/citations?hl=en&user=6bn6bn0AAAAJ&view_op=list_works&sortby=pubdate) · [ORCID](https://orcid.org/0000-0002-2037-8284) · [ResearchGate](https://www.researchgate.net/profile/Saeed-Salehi-3?ev=hdr_xprf) · [GitHub](https://github.com/salehisaeed) · [LinkedIn](https://www.linkedin.com/in/saeed-salehi-3b97685a/)  
+## Online profiles
+
+{{< include _includes/profile-links.md >}}
+
+LiU staff pages: [English](https://liu.se/en/employee/saesa86) · [Svenska](https://liu.se/medarbetare/saesa86)

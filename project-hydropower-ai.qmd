@@ -1,21 +1,21 @@
 ---
 title: "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control"
-description: "PhD project on deep reinforcement learning for active flow control of hydraulic turbine instabilities"
+description: "ÅForsk-funded project at Linköping University on deep reinforcement learning and high-fidelity CFD for active control of flow instabilities in hydraulic turbines."
 toc: true
-listing: false
+image: img/og-project.jpg
 ---
 
 ::: {.callout-note appearance="simple"}
-This page provides detailed information about the research project for prospective PhD applicants. See the [job advertisement](https://liu.se/en/work-at-liu/vacancies/29533) for application details. Application deadline: **August 31, 2026**.
+**PhD recruitment:** a PhD position in this project was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. This page describes the research project.
 :::
 
 ## Project summary
 
 This project investigates AI-based active flow control for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation.
 
-![Conceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.](img/framework.png){fig-alt="Conceptual illustration of the AI-based active flow control framework for hydraulic turbines" width=85%}
+![Conceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.](img/drl-turbine-framework.webp){fig-alt="Conceptual illustration of the AI-based active flow control framework for hydraulic turbines" width=85%}
 
-The project is funded by: [ÅForsk Foundation](https://aforsk.com/), with co-funding from the Linköping University.\
+The project is funded by the [ÅForsk Foundation](https://aforsk.com/PreviousWinners) through an Early-Career Research Grant, with co-funding from Linköping University.\
 **Principal investigator:** [Saeed Salehi](https://liu.se/en/employee/saesa86), Linköping University\
 **Co-supervisor:** [Håkan Nilsson](https://www.chalmers.se/en/persons/hani/), Chalmers University of Technology\
 The project is carried out as a collaboration between the [Division of Applied Thermodynamics and Fluid Mechanics](https://liu.se/en/organisation/liu/iei/mvs) at Linköping University and the [Division of Fluid Dynamics](https://www.chalmers.se/en/departments/me/research/fluid-dynamics/) at Chalmers University of Technology.
@@ -26,7 +26,7 @@ The project is carried out as a collaboration between the [Division of Applied T
 
 The increasing penetration of intermittent energy sources such as wind and solar power places greater demands on hydropower to operate more flexibly to balance the electric grid. This flexible operation involves frequent starts and stops, continuous regulation, and prolonged operation at off-design conditions. These operations are known to promote strong self-induced flow instabilities that generate harmful pressure pulsations ([Salehi and Nilsson, 2021](https://doi.org/10.1016/j.renene.2021.07.107); [Salehi and Nilsson, 2022](https://doi.org/10.1016/j.renene.2022.01.111)), accelerate structural fatigue, reduce lifetime, and limit the safe operating range of hydraulic turbines ([Nobilo et al., 2026](https://doi.org/10.1016/j.rser.2025.116578)).
 
-![Flow instability during shutdown operation of a Francis turbine, showing helical vortex rope structures in the draft tube ([Salehi and Nilsson, 2021](https://doi.org/10.1016/j.renene.2021.07.107)).](img/rvr_shutdown.jpg){fig-alt="Helical vortex rope instability in a Francis turbine draft tube during shutdown" width=60%}
+![Flow instability during shutdown operation of a Francis turbine, showing helical vortex rope structures in the draft tube ([Salehi and Nilsson, 2021](https://doi.org/10.1016/j.renene.2021.07.107)).](img/francis-shutdown-rvr.webp){fig-alt="Helical vortex rope instability in a Francis turbine draft tube during shutdown" width=60%}
 
 Several strategies have been proposed to mitigate flow instabilities in hydraulic turbines. Passive approaches rely on geometric modifications of the runner or draft tube to weaken instabilities or stabilize the flow. Active flow control techniques typically employ air admission or water injection supplied by external energy sources. Air admission redistributes low-pressure regions to damp pulsations, whereas water injection directly alters the angular momentum of the swirling flow.
 
@@ -60,12 +60,12 @@ In parallel, we have developed a computational framework for coupling DRL with t
 
 The methodology has been applied to active flow control problems. The figures below illustrate representative results, including successful control of vortex-dominated flow structures in both 2D and 3D configurations.
 
-![Uncontrolled (left) and DRL-controlled (right) flow past a 2D cylinder ([Salehi, 2025](https://doi.org/10.1007/s11012-024-01830-1)). The learned control policy suppresses the vortex shedding.](img/contours_proposal.png){fig-alt="Comparison of uncontrolled and DRL-controlled flow past a 2D cylinder" width=90%}
+![Uncontrolled (left) and DRL-controlled (right) flow past a 2D cylinder ([Salehi, 2025](https://doi.org/10.1007/s11012-024-01830-1)). The learned control policy suppresses the vortex shedding.](img/cylinder2d-drl.webp){fig-alt="Comparison of uncontrolled and DRL-controlled flow past a 2D cylinder" width=90%}
 
 ::: {layout-ncol=2}
-![Uncontrolled 3D cylinder wake](img/cylinder3d_uncontrolled.png){fig-alt="Uncontrolled vortex shedding behind a 3D cylinder"}
+![Uncontrolled 3D cylinder wake](img/cylinder3d-uncontrolled.webp){fig-alt="Uncontrolled vortex shedding behind a 3D cylinder"}
 
-![DRL-controlled 3D cylinder wake](img/cylinder3d_controlled.png){fig-alt="DRL-controlled flow behind a 3D cylinder showing suppressed vortex shedding"}
+![DRL-controlled 3D cylinder wake](img/cylinder3d-controlled.webp){fig-alt="DRL-controlled flow behind a 3D cylinder showing suppressed vortex shedding"}
 :::
 
 ### Proof-of-concept: DRL control of draft tube instability
@@ -73,14 +73,14 @@ The methodology has been applied to active flow control problems. The figures be
 As a first step toward the present project, we conducted a proof-of-concept study on a swirl generator configuration representing a simplified hydraulic turbine draft tube. A DRL controller was coupled to a 3D CFD model with localized axial jet actuation at the runner cone.
 
 ::: {layout-ncol=2}
-![Uncontrolled vortex rope](img/vortex_uncontrolled.png){fig-alt="Uncontrolled helical vortex rope in the swirl generator draft tube"}
+![Uncontrolled vortex rope](img/swirl-uncontrolled.webp){fig-alt="Uncontrolled helical vortex rope in the swirl generator draft tube"}
 
-![DRL-controlled vortex rope](img/vortex_controlled.png){fig-alt="Vortex rope significantly reduced under DRL-based closed-loop control"}
+![DRL-controlled vortex rope](img/swirl-controlled.webp){fig-alt="Vortex rope significantly reduced under DRL-based closed-loop control"}
 :::
 
 Under closed-loop control, the strength of the helical flow instability is reduced compared to the uncontrolled case. The corresponding time evolution of the rotating pressure mode is shown below. When the controller is activated at $t = 1$ s (dashed red line), the rotating mode amplitude decreases and stabilizes at a lower level.
 
-![Time evolution of the rotating pressure mode. The DRL controller is activated at $t = 1$ s (dashed red line), after which the pressure oscillation amplitude is rapidly suppressed.](img/pressure_modes.png){fig-alt="Time series showing rapid suppression of pressure pulsations after DRL controller activation" width=80%}
+![Time evolution of the rotating pressure mode. The DRL controller is activated at $t = 1$ s (dashed red line), after which the pressure oscillation amplitude is rapidly suppressed.](img/pressure-modes.webp){fig-alt="Time series showing rapid suppression of pressure pulsations after DRL controller activation" width=80%}
 
 This preliminary study considered a simplified geometry, a single operating condition, and a basic actuation setup to establish feasibility. Extending this framework to realistic turbine configurations, multiple operating regimes, advanced actuator concepts, and higher-fidelity simulations is the next step and constitutes the core of this project.
 
@@ -116,7 +116,7 @@ For more details on the scientific background and methods behind this project, s
 
 ## Contact
 
-Feel free to reach out if you have any questions about the project or the PhD position.
+Feel free to reach out if you have any questions about the project.
 
 **Saeed Salehi**\
 Associate Professor of Fluid Mechanics\

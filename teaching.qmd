@@ -1,26 +1,62 @@
 ---
-title: "Teaching"
-description: "Courses taught by Saeed Salehi at Linköping University."
+title: "Teaching and supervision"
+description: "Courses taught by Saeed Salehi at Linköping University and Chalmers, PhD supervision, and pedagogical training."
+toc: true
 ---
 
-I am lecturer and examiner for the following courses at Linköping University.
+## Current courses at Linköping University
 
----
+I am examiner, course coordinator and main teacher for two Master's-level courses.
 
-## Applied Computational Fluid Dynamics (TMMV59)
+::: {.card-grid}
+::: {.info-card}
+### Applied Computational Fluid Dynamics
+[TMMV59 · 6 credits · Master's level]{.meta-line}
 
-**6 credits | Second cycle (Master's level)**
+Practical training in CFD for complex flow and heat transfer problems: the full workflow from modelling strategy, choice of physical models and numerical methods, and meshing to verification and validation. Students also learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results. The course combines lectures, workshops, computer exercises and project work with input from industry.
 
-This course provides practical training in CFD for complex flow and heat transfer problems. The curriculum covers end-to-end CFD workflows, including formulation of modeling strategies, selection of physical models and numerical methods, meshing strategies, verification and validation. Students learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results scientifically. The instruction combines lectures, workshops, computer exercises, and project-based learning with input from industrial professionals.
+[Course page at LiU](https://studieinfo.liu.se/en/kurs/TMMV59)
+:::
 
-[Course page at LiU](https://studieinfo.liu.se/en/kurs/TMMV59/ht-2026)
+::: {.info-card}
+### Machine Learning for Mechanical Engineering
+[TMMV64 · 6 credits · Master's level]{.meta-line}
 
----
-
-## Machine Learning for Mechanical Engineering (TMMV64)
-
-**6 credits | Second cycle (Master's level)**
-
-This course introduces data-driven modeling and machine learning techniques tailored for mechanical engineering applications. Students learn to process, analyze, and visualize datasets from mechanical and energy systems while implementing predictive and classification models using Python. The curriculum combines lectures with hands-on laboratory sessions and culminates in a capstone project applying these methods to real engineering problems.
+Data-driven modelling and machine learning for mechanical engineering. Students process, analyse and visualise data from mechanical and energy systems and implement predictive and classification models in Python. Lectures and hands-on labs end in a project that applies the methods to a real engineering problem.
 
 [Course page at LiU](https://studieinfo.liu.se/en/kurs/TMMV64)
+:::
+:::
+
+## Earlier teaching
+
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">2020 – present</span><span class="what"><strong><a href="http://www.tfd.chalmers.se/~hani/kurser/OS_CFD/">CFD with OpenSource Software</a></strong> (7.5 ECTS), lecturer and teaching assistant<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
+  <li><span class="when">2021 – present</span><span class="what"><strong><a href="https://www.tfd.chalmers.se/~hani/kurser/OS_CFD/BasicUsageOfOpenFOAM.htm">Basic Usage of OpenFOAM</a></strong> (2 ECTS), lecturer and teaching assistant<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
+  <li><span class="when">2022</span><span class="what"><strong>Introduction to fluid dynamics in water turbines</strong> (2 ECTS), main teacher and examiner<br><span class="sub">Swedish Hydropower Centre (SVC) research school at KTH Royal Institute of Technology · PhD level</span></span></li>
+  <li><span class="when">2018 – 2019</span><span class="what"><strong>Introduction to Turbomachinery</strong>, main teacher and examiner<br><span class="sub">University of Science and Culture, Tehran · Bachelor level</span></span></li>
+  <li><span class="when">2013 – 2017</span><span class="what"><strong>Teaching assistant</strong> in Turbomachinery Lab, Turbulent Flows, Heat Transfer and Fluid Mechanics<br><span class="sub">University of Tehran · Bachelor and Master level</span></span></li>
+</ul>
+```
+
+## PhD supervision
+
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">Recruiting</span><span class="what"><strong>PhD student, Linköping University</strong>, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control (<a href="project-hydropower-ai.html">project page</a>). Expected start autumn 2026.</span></span></li>
+  <li><span class="when">2023 – present</span><span class="what"><strong>Mohammad Sheikholeslami</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Multi-fidelity physics-informed neural networks for solving partial differential equations</span></span></li>
+  <li><span class="when">2023 – 2025</span><span class="what"><strong>Martina Nobilo</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">CFD for hydropower lifetime analysis. Licentiate degree, 2025.</span></span></li>
+  <li><span class="when">2020 – 2024</span><span class="what"><strong>Jonathan Fahlbeck</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Flow in contra-rotating pump-turbines at stationary, transient and cavitating conditions (EU Horizon 2020 project <a href="https://alpheus-h2020.eu/">ALPHEUS</a>). PhD, 2024.</span></span></li>
+</ul>
+```
+
+I also supervise MSc and BSc thesis projects. See [Opportunities](opportunities.qmd) for current proposals.
+
+## Pedagogical training
+
+- **Diploma in Teaching and Learning in Higher Education** (15 ECTS), Chalmers University of Technology, 2023. Designed to meet the learning outcomes of the Association of Swedish Higher Education Institutions (SUHF), including a final pedagogical project.
+- **Supervising Research Students** (3 ECTS), Chalmers University of Technology, 2022.
+- **Higher Education Pedagogy for PhD Supervisors** (4 credits), Linköping University, 2025.
+
+In 2024 I presented *CFD with OpenSource Software: a case study of project-based learning in an international PhD course* at the Chalmers Conference on Teaching and Learning (KUL).

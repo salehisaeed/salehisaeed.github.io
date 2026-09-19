@@ -1,5 +1,13 @@
 ---
-title: "Page Not Found"
+title: "Page not found"
+description: "The requested page does not exist."
 ---
 
-The page you requested does not exist. You can return to the [home page](index.qmd) or use the navigation above.
+The page you are looking for does not exist or has moved. The site was reorganised in 2026, so some older addresses no longer work.
+
+- [Home](/index.html)
+- [Research](/research.html)
+- [Publications](/publications.html)
+- [Contact](/contact.html)
+
+You can also use the search in the navigation bar.

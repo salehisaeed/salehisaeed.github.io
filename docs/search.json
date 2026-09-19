@@ -1,108 +1,101 @@
 [
   {
-    "objectID": "uq.html",
-    "href": "uq.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
-  },
-  {
     "objectID": "teaching.html",
     "href": "teaching.html",
-    "title": "Teaching",
+    "title": "Teaching and supervision",
     "section": "",
-    "text": "I am lecturer and examiner for the following courses at Linköping University."
+    "text": "I am examiner, course coordinator and main teacher for two Master’s-level courses.\n\n\n\nTMMV59 · 6 credits · Master’s level\nPractical training in CFD for complex flow and heat transfer problems: the full workflow from modelling strategy, choice of physical models and numerical methods, and meshing to verification and validation. Students also learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results. The course combines lectures, workshops, computer exercises and project work with input from industry.\nCourse page at LiU\n\n\n\nTMMV64 · 6 credits · Master’s level\nData-driven modelling and machine learning for mechanical engineering. Students process, analyse and visualise data from mechanical and energy systems and implement predictive and classification models in Python. Lectures and hands-on labs end in a project that applies the methods to a real engineering problem.\nCourse page at LiU"
   },
   {
-    "objectID": "teaching.html#applied-computational-fluid-dynamics-tmmv59",
-    "href": "teaching.html#applied-computational-fluid-dynamics-tmmv59",
-    "title": "Teaching",
-    "section": "Applied Computational Fluid Dynamics (TMMV59)",
-    "text": "Applied Computational Fluid Dynamics (TMMV59)\n6 credits | Second cycle (Master’s level)\nThis course provides practical training in CFD for complex flow and heat transfer problems. The curriculum covers end-to-end CFD workflows, including formulation of modeling strategies, selection of physical models and numerical methods, meshing strategies, verification and validation. Students learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results scientifically. The instruction combines lectures, workshops, computer exercises, and project-based learning with input from industrial professionals.\nCourse page at LiU"
+    "objectID": "teaching.html#current-courses-at-linköping-university",
+    "href": "teaching.html#current-courses-at-linköping-university",
+    "title": "Teaching and supervision",
+    "section": "",
+    "text": "I am examiner, course coordinator and main teacher for two Master’s-level courses.\n\n\n\nTMMV59 · 6 credits · Master’s level\nPractical training in CFD for complex flow and heat transfer problems: the full workflow from modelling strategy, choice of physical models and numerical methods, and meshing to verification and validation. Students also learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results. The course combines lectures, workshops, computer exercises and project work with input from industry.\nCourse page at LiU\n\n\n\nTMMV64 · 6 credits · Master’s level\nData-driven modelling and machine learning for mechanical engineering. Students process, analyse and visualise data from mechanical and energy systems and implement predictive and classification models in Python. Lectures and hands-on labs end in a project that applies the methods to a real engineering problem.\nCourse page at LiU"
   },
   {
-    "objectID": "teaching.html#machine-learning-for-mechanical-engineering-tmmv64",
-    "href": "teaching.html#machine-learning-for-mechanical-engineering-tmmv64",
-    "title": "Teaching",
-    "section": "Machine Learning for Mechanical Engineering (TMMV64)",
-    "text": "Machine Learning for Mechanical Engineering (TMMV64)\n6 credits | Second cycle (Master’s level)\nThis course introduces data-driven modeling and machine learning techniques tailored for mechanical engineering applications. Students learn to process, analyze, and visualize datasets from mechanical and energy systems while implementing predictive and classification models using Python. The curriculum combines lectures with hands-on laboratory sessions and culminates in a capstone project applying these methods to real engineering problems.\nCourse page at LiU"
+    "objectID": "teaching.html#earlier-teaching",
+    "href": "teaching.html#earlier-teaching",
+    "title": "Teaching and supervision",
+    "section": "Earlier teaching",
+    "text": "Earlier teaching\n\n  2020 – presentCFD with OpenSource Software (7.5 ECTS), lecturer and teaching assistantChalmers University of Technology · PhD level\n  2021 – presentBasic Usage of OpenFOAM (2 ECTS), lecturer and teaching assistantChalmers University of Technology · PhD level\n  2022Introduction to fluid dynamics in water turbines (2 ECTS), main teacher and examinerSwedish Hydropower Centre (SVC) research school at KTH Royal Institute of Technology · PhD level\n  2018 – 2019Introduction to Turbomachinery, main teacher and examinerUniversity of Science and Culture, Tehran · Bachelor level\n  2013 – 2017Teaching assistant in Turbomachinery Lab, Turbulent Flows, Heat Transfer and Fluid MechanicsUniversity of Tehran · Bachelor and Master level"
+  },
+  {
+    "objectID": "teaching.html#phd-supervision",
+    "href": "teaching.html#phd-supervision",
+    "title": "Teaching and supervision",
+    "section": "PhD supervision",
+    "text": "PhD supervision\n\n  RecruitingPhD student, Linköping University, principal supervisorEnabling flexible hydropower operation by AI-based active flow control (project page). Expected start autumn 2026.\n  2023 – presentMohammad Sheikholeslami, Chalmers University of Technology, co-supervisorMulti-fidelity physics-informed neural networks for solving partial differential equations\n  2023 – 2025Martina Nobilo, Chalmers University of Technology, co-supervisorCFD for hydropower lifetime analysis. Licentiate degree, 2025.\n  2020 – 2024Jonathan Fahlbeck, Chalmers University of Technology, co-supervisorFlow in contra-rotating pump-turbines at stationary, transient and cavitating conditions (EU Horizon 2020 project ALPHEUS). PhD, 2024.\n\nI also supervise MSc and BSc thesis projects. See Opportunities for current proposals."
+  },
+  {
+    "objectID": "teaching.html#pedagogical-training",
+    "href": "teaching.html#pedagogical-training",
+    "title": "Teaching and supervision",
+    "section": "Pedagogical training",
+    "text": "Pedagogical training\n\nDiploma in Teaching and Learning in Higher Education (15 ECTS), Chalmers University of Technology, 2023. Designed to meet the learning outcomes of the Association of Swedish Higher Education Institutions (SUHF), including a final pedagogical project.\nSupervising Research Students (3 ECTS), Chalmers University of Technology, 2022.\nHigher Education Pedagogy for PhD Supervisors (4 credits), Linköping University, 2025.\n\nIn 2024 I presented CFD with OpenSource Software: a case study of project-based learning in an international PhD course at the Chalmers Conference on Teaching and Learning (KUL)."
   },
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "Research Highlights",
+    "title": "Research",
     "section": "",
-    "text": "My research combines Computational Fluid Dynamics (CFD) with data science and machine learning to better understand, predict, and control complex flow systems. I focus on methods that are efficient, robust, and generalizable for both fundamental studies and applications in turbulent flows and turbomachinery. The following highlights several key projects and results in these areas."
+    "text": "My research combines computational fluid dynamics (CFD) with data science and machine learning to understand, predict and control complex flows. I aim for methods that are efficient, robust and general enough to be used beyond canonical test cases, and I test them on demanding applications, above all hydraulic turbines, where flexible operation leads to strong flow instabilities. Most of the methods are developed in OpenFOAM and released as open-source software."
   },
   {
-    "objectID": "research.html#overview",
-    "href": "research.html#overview",
-    "title": "Research Highlights",
-    "section": "",
-    "text": "My research combines Computational Fluid Dynamics (CFD) with data science and machine learning to better understand, predict, and control complex flow systems. I focus on methods that are efficient, robust, and generalizable for both fundamental studies and applications in turbulent flows and turbomachinery. The following highlights several key projects and results in these areas."
+    "objectID": "research.html#flow-control",
+    "href": "research.html#flow-control",
+    "title": "Research",
+    "section": "Reinforcement-learning-based flow control",
+    "text": "Reinforcement-learning-based flow control\nDeep reinforcement learning (DRL) can discover feedback control strategies for nonlinear flows that are hard to design with classical methods. Current DRL–CFD frameworks, however, struggle with efficiency, robustness and generalisation. My work pushes DRL towards realistic flows by combining it with multi-fidelity learning, transfer learning and robust learning under uncertainty.\nI developed an intrusive DRL framework in which the agent runs inside the OpenFOAM solver, avoiding external data exchange during training and running parallel environments with MPI. It has been applied to vortex shedding behind 2D and 3D cylinders and to the vortex rope in a swirl generator, a simplified model of a turbine draft tube. The ongoing ÅForsk project extends this to realistic hydraulic turbines.\nKey work\n\nS. Salehi, An efficient intrusive deep reinforcement learning framework for OpenFOAM, Meccanica, 2025\nS. Salehi, Transfer learning strategies for accelerating reinforcement-learning-based flow control, arXiv preprint, 2025\nS. Salehi and H. Nilsson, A parametric study of axial flow jets for mitigation of vortex rope instabilities, IOP Conf. Ser.: Earth Environ. Sci., 2025\n\nSoftware: TensorforceFoam · agentJet"
   },
   {
-    "objectID": "research.html#deep-reinforcement-learning-for-flow-control",
-    "href": "research.html#deep-reinforcement-learning-for-flow-control",
-    "title": "Research Highlights",
-    "section": "Deep Reinforcement Learning for Flow Control",
-    "text": "Deep Reinforcement Learning for Flow Control\nA major line of work is deep reinforcement learning (DRL) for active flow control. DRL promises sophisticated control strategies beyond classical methods, but current DRL–CFD frameworks struggle with efficiency, robustness, and generalization. My approach combines multifidelity learning, transfer learning, and robust learning under uncertainty to push DRL toward realistic high-Reynolds-number flows and deliver controllers that transfer across operating conditions.\n\n\n\n\nOverview of the multifidelity deep reinforcement learning pipeline for flow control"
+    "objectID": "research.html#turbine-transients",
+    "href": "research.html#turbine-transients",
+    "title": "Research",
+    "section": "Transient operation of hydraulic turbines",
+    "text": "Transient operation of hydraulic turbines\nStart-up, shutdown and load changes are becoming frequent as hydropower balances intermittent wind and solar power, and they expose turbines to strong pressure pulsations. Simulating them requires the mesh to follow moving guide vanes and runner blades. I developed a semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM, and used it for resolved simulations of Francis and Kaplan turbines during transient operation.\nThese simulations reveal how flow instabilities such as the rotating vortex rope form and decay during transients. The mesh-motion library is released as open source and is used by the R&D department of Vattenfall to study transient operation of their hydropower systems.\nKey work\n\nS. Salehi, H. Nilsson, E. Lillberg and N. Edh, An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown, Renewable Energy, 2021\nS. Salehi and H. Nilsson, Flow-induced pulsations in Francis turbines during startup, Renewable Energy, 2022\nS. Salehi and H. Nilsson, A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM, Computer Physics Communications, 2023\nF. A. Masoodi, S. Salehi and R. Goyal, Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine, Physics of Fluids, 2024\n\nSoftware: semiImplicitSlip · Francis-99 transients"
   },
   {
-    "objectID": "research.html#resolved-simulation-of-hydraulic-turbines-during-transient-operation",
-    "href": "research.html#resolved-simulation-of-hydraulic-turbines-during-transient-operation",
-    "title": "Research Highlights",
-    "section": "Resolved Simulation of Hydraulic Turbines During Transient Operation",
-    "text": "Resolved Simulation of Hydraulic Turbines During Transient Operation\nI develop and use high-fidelity CFD to study complex, transient turbomachinery flows. I created semi-implicit mesh-deformation techniques in OpenFOAM to simulate the complex mesh motion of hydraulic turbines during transient operation. These simulations provide detailed analysis of complex physics during such operations, providing insights into transient flow instabilities.\n\n\n\n\nTransient CFD simulation of a hydraulic turbine"
+    "objectID": "research.html#modal-analysis",
+    "href": "research.html#modal-analysis",
+    "title": "Research",
+    "section": "Modal analysis and reduced-order modelling",
+    "text": "Modal analysis and reduced-order modelling\nHigh-fidelity simulations produce large, detailed data sets. Modal decompositions such as proper orthogonal decomposition (POD), spectral POD, dynamic mode decomposition (DMD) and sparsity-promoting DMD extract the coherent structures and dominant frequencies hidden in them. I have used these methods to analyse the vortex rope in hydraulic turbines, identifying the modes that govern the instability. This is a basis for reduced-order models and for designing control strategies.\nKey work\n\nS. Salehi and H. Nilsson, Modal analysis of vortex rope using dynamic mode decomposition, Physics of Fluids, 2024\nS. Salehi and H. Nilsson, Dynamic mode decomposition of rotating vortex rope instability, 9th IAHR Meeting of the Work Group on Cavitation and Dynamic Problems in Hydraulic Machinery and Systems, 2024"
   },
   {
-    "objectID": "research.html#high-resolved-simulations-and-reduced-order-modeling-of-turbomachinery-flows",
-    "href": "research.html#high-resolved-simulations-and-reduced-order-modeling-of-turbomachinery-flows",
-    "title": "Research Highlights",
-    "section": "High-Resolved Simulations and Reduced-Order Modeling of Turbomachinery Flows",
-    "text": "High-Resolved Simulations and Reduced-Order Modeling of Turbomachinery Flows\nHigh-fidelity CFD and dynamic mode decomposition (DMD) were used to analyze vortex rope instabilities in hydraulic turbines, revealing key coherent structures and dominant frequency modes that inform future control strategies.\n\n\n\n\nVortex rope analysis using dynamic mode decomposition"
+    "objectID": "research.html#pinns",
+    "href": "research.html#pinns",
+    "title": "Research",
+    "section": "Physics-informed neural networks",
+    "text": "Physics-informed neural networks\nPhysics-informed neural networks (PINNs) embed the governing equations in the loss function of a neural network. Together with colleagues at Chalmers University of Technology, I study multi-fidelity PINNs for solving partial differential equations, with applications to the linear wave problem from potential flow theory, comparing soft and hard enforcement of boundary conditions. This work is the PhD project of Mohammad Sheikholeslami, whom I co-supervise.\nKey work\n\nM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves, Physics of Fluids, 2025\nM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, State-of-the-art implementations of PINNs for the lid-driven cavity problem: a critical review with future perspectives, Results in Engineering, 2026"
   },
   {
-    "objectID": "research.html#uncertainty-quantification-of-turbulent-flows",
-    "href": "research.html#uncertainty-quantification-of-turbulent-flows",
-    "title": "Research Highlights",
-    "section": "Uncertainty Quantification of Turbulent Flows",
-    "text": "Uncertainty Quantification of Turbulent Flows\nI have developed efficient uncertainty quantification (UQ) methods for turbulent and industrial flows. I introduced sparse polynomial chaos, compressed sensing, and multifidelity \\(\\ell_1\\)-minimization to reduce computational cost while retaining accuracy. These methods were applied to operational and geometrical uncertainties in turbomachinery and used for robust optimization.\n\n\n\n\nUncertainty quantification of turbulent flows"
+    "objectID": "research.html#uq",
+    "href": "research.html#uq",
+    "title": "Research",
+    "section": "Uncertainty quantification",
+    "text": "Uncertainty quantification\nIn my doctoral research I developed efficient uncertainty quantification (UQ) methods for turbulent and industrial flows. Sparse polynomial chaos with compressed sensing, and a multi-fidelity ℓ₁-minimisation method, reduce the number of expensive CFD simulations needed while retaining accuracy. Applied to hydraulic pumps, the methods showed that combined operational and geometrical uncertainties significantly affect flow and performance. They were also used for probabilistic CFD and robust optimisation of a cooled gas turbine vane.\nKey work\n\nS. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, Efficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensing, Computers & Fluids, 2017\nS. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, An efficient multifidelity ℓ₁-minimization method for sparse polynomial chaos, Computer Methods in Applied Mechanics and Engineering, 2018\nS. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, On the flow field and performance of a centrifugal pump under operational and geometrical uncertainties, Applied Mathematical Modelling, 2018\nM. S. Karimi, M. Raisee, S. Salehi, P. Hendrick and A. Nourbakhsh, Robust optimization of the NASA C3X gas turbine vane under uncertain operational conditions, Int. J. Heat and Mass Transfer, 2021"
   },
   {
-    "objectID": "research.html#physics-informed-neural-networks-for-pdes",
-    "href": "research.html#physics-informed-neural-networks-for-pdes",
-    "title": "Research Highlights",
-    "section": "Physics-Informed Neural Networks for PDEs",
-    "text": "Physics-Informed Neural Networks for PDEs\nPhysics-informed neural networks (PINNs) were applied to the linear wave problem from potential flow theory, exploring both soft and hard enforcement of boundary conditions.\n\n\n\n\nPhysics-informed neural network for wave problems\n\n\n(Contributor: PhD student Mohammad Sheikholeslami)"
-  },
-  {
-    "objectID": "research.html#flow-in-contra-rotating-pump-turbine",
-    "href": "research.html#flow-in-contra-rotating-pump-turbine",
-    "title": "Research Highlights",
-    "section": "Flow in Contra-Rotating Pump-Turbine",
-    "text": "Flow in Contra-Rotating Pump-Turbine\nThis project studied contra-rotating pump-turbines (CRPT) for low-head pumped hydro storage. CFD simulations show high efficiency in both pump and turbine modes, while transient and cavitation analyses highlight the need for careful valve control and reveal performance degradation under cavitating conditions.\n\n\n\n\nContra-rotating pump-turbine simulation\n\n\n(Contributor: PhD student Jonathan Fahlbeck)"
-  },
-  {
-    "objectID": "research.html#analysis-of-flow-induced-loads-in-kaplan-turbine",
-    "href": "research.html#analysis-of-flow-induced-loads-in-kaplan-turbine",
-    "title": "Research Highlights",
-    "section": "Analysis of Flow-Induced Loads in Kaplan Turbine",
-    "text": "Analysis of Flow-Induced Loads in Kaplan Turbine\nThis project examined the effects of flexible hydropower operation on turbine lifetime. CFD simulations on a Kaplan turbine model reveal how flow-induced forces, pressure pulsations, and rotating vortex rope dynamics impact loads during part-load and transient conditions. The results provide input for fatigue lifetime analysis of turbine runners.\n\n\n\n\nFlow-induced loads in a Kaplan turbine\n\n\n(Contributor: PhD student Martina Nobilo)"
+    "objectID": "research.html#hydropower",
+    "href": "research.html#hydropower",
+    "title": "Research",
+    "section": "Flexible hydropower: loads, lifetime and energy storage",
+    "text": "Flexible hydropower: loads, lifetime and energy storage\nTogether with PhD students at Chalmers University of Technology, I study how flexible operation affects hydropower machines. CFD of a Kaplan turbine model shows how flow-induced forces, pressure pulsations and rotating vortex rope dynamics load the runner at part load and during load reduction, giving input for fatigue lifetime analysis (PhD student Martina Nobilo). In the EU Horizon 2020 project ALPHEUS we studied contra-rotating pump-turbines for low-head pumped hydro storage, including start-up and shutdown sequences and cavitating conditions (PhD student Jonathan Fahlbeck).\nKey work\n\nM. Nobilo, S. Salehi and H. Nilsson, Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system: a review, Renewable and Sustainable Energy Reviews, 2026\nM. Nobilo, S. Salehi and H. Nilsson, On the flow-induced pulsating forces during load reduction of a Kaplan turbine model, IOP Conf. Ser.: Earth Environ. Sci., 2025\nJ. Fahlbeck, H. Nilsson, M. H. Arabnejad and S. Salehi, Performance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditions, Renewable Energy, 2024\nJ. Fahlbeck, H. Nilsson and S. Salehi, Surrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine, Journal of Energy Storage, 2023"
   },
   {
     "objectID": "project-hydropower-ai.html",
     "href": "project-hydropower-ai.html",
     "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
     "section": "",
-    "text": "This page provides detailed information about the research project for prospective PhD applicants. See the job advertisement for application details. Application deadline: August 31, 2026."
+    "text": "PhD recruitment: a PhD position in this project was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. This page describes the research project."
   },
   {
     "objectID": "project-hydropower-ai.html#project-summary",
     "href": "project-hydropower-ai.html#project-summary",
     "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
     "section": "Project summary",
-    "text": "Project summary\nThis project investigates AI-based active flow control for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation.\n\n\n\nConceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.\n\n\nThe project is funded by: ÅForsk Foundation, with co-funding from the Linköping University.\nPrincipal investigator: Saeed Salehi, Linköping University\nCo-supervisor: Håkan Nilsson, Chalmers University of Technology\nThe project is carried out as a collaboration between the Division of Applied Thermodynamics and Fluid Mechanics at Linköping University and the Division of Fluid Dynamics at Chalmers University of Technology."
+    "text": "Project summary\nThis project investigates AI-based active flow control for mitigating harmful flow instabilities in hydraulic turbines operating under off-design conditions. By coupling Deep Reinforcement Learning (DRL) with high-fidelity Computational Fluid Dynamics (CFD), the project aims to create a feedback-driven control framework that stabilizes the flow across varying operating regimes, contributing to safer and more flexible hydropower operation.\n\n\n\nConceptual illustration of the project. An AI agent observes the flow in the turbine draft tube and learns to actively control the instability through jet actuation.\n\n\nThe project is funded by the ÅForsk Foundation through an Early-Career Research Grant, with co-funding from Linköping University.\nPrincipal investigator: Saeed Salehi, Linköping University\nCo-supervisor: Håkan Nilsson, Chalmers University of Technology\nThe project is carried out as a collaboration between the Division of Applied Thermodynamics and Fluid Mechanics at Linköping University and the Division of Fluid Dynamics at Chalmers University of Technology."
   },
   {
     "objectID": "project-hydropower-ai.html#background-and-motivation",
@@ -144,181 +137,174 @@
     "href": "project-hydropower-ai.html#contact",
     "title": "Enabling Flexible Hydropower Operation by AI-Based Active Flow Control",
     "section": "Contact",
-    "text": "Contact\nFeel free to reach out if you have any questions about the project or the PhD position.\nSaeed Salehi\nAssociate Professor of Fluid Mechanics\nLinköping University\nsaeed.salehi@liu.se"
-  },
-  {
-    "objectID": "opportunities.html",
-    "href": "opportunities.html",
-    "title": "Opportunities",
-    "section": "",
-    "text": "I enjoy working with motivated students and researchers who are interested in computational fluid dynamics, high-fidelity simulations, and data-driven methods."
-  },
-  {
-    "objectID": "opportunities.html#available-msc-thesis-proposals",
-    "href": "opportunities.html#available-msc-thesis-proposals",
-    "title": "Opportunities",
-    "section": "Available MSc Thesis Proposals",
-    "text": "Available MSc Thesis Proposals\n\n\nAccelerating reinforcement-learning-based flow control using transfer learning\n📄 Download proposal (PDF)\n\n\nSpectral POD and autoencoders for compression and prediction of vortex rope\n📄 Download proposal (PDF)"
-  },
-  {
-    "objectID": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
-    "href": "opportunities.html#examples-of-funding-opportunities-for-phd-candidates",
-    "title": "Opportunities",
-    "section": "Examples of funding opportunities for PhD candidates",
-    "text": "Examples of funding opportunities for PhD candidates\n\nSwedish national graduate schools (e.g. WASP)\n\nMarie Skłodowska-Curie Actions (MSCA) Doctoral Networks\n\nOther national or EU-based PhD scholarship programs"
-  },
-  {
-    "objectID": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
-    "href": "opportunities.html#examples-of-funding-opportunities-for-postdoctoral-researchers",
-    "title": "Opportunities",
-    "section": "Examples of funding opportunities for postdoctoral researchers",
-    "text": "Examples of funding opportunities for postdoctoral researchers\n\nKnut and Alice Wallenberg Foundation postdoc grants\n\nMarie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowships\n\nNational mobility or international exchange programs"
-  },
-  {
-    "objectID": "opportunities.html#how-to-get-in-touch",
-    "href": "opportunities.html#how-to-get-in-touch",
-    "title": "Opportunities",
-    "section": "How to Get in Touch",
-    "text": "How to Get in Touch\nIf you are interested in joining, please send me:\n1. A short CV\n2. A brief description of your research interests and how they connect to my research\n3. Information about your background in CFD, programming, and machine learning\n4. (If relevant) A detailed plan for applying for a scholarship or external funding"
+    "text": "Contact\nFeel free to reach out if you have any questions about the project.\nSaeed Salehi\nAssociate Professor of Fluid Mechanics\nLinköping University\nsaeed.salehi@liu.se"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Saeed Salehi",
     "section": "",
-    "text": "Associate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n\nI am Associate Professor of Fluid Mechanics at Linköping University. I study complex fluid flows using high-fidelity Computational Fluid Dynamics (CFD). My research combines data-driven approaches and machine learning with CFD to develop efficient and reliable tools for simulation, model order reduction, control, and uncertainty quantification.\nI am first and foremost a CFD specialist. To me, CFD is more than a black box, and I am particularly engaged in open-source development, especially with OpenFOAM. Additionally, I am also passionate about data-driven modeling, and how it can be combined with CFD. My doctoral research focused on uncertainty quantification of turbulent flows in turbomachinery, where I developed sparse and efficient methods to assess operational and geometrical uncertainties and applied robust optimization under uncertainty. During my postdoc at Chalmers University of Technology, I developed numerical methods, in OpenFOAM, for transient simulations of hydraulic turbines and expanded into reduced-order modeling, studying approaches such as POD, SPOD, DMD, and sparsity-promoting DMD.\nMore recently, my research has focused on integrating Artificial Intelligence (AI) with CFD. I have investigated flow control using Deep Reinforcement Learning (DRL) in OpenFOAM and developed multi-fidelity physics-informed neural networks (PINNs) for solving PDEs. This line of work places my research at the intersection of high-fidelity CFD and data-driven methods, with the aim of creating efficient, robust, and trustworthy approaches for the simulation, analysis, and control of complex flows."
-  },
-  {
-    "objectID": "index.html#news",
-    "href": "index.html#news",
-    "title": "Saeed Salehi",
-    "section": "News",
-    "text": "News\n\nPhD position available in AI-based flow control for hydraulic turbines. Read more about the project. Deadline: Aug 31, 2026.\nNew paper: Lifetime analysis of hydro turbines published in Renewable and Sustainable Energy Reviews (2026)\nNew paper: Physics-informed neural networks for linear free surface waves published in Physics of Fluids (2025)"
-  },
-  {
-    "objectID": "index.html#computational-and-data-driven-fluid-dynamics-for-complex-flows",
-    "href": "index.html#computational-and-data-driven-fluid-dynamics-for-complex-flows",
-    "title": "Saeed Salehi",
-    "section": "Computational and data-driven fluid dynamics for complex flows",
-    "text": "Computational and data-driven fluid dynamics for complex flows\n\n\n\n\n\nDRL for flow control\nDeep reinforcement learning for active control of turbulent flows\n\n\n\n\nTransient turbine CFD\nHigh-fidelity simulation of hydraulic turbines during transient operation\n\n\n\n\nUncertainty quantification\nEfficient UQ methods for turbulent and industrial flows\n\n\n\n\nSee all research projects →"
-  },
-  {
-    "objectID": "index.html#recent-publications",
-    "href": "index.html#recent-publications",
-    "title": "Saeed Salehi",
-    "section": "Recent publications",
-    "text": "Recent publications\n\nM. Nobilo, S. Salehi, and H. Nilsson, “Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system,” Renewable and Sustainable Energy Reviews, 2026. DOI\nM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost, and H. Nilsson, “Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves,” Physics of Fluids, 2025. DOI\nS. Salehi, “An efficient intrusive deep reinforcement learning framework for OpenFOAM,” Meccanica, vol. 60, no. 6, pp. 1673-1693, 2025. DOI\nS. Salehi and H. Nilsson, “Modal analysis of vortex rope using dynamic mode decomposition,” Physics of Fluids, vol. 36, no. 2, 2024. DOI\n\nFull publication list →"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Associate Professor of Fluid Mechanics, Linköping University (2025– )\nDivision of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering.\nResearcher, Chalmers Industriteknik (2023–2025)\nWorked on applying AI and machine learning in CFD for hydraulic turbines in collaboration with Chalmers University of Technology.\nPostdoctoral Researcher, Chalmers University of Technology (2019–2023)\nProject on new operating procedures of hydropower for a sustainable energy system. Developed advanced CFD methods in OpenFOAM for transient hydropower simulations and explored data-driven techniques."
-  },
-  {
-    "objectID": "cv.html#appointments",
-    "href": "cv.html#appointments",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Associate Professor of Fluid Mechanics, Linköping University (2025– )\nDivision of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering.\nResearcher, Chalmers Industriteknik (2023–2025)\nWorked on applying AI and machine learning in CFD for hydraulic turbines in collaboration with Chalmers University of Technology.\nPostdoctoral Researcher, Chalmers University of Technology (2019–2023)\nProject on new operating procedures of hydropower for a sustainable energy system. Developed advanced CFD methods in OpenFOAM for transient hydropower simulations and explored data-driven techniques."
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "Curriculum Vitae",
-    "section": "Education",
-    "text": "Education\n\nPhD in Mechanical Engineering, University of Tehran (2012–2018)\nThesis: Uncertainty quantification of turbulent flows in hydraulic machinery.\nMSc in Mechanical Engineering (Energy Conversion), University of Tehran (2010–2012)\nThesis: Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with adverse pressure gradient.\nBSc in Mechanical Engineering, University of Tehran (2006–2010)\nThesis: Large eddy simulation of stall development around airfoils."
-  },
-  {
-    "objectID": "cv.html#selected-grants-and-awards",
-    "href": "cv.html#selected-grants-and-awards",
-    "title": "Curriculum Vitae",
-    "section": "Selected Grants and Awards",
-    "text": "Selected Grants and Awards\n\nEnabling Flexible Hydropower Operation by AI-Based Active Flow Control ÅForsk Foundation, 2026–2031. PI.\nArtificial Intelligence for Enhanced Hydraulic Turbine Lifetime Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.\nHydropower Operation and Lifetime Analysis Swedish Hydropower Centre (SVC), 2023–2027. Co-PI.\nMulti-Fidelity Physics-Informed Neural Network to Solve PDEs Chalmers University of Technology, 2023–2027. Co-PI."
-  },
-  {
-    "objectID": "cv.html#supervision",
-    "href": "cv.html#supervision",
-    "title": "Curriculum Vitae",
-    "section": "Supervision",
-    "text": "Supervision\n\nPhD co-supervisor of three PhD students working on contra-rotating pump-turbines (ALPHEUS EU project), hydropower lifetime analysis, and multi-fidelity PINNs at Chalmers University of Technology.\nMSc supervision of a few students at Chalmers University of Technology"
-  },
-  {
-    "objectID": "cv.html#teaching",
-    "href": "cv.html#teaching",
-    "title": "Curriculum Vitae",
-    "section": "Teaching",
-    "text": "Teaching\n\nLecturer and examiner for Applied Computational Fluid Dynamics (TMMV59) and Machine Learning for Mechanical Engineering (TMMV64) at Linköping University.\nDiploma in Teaching and Learning in Higher Education (15 ECTS), 2023"
-  },
-  {
-    "objectID": "cv.html#publications",
-    "href": "cv.html#publications",
-    "title": "Curriculum Vitae",
-    "section": "Publications",
-    "text": "Publications\n\nAuthor of 25+ peer-reviewed journal articles and multiple conference contributions.\n\nResearch published in journals including Physics of Fluids, Renewable Energy, Computer Physics Communications, and International Journal of Heat and Mass Transfer.\n\nComplete publication list available here."
-  },
-  {
-    "objectID": "cv.html#complete-academic-cv",
-    "href": "cv.html#complete-academic-cv",
-    "title": "Curriculum Vitae",
-    "section": "Complete Academic CV",
-    "text": "Complete Academic CV\nFor more details, see my complete academic CV on GitHub."
-  },
-  {
-    "objectID": "alpheus.html",
-    "href": "alpheus.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "text": "Saeed Salehi\n    Associate Professor of Fluid Mechanics, Docent\n    Division of Applied Thermodynamics and Fluid Mechanics · Department of Management and Engineering · Linköping University, Sweden\n    I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. Much of my work concerns hydraulic turbines and the flexible operation of hydropower.\n    I am first and foremost a CFD specialist and an active OpenFOAM developer. My current focus is deep reinforcement learning for active flow control, coupled directly to CFD.\n  \n\n\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n  LiU profile\n\n\n  Research themes\n  All research →\n\n\n  \n    \n    Reinforcement-learning flow controlDeep reinforcement learning coupled with CFD for active control of unsteady and turbulent flows.\n  \n  \n    \n    Hydraulic turbine transientsResolved simulation of start-up, shutdown and load changes, with new mesh-motion methods in OpenFOAM.\n  \n  \n    \n    Modal analysis and reduced-order modelsPOD, SPOD and DMD to extract coherent structures and dominant frequencies from simulation data.\n  \n  \n    \n    Physics-informed neural networksMulti-fidelity PINNs for solving partial differential equations, including free-surface waves.\n  \n  \n    \n    Uncertainty quantificationSparse and multi-fidelity polynomial chaos methods and robust design under uncertainty.\n  \n  \n    \n    Flexible hydropowerFlow-induced loads, turbine lifetime and contra-rotating pump-turbines for energy storage.\n  \n\n\n\nNews\n\n  Jul 2026Talk on closed-loop control of the vortex rope in a swirl generator with deep reinforcement learning, and session chair, at the 21st OpenFOAM Workshop in Guimarães, Portugal.\n  May 2026Invited talk, Towards efficient control of turbulence, at the Swedish Society for Industrial Flow and Heat Transfer in Lund.\n  Mar 2026Talk on transfer learning for reinforcement-learning-based flow control, and session chair, at the 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics in Amsterdam.\n  Feb 2026Awarded the title of Docent in Fluid Mechanics at Linköping University.\n  2026Appointed Section Editor of the OpenFOAM Journal.\n  2026New review papers on PINNs for the lid-driven cavity problem (Results in Engineering) and on lifetime analysis of hydro turbines (Renewable and Sustainable Energy Reviews).\n  Oct 2025Preprint: Transfer learning strategies for accelerating reinforcement-learning-based flow control.\n  Aug 2025Joined Linköping University as Associate Professor of Fluid Mechanics.\n\n\n\nCurrent project\n\n  ÅForsk Early-Career Research Grant\n  Enabling flexible hydropower operation by AI-based active flow control\n  Deep reinforcement learning coupled with high-fidelity CFD to suppress harmful flow instabilities in hydraulic turbines at off-design operation. A PhD student is being recruited at Linköping University.\n  About the project →\n\n\n  Students\n  Thesis projects and PhD opportunities\n  I supervise MSc and BSc theses in CFD, OpenFOAM development and machine learning for fluid flows, and I support applications for external PhD and postdoc fellowships.\n  Opportunities →\n\n\n\n\n  Recent publications\n  All publications →\n\n\n\nState-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectivesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonResults in Engineering, 32, 112399 (2026) DOI\nLifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – A reviewM. Nobilo, S. Salehi and H. NilssonRenewable and Sustainable Energy Reviews, 228, 116578 (2026) DOI\nPhysics-informed neural networks with hard and soft boundary conditions for linear free surface wavesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonPhysics of Fluids, 37(8), 087158 (2025) DOI\nAn efficient intrusive deep reinforcement learning framework for OpenFOAMS. SalehiMeccanica, 60(6), 1673–1693 (2025) DOI\nTransfer learning strategies for accelerating reinforcement-learning-based flow controlS. SalehiarXiv preprint arXiv:2510.16016 (2025) arXiv"
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Saeed Salehi\nAssociate Professor of Fluid Mechanics\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\n📧 Email: saeed.salehi@liu.se\n📞 Phone: +46 13 28 26 82\n📍 Visiting Address\nRoom 3A:970\nA-huset, Campus Valla\nSE-581 83 Linköping, Sweden\nGoogle Maps (Campus Valla) · MazeMap (Office 3A:970)\nDirections inside A-huset\nUse Entrance 13 of the A-huset building, which is closest entrance to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the hall to the Division of Applied Thermodynamics and Fluid Mechanics, located at the end on the right. Enter the division corridor (call me if it is locked) and my office, Room 3A:970, is in the middle of the corridor.\nLiU Staff Pages\n🌐 English staff page\n🌐 Svensk profilsida\nOther Links 🔗 Google Scholar · ORCID · ResearchGate · GitHub · LinkedIn"
+    "text": "saeed.salehi@liu.se\n+46 13 28 26 82\n\n\n\nSaeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden\n\n\n\nRoom 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
   },
   {
-    "objectID": "drl.html",
-    "href": "drl.html",
-    "title": "Under construction",
+    "objectID": "contact.html#email-and-phone",
+    "href": "contact.html#email-and-phone",
+    "title": "Contact",
     "section": "",
-    "text": "Under construction"
+    "text": "saeed.salehi@liu.se\n+46 13 28 26 82"
   },
   {
-    "objectID": "kaplan.html",
-    "href": "kaplan.html",
-    "title": "Under construction",
+    "objectID": "contact.html#postal-address",
+    "href": "contact.html#postal-address",
+    "title": "Contact",
     "section": "",
-    "text": "Under construction"
+    "text": "Saeed Salehi\nDivision of Applied Thermodynamics and Fluid Mechanics\nDepartment of Management and Engineering\nLinköping University\nSE-581 83 Linköping, Sweden"
   },
   {
-    "objectID": "pinn.html",
-    "href": "pinn.html",
-    "title": "Under construction",
+    "objectID": "contact.html#office",
+    "href": "contact.html#office",
+    "title": "Contact",
     "section": "",
-    "text": "Under construction"
+    "text": "Room 3A:970, A-huset, Campus Valla\nGoogle Maps · MazeMap (room 3A:970)"
+  },
+  {
+    "objectID": "contact.html#finding-my-office",
+    "href": "contact.html#finding-my-office",
+    "title": "Contact",
+    "section": "Finding my office",
+    "text": "Finding my office\nUse entrance 13 of the A-huset building, the entrance closest to my office. Take the staircase directly ahead and go up one floor. Turn back and follow the corridor to the Division of Applied Thermodynamics and Fluid Mechanics at the end on the right. Enter the division corridor (call me if it is locked). Room 3A:970 is in the middle of the corridor."
+  },
+  {
+    "objectID": "contact.html#online-profiles",
+    "href": "contact.html#online-profiles",
+    "title": "Contact",
+    "section": "Online profiles",
+    "text": "Online profiles\n\n  saeed.salehi@liu.se\n  Google Scholar\n  ORCID\n  GitHub\n  LinkedIn\n  ResearchGate\n  LiU profile\n\nLiU staff pages: English · Svenska"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "A summary of my academic career. The full CV, including the complete publication list and teaching record, is available as a PDF."
+  },
+  {
+    "objectID": "cv.html#appointments",
+    "href": "cv.html#appointments",
+    "title": "Curriculum vitae",
+    "section": "Appointments",
+    "text": "Appointments\n\n  Aug 2025 – presentAssociate Professor of Fluid Mechanics, Linköping UniversityDivision of Applied Thermodynamics and Fluid Mechanics, Department of Management and Engineering\n  2023 – 2025Researcher, Chalmers Industriteknik, based at Chalmers University of TechnologyArtificial intelligence and machine learning in CFD, in the project Artificial Intelligence in Fluid Dynamics for Improving the Lifetime of Hydraulic Turbines\n  2019 – 2023Postdoctoral Researcher, Chalmers University of TechnologyNew operating procedures of hydropower for a sustainable energy system: numerical methods in OpenFOAM for transient operation of hydraulic turbines, and reduced-order modelling (POD, DMD)\n  2018 – 2019Lecturer, University of Science and Culture, Tehran"
+  },
+  {
+    "objectID": "cv.html#education-and-qualifications",
+    "href": "cv.html#education-and-qualifications",
+    "title": "Curriculum vitae",
+    "section": "Education and qualifications",
+    "text": "Education and qualifications\n\n  Feb 2026Docent in Fluid Mechanics, Linköping University\n  2012 – 2018PhD in Mechanical Engineering (Hydraulic Machinery), University of TehranThesis: Uncertainty quantification of turbulent flows in hydraulic machinery. Supervisors: Prof. Mehrdad Raisee, Prof. Michel Cervantes, Prof. Ahmad Nourbakhsh\n  2010 – 2012MSc in Mechanical Engineering (Energy Conversion), University of TehranThesis: Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with moderate adverse pressure gradient\n  2006 – 2010BSc in Mechanical Engineering, University of TehranThesis: Large eddy simulation of stall development around airfoils\n  2023Diploma in Teaching and Learning in Higher Education (15 ECTS), Chalmers University of Technology"
+  },
+  {
+    "objectID": "cv.html#research-grants",
+    "href": "cv.html#research-grants",
+    "title": "Curriculum vitae",
+    "section": "Research grants",
+    "text": "Research grants\n\n  2027 – 2031Enabling Flexible Hydropower Operation by AI-Based Active Flow ControlÅForsk Foundation, Early-Career Research Grant · 4.0 MSEK · PI · funds a PhD student at Linköping University\n  2023 – 2027Artificial Intelligence for Enhanced Hydraulic Turbine LifetimeSwedish Hydropower Centre (SVC) · 7.4 MSEK · Co-PI (PI: Prof. Håkan Nilsson) · developed the project concept and led the application\n  2023 – 2027Hydropower Operation and Lifetime AnalysisSwedish Hydropower Centre (SVC) · 5.3 MSEK · Co-PI (PI: Prof. Håkan Nilsson)\n  2023 – 2027Multi-Fidelity Physics-Informed Neural Network to Solve Partial Differential EquationsChalmers University of Technology, internal competitive funding · 5.5 MSEK · Co-PI (joint application)"
+  },
+  {
+    "objectID": "cv.html#academic-service",
+    "href": "cv.html#academic-service",
+    "title": "Curriculum vitae",
+    "section": "Academic service",
+    "text": "Academic service\n\n  2026 – presentSection Editor, OpenFOAM Journal\n  2022 – presentTechnical Committee Member, OpenFOAM Turbomachinery Technical Committee, OpenFOAM Governance\n  2026Session chair, 21st OpenFOAM Workshop, Guimarães (July), and 3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics, Amsterdam (March)\n  2024 – 2026Doctoral examinationExternal thesis examiner, Indian Institute of Technology Delhi (2026) · Discussion leader, half-time seminar, Linköping University (2026) · External reviewer, 90% seminar, University of Gävle (2026) · External examiner on defence committee, Universitat Rovira i Virgili (2024)\n  2026Grant reviewer, Olle Engkvist Foundation\n  OngoingJournal reviewerPhysics of Fluids, AIAA Journal, Computers & Fluids, Applied Mathematical Modelling, Journal of Fluids Engineering, Biomechanics and Modeling in Mechanobiology, Science Progress, Fluids, Energies, Algorithms, Processes, Journal of Applied Fluid Mechanics"
+  },
+  {
+    "objectID": "cv.html#invited-talks",
+    "href": "cv.html#invited-talks",
+    "title": "Curriculum vitae",
+    "section": "Invited talks",
+    "text": "Invited talks\n\n  May 2026Towards efficient control of turbulenceSwedish Society for Industrial Flow and Heat Transfer, Lund\n  Feb 2026Engineering applications of computational and data-driven fluid dynamicsLKAB, Kiruna (online)\n  May 2024Artificial intelligence and data-driven algorithms for flow feature extraction and controlSwedish Society for Industrial Flow and Heat Transfer, Finspång\n  Jul 2023Deep reinforcement learning in CFD, implementation in OpenFOAMDutch OpenFOAM User Group meeting\n  Jan 2023Invited OpenFOAM expert, OpenFOAM Student Workshop, Delft University of Technology"
+  },
+  {
+    "objectID": "cv.html#skills-and-languages",
+    "href": "cv.html#skills-and-languages",
+    "title": "Curriculum vitae",
+    "section": "Skills and languages",
+    "text": "Skills and languages\n\nCFD: OpenFOAM (use and development), Fluent, CFX\nProgramming and HPC: C++, Python, MATLAB, MPI\nMachine learning: TensorFlow, PyTorch\nLanguages: English (fluent), Swedish (fluent), Persian (native)"
+  },
+  {
+    "objectID": "opportunities.html",
+    "href": "opportunities.html",
+    "title": "Opportunities",
+    "section": "",
+    "text": "I enjoy working with motivated students and researchers interested in computational fluid dynamics, high-fidelity simulation and data-driven methods. Below are the current openings and how to get in touch."
+  },
+  {
+    "objectID": "opportunities.html#msc-and-bsc-thesis-projects",
+    "href": "opportunities.html#msc-and-bsc-thesis-projects",
+    "title": "Opportunities",
+    "section": "MSc and BSc thesis projects",
+    "text": "MSc and BSc thesis projects\nI supervise thesis projects in areas such as:\n\ndevelopment of CFD methods in OpenFOAM\nhigh-fidelity simulation of turbulent and unsteady flows\ndata-driven and machine learning methods for flow analysis and control\n\nIf you study at Linköping University and would like to align your thesis with my research, feel free to contact me.\n\nAvailable MSc thesis proposals\n\n\nAccelerating reinforcement-learning-based flow control using transfer learning\nDownload proposal (PDF, 1 MB)\n\n\nSpectral POD and autoencoders for compression and prediction of vortex rope\nDownload proposal (PDF, 2.7 MB)"
+  },
+  {
+    "objectID": "opportunities.html#phd-positions",
+    "href": "opportunities.html#phd-positions",
+    "title": "Opportunities",
+    "section": "PhD positions",
+    "text": "PhD positions\nA PhD position on AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation, was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. Read about the project.\nNew funded positions will be announced here and on the Linköping University vacancies page."
+  },
+  {
+    "objectID": "opportunities.html#postdocs-and-fellowships",
+    "href": "opportunities.html#postdocs-and-fellowships",
+    "title": "Opportunities",
+    "section": "Postdocs and fellowships",
+    "text": "Postdocs and fellowships\nThere are no funded postdoc openings at the moment. If you have your own funding or plan to apply for a fellowship, I am happy to discuss possible projects. I will support strong applications for external scholarships and fellowships and can host you at Linköping University.\n\n\nExamples of funding for PhD candidates\n\nSwedish national graduate schools (e.g. WASP)\nMarie Skłodowska-Curie Actions (MSCA) Doctoral Networks\nOther national or EU-funded PhD scholarship programmes\n\n\n\nExamples of funding for postdocs\n\nKnut and Alice Wallenberg Foundation postdoc grants\nMSCA Postdoctoral Fellowships\nNational mobility or international exchange programmes"
+  },
+  {
+    "objectID": "opportunities.html#how-to-get-in-touch",
+    "href": "opportunities.html#how-to-get-in-touch",
+    "title": "Opportunities",
+    "section": "How to get in touch",
+    "text": "How to get in touch\nIf you are interested in joining, email me with:\n\na short CV\na brief description of your research interests and how they connect to my research\nyour background in CFD, programming and machine learning\nif relevant, your plan for applying for a scholarship or external funding"
   },
   {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "See my full publication list on\n- Google Scholar\n- ORCID\n- ResearchGate\nAll peer-reviewed articles are listed below.\n\n\n\n\nReferences\n\n1. Nobilo, M., Salehi, S. & Nilsson, H. Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – a review. Renewable and Sustainable Energy Reviews 228, 116578 (2026).\n\n\n2. Sheikholeslami, M., Salehi, S., Mao, W., Eslamdoost, A. & Nilsson, H. Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves. Physics of Fluids 37, 087158 (2025).\n\n\n3. Salehi, S. An efficient intrusive deep reinforcement learning framework for OpenFOAM. Meccanica 60, 1673–1693 (2025).\n\n\n4. Fahlbeck, J., Nilsson, H., Arabnejad, M. H. & Salehi, S. Performance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditions. Renewable Energy (2024) doi:10.1016/j.renene.2024.121605.\n\n\n5. Masoodi, F. A., Salehi, S. & Goyal, R. Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine. Physics of Fluids 36, 094110 (2024).\n\n\n6. Salehi, S. & Nilsson, H. Modal analysis of vortex rope using dynamic mode decomposition. Physics of Fluids 36, 024122 (2024).\n\n\n7. Masoodi, F. A., Salehi, S. & Goyal, R. Formation and evolution of vortex breakdown consequent to post design flow increase in a Francis turbine. Physics of Fluids 36, 025116 (2024).\n\n\n8. Salehi, S. & Nilsson, H. A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM. Computer Physics Communications 287, 108703 (2023).\n\n\n9. Fahlbeck, J., Nilsson, H. & Salehi, S. Surrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine using a genetic algorithm and computational fluid dynamics. Journal of Energy Storage 62, 106902 (2023).\n\n\n10. Salehi, S. & Nilsson, H. Effects of uncertainties in positioning of PIV plane on validation of CFD results of a high-head francis turbine model. Renewable Energy 193, 57–75 (2022).\n\n\n11. Salehi, S. & Nilsson, H. Flow-induced pulsations in francis turbines during startup - a consequence of an intermittent energy system. Renewable Energy (2022) doi:10.1016/j.renene.2022.01.111.\n\n\n12. Fahlbeck, J., Nilsson, H. & Salehi, S. A head loss pressure boundary condition for hydraulic systems. OpenFOAM Journal 2, 1–12 (2022).\n\n\n13. Salehi, S., Nilsson, H., Lillberg, E. & Edh, N. An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown. Renewable Energy 179, 2322–2347 (2021).\n\n\n14. Salehi, S. & Nilsson, H. OpenFOAM for Francis turbine transients. OpenFOAM Journal 1, 47–61 (2021).\n\n\n15. Fahlbeck, J., Nilsson, H. & Salehi, S. Flow characteristics of preliminary shutdown and startup sequences for a model counter-rotating pump-turbine. Energies 14, (2021).\n\n\n16. Karimi, M. S., Raisee, M., Salehi, S., Hendrick, P. & Nourbakhsh, A. Robust optimization of the NASA C3X gas turbine vane under uncertain operational conditions. International Journal of Heat and Mass Transfer 164, 120537 (2021).\n\n\n17. Ahmar, A. M., Salehi, S. & Raisee, M. Uncertainty quantification of the turbulent flow field and heat transfer of film cooling (in persian). Journal of Solid and Fluid Mechanics 10, 177–192 (2020).\n\n\n18. Karimi, M. S., Salehi, S., Raisee, M., Hendrick, P. & Nourbakhsh, A. Probabilistic CFD computations of gas turbine vane under uncertain operational conditions. Applied Thermal Engineering 148, 754–767 (2019).\n\n\n19. Salehi, S., Raisee, M., Cervantes, M. J. & Nourbakhsh, A. On the flow field and performance of a centrifugal pump under operational and geometrical uncertainties. Applied Mathematical Modelling 61, 540–560 (2018).\n\n\n20. Salehi, S., Raisee, M., Cervantes, M. J. & Nourbakhsh, A. An efficient multifidelity \\(\\ell_1\\)-minimization method for sparse polynomial chaos. Computer Methods in Applied Mechanics and Engineering 334, 183–207 (2018).\n\n\n21. Salehpour, A., Salehi, S., Salehpour, S. & Ashjaee, M. Thermal and hydrodynamic performances of MHD ferrofluid flow inside a porous channel. Experimental Thermal and Fluid Science 90, 1–13 (2018).\n\n\n22. Salehi, S., Raisee, M., Cervantes, M. J. & Nourbakhsh, A. Efficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensing. Computers & Fluids 154, 296–321 (2017).\n\n\n23. Salehi, S., Raisee, M., Cervantes, M. J. & Nourbakhsh, A. The effects of inflow uncertainties on the characteristics of developing turbulent flow in rectangular pipe and asymmetric diffuser. Journal of Fluids Engineering 139, 041402 (2017).\n\n\n24. Salehi, S., Raisee, M. & Cervantes, M. J. Computation of developing turbulent flow through a straight asymmetric diffuser with moderate adverse pressure gradient. Journal of Applied Fluid Mechanics 10, 1029–1043 (2017).\n\n\n25. Salehi, S. & Raisee, M. Application of gram-schmidt orthogonalization method in uncertainty quantification of computational fluid dynamics problems with arbitrary probability distribution functions (in persian). Modares Mechanical Engineering 15, 1–8 (2015).\n\n\n26. Takabi, B. & Salehi, S. Augmentation of the heat transfer performance of a sinusoidal corrugated enclosure by employing hybrid nanofluid. Advances in Mechanical Engineering 6, 147059 (2014).\n\n\n27. Salehi, S., Raisee, M., Cervantes, M. & Nourbakhsh, A. Development of an efficient multifidelity non-intrusive uncertainty quantification method. in Evolutionary and deterministic methods for design optimization and control with applications to industrial and societal problems (eds. Andrés-Pérez, E. et al.) (Springer International Publishing, 2019). doi:10.1007/978-3-319-89890-2.\n\n\n28. Nobilo, M., Salehi, S. & Nilsson, H. On the flow-induced pulsating forces during load reduction of a kaplan turbine model. in IOP Conference Series: Earth and Environmental Science vol. 1483 012022 (IOP Publishing, 2025).\n\n\n29. Fahlbeck, J., Nilsson, H. & Salehi, S. On the pump mode shutdown sequence for a model contra-rotating pump-turbine. in IOP Conference Series: Earth and Environmental Science vol. 1483 012016 (IOP Publishing, 2025).\n\n\n30. Salehi, S. & Nilsson, H. Dynamic mode decomposition of rotating vortex rope instability. in 9th IAHR meeting of the WorkGroup on cavitation and dynamic problems in hydraulic machinery and systems (2024).\n\n\n31. Nobilo, M., Salehi, S. & Nilsson, H. Effects of load reduction on forces and moments on the runner blades of a kaplan turbine model. in IOP Conference Series: Earth and Environmental Science vol. 1411 012001 (IOP Publishing, 2024).\n\n\n32. Fahlbeck, J., Nilsson, H. & Salehi, S. Analysis of mode-switching of a contra-rotating pump-turbine based on load gradient limiting shutdown and startup sequences. in IOP Conference Series: Earth and Environmental Science vol. 1411 012049 (IOP Publishing, 2024).\n\n\n33. Sheikholeslami, M., Salehi, S., Mao, W., Eslamdoost, A. & Nilsson, H. Physics-Informed Neural Networks for Modeling Linear Waves. in vols. Volume 9: Philip Liu Honoring Symposium on Water Wave Mechanics and Hydrodynamics; Blue Economy Symposium V009T12A002 (2024).\n\n\n34. Fahlbeck, J., Nilsson, H. & Salehi, S. Evaluation of startup time for a model contra-rotating pump-turbine in pump-mode. in IOP Conference Series: Earth and Environmental Science vol. 1079 012034 (IOP Publishing, 2022).\n\n\n35. Salehi, S., Nilsson, H., Lillberg, E. & Edh, N. Development of a novel numerical framework in OpenFOAM to simulate kaplan turbine transients. in IOP Conference Series: Earth and Environmental Science vol. 774 012058 (IOP Publishing, 2021).\n\n\n36. Salehi, S., Nilsson, H., Lillberg, E. & Edh, N. Numerical simulation of hydraulic turbine during transient operation using OpenFOAM. in IOP Conference Series: Earth and Environmental Science vol. 774 012060 (IOP Publishing, 2021).\n\n\n37. Fahlbeck, J., Nilsson, H., Salehi, S., Zangeneh, M. & Joseph, M. Numerical analysis of an initial design of a counter-rotating pump-turbine. in IOP Conference Series: Earth and Environmental Science vol. 774 012066 (IOP Publishing, 2021)."
+    "text": "Listed by type, most recent first. Current citation data is on Google Scholar, ORCID and ResearchGate. Open-source code accompanying several papers is listed under Software.\n\n  Filter publications\n  \n  \n\n\nJournal articles (27) · Preprints (1) · Book chapters (1) · Conference papers (17) · Conference presentations (9)\n\nJournal articles 27\n2026\nState-of-the-art implementations of PINNs for the lid-driven cavity problem – a critical review with future perspectivesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonResults in Engineering, 32, 112399 DOI\nLifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system – A reviewM. Nobilo, S. Salehi and H. NilssonRenewable and Sustainable Energy Reviews, 228, 116578 DOI\n\n2025\nPhysics-informed neural networks with hard and soft boundary conditions for linear free surface wavesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonPhysics of Fluids, 37(8), 087158 DOI\nAn efficient intrusive deep reinforcement learning framework for OpenFOAMS. SalehiMeccanica, 60(6), 1673–1693 DOI\n\n2024\nPerformance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditionsJ. Fahlbeck, H. Nilsson, M. H. Arabnejad and S. SalehiRenewable Energy, 237, 121605 DOI\nReorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbineF. A. Masoodi, S. Salehi and R. GoyalPhysics of Fluids, 36(9), 094110 DOI\nModal analysis of vortex rope using dynamic mode decompositionS. Salehi and H. NilssonPhysics of Fluids, 36(2), 024122 DOI\nFormation and evolution of vortex breakdown consequent to post design flow increase in a Francis turbineF. A. Masoodi, S. Salehi and R. GoyalPhysics of Fluids, 36(2), 025116 DOI\n\n2023\nA semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAMS. Salehi and H. NilssonComputer Physics Communications, 287, 108703 DOI\nSurrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine using a genetic algorithm and computational fluid dynamicsJ. Fahlbeck, H. Nilsson and S. SalehiJournal of Energy Storage, 62, 106902 DOI\n\n2022\nEffects of uncertainties in positioning of PIV plane on validation of CFD results of a high-head Francis turbine modelS. Salehi and H. NilssonRenewable Energy, 193, 57–75 DOI\nFlow-induced pulsations in Francis turbines during startup - A consequence of an intermittent energy systemS. Salehi and H. NilssonRenewable Energy, 188, 1166–1183 DOI\nA head loss pressure boundary condition for hydraulic systemsJ. Fahlbeck, H. Nilsson and S. SalehiOpenFOAM Journal, 2, 1–12 DOI\n\n2021\nAn in-depth numerical analysis of transient flow field in a Francis turbine during shutdownS. Salehi, H. Nilsson, E. Lillberg and N. EdhRenewable Energy, 179, 2322–2347 DOI\nOpenFOAM for Francis turbine transientsS. Salehi and H. NilssonOpenFOAM Journal, 1, 47–61 DOI\nFlow Characteristics of Preliminary Shutdown and Startup Sequences for a Model Counter-Rotating Pump-TurbineJ. Fahlbeck, H. Nilsson and S. SalehiEnergies, 14(12), 3593 DOI\nRobust optimization of the NASA C3X gas turbine vane under uncertain operational conditionsM. S. Karimi, M. Raisee, S. Salehi, P. Hendrick and A. NourbakhshInternational Journal of Heat and Mass Transfer, 164, 120537 DOI\n\n2020\nUncertainty quantification of the turbulent flow field and heat transfer of film cooling (in Persian)A. M. Ahmar, S. Salehi and M. RaiseeJournal of Solid and Fluid Mechanics, 10(2), 177–192 Link\n\n2019\nProbabilistic CFD computations of gas turbine vane under uncertain operational conditionsM. S. Karimi, S. Salehi, M. Raisee, P. Hendrick and A. NourbakhshApplied Thermal Engineering, 148, 754–767 DOI\n\n2018\nOn the flow field and performance of a centrifugal pump under operational and geometrical uncertaintiesS. Salehi, M. Raisee, M. J. Cervantes and A. NourbakhshApplied Mathematical Modelling, 61, 540–560 DOI\nAn efficient multifidelity ℓ1-minimization method for sparse polynomial chaosS. Salehi, M. Raisee, M. J. Cervantes and A. NourbakhshComputer Methods in Applied Mechanics and Engineering, 334, 183–207 DOI\nThermal and hydrodynamic performances of MHD ferrofluid flow inside a porous channelA. Salehpour, S. Salehi, S. Salehpour and M. AshjaeeExperimental Thermal and Fluid Science, 90, 1–13 DOI\n\n2017\nEfficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensingS. Salehi, M. Raisee, M. J. Cervantes and A. NourbakhshComputers & Fluids, 154, 296–321 DOI\nThe Effects of Inflow Uncertainties on the Characteristics of Developing Turbulent Flow in Rectangular Pipe and Asymmetric DiffuserS. Salehi, M. Raisee, M. J. Cervantes and A. NourbakhshJournal of Fluids Engineering, 139(4), 041402 DOI\nComputation of Developing Turbulent Flow Through a Straight Asymmetric Diffuser With Moderate Adverse Pressure GradientS. Salehi, M. Raisee and M. J. CervantesJournal of Applied Fluid Mechanics, 10(4), 1029–1043 Article\n\n2015\nApplication of Gram-Schmidt orthogonalization method in uncertainty quantification of computational fluid dynamics problems with arbitrary probability distribution functions (In Persian)S. Salehi and M. RaiseeModares Mechanical Engineering, 15(12), 1–8 Link\n\n2014\nAugmentation of the Heat Transfer Performance of a Sinusoidal Corrugated Enclosure by Employing Hybrid NanofluidB. Takabi and S. SalehiAdvances in Mechanical Engineering, 6, 147059 DOI\n\n\n\nPreprints 1\n\nTransfer learning strategies for accelerating reinforcement-learning-based flow controlS. SalehiarXiv preprint arXiv:2510.16016 (2025) arXiv\n\n\n\nBook chapters 1\n\nDevelopment of an Efficient Multifidelity Non-Intrusive Uncertainty Quantification MethodS. Salehi, M. Raisee, M. Cervantes and A. NourbakhshIn Evolutionary and Deterministic Methods for Design Optimization and Control With Applications to Industrial and Societal Problems, Springer International Publishing, pp. 483–497 (2019) DOI\n\n\n\nConference papers 17\n2025\nA parametric study of axial flow jets for mitigation of vortex rope instabilitiesS. Salehi and H. NilssonIOP Conference Series: Earth and Environmental Science, 1561, 012023 DOI\nOn the flow-induced pulsating forces during load reduction of a Kaplan turbine modelM. Nobilo, S. Salehi and H. NilssonIOP Conference Series: Earth and Environmental Science, 1483, 012022 DOI\nOn the pump mode shutdown sequence for a model contra-rotating pump-turbineJ. Fahlbeck, H. Nilsson and S. SalehiIOP Conference Series: Earth and Environmental Science, 1483, 012016 DOI\n\n2024\nDynamic Mode Decomposition of Rotating Vortex Rope InstabilityS. Salehi and H. Nilsson9th IAHR Meeting of the WorkGroup on Cavitation and Dynamic Problems in Hydraulic Machinery and Systems\nEffects of load reduction on forces and moments on the runner blades of a Kaplan turbine modelM. Nobilo, S. Salehi and H. NilssonIOP Conference Series: Earth and Environmental Science, 1411, 012001 DOI\nAnalysis of mode-switching of a contra-rotating pump-turbine based on load gradient limiting shutdown and startup sequencesJ. Fahlbeck, H. Nilsson and S. SalehiIOP Conference Series: Earth and Environmental Science, 1411, 012049 DOI\nPhysics-Informed Neural Networks for Modeling Linear WavesM. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. NilssonInternational Conference on Offshore Mechanics and Arctic Engineering, 9, V009T12A002 DOI\n\n2022\nEvaluation of startup time for a model contra-rotating pump-turbine in pump-modeJ. Fahlbeck, H. Nilsson and S. SalehiIOP Conference Series: Earth and Environmental Science, 1079, 012034 DOI\n\n2021\nDevelopment of a novel numerical framework in OpenFOAM to simulate Kaplan turbine transientsS. Salehi, H. Nilsson, E. Lillberg and N. EdhIOP Conference Series: Earth and Environmental Science, 774, 012058 DOI\nNumerical Simulation of Hydraulic Turbine During Transient Operation Using OpenFOAMS. Salehi, H. Nilsson, E. Lillberg and N. EdhIOP Conference Series: Earth and Environmental Science, 774, 012060 DOI\nNumerical analysis of an initial design of a counter-rotating pump-turbineJ. Fahlbeck, H. Nilsson, S. Salehi, M. Zangeneh and M. JosephIOP Conference Series: Earth and Environmental Science, 774, 012066 DOI\n\n2017\nConjugate Heat Transfer Simulation of a Cooled Turbine Vane under Uncertain Operational ConditionM. S. Karimi, S. Salehi, M. Raisee and A. NourbakhshInternational Conference on Evolutionary and Deterministic Methods for Design Optimization and Control with Applications to Industrial and Societal Problems, Madrid, Spain\nDevelopment of an Efficient Multifidelity Non-Intrusive Uncertainty Quantification MethodS. Salehi, M. Raisee, M. Cervantes and A. NourbakhshInternational Conference on Evolutionary and Deterministic Methods for Design Optimization and Control with Applications to Industrial and Societal Problems, Madrid, Spain\nEffects of Geometrical and Operational Uncertainties on the Performance of Hydraulic MachineryS. Salehi, M. Raisee and A. NourbakhshThe 14th Asian International Conference on Fluid Machinery, Zhenjiang, China\nNumerical Investigation of Turbulent Flow in Francis-99 Turbine Using Various Turbulence ModelsV. Etemadeasl, S. Salehi, M. Raisee and A. NourbakhshThe 14th Asian International Conference on Fluid Machinery, Zhenjiang, China\n\n2013\nNumerical and Experimental Investigation of the Effect of Heat Exchanger Shape on Performance of an Industrial Heater (In Persian)E. Akbari, S. Salehi and M. Karami21st Annual International Conference on Mechanical Engineering (ISME), Tehran, Iran\nStudying the effects of employing hybrid nanofluid on heat transfer performance of a wavy cavityB. Takabi, S. Salehi and M. H. Rahimyan21st Annual International Conference on Mechanical Engineering (ISME), Tehran, Iran\n\n\n\nConference presentations 9\n\nClosed-loop control of vortex rope in a swirl generator using deep reinforcement learningS. Salehi21st OpenFOAM Workshop, Guimarães, Portugal (OFW21) (2026)\nTransfer learning strategies for accelerating reinforcement-learning-based flow controlS. Salehi3rd ERCOFTAC Workshop on Machine Learning for Fluid Dynamics, CWI, Amsterdam, Netherlands (2026)\nCFD with OpenSource Software: a case study of project-based learning in an international PhD courseS. SalehiChalmers Conference on Teaching and Learning (KUL) (2024)\nTowards practical applications of deep reinforcement learning in CFDS. SalehiERCOFTAC Workshop on Machine Learning for Fluid Dynamics, Sorbonne University, Paris, France (2024)\nImplementation of deep reinforcement learning in OpenFOAM for active flow controlS. Salehi18th OpenFOAM Workshop, Genoa, Italy (OFW18) (2023)\nDeep reinforcement learning for active flow controlS. SalehiDutch OpenFOAM User Group Meeting, July, TU Delft, Netherlands (2023)\nEvolution of flow features during transient operation of a Kaplan turbineS. Salehi17th OpenFOAM Workshop, Cambridge, UK (OFW17) (2022)\nNumerical simulation of hydraulic turbine during transient operation using OpenFOAMS. Salehi15th OpenFOAM Workshop, Virginia, USA (OFW15) (2020)\nQuantification of epistemic uncertainties in the k–ε model coefficientsS. SalehiGothenburg Region OpenFOAM User Group Meeting (OFGBG19) (2019)"
   },
   {
-    "objectID": "rom.html",
-    "href": "rom.html",
-    "title": "Under construction",
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
     "section": "",
-    "text": "Under construction"
+    "text": "I release the methods I develop as open-source code, so that they can be used and checked by both academic and industrial users. Most of the projects extend OpenFOAM. All code is on GitHub."
   },
   {
-    "objectID": "transient.html",
-    "href": "transient.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "Under construction"
+    "objectID": "software.html#reinforcement-learning-and-flow-control",
+    "href": "software.html#reinforcement-learning-and-flow-control",
+    "title": "Software",
+    "section": "Reinforcement learning and flow control",
+    "text": "Reinforcement learning and flow control\n\nTensorforceFoam\nAn intrusive deep reinforcement learning (DRL) framework for OpenFOAM, built on TensorFlow and the Tensorforce package. Intrusive means the DRL agent is integrated directly into the CFD environment, so no external information exchange is needed during DRL episodes. Parallel environments for expensive CFD cases are handled through MPI (mpi4py).\nCode on GitHub · Paper: Salehi, Meccanica, 2025\n\n\nagentJet\nAn OpenFOAM boundary condition that deploys a trained DRL policy as a jet actuator directly inside the CFD solver. The saved TensorFlow policy is evaluated through the TensorFlow C++ API (cppflow), so no Python coupling is needed at run time. At each control period the flow state is sampled at probe locations, and the policy returns a jet velocity that is ramped smoothly from the previous action.\nCode on GitHub"
+  },
+  {
+    "objectID": "software.html#hydraulic-turbines-and-mesh-motion",
+    "href": "software.html#hydraulic-turbines-and-mesh-motion",
+    "title": "Software",
+    "section": "Hydraulic turbines and mesh motion",
+    "text": "Hydraulic turbines and mesh motion\n\nsemiImplicitSlip\nA mesh-motion library for OpenFOAM with a robust semi-implicit algorithm for slipping mesh points along curved surfaces: an explicit step based on the general slip condition followed by an implicit step based on a Dirichlet condition, with Laplacian smoothing to spread the deformation into the domain. A solid-body rotation can be added on top, for example to model the runner of a Kaplan turbine during transient operation.\nCode on GitHub · Paper: Salehi and Nilsson, Computer Physics Communications, 2023\n\n\nFrancis-99 transients\nOpen case files and code for CFD simulation of the transient operation of a Francis turbine in OpenFOAM.\nDataset on Harvard Dataverse · Paper: Salehi and Nilsson, OpenFOAM Journal, 2021\n\n\nOpenFOAM-Swirl-Number\nA pipeline for computing the swirl number, the ratio of the axial flux of angular momentum to the axial flux of axial momentum, in OpenFOAM. Modular function objects extract and transform the velocity field and integrate the momentum fluxes over a sampled cross-section. A Python script then computes and plots the swirl number over time.\nCode on GitHub"
+  },
+  {
+    "objectID": "software.html#teaching",
+    "href": "software.html#teaching",
+    "title": "Software",
+    "section": "Teaching",
+    "text": "Teaching\n\nOSCFD\nTest codes and examples for the PhD course CFD with Open-Source Software at Chalmers University of Technology, complementing lectures on memory management in C++ and OpenFOAM. They range from standalone C++ examples (dynamic allocation, copy semantics, smart pointers) to OpenFOAM applications that examine autoPtr and tmp.\nCode on GitHub"
   }
 ]

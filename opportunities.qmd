@@ -1,78 +1,66 @@
 ---
 title: "Opportunities"
-description: "MSc thesis proposals, PhD and postdoc opportunities in CFD and data-driven methods at Linköping University."
+description: "MSc and BSc thesis projects, PhD and postdoc opportunities in CFD, OpenFOAM and machine learning for fluid flows with Saeed Salehi at Linköping University."
+toc: true
 ---
 
-I enjoy working with motivated students and researchers who are interested in **computational fluid dynamics**, **high-fidelity simulations**, and **data-driven methods**.  
+I enjoy working with motivated students and researchers interested in **computational fluid dynamics**, **high-fidelity simulation** and **data-driven methods**. Below are the current openings and how to get in touch.
 
-::: {.section-background style="background-color:#f5f8fc; padding: 1em; border-radius: 8px;"}
-# MSc and BSc Thesis Projects
+## MSc and BSc thesis projects
 
-I supervise thesis projects in areas such as:    
- - Development of CFD methods in OpenFOAM  
- - High-fidelity simulations of turbulent and unsteady flows  
- - Data-driven and machine learning methods for flow analysis and control  
+I supervise thesis projects in areas such as:
 
-If you are studying at Linköping University and would like to align your thesis with my research, feel free to reach out.  
+- development of CFD methods in OpenFOAM
+- high-fidelity simulation of turbulent and unsteady flows
+- data-driven and machine learning methods for flow analysis and control
 
-## Available MSc Thesis Proposals
+If you study at Linköping University and would like to align your thesis with my research, feel free to [contact me](contact.qmd).
 
-:::: {.cards}
-::: {.card}
-#### Accelerating reinforcement-learning-based flow control using transfer learning
-[📄 Download proposal (PDF)](files/MasterThesis_CFD_DRL_TL.pdf)
+### Available MSc thesis proposals
+
+::: {.card-grid}
+::: {.info-card}
+#### Accelerating reinforcement-learning-based flow control using transfer learning {.unlisted}
+[Download proposal (PDF, 1 MB)](files/MasterThesis_CFD_DRL_TL.pdf)
 :::
 
-
-::: {.card}
-#### Spectral POD and autoencoders for compression and prediction of vortex rope
-[📄 Download proposal (PDF)](files/MasterThesis_Modal_Vortex.pdf)
+::: {.info-card}
+#### Spectral POD and autoencoders for compression and prediction of vortex rope {.unlisted}
+[Download proposal (PDF, 2.7 MB)](files/MasterThesis_Modal_Vortex.pdf)
+:::
 :::
 
-::::
+## PhD positions
+
+A PhD position on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation, was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. [Read about the project](project-hydropower-ai.qmd).
+
+New funded positions will be announced here and on the [Linköping University vacancies page](https://liu.se/en/work-at-liu/vacancies).
+
+## Postdocs and fellowships
+
+There are no funded postdoc openings at the moment. If you have your own funding or plan to apply for a fellowship, I am happy to discuss possible projects. I will support strong applications for external scholarships and fellowships and can host you at Linköping University.
+
+::: {.card-grid}
+::: {.info-card}
+### Examples of funding for PhD candidates {.unlisted}
+- Swedish national graduate schools (e.g. WASP)
+- Marie Skłodowska-Curie Actions (MSCA) Doctoral Networks
+- Other national or EU-funded PhD scholarship programmes
 :::
 
----
-
-::: {.section-background style="background-color:#ffffff; padding: 1em; border-radius: 8px;"}
-# PhD and Postdoc Opportunities
-
-## Open PhD Position
-
-There is currently an open PhD position in the group on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation.
-
-**Application deadline: August 31, 2026**
-
-- [Read more about the project](project-hydropower-ai.html)
-- [Apply at LiU vacancies](https://liu.se/en/work-at-liu/vacancies/29533)
-
-## Postdoc Opportunities
-
-At the moment there are no funded postdoc openings. If you have your own funding or plan to apply for a fellowship, I am open to discussing possible projects.
+::: {.info-card}
+### Examples of funding for postdocs {.unlisted}
+- Knut and Alice Wallenberg Foundation postdoc grants
+- MSCA Postdoctoral Fellowships
+- National mobility or international exchange programmes
+:::
 :::
 
----
+## How to get in touch
 
-::: {.section-background style="background-color:#f5f8fc; padding: 1em; border-radius: 8px;"}
-# Information for Prospective PhDs and Postdocs
+If you are interested in joining, [email me](mailto:saeed.salehi@liu.se) with:
 
-I am always open to discussing possibilities with motivated PhD candidates and postdoctoral researchers.  
-Even if there are no funded positions available at the moment, I am glad to support applications for external scholarships and fellowships and can host you at Linköping University.  
-
-## Examples of funding opportunities for PhD candidates
-- Swedish national graduate schools (e.g. WASP)  
-- Marie Skłodowska-Curie Actions (MSCA) Doctoral Networks  
-- Other national or EU-based PhD scholarship programs  
-
-## Examples of funding opportunities for postdoctoral researchers
-- Knut and Alice Wallenberg Foundation postdoc grants  
-- Marie Skłodowska-Curie Actions (MSCA) Postdoctoral Fellowships  
-- National mobility or international exchange programs  
-
-## How to Get in Touch
-If you are interested in joining, please send me:  
-1. A short CV  
-2. A brief description of your research interests and how they connect to my research  
-3. Information about your background in CFD, programming, and machine learning  
-4. (If relevant) A detailed plan for applying for a scholarship or external funding  
-:::
+1. a short CV
+2. a brief description of your research interests and how they connect to [my research](research.qmd)
+3. your background in CFD, programming and machine learning
+4. if relevant, your plan for applying for a scholarship or external funding
