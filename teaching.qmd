@@ -28,12 +28,12 @@ Data-driven modelling and machine learning for mechanical engineering. Students 
 :::
 :::
 
-## Earlier teaching
+## Other teaching
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">2020 – present</span><span class="what"><strong><a href="http://www.tfd.chalmers.se/~hani/kurser/OS_CFD/">CFD with OpenSource Software</a></strong> (7.5 ECTS), lecturer and teaching assistant<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
-  <li><span class="when">2021 – present</span><span class="what"><strong><a href="https://www.tfd.chalmers.se/~hani/kurser/OS_CFD/BasicUsageOfOpenFOAM.htm">Basic Usage of OpenFOAM</a></strong> (2 ECTS), lecturer and teaching assistant<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
+  <li><span class="when">2020 – present</span><span class="what"><strong><a href="http://www.tfd.chalmers.se/~hani/kurser/OS_CFD/">CFD with OpenSource Software</a></strong> (7.5 ECTS), lecturer<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
+  <li><span class="when">2021 – present</span><span class="what"><strong><a href="https://www.tfd.chalmers.se/~hani/kurser/OS_CFD/BasicUsageOfOpenFOAM.htm">Basic Usage of OpenFOAM</a></strong> (2 ECTS), lecturer<br><span class="sub">Chalmers University of Technology · PhD level</span></span></li>
   <li><span class="when">2022</span><span class="what"><strong>Introduction to fluid dynamics in water turbines</strong> (2 ECTS), main teacher and examiner<br><span class="sub">Swedish Hydropower Centre (SVC) research school at KTH Royal Institute of Technology · PhD level</span></span></li>
   <li><span class="when">2018 – 2019</span><span class="what"><strong>Introduction to Turbomachinery</strong>, main teacher and examiner<br><span class="sub">University of Science and Culture, Tehran · Bachelor level</span></span></li>
   <li><span class="when">2013 – 2017</span><span class="what"><strong>Teaching assistant</strong> in Turbomachinery Lab, Turbulent Flows, Heat Transfer and Fluid Mechanics<br><span class="sub">University of Tehran · Bachelor and Master level</span></span></li>

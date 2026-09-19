@@ -14,11 +14,11 @@
     "text": "I am examiner, course coordinator and main teacher for two Master’s-level courses.\n\n\n\nTMMV59 · 6 credits · Master’s level\nPractical training in CFD for complex flow and heat transfer problems: the full workflow from modelling strategy, choice of physical models and numerical methods, and meshing to verification and validation. Students also learn to manage simulation projects, assess errors and uncertainties, automate workflows for high-performance computing, and communicate results. The course combines lectures, workshops, computer exercises and project work with input from industry.\nCourse page at LiU\n\n\n\nTMMV64 · 6 credits · Master’s level\nData-driven modelling and machine learning for mechanical engineering. Students process, analyse and visualise data from mechanical and energy systems and implement predictive and classification models in Python. Lectures and hands-on labs end in a project that applies the methods to a real engineering problem.\nCourse page at LiU"
   },
   {
-    "objectID": "teaching.html#earlier-teaching",
-    "href": "teaching.html#earlier-teaching",
+    "objectID": "teaching.html#other-teaching",
+    "href": "teaching.html#other-teaching",
     "title": "Teaching and supervision",
-    "section": "Earlier teaching",
-    "text": "Earlier teaching\n\n  2020 – presentCFD with OpenSource Software (7.5 ECTS), lecturer and teaching assistantChalmers University of Technology · PhD level\n  2021 – presentBasic Usage of OpenFOAM (2 ECTS), lecturer and teaching assistantChalmers University of Technology · PhD level\n  2022Introduction to fluid dynamics in water turbines (2 ECTS), main teacher and examinerSwedish Hydropower Centre (SVC) research school at KTH Royal Institute of Technology · PhD level\n  2018 – 2019Introduction to Turbomachinery, main teacher and examinerUniversity of Science and Culture, Tehran · Bachelor level\n  2013 – 2017Teaching assistant in Turbomachinery Lab, Turbulent Flows, Heat Transfer and Fluid MechanicsUniversity of Tehran · Bachelor and Master level"
+    "section": "Other teaching",
+    "text": "Other teaching\n\n  2020 – presentCFD with OpenSource Software (7.5 ECTS), lecturerChalmers University of Technology · PhD level\n  2021 – presentBasic Usage of OpenFOAM (2 ECTS), lecturerChalmers University of Technology · PhD level\n  2022Introduction to fluid dynamics in water turbines (2 ECTS), main teacher and examinerSwedish Hydropower Centre (SVC) research school at KTH Royal Institute of Technology · PhD level\n  2018 – 2019Introduction to Turbomachinery, main teacher and examinerUniversity of Science and Culture, Tehran · Bachelor level\n  2013 – 2017Teaching assistant in Turbomachinery Lab, Turbulent Flows, Heat Transfer and Fluid MechanicsUniversity of Tehran · Bachelor and Master level"
   },
   {
     "objectID": "teaching.html#phd-supervision",
