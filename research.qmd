@@ -11,7 +11,7 @@ aliases:
   - kaplan.html
 ---
 
-My research combines computational fluid dynamics (CFD) with data science and machine learning to understand, predict and control complex flows. I aim for methods that are efficient, robust and general enough to be used beyond canonical test cases, and I test them on demanding applications, above all hydraulic turbines, where flexible operation leads to strong flow instabilities. Most of the methods are developed in OpenFOAM and released as [open-source software](software.qmd).
+My research combines computational fluid dynamics (CFD) with data science and machine learning to understand, predict and control complex flows. I aim for methods that are efficient, robust and general enough to be used beyond canonical test cases, and I apply them to problems ranging from canonical flows to engineering systems such as turbomachinery. Most of the methods are developed in OpenFOAM and released as [open-source software](software.qmd).
 
 ```{=html}
 <ul class="toc-chips" aria-label="Research themes">

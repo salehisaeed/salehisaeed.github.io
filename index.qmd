@@ -18,7 +18,7 @@ include-in-header: _includes/jsonld.html
     <p id="hero-name" class="hero-name" role="heading" aria-level="1">Saeed Salehi</p>
     <p class="hero-role">Associate Professor of Fluid Mechanics, Docent</p>
     <p class="hero-affil">Division of Applied Thermodynamics and Fluid Mechanics · Department of Management and Engineering · Linköping University, Sweden</p>
-    <p class="hero-intro">I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. Much of my work concerns hydraulic turbines and the flexible operation of hydropower.</p>
+    <p class="hero-intro">I study complex fluid flows with high-fidelity computational fluid dynamics (CFD), and combine CFD with data-driven methods and machine learning to build efficient and reliable tools for simulation, model reduction, flow control and uncertainty quantification. My applications range from canonical flows to engineering systems such as turbomachinery and energy systems.</p>
     <p class="hero-intro">I am first and foremost a CFD specialist and an active OpenFOAM developer. My current focus is deep reinforcement learning for active flow control, coupled directly to CFD.</p>
   </div>
 </section>
