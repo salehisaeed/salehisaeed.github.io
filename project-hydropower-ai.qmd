@@ -6,7 +6,7 @@ image: img/og-project.jpg
 ---
 
 ::: {.callout-note appearance="simple"}
-**PhD recruitment:** a PhD position in this project was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. This page describes the research project.
+**PhD recruitment update (September 2026):** the application period closed on 31 August 2026, and the assessment and recruitment process has now started. We received a large number of applications, so the process will take some time. Thank you to all applicants for your patience. This page describes the research project.
 :::
 
 ## Project summary

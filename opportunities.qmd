@@ -32,7 +32,7 @@ If you study at Linköping University and would like to align your thesis with m
 
 ## PhD positions
 
-A PhD position on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation, was advertised in 2026. The application period closed on 31 August 2026 and recruitment is under way. [Read about the project](project-hydropower-ai.qmd).
+A PhD position on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation, was advertised in 2026. The application period closed on 31 August 2026, and assessment and recruitment are under way. We received a large number of applications, so this will take some time. Thank you to all applicants for your patience. [Read about the project](project-hydropower-ai.qmd).
 
 New funded positions will be announced here and on the [Linköping University vacancies page](https://liu.se/en/work-at-liu/vacancies).
 
