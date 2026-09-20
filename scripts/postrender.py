@@ -7,6 +7,7 @@ Quarto cannot express these directly:
   * the home page hero name as a real <h1> (Quarto hoists a literal <h1>
     into its own title block, so the source uses a placeholder)
   * a skip link as the first focusable element in the body
+  * an accessible name on the colour-scheme toggle
   * the ProfilePage/Person JSON-LD on the home page only
   * noindex on redirect stubs and the 404 page
   * "/" instead of "/index.html" in the sitemap
@@ -36,6 +37,11 @@ def main():
     for path in sorted(DOCS.glob("*.html")):
         html = path.read_text(encoding="utf-8")
         page = path.name
+
+        # Quarto gives the colour-scheme toggle only a title attribute.
+        html = html.replace('class="quarto-color-scheme-toggle quarto-navigation-tool  px-1"',
+                            'class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" '
+                            'aria-label="Switch between light and dark theme" role="button"')
 
         redirect = re.search(r'var redirects = \{"":"([^"]+)"\}', html)
 
