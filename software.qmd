@@ -58,7 +58,7 @@ A pipeline for computing the swirl number, the ratio of the axial flux of angula
 ::: {.software-item}
 ### OSCFD
 
-Test codes and examples for the PhD course *CFD with Open-Source Software* at Chalmers University of Technology, complementing lectures on memory management in C++ and OpenFOAM. They range from standalone C++ examples (dynamic allocation, copy semantics, smart pointers) to OpenFOAM applications that examine `autoPtr` and `tmp`.
+Test codes and examples for the PhD course *CFD with OpenSource Software* at Chalmers University of Technology, complementing lectures on memory management in C++ and OpenFOAM. They range from standalone C++ examples (dynamic allocation, copy semantics, smart pointers) to OpenFOAM applications that examine `autoPtr` and `tmp`.
 
 [[Code on GitHub](https://github.com/salehisaeed/OSCFD)]{.meta-line}
 :::

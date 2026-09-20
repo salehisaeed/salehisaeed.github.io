@@ -6,6 +6,8 @@ Quarto cannot express these directly:
   * the home page <title> with the name first and no site-name suffix
   * the home page hero name as a real <h1> (Quarto hoists a literal <h1>
     into its own title block, so the source uses a placeholder)
+  * a skip link as the first focusable element in the body
+  * the ProfilePage/Person JSON-LD on the home page only
   * noindex on redirect stubs and the 404 page
   * "/" instead of "/index.html" in the sitemap
 
@@ -18,6 +20,8 @@ from pathlib import Path
 SITE = "https://saeedsalehi.com"
 DOCS = Path(__file__).resolve().parent.parent / "docs"
 HOME_TITLE = "Saeed Salehi – Associate Professor of Fluid Mechanics, Linköping University"
+JSONLD = Path(__file__).resolve().parent.parent / "_includes" / "jsonld.html"
+SKIP_LINK = '<a class="skip-link" href="#quarto-document-content">Skip to main content</a>' 
 
 
 def canonical_url(page):
@@ -34,6 +38,11 @@ def main():
         page = path.name
 
         redirect = re.search(r'var redirects = \{"":"([^"]+)"\}', html)
+
+        if not redirect and SKIP_LINK not in html:
+            # First focusable element, so keyboard users can bypass the navbar.
+            html = re.sub(r"(<body[^>]*>)", r"\1\n" + SKIP_LINK, html, count=1)
+
         if redirect:
             html = add_head(html, '<meta name="robots" content="noindex">')
             html = add_head(html, f'<link rel="canonical" href="{canonical_url(redirect.group(1))}">')
@@ -45,6 +54,9 @@ def main():
             html = add_head(html, f'<meta property="og:url" content="{url}">')
 
         if page == "index.html":
+            # ProfilePage/Person data belongs on the home page only.
+            if "ProfilePage" not in html:
+                html = add_head(html, JSONLD.read_text(encoding="utf-8").strip())
             html = re.sub(r"<title>.*?</title>", f"<title>{HOME_TITLE}</title>", html, count=1, flags=re.S)
             html = re.sub(r'(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*"',
                           rf'\1{HOME_TITLE}"', html)

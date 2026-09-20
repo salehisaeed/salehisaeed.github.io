@@ -24,6 +24,6 @@ Appointed Section Editor of the [OpenFOAM Journal](https://journal.openfoam.com/
 ::: {.news-item}
 [Jun 2026]{.news-date}
 
-New PhD position in AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation (see the [project page](project-hydropower-ai.qmd)). Application deadline: 31 August 2026.
+Announced: a PhD position in AI-based active flow control for hydraulic turbines, funded by the ÅForsk Foundation. **The call has since closed** (31 August 2026); see the [project page](project-hydropower-ai.qmd).
 :::
 :::

@@ -44,7 +44,7 @@ Data-driven modelling and machine learning for mechanical engineering. Students 
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">Recruiting</span><span class="what"><strong>PhD student, Linköping University</strong>, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control (<a href="project-hydropower-ai.html">project page</a>). Expected start autumn 2026.</span></span></li>
+  <li><span class="when">From autumn 2026</span><span class="what"><strong>Doctoral student, Linköping University</strong>, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control (<a href="project-hydropower-ai.html">project page</a>); recruitment under way.</span></span></li>
   <li><span class="when">2023 – present</span><span class="what"><strong>Mohammad Sheikholeslami</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Multi-fidelity physics-informed neural networks for solving partial differential equations</span></span></li>
   <li><span class="when">2023 – 2025</span><span class="what"><strong>Martina Nobilo</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">CFD for hydropower lifetime analysis. Licentiate degree, 2025.</span></span></li>
   <li><span class="when">2020 – 2024</span><span class="what"><strong>Jonathan Fahlbeck</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Flow in contra-rotating pump-turbines at stationary, transient and cavitating conditions (EU Horizon 2020 project <a href="https://alpheus-h2020.eu/">ALPHEUS</a>). PhD, 2024.</span></span></li>

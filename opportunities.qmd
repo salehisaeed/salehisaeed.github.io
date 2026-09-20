@@ -4,7 +4,7 @@ description: "MSc and BSc thesis projects, PhD and postdoc opportunities in CFD,
 toc: true
 ---
 
-I enjoy working with motivated students and researchers interested in **computational fluid dynamics**, **high-fidelity simulation** and **data-driven methods**. Below are the current openings and how to get in touch.
+I enjoy working with motivated students and researchers interested in **computational fluid dynamics**, **high-fidelity simulation** and **data-driven methods**. Below are the current thesis proposals, the status of PhD and postdoc positions, and how to get in touch.
 
 ## MSc and BSc thesis projects
 
@@ -32,9 +32,11 @@ If you study at Linköping University and would like to align your thesis with m
 
 ## PhD positions
 
-A PhD position on **AI-based active flow control for hydraulic turbines**, funded by the ÅForsk Foundation, was advertised in 2026. The application period closed on 31 August 2026, and assessment and recruitment are under way. We received a large number of applications, so this will take some time. Thank you to all applicants for your patience. [Read about the project](project-hydropower-ai.qmd).
+::: {.callout-note appearance="simple"}
+**No open PhD call at the moment.** The doctoral position in the ÅForsk-funded project on AI-based active flow control for hydraulic turbines was advertised in 2026; applications closed on 31 August 2026 and assessment and recruitment are now under way. Thank you to all applicants for your patience.
+:::
 
-New funded positions will be announced here and on the [Linköping University vacancies page](https://liu.se/en/work-at-liu/vacancies).
+Future openings will be announced here and on the [Linköping University vacancies page](https://liu.se/en/work-at-liu/vacancies). If you are interested in the research itself, see the [project page](project-hydropower-ai.qmd) and my [research themes](research.qmd).
 
 ## Postdocs and fellowships
 

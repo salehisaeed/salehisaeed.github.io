@@ -55,7 +55,7 @@ as Section Editor. I also serve on the OpenFOAM Turbomachinery Technical Committ
 :::
 
 ::: {.news-entry}
-### New PhD position in AI-based flow control for hydropower {#phd-position}
+### New PhD position in AI-based flow control for hydropower (call now closed) {#phd-position}
 
 [June 2026]{.news-date}
 
@@ -65,9 +65,10 @@ University. The project couples deep reinforcement learning with high-fidelity C
 flow instabilities in hydraulic turbines.
 
 The student will be based at Linköping University, with Håkan Nilsson (Chalmers University of
-Technology) as co-supervisor. The application deadline was 31 August 2026.
+Technology) as co-supervisor.
 
-[About the project](project-hydropower-ai.qmd)
+**This call is closed.** Applications closed on 31 August 2026; see the
+[recruitment update](#phd-recruitment-update) and the [project page](project-hydropower-ai.qmd).
 :::
 
 ::: {.news-entry}

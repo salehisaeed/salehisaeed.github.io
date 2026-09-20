@@ -4,3 +4,4 @@
 
 **/*.quarto_ipynb
 /phd_poster.pptx
+__pycache__/

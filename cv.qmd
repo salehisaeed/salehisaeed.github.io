@@ -27,7 +27,7 @@ A summary of my academic career. The full CV, including the complete publication
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">Feb 2026</span><span class="what"><strong>Docent in Fluid Mechanics</strong>, Linköping University</span></li>
+  <li><span class="when">Feb 2026</span><span class="what"><strong>Docent in Fluid Mechanics</strong>, Linköping University<br><span class="sub">Swedish academic qualification recognising independent scientific and pedagogical competence; qualifies for principal supervision of doctoral students</span></span></li>
   <li><span class="when">2012 – 2018</span><span class="what"><strong>PhD in Mechanical Engineering</strong> (Hydraulic Machinery), University of Tehran<br><span class="sub">Thesis: <em>Uncertainty quantification of turbulent flows in hydraulic machinery</em>. Supervisors: Prof. Mehrdad Raisee, Prof. Michel Cervantes, Prof. Ahmad Nourbakhsh</span></span></li>
   <li><span class="when">2010 – 2012</span><span class="what"><strong>MSc in Mechanical Engineering</strong> (Energy Conversion), University of Tehran<br><span class="sub">Thesis: <em>Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with moderate adverse pressure gradient</em></span></span></li>
   <li><span class="when">2006 – 2010</span><span class="what"><strong>BSc in Mechanical Engineering</strong>, University of Tehran<br><span class="sub">Thesis: <em>Large eddy simulation of stall development around airfoils</em></span></span></li>
@@ -39,12 +39,25 @@ A summary of my academic career. The full CV, including the complete publication
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">2027 – 2031</span><span class="what"><strong>Enabling Flexible Hydropower Operation by AI-Based Active Flow Control</strong><br><span class="sub">ÅForsk Foundation, Early-Career Research Grant · 4.0 MSEK · <strong>PI</strong> · funds a PhD student at Linköping University</span></span></li>
+  <li><span class="when">2027 – 2031</span><span class="what"><strong>Enabling Flexible Hydropower Operation by AI-Based Active Flow Control</strong><br><span class="sub">ÅForsk Foundation, Early-Career Research Grant · 4.0 MSEK · <strong>PI</strong> · funds a doctoral student at Linköping University</span></span></li>
   <li><span class="when">2023 – 2027</span><span class="what"><strong>Artificial Intelligence for Enhanced Hydraulic Turbine Lifetime</strong><br><span class="sub">Swedish Hydropower Centre (SVC) · 7.4 MSEK · Co-PI (PI: Prof. Håkan Nilsson) · developed the project concept and led the application</span></span></li>
   <li><span class="when">2023 – 2027</span><span class="what"><strong>Hydropower Operation and Lifetime Analysis</strong><br><span class="sub">Swedish Hydropower Centre (SVC) · 5.3 MSEK · Co-PI (PI: Prof. Håkan Nilsson)</span></span></li>
   <li><span class="when">2023 – 2027</span><span class="what"><strong>Multi-Fidelity Physics-Informed Neural Network to Solve Partial Differential Equations</strong><br><span class="sub">Chalmers University of Technology, internal competitive funding · 5.5 MSEK · Co-PI (joint application)</span></span></li>
 </ul>
 ```
+
+## Supervision
+
+```{=html}
+<ul class="entry-list">
+  <li><span class="when">From autumn 2026</span><span class="what"><strong>Doctoral student</strong>, Linköping University, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control; recruitment under way</span></span></li>
+  <li><span class="when">2023 – present</span><span class="what"><strong>Mohammad Sheikholeslami</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Multi-fidelity physics-informed neural networks for partial differential equations</span></span></li>
+  <li><span class="when">2023 – 2025</span><span class="what"><strong>Martina Nobilo</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">CFD for hydropower lifetime analysis; Licentiate degree 2025</span></span></li>
+  <li><span class="when">2020 – 2024</span><span class="what"><strong>Jonathan Fahlbeck</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Contra-rotating pump-turbines at stationary, transient and cavitating conditions (EU Horizon 2020 project ALPHEUS); PhD 2024</span></span></li>
+</ul>
+```
+
+I also supervise MSc and BSc thesis projects; current proposals are listed under [Opportunities](opportunities.qmd). Teaching and pedagogical training are described on the [Teaching and supervision](teaching.qmd) page.
 
 ## Academic service
 

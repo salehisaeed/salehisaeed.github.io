@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d4e2608edf277f67e1dd1311175a033a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-44c667c8a7f1ce68f14f704f048d65f4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d4e2608edf277f67e1dd1311175a033a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-94ea62147550605a92098088480b084e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-00fb8cf0d90941ab55b2050cf9a596a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-94ea62147550605a92098088480b084e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -92,17 +92,18 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 <meta property="og:image" content="https://saeedsalehi.com/img/cylinder2d-drl.webp">
 <meta property="og:site_name" content="Saeed Salehi">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image:alt" content="Vorticity contours behind a cylinder without control and with deep reinforcement learning control">
+<meta property="og:image:alt" content="Vorticity contours behind a cylinder: a periodic vortex street without control, and a steady wake under deep reinforcement learning control">
 <meta name="twitter:title" content="Research – Saeed Salehi">
 <meta name="twitter:description" content="High-fidelity CFD combined with data-driven methods and machine learning: reinforcement-learning-based flow control, hydraulic turbine transients, reduced-order modelling, physics-informed neural networks and uncertainty quantification.">
 <meta name="twitter:image" content="https://saeedsalehi.com/img/cylinder2d-drl.webp">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image:alt" content="Vorticity contours behind a cylinder without control and with deep reinforcement learning control">
+<meta name="twitter:image:alt" content="Vorticity contours behind a cylinder: a periodic vortex street without control, and a steady wake under deep reinforcement learning control">
 <link rel="canonical" href="https://saeedsalehi.com/research.html">
 <meta property="og:url" content="https://saeedsalehi.com/research.html">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light">
+<a class="skip-link" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -335,12 +336,12 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -355,7 +356,7 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 </div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -367,11 +368,12 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 </header>
 
 
-<p>My research combines computational fluid dynamics (CFD) with data science and machine learning to understand, predict and control complex flows. I aim for methods that are efficient, robust and general enough to be used beyond canonical test cases, and I apply them to problems ranging from canonical flows to engineering systems such as turbomachinery. Most of the methods are developed in OpenFOAM and released as <a href="./software.html">open-source software</a>.</p>
+<div class="wide">
+<p>I work at the interface between high-fidelity computational fluid dynamics (CFD) and data-driven modelling. The common thread is making expensive simulations useful: extracting the dominant physics from them, quantifying how much to trust them, and turning them into models and controllers that act on the flow. Nearly all of the methods are developed in OpenFOAM and released as <a href="./software.html">open-source software</a>, and they are tested on problems ranging from canonical flows to turbomachinery.</p>
 <ul class="toc-chips" aria-label="Research themes">
   <li><a href="#flow-control">Reinforcement-learning flow control</a></li>
   <li><a href="#turbine-transients">Hydraulic turbine transients</a></li>
-  <li><a href="#modal-analysis">Modal analysis and ROM</a></li>
+  <li><a href="#modal-analysis">High-resolution simulation and reduced-order modelling</a></li>
   <li><a href="#pinns">Physics-informed neural networks</a></li>
   <li><a href="#uq">Uncertainty quantification</a></li>
   <li><a href="#hydropower">Flexible hydropower</a></li>
@@ -379,26 +381,28 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 <div class="research-theme">
 <section id="flow-control" class="level2">
 <h2 class="anchored" data-anchor-id="flow-control">Reinforcement-learning-based flow control</h2>
-<p>Deep reinforcement learning (DRL) can discover feedback control strategies for nonlinear flows that are hard to design with classical methods. Current DRL–CFD frameworks, however, struggle with efficiency, robustness and generalisation. My work pushes DRL towards realistic flows by combining it with multi-fidelity learning, transfer learning and robust learning under uncertainty.</p>
-<p>I developed an intrusive DRL framework in which the agent runs inside the OpenFOAM solver, avoiding external data exchange during training and running parallel environments with MPI. It has been applied to vortex shedding behind 2D and 3D cylinders and to the vortex rope in a swirl generator, a simplified model of a turbine draft tube. The ongoing <a href="./project-hydropower-ai.html">ÅForsk project</a> extends this to realistic hydraulic turbines.</p>
+<p><span class="status-chip status-current">Current focus</span></p>
+<p><strong>The problem.</strong> Unsteady flows such as vortex shedding and the swirling vortex rope in a draft tube are high-dimensional and nonlinear, which limits conventional model-based control. Deep reinforcement learning (DRL) can learn feedback policies directly from flow observations, but DRL–CFD frameworks are expensive to train, sensitive to the training conditions, and are usually demonstrated on canonical cases.</p>
+<p><strong>My approach.</strong> I developed an intrusive DRL framework in which the learning agent runs inside the OpenFOAM solver, so no data are exchanged with an external process during an episode, and parallel environments are handled with MPI. On top of it I study transfer learning, multi-fidelity training and robust learning under uncertainty to bring down the cost and make a learned policy usable away from the conditions it was trained on.</p>
+<p><strong>Results so far.</strong> The framework suppresses vortex shedding behind 2D and 3D cylinders, and a proof-of-concept study on a swirl generator, a simplified model of a turbine draft tube, reduced the strength of the helical vortex rope under closed-loop control with axial jet actuation. Extending this to realistic turbine geometries and several operating regimes is the subject of the <a href="./project-hydropower-ai.html">ÅForsk project</a>.</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>S. Salehi, <a href="https://doi.org/10.1007/s11012-024-01830-1">An efficient intrusive deep reinforcement learning framework for OpenFOAM</a>, <em>Meccanica</em>, 2025</li>
+<li>S. Salehi, <a href="https://doi.org/10.1007/s11012-024-01830-1">An efficient intrusive deep reinforcement learning framework for OpenFOAM</a>, <em>Meccanica</em>, 60(6), 1673–1693, 2025</li>
 <li>S. Salehi, <a href="https://arxiv.org/abs/2510.16016">Transfer learning strategies for accelerating reinforcement-learning-based flow control</a>, arXiv preprint, 2025</li>
-<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1088/1755-1315/1561/1/012023">A parametric study of axial flow jets for mitigation of vortex rope instabilities</a>, <em>IOP Conf. Ser.: Earth Environ. Sci.</em>, 2025</li>
+<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1088/1755-1315/1561/1/012023">A parametric study of axial flow jets for mitigation of vortex rope instabilities</a>, <em>IOP Conf. Ser.: Earth Environ. Sci.</em>, 1561, 012023, 2025</li>
 </ul>
-<p><span class="meta-line">Software: <a href="https://github.com/salehisaeed/TensorforceFoam">TensorforceFoam</a> · <a href="https://github.com/salehisaeed/agentJet">agentJet</a></span></p>
+<p><span class="meta-line">Software: <a href="https://github.com/salehisaeed/TensorforceFoam">TensorforceFoam</a> · <a href="https://github.com/salehisaeed/agentJet">agentJet</a>. Project: <a href="./project-hydropower-ai.html">Enabling flexible hydropower operation by AI-based active flow control</a></span></p>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/cylinder2d-drl.webp" alt="Vorticity contours behind a cylinder without control and with deep reinforcement learning control" width="1800" height="210" class="figure-img"></p>
-<figcaption>Uncontrolled (left) and DRL-controlled (right) flow past a 2D cylinder. The learned policy suppresses vortex shedding.</figcaption>
+<p><img src="img/cylinder2d-drl.webp" alt="Vorticity contours behind a cylinder: a periodic vortex street without control, and a steady wake under deep reinforcement learning control" width="1800" height="210" class="figure-img"></p>
+<figcaption>Flow past a 2D cylinder without control (left) and with a DRL controller (right); the learned policy suppresses vortex shedding.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/swirl-controlled-pair.webp" alt="Iso-surfaces of the helical vortex rope in a swirl generator without control and with DRL control" width="1400" height="215" class="figure-img"></p>
+<p><img src="img/swirl-controlled-pair.webp" alt="Iso-surfaces of the helical vortex rope in a swirl generator: a large rope without control and a much weaker structure under DRL control" width="1400" height="215" class="figure-img"></p>
 <figcaption>Vortex rope in a swirl generator without control (left) and under closed-loop DRL control (right).</figcaption>
 </figure>
 </div>
@@ -407,21 +411,23 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 <div class="research-theme">
 <section id="turbine-transients" class="level2">
 <h2 class="anchored" data-anchor-id="turbine-transients">Transient operation of hydraulic turbines</h2>
-<p>Start-up, shutdown and load changes are becoming frequent as hydropower balances intermittent wind and solar power, and they expose turbines to strong pressure pulsations. Simulating them requires the mesh to follow moving guide vanes and runner blades. I developed a semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM, and used it for resolved simulations of Francis and Kaplan turbines during transient operation.</p>
-<p>These simulations reveal how flow instabilities such as the rotating vortex rope form and decay during transients. The mesh-motion library is released as open source and is used by the R&amp;D department of Vattenfall to study transient operation of their hydropower systems.</p>
+<p><span class="status-chip">Established line of work</span></p>
+<p><strong>The problem.</strong> As hydropower balances intermittent wind and solar power, turbines start, stop and change load far more often, which exposes them to strong pressure pulsations. Resolving such transients requires the computational mesh to follow moving guide vanes and runner blades without degrading.</p>
+<p><strong>My approach.</strong> I developed a semi-implicit slip algorithm for mesh deformation in complex geometries and implemented it in OpenFOAM: an explicit step based on the general slip condition, an implicit Dirichlet step, and Laplacian smoothing to spread the deformation through the domain, with an optional solid-body rotation for Kaplan runners.</p>
+<p><strong>Results so far.</strong> The method made resolved simulations of Francis and Kaplan turbines during shutdown and start-up sequences possible, showing how the rotating vortex rope forms and decays and how the resulting pulsations evolve. The library is open source and is used by the R&amp;D department of Vattenfall to study transient operation of their hydropower systems.</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>S. Salehi, H. Nilsson, E. Lillberg and N. Edh, <a href="https://doi.org/10.1016/j.renene.2021.07.107">An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown</a>, <em>Renewable Energy</em>, 2021</li>
-<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.renene.2022.01.111">Flow-induced pulsations in Francis turbines during startup</a>, <em>Renewable Energy</em>, 2022</li>
-<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.cpc.2023.108703">A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM</a>, <em>Computer Physics Communications</em>, 2023</li>
-<li>F. A. Masoodi, S. Salehi and R. Goyal, <a href="https://doi.org/10.1063/5.0222739">Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine</a>, <em>Physics of Fluids</em>, 2024</li>
+<li>S. Salehi, H. Nilsson, E. Lillberg and N. Edh, <a href="https://doi.org/10.1016/j.renene.2021.07.107">An in-depth numerical analysis of transient flow field in a Francis turbine during shutdown</a>, <em>Renewable Energy</em>, 179, 2322–2347, 2021</li>
+<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.renene.2022.01.111">Flow-induced pulsations in Francis turbines during startup</a>, <em>Renewable Energy</em>, 188, 1166–1183, 2022</li>
+<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.cpc.2023.108703">A semi-implicit slip algorithm for mesh deformation in complex geometries, implemented in OpenFOAM</a>, <em>Computer Physics Communications</em>, 287, 108703, 2023</li>
+<li>F. A. Masoodi, S. Salehi and R. Goyal, <a href="https://doi.org/10.1063/5.0222739">Reorganization of flow field due to load rejection driven self-mitigation of high load vortex breakdown in a Francis turbine</a>, <em>Physics of Fluids</em>, 36(9), 094110, 2024</li>
 </ul>
-<p><span class="meta-line">Software: <a href="https://github.com/salehisaeed/semiImplicitSlip">semiImplicitSlip</a> · <a href="https://doi.org/10.7910/DVN/31JGOM">Francis-99 transients</a></span></p>
+<p><span class="meta-line">Software: <a href="https://github.com/salehisaeed/semiImplicitSlip">semiImplicitSlip</a>. Dataset: <a href="https://doi.org/10.7910/DVN/31JGOM">Francis-99 transients</a></span></p>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/francis-shutdown-rvr.webp" alt="Helical vortex rope in the draft tube of a Francis turbine during shutdown" width="1000" height="861" class="figure-img"></p>
+<p><img src="img/francis-shutdown-rvr.webp" alt="Red iso-surface of a helical vortex rope below the runner of a Francis turbine during shutdown" width="1000" height="861" class="figure-img"></p>
 <figcaption>Rotating vortex rope in the draft tube of a Francis turbine during shutdown (Salehi et al., 2021).</figcaption>
 </figure>
 </div>
@@ -429,19 +435,22 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 </div>
 <div class="research-theme">
 <section id="modal-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="modal-analysis">Modal analysis and reduced-order modelling</h2>
-<p>High-fidelity simulations produce large, detailed data sets. Modal decompositions such as proper orthogonal decomposition (POD), spectral POD, dynamic mode decomposition (DMD) and sparsity-promoting DMD extract the coherent structures and dominant frequencies hidden in them. I have used these methods to analyse the vortex rope in hydraulic turbines, identifying the modes that govern the instability. This is a basis for reduced-order models and for designing control strategies.</p>
+<h2 class="anchored" data-anchor-id="modal-analysis">High-resolution simulation and reduced-order modelling</h2>
+<p><span class="status-chip status-current">Ongoing</span></p>
+<p><strong>The problem.</strong> Resolved simulations of turbomachinery produce data sets far too large to interpret directly, yet their dynamics are often governed by a handful of coherent structures and frequencies.</p>
+<p><strong>My approach.</strong> I use modal decompositions, proper orthogonal decomposition (POD), spectral POD, dynamic mode decomposition (DMD) and sparsity-promoting DMD, to separate those structures from the rest of the field and to compress simulation data into low-order descriptions.</p>
+<p><strong>Results so far.</strong> Applied to the vortex rope in a hydraulic turbine, DMD isolates the modes that carry the instability and their frequencies, which gives both a compact description of the dynamics and the quantities a controller has to act on. Compression and prediction of vortex-rope dynamics with spectral POD and autoencoders is offered as an <a href="./opportunities.html">MSc thesis project</a>.</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1063/5.0186871">Modal analysis of vortex rope using dynamic mode decomposition</a>, <em>Physics of Fluids</em>, 2024</li>
+<li>S. Salehi and H. Nilsson, <a href="https://doi.org/10.1063/5.0186871">Modal analysis of vortex rope using dynamic mode decomposition</a>, <em>Physics of Fluids</em>, 36(2), 024122, 2024</li>
 <li>S. Salehi and H. Nilsson, Dynamic mode decomposition of rotating vortex rope instability, <em>9th IAHR Meeting of the Work Group on Cavitation and Dynamic Problems in Hydraulic Machinery and Systems</em>, 2024</li>
 </ul>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/vortex-rope-dmd.webp" alt="Vortex rope structures in a turbine draft tube, annotated with blade wakes, separated boundary layer and disintegrated vortex rope" width="900" height="927" class="figure-img"></p>
-<figcaption>Instantaneous flow structures of the vortex rope in a hydraulic turbine, used for modal analysis.</figcaption>
+<p><img src="img/vortex-rope-dmd.webp" alt="Annotated vortex rope in a draft tube showing blade wakes, the separated boundary layer, the disintegrated rope and the reunited vortex core" width="900" height="927" class="figure-img"></p>
+<figcaption>Instantaneous flow structures of the vortex rope in a hydraulic turbine, the starting point for modal analysis.</figcaption>
 </figure>
 </div>
 </div>
@@ -449,39 +458,45 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 <div class="research-theme">
 <section id="pinns" class="level2">
 <h2 class="anchored" data-anchor-id="pinns">Physics-informed neural networks</h2>
-<p>Physics-informed neural networks (PINNs) embed the governing equations in the loss function of a neural network. Together with colleagues at Chalmers University of Technology, I study multi-fidelity PINNs for solving partial differential equations, with applications to the linear wave problem from potential flow theory, comparing soft and hard enforcement of boundary conditions. This work is the PhD project of Mohammad Sheikholeslami, whom I co-supervise.</p>
+<p><span class="status-chip status-current">Ongoing</span></p>
+<p><strong>The problem.</strong> Physics-informed neural networks (PINNs) solve partial differential equations by putting the governing equations into the loss function, which avoids meshing but raises questions of accuracy, cost and how boundary conditions should be imposed.</p>
+<p><strong>My approach.</strong> Together with colleagues at Chalmers University of Technology I study multi-fidelity PINNs, in which cheap low-fidelity data are combined with a small amount of accurate data. The linear wave problem from potential flow theory serves as a test case, with soft and hard enforcement of boundary conditions compared directly.</p>
+<p><strong>Results so far.</strong> The free-surface wave study compares hard and soft enforcement of the boundary conditions for the same problem, and a critical review of published implementations for the lid-driven cavity problem sets out where current PINN practice stands. The work is the doctoral project of Mohammad Sheikholeslami, whom I co-supervise.</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, <a href="https://doi.org/10.1063/5.0277421">Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves</a>, <em>Physics of Fluids</em>, 2025</li>
-<li>M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, <a href="https://doi.org/10.1016/j.rineng.2026.112399">State-of-the-art implementations of PINNs for the lid-driven cavity problem: a critical review with future perspectives</a>, <em>Results in Engineering</em>, 2026</li>
+<li>M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, <a href="https://doi.org/10.1063/5.0277421">Physics-informed neural networks with hard and soft boundary conditions for linear free surface waves</a>, <em>Physics of Fluids</em>, 37(8), 087158, 2025</li>
+<li>M. Sheikholeslami, S. Salehi, W. Mao, A. Eslamdoost and H. Nilsson, <a href="https://doi.org/10.1016/j.rineng.2026.112399">State-of-the-art implementations of PINNs for the lid-driven cavity problem: a critical review with future perspectives</a>, <em>Results in Engineering</em>, 32, 112399, 2026</li>
 </ul>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/pinn-architecture.webp" alt="Diagram of a physics-informed neural network: inputs, periodic layer, hidden layers, trial function and loss function with Adam and L-BFGS optimisers" width="1300" height="858" class="figure-img"></p>
-<figcaption>Network architecture of a PINN for the linear wave problem.</figcaption>
+<p><img src="img/pinn-architecture.webp" alt="Diagram of a physics-informed neural network with a periodic input layer, hidden layers, a trial function and a loss function minimised by Adam and L-BFGS" width="1300" height="858" class="figure-img"></p>
+<figcaption>Architecture of a physics-informed neural network for the linear wave problem.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="research-theme">
 <section id="uq" class="level2">
-<h2 class="anchored" data-anchor-id="uq">Uncertainty quantification</h2>
-<p>In my doctoral research I developed efficient uncertainty quantification (UQ) methods for turbulent and industrial flows. Sparse polynomial chaos with compressed sensing, and a multi-fidelity ℓ₁-minimisation method, reduce the number of expensive CFD simulations needed while retaining accuracy. Applied to hydraulic pumps, the methods showed that combined operational and geometrical uncertainties significantly affect flow and performance. They were also used for probabilistic CFD and robust optimisation of a cooled gas turbine vane.</p>
+<h2 class="anchored" data-anchor-id="uq">Uncertainty quantification and robust design</h2>
+<p><span class="status-chip">Established line of work</span></p>
+<p><strong>The problem.</strong> Simulation inputs, operating conditions, geometry and turbulence-model coefficients are never known exactly. Propagating that uncertainty with standard polynomial chaos requires far more simulations than an industrial CFD budget allows.</p>
+<p><strong>My approach.</strong> During my doctoral work I combined sparse polynomial chaos with compressed sensing, and developed a multi-fidelity ℓ₁-minimisation method that builds the expansion mostly from cheap simulations while a few expensive ones correct it. The same machinery supports robust optimisation, where a design is chosen to perform well across the uncertainty rather than at a single nominal point.</p>
+<p><strong>Results so far.</strong> The methods cut the number of simulations needed at comparable accuracy, and showed for a centrifugal pump that combined operational and geometrical uncertainties change flow and performance appreciably. Applied to a cooled gas turbine vane, they produced probabilistic predictions and a robust optimum design.</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.compfluid.2017.06.016">Efficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensing</a>, <em>Computers &amp; Fluids</em>, 2017</li>
-<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.cma.2018.01.055">An efficient multifidelity ℓ₁-minimization method for sparse polynomial chaos</a>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 2018</li>
-<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.apm.2018.05.008">On the flow field and performance of a centrifugal pump under operational and geometrical uncertainties</a>, <em>Applied Mathematical Modelling</em>, 2018</li>
-<li>M. S. Karimi, M. Raisee, S. Salehi, P. Hendrick and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2020.120537">Robust optimization of the NASA C3X gas turbine vane under uncertain operational conditions</a>, <em>Int. J. Heat and Mass Transfer</em>, 2021</li>
+<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.compfluid.2017.06.016">Efficient uncertainty quantification of stochastic CFD problems using sparse polynomial chaos and compressed sensing</a>, <em>Computers &amp; Fluids</em>, 154, 296–321, 2017</li>
+<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.cma.2018.01.055">An efficient multifidelity ℓ₁-minimization method for sparse polynomial chaos</a>, <em>Computer Methods in Applied Mechanics and Engineering</em>, 334, 183–207, 2018</li>
+<li>S. Salehi, M. Raisee, M. J. Cervantes and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.apm.2018.05.008">On the flow field and performance of a centrifugal pump under operational and geometrical uncertainties</a>, <em>Applied Mathematical Modelling</em>, 61, 540–560, 2018</li>
+<li>M. S. Karimi, M. Raisee, S. Salehi, P. Hendrick and A. Nourbakhsh, <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2020.120537">Robust optimization of the NASA C3X gas turbine vane under uncertain operational conditions</a>, <em>International Journal of Heat and Mass Transfer</em>, 164, 120537, 2021</li>
 </ul>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/uq-robust-vane.webp" alt="Surface temperature contours on a baseline turbine vane and a robust-optimum vane with larger cooling holes" width="740" height="486" class="figure-img"></p>
-<figcaption>Baseline and robust-optimum designs of a cooled turbine vane under uncertain operating conditions.</figcaption>
+<p><img src="img/uq-robust-vane.webp" alt="Temperature contours on two cooled turbine vanes, the baseline design and a robust optimum with enlarged cooling holes" width="740" height="486" class="figure-img"></p>
+<figcaption>Surface temperature of the baseline (left) and robust-optimum (right) cooled turbine vane under uncertain operating conditions.</figcaption>
 </figure>
 </div>
 </div>
@@ -489,29 +504,35 @@ gtag('config', 'G-Y03H51EZR6', { 'anonymize_ip': true});
 <div class="research-theme">
 <section id="hydropower" class="level2">
 <h2 class="anchored" data-anchor-id="hydropower">Flexible hydropower: loads, lifetime and energy storage</h2>
-<p>Together with PhD students at Chalmers University of Technology, I study how flexible operation affects hydropower machines. CFD of a Kaplan turbine model shows how flow-induced forces, pressure pulsations and rotating vortex rope dynamics load the runner at part load and during load reduction, giving input for fatigue lifetime analysis (PhD student Martina Nobilo). In the EU Horizon 2020 project <a href="https://alpheus-h2020.eu/">ALPHEUS</a> we studied contra-rotating pump-turbines for low-head pumped hydro storage, including start-up and shutdown sequences and cavitating conditions (PhD student Jonathan Fahlbeck).</p>
+<p><span class="status-chip status-current">Ongoing, with PhD students</span></p>
+<p><strong>The problem.</strong> Flexible operation shortens the life of hydropower machines, and low-head pumped storage needs machines that work well in both pump and turbine mode. Both questions require load data that measurements alone cannot provide.</p>
+<p><strong>My approach.</strong> With PhD students at Chalmers University of Technology I combine resolved CFD of model turbines with load and lifetime analysis. A Kaplan turbine model is used to extract flow-induced forces, pressure pulsations and vortex rope dynamics at part load and during load reduction, which feed fatigue lifetime analysis. In the EU Horizon 2020 project <a href="https://alpheus-h2020.eu/">ALPHEUS</a> we studied contra-rotating pump-turbines for low-head pumped hydro storage, including start-up and shutdown sequences and cavitating conditions.</p>
+<p><strong>Results so far.</strong> The turbine work quantified how loads on the runner blades change during load reduction and reviewed how transient and off-design operation drives fatigue damage. For the pump-turbine, simulations characterised performance in both modes, showed how mode switching and start-up sequences can be shaped, and quantified the degradation under cavitation. This work is carried out with PhD students Martina Nobilo and Jonathan Fahlbeck, whom I co-supervise(d).</p>
 <p><strong>Key work</strong></p>
 <ul>
-<li>M. Nobilo, S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.rser.2025.116578">Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system: a review</a>, <em>Renewable and Sustainable Energy Reviews</em>, 2026</li>
-<li>M. Nobilo, S. Salehi and H. Nilsson, <a href="https://doi.org/10.1088/1755-1315/1483/1/012022">On the flow-induced pulsating forces during load reduction of a Kaplan turbine model</a>, <em>IOP Conf. Ser.: Earth Environ. Sci.</em>, 2025</li>
-<li>J. Fahlbeck, H. Nilsson, M. H. Arabnejad and S. Salehi, <a href="https://doi.org/10.1016/j.renene.2024.121605">Performance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditions</a>, <em>Renewable Energy</em>, 2024</li>
-<li>J. Fahlbeck, H. Nilsson and S. Salehi, <a href="https://doi.org/10.1016/j.est.2023.106902">Surrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine</a>, <em>Journal of Energy Storage</em>, 2023</li>
+<li>M. Nobilo, S. Salehi and H. Nilsson, <a href="https://doi.org/10.1016/j.rser.2025.116578">Lifetime analysis of hydro turbines with focus on fatigue damage in a renewable energy system: a review</a>, <em>Renewable and Sustainable Energy Reviews</em>, 228, 116578, 2026</li>
+<li>M. Nobilo, S. Salehi and H. Nilsson, <a href="https://doi.org/10.1088/1755-1315/1483/1/012022">On the flow-induced pulsating forces during load reduction of a Kaplan turbine model</a>, <em>IOP Conf. Ser.: Earth Environ. Sci.</em>, 1483, 012022, 2025</li>
+<li>J. Fahlbeck, H. Nilsson, M. H. Arabnejad and S. Salehi, <a href="https://doi.org/10.1016/j.renene.2024.121605">Performance characteristics of a contra-rotating pump-turbine in turbine and pump modes under cavitating flow conditions</a>, <em>Renewable Energy</em>, 237, 121605, 2024</li>
+<li>J. Fahlbeck, H. Nilsson and S. Salehi, <a href="https://doi.org/10.1016/j.est.2023.106902">Surrogate based optimisation of a pump mode startup sequence for a contra-rotating pump-turbine</a>, <em>Journal of Energy Storage</em>, 62, 106902, 2023</li>
 </ul>
 </section>
 <div class="research-figure">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/kaplan-vortex-rope.webp" alt="Kaplan turbine runner and draft tube at best efficiency point and at part load showing a vortex rope" width="1400" height="638" class="figure-img"></p>
+<p><img src="img/kaplan-vortex-rope.webp" alt="Two views of a Kaplan turbine runner and draft tube, one at best efficiency point and one at part load with a red vortex rope" width="1400" height="638" class="figure-img"></p>
 <figcaption>Kaplan turbine model at the best efficiency point (left) and at part load with a rotating vortex rope (right).</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/crpt-alpheus.webp" alt="Sequence of six snapshots of flow structures in a contra-rotating pump-turbine at increasing flow rate" width="1600" height="544" class="figure-img"></p>
+<p><img src="img/crpt-alpheus.webp" alt="Six snapshots of flow structures in a contra-rotating pump-turbine at increasing flow rate" width="1600" height="544" class="figure-img"></p>
 <figcaption>Flow in a contra-rotating pump-turbine at successive instants of a transient sequence (ALPHEUS project).</figcaption>
 </figure>
 </div>
 </div>
+</div>
+<hr>
+<p>A complete list of papers is on the <a href="./publications.html">Publications</a> page, and the accompanying code and data are on the <a href="./software.html">Software</a> page.</p>
 </div>
 
 

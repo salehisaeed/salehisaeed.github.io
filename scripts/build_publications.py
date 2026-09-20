@@ -149,7 +149,7 @@ def link_of(e):
     if is_preprint(e):
         return e.get("url") or f"https://arxiv.org/abs/{e['eprint']}", "arXiv"
     if e.get("url"):
-        return e["url"], "Link"
+        return e["url"], "Code" if e["type"] == "software" else "Link"
     return None, None
 
 
@@ -186,6 +186,8 @@ def venue_of(e):
         return v
     if t == "unpublished":
         return delatex(e.get("addendum", ""))
+    if t == "software":
+        return delatex(e.get("note", ""))
     return ""
 
 
@@ -237,6 +239,7 @@ def main():
     chapters = [e for e in entries if e["type"] == "incollection"]
     conf = [e for e in entries if e["type"] == "inproceedings"]
     talks = [e for e in entries if e["type"] == "unpublished"]
+    software = [e for e in entries if e["type"] == "software"]
 
     groups = [
         ("journal-articles", "Journal articles", journal, True),
@@ -244,6 +247,7 @@ def main():
         ("book-chapters", "Book chapters", chapters, False),
         ("conference-papers", "Conference papers", conf, True),
         ("presentations", "Conference presentations", talks, False),
+        ("software-datasets", "Software and datasets", software, False),
     ]
     nav = " · ".join(
         f'<a href="#{a}">{t} ({len(es)})</a>' for a, t, es, _ in groups if es
@@ -267,7 +271,8 @@ def main():
         encoding="utf-8",
     )
     print(f"build_publications: {len(journal)} journal, {len(preprints)} preprints, "
-          f"{len(chapters)} chapters, {len(conf)} conference papers, {len(talks)} presentations")
+          f"{len(chapters)} chapters, {len(conf)} conference papers, {len(talks)} presentations, "
+          f"{len(software)} software/datasets")
 
 
 if __name__ == "__main__":
