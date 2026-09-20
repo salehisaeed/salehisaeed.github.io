@@ -40,7 +40,7 @@ These limitations motivate the development of feedback-based control strategies 
 
 ## Approach
 
-The high-dimensional and nonlinear dynamics of turbine instabilities limit the practical applicability of conventional model-based control methods. deep reinforcement learning (DRL) offers an alternative by enabling systematic optimisation of control policies directly from flow observations in complex dynamical systems. Recent advances in DRL have demonstrated the ability to construct feedback control policies for complex, nonlinear flow systems, including laminar ([Rabault et al., 2019](https://doi.org/10.1017/jfm.2019.62)), weakly turbulent ([Ren et al., 2021](https://doi.org/10.1063/5.0037371)), and fully turbulent flows ([Sonoda et al., 2023](https://doi.org/10.1017/jfm.2023.147)), though predominantly in simplified settings rather than realistic engineering systems.
+The high-dimensional and nonlinear dynamics of turbine instabilities limit the practical applicability of conventional model-based control methods. Deep reinforcement learning (DRL) offers an alternative by enabling systematic optimisation of control policies directly from flow observations in complex dynamical systems. Recent advances in DRL have demonstrated the ability to construct feedback control policies for complex, nonlinear flow systems, including laminar ([Rabault et al., 2019](https://doi.org/10.1017/jfm.2019.62)), weakly turbulent ([Ren et al., 2021](https://doi.org/10.1063/5.0037371)), and fully turbulent flows ([Sonoda et al., 2023](https://doi.org/10.1017/jfm.2023.147)), though predominantly in simplified settings rather than realistic engineering systems.
 
 In the proposed framework, a deep neural network (the agent) interacts with a high-fidelity CFD simulation in a closed loop: the agent observes the flow state, selects a control action (e.g. jet actuation), and receives a reward signal reflecting the degree of instability suppression. Through iterative training, the agent learns a control policy that adapts to the flow dynamics, without requiring an explicit mathematical model of the instability.
 
@@ -90,7 +90,7 @@ This preliminary study considered a simplified geometry, a single operating cond
 
 ## What is new in this project
 
-To date, no DRL-based closed-loop control framework has been applied to instability mitigation in realistic hydraulic turbine configurations. This project aims to fill that gap by integrating DRL directly with high-fidelity CFD of turbines, moving beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.
+To the best of our knowledge, no DRL-based closed-loop control framework has yet been applied to instability mitigation in realistic hydraulic turbine configurations. This project aims to fill that gap by integrating DRL directly with high-fidelity CFD of turbines, moving beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.
 
 ---
 

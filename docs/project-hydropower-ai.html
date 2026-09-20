@@ -46,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-94ea62147550605a92098088480b084e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-00fb8cf0d90941ab55b2050cf9a596a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-94ea62147550605a92098088480b084e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c1ac21f31e234ef351a9f7dff6ac5cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-fd416c9f691c88af3b722afac11ec776.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c1ac21f31e234ef351a9f7dff6ac5cd9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -449,7 +449,7 @@ window.Quarto = {
 </section>
 <section id="approach" class="level2">
 <h2 class="anchored" data-anchor-id="approach">Approach</h2>
-<p>The high-dimensional and nonlinear dynamics of turbine instabilities limit the practical applicability of conventional model-based control methods. deep reinforcement learning (DRL) offers an alternative by enabling systematic optimisation of control policies directly from flow observations in complex dynamical systems. Recent advances in DRL have demonstrated the ability to construct feedback control policies for complex, nonlinear flow systems, including laminar (<a href="https://doi.org/10.1017/jfm.2019.62">Rabault et al., 2019</a>), weakly turbulent (<a href="https://doi.org/10.1063/5.0037371">Ren et al., 2021</a>), and fully turbulent flows (<a href="https://doi.org/10.1017/jfm.2023.147">Sonoda et al., 2023</a>), though predominantly in simplified settings rather than realistic engineering systems.</p>
+<p>The high-dimensional and nonlinear dynamics of turbine instabilities limit the practical applicability of conventional model-based control methods. Deep reinforcement learning (DRL) offers an alternative by enabling systematic optimisation of control policies directly from flow observations in complex dynamical systems. Recent advances in DRL have demonstrated the ability to construct feedback control policies for complex, nonlinear flow systems, including laminar (<a href="https://doi.org/10.1017/jfm.2019.62">Rabault et al., 2019</a>), weakly turbulent (<a href="https://doi.org/10.1063/5.0037371">Ren et al., 2021</a>), and fully turbulent flows (<a href="https://doi.org/10.1017/jfm.2023.147">Sonoda et al., 2023</a>), though predominantly in simplified settings rather than realistic engineering systems.</p>
 <p>In the proposed framework, a deep neural network (the agent) interacts with a high-fidelity CFD simulation in a closed loop: the agent observes the flow state, selects a control action (e.g.&nbsp;jet actuation), and receives a reward signal reflecting the degree of instability suppression. Through iterative training, the agent learns a control policy that adapts to the flow dynamics, without requiring an explicit mathematical model of the instability.</p>
 <p>With DRL-based flow control showing promising results in canonical configurations, extending these approaches to practical engineering systems such as turbine instability problems is a logical next step.</p>
 <hr>
@@ -528,7 +528,7 @@ window.Quarto = {
 </section>
 <section id="what-is-new-in-this-project" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-new-in-this-project">What is new in this project</h2>
-<p>To date, no DRL-based closed-loop control framework has been applied to instability mitigation in realistic hydraulic turbine configurations. This project aims to fill that gap by integrating DRL directly with high-fidelity CFD of turbines, moving beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.</p>
+<p>To the best of our knowledge, no DRL-based closed-loop control framework has yet been applied to instability mitigation in realistic hydraulic turbine configurations. This project aims to fill that gap by integrating DRL directly with high-fidelity CFD of turbines, moving beyond predefined geometric modifications and open-loop actuation toward regime-robust, efficiency-aware control across off-design operating conditions.</p>
 <hr>
 </section>
 <section id="selected-related-publications" class="level2">

@@ -157,13 +157,13 @@ I work at the interface between high-fidelity computational fluid dynamics (CFD)
 ::: {}
 ## Flexible hydropower: loads, lifetime and energy storage {#hydropower}
 
-[Ongoing, with PhD students]{.status-chip .status-current}
+[Ongoing]{.status-chip .status-current}
 
 **The problem.** Flexible operation shortens the life of hydropower machines, and low-head pumped storage needs machines that work well in both pump and turbine mode. Both questions require load data that measurements alone cannot provide.
 
 **My approach.** With PhD students at Chalmers University of Technology I combine resolved CFD of model turbines with load and lifetime analysis. A Kaplan turbine model is used to extract flow-induced forces, pressure pulsations and vortex rope dynamics at part load and during load reduction, which feed fatigue lifetime analysis. In the EU Horizon 2020 project [ALPHEUS](https://alpheus-h2020.eu/) we studied contra-rotating pump-turbines for low-head pumped hydro storage, including start-up and shutdown sequences and cavitating conditions.
 
-**Results so far.** The turbine work quantified how loads on the runner blades change during load reduction and reviewed how transient and off-design operation drives fatigue damage. For the pump-turbine, simulations characterised performance in both modes, showed how mode switching and start-up sequences can be shaped, and quantified the degradation under cavitation. This work is carried out with PhD students Martina Nobilo and Jonathan Fahlbeck, whom I co-supervise(d).
+**Results so far.** The turbine work quantified how loads on the runner blades change during load reduction and reviewed how transient and off-design operation drives fatigue damage. For the pump-turbine, simulations characterised performance in both modes, showed how mode switching and start-up sequences can be shaped, and quantified the degradation under cavitation. The turbine work is the doctoral project of Martina Nobilo and the pump-turbine work that of Jonathan Fahlbeck, both of whom I co-supervised.
 
 **Key work**
 

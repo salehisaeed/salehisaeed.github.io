@@ -11,6 +11,8 @@ quarto render         # full build into docs/, then commit docs/ together with t
 
 Rendering first runs `scripts/build_publications.py` (plain Python 3), which turns `Pubs.bib` into `_generated/publications.md` and `_generated/recent.md`, and `scripts/build_news.py` (needs PyYAML), which turns `news.yml` into `_generated/news-recent.md` and `_generated/news-all.md`. The generated files are committed, because Quarto resolves includes before the pre-render scripts run. Afterwards `scripts/postrender.py` adds canonical URLs and a skip link, sets the home page title, `<h1>` and structured data, and marks redirect pages `noindex`.
 
+`python3 scripts/check_site.py` validates the built site without rendering it: internal links and anchors, missing assets, per-page headings, alt text, descriptions, canonical URLs and skip links, and whether `_generated/` is still in step with `Pubs.bib` and `news.yml`. The same check runs in GitHub Actions (`.github/workflows/check-site.yml`).
+
 ## Common updates
 
 | What | Where |
@@ -24,6 +26,7 @@ Rendering first runs `scripts/build_publications.py` (plain Python 3), which tur
 | Profile links | `_includes/profile-links.md`, used on the home and contact pages |
 | Structured data (ProfilePage, injected into the home page) | `_includes/jsonld.html` |
 | Styling | `theme.scss` (light) and `theme-dark.scss` (dark overrides) |
+| Fonts | Self-hosted in `fonts/` (Source Sans 3, Source Serif 4, SIL Open Font License), latin and latin-ext subsets, loaded through `$web-font-path`. Font URLs in `fonts/fonts.css` must stay relative to that file, or Quarto rewrites them incorrectly. |
 
 ## Images
 

@@ -11,6 +11,7 @@ project:
     - CNAME
     - robots.txt
     - img/
+    - fonts/
     - files/
   render:
     - "*.qmd"

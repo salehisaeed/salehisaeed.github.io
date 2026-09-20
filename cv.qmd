@@ -27,7 +27,7 @@ A summary of my academic career. The full CV, including the complete publication
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">Feb 2026</span><span class="what"><strong>Docent in Fluid Mechanics</strong>, Linköping University<br><span class="sub">Swedish academic qualification recognising independent scientific and pedagogical competence; qualifies for principal supervision of doctoral students</span></span></li>
+  <li><span class="when">Feb 2026</span><span class="what"><strong>Docent in Fluid Mechanics</strong>, Linköping University<br><span class="sub">Swedish academic qualification recognising independent scientific and pedagogical competence; supports principal supervision of doctoral students</span></span></li>
   <li><span class="when">2012 – 2018</span><span class="what"><strong>PhD in Mechanical Engineering</strong> (Hydraulic Machinery), University of Tehran<br><span class="sub">Thesis: <em>Uncertainty quantification of turbulent flows in hydraulic machinery</em>. Supervisors: Prof. Mehrdad Raisee, Prof. Michel Cervantes, Prof. Ahmad Nourbakhsh</span></span></li>
   <li><span class="when">2010 – 2012</span><span class="what"><strong>MSc in Mechanical Engineering</strong> (Energy Conversion), University of Tehran<br><span class="sub">Thesis: <em>Computation of steady and pulsating turbulent flow through a straight asymmetric diffuser with moderate adverse pressure gradient</em></span></span></li>
   <li><span class="when">2006 – 2010</span><span class="what"><strong>BSc in Mechanical Engineering</strong>, University of Tehran<br><span class="sub">Thesis: <em>Large eddy simulation of stall development around airfoils</em></span></span></li>
@@ -50,7 +50,7 @@ A summary of my academic career. The full CV, including the complete publication
 
 ```{=html}
 <ul class="entry-list">
-  <li><span class="when">From autumn 2026</span><span class="what"><strong>Doctoral student</strong>, Linköping University, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control; recruitment under way</span></span></li>
+  <li><span class="when">From autumn 2026</span><span class="what"><strong>Doctoral student</strong>, Linköping University, principal supervisor<br><span class="sub">Enabling flexible hydropower operation by AI-based active flow control</span></span></li>
   <li><span class="when">2023 – present</span><span class="what"><strong>Mohammad Sheikholeslami</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Multi-fidelity physics-informed neural networks for partial differential equations</span></span></li>
   <li><span class="when">2023 – 2025</span><span class="what"><strong>Martina Nobilo</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">CFD for hydropower lifetime analysis; Licentiate degree 2025</span></span></li>
   <li><span class="when">2020 – 2024</span><span class="what"><strong>Jonathan Fahlbeck</strong>, Chalmers University of Technology, co-supervisor<br><span class="sub">Contra-rotating pump-turbines at stationary, transient and cavitating conditions (EU Horizon 2020 project ALPHEUS); PhD 2024</span></span></li>

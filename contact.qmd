@@ -7,7 +7,7 @@ description: "Contact details and office directions for Saeed Salehi, Linköping
 ::: {.info-card}
 ## Email and phone
 [saeed.salehi@liu.se](mailto:saeed.salehi@liu.se)\
-[+46 13 28 26 82](tel:+4613282682)
+Office: [+46 13 28 26 82](tel:+4613282682)
 :::
 
 ::: {.info-card}
