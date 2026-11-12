@@ -13,7 +13,6 @@ project:
     - img/
     - fonts/
     - files/
-    - tmmv64/
   render:
     - "*.qmd"
 
