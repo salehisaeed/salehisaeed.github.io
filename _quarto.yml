@@ -13,6 +13,7 @@ project:
     - img/
     - fonts/
     - files/
+    - tmmv64/            # the course pages for phones (TMMV64 lectures, QR codes)
   render:
     - "*.qmd"
 
