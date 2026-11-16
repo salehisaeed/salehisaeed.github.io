@@ -9,8 +9,15 @@
   :root { --ink: #1d1d1f; --muted: #6b6e73; --gold: #9c6a12; --paper: #f7f6f2; --line: #e3e0d8; --blue: #1d5a85; }
   html, body { margin: 0; height: 100%; background: var(--paper); color: var(--ink); font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif; }
   #wrap { max-width: 1100px; margin: 0 auto; padding: 22px 28px; }
-  body.embed #wrap { max-width: none; padding: 6px 10px; } body.embed h1 { display: none; } body.embed .sub { font-size: 26px; margin: 0 0 10px; }
-  body.embed table { font-size: 40px; } body.embed td { padding: 10px 14px; } body.embed td.m { font-size: 28px; } body.embed td.s { width: 190px; } body.embed td.r { width: 80px; }
+  body.embed #wrap { max-width: none; padding: 6px 10px; } body.embed h1 { display: none; } body.embed .sub { font-size: 22px; margin: 0 0 8px; }
+  #pod { display: none; } body.embed #pod { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px; }
+  .card { background: #fff; border: 2px solid var(--gold); border-radius: 12px; padding: 6px 14px; }
+  .card .k { font-size: 20px; color: var(--gold); font-weight: 700; } .card .w { font-size: 28px; } .card .s { font-size: 38px; font-weight: 800; color: var(--gold); line-height: 1.1; }
+  .card .m { font-size: 17px; color: var(--muted); line-height: 1.2; }
+  body.embed table { display: none; } #rest { display: none; }
+  body.embed #rest { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-flow: column; grid-template-rows: repeat(9, auto); column-gap: 26px; font-size: 21px; }
+  #rest div { display: flex; gap: 10px; padding: 1px 4px; border-bottom: 1px solid var(--line); } #rest .r { width: 34px; text-align: right; color: var(--muted); }
+  #rest .w { flex: 1; } #rest .s { font-weight: 700; } #rest .new { animation: flash 2.5s ease-out; }
   h1 { margin: 0; font-size: 44px; color: var(--blue); }
   .sub { color: var(--muted); font-size: 22px; margin: 4px 0 16px; }
   table { width: 100%; border-collapse: collapse; font-size: 30px; }
@@ -30,7 +37,9 @@
 <div id="wrap">
   <h1 id="title">Leaderboard</h1>
   <div class="sub" id="sub">Waiting for results …</div>
+  <div id="pod"></div>
   <table id="t"></table>
+  <div id="rest"></div>
 </div>
 <script>
 (function () {
@@ -49,10 +58,15 @@
       const d = await r.json();
       document.getElementById("sub").textContent = d.n ? `${d.n} ${d.n === 1 ? "student" : "students"} · best result each · test points` : "No results yet. Scan, press Start, submit your best";
       const now = new Set();
-      document.getElementById("t").innerHTML = d.rows.length ? d.rows.slice(0, Q.has("embed") ? 8 : 15).map((x, i) => {
+      document.getElementById("t").innerHTML = d.rows.length ? d.rows.map((x, i) => {
         const key = x.who + "|" + x.score; now.add(key);
         return `<tr class="${i < 3 ? "top" : ""} ${seen.size && !seen.has(key) ? "new" : ""}"><td class="r">${i + 1}</td><td class="w">${esc(x.who)}</td><td class="s">${x.score} %</td><td class="m">${esc(x.method)}</td></tr>`;
       }).join("") : "";
+      if (Q.has("embed")) {
+        const pl = ["1st", "2nd", "3rd"];
+        document.getElementById("pod").innerHTML = d.rows.slice(0, 3).map((x, i) => `<div class="card"><div class="k">${pl[i]}</div><div class="w">${esc(x.who)}</div><div class="s">${x.score} %</div><div class="m">${esc(x.method)}</div></div>`).join("");
+        document.getElementById("rest").innerHTML = d.rows.slice(3, 30).map((x, i) => { const key = x.who + "|" + x.score; return `<div class="${seen.size && !seen.has(key) ? "new" : ""}"><span class="r">${i + 4}</span><span class="w">${esc(x.who)}</span><span class="s">${x.score} %</span></div>`; }).join("");
+      }
       seen = now;
     } catch (e) { document.getElementById("sub").textContent = "No connection to the contest service. Retrying …"; }
   }
