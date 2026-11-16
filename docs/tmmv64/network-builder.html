@@ -61,7 +61,7 @@ window.Contest = (function () {
     for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
     return h.toString(36).toUpperCase().padStart(7, "0").slice(-6);
   }
-  let name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
+  let onStart = null, name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
   const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
   function render() {
@@ -75,7 +75,7 @@ window.Contest = (function () {
     const sd = el.querySelector("#ct-send"); if (sd) sd.onclick = send;
   }
   function start() {
-    state = "running"; left = seconds; best = null; render();
+    state = "running"; left = seconds; best = null; render(); if (onStart) onStart();   // count the model already on screen
     timer = setInterval(() => { left--; if (left <= 0) { clearInterval(timer); state = "over"; } render(); }, 1000);
   }
   function send() {
@@ -86,14 +86,14 @@ window.Contest = (function () {
   }
   function init(opt) {
     if (framed) return;
-    name = opt.name; seconds = opt.seconds || 180;
+    name = opt.name; seconds = opt.seconds || 180; onStart = opt.onStart || null;
     const css = document.createElement("style");
-    css.textContent = `#ct { position: fixed; z-index: 50; right: 10px; top: 10px; width: 330px; background: #fff; border: 2px solid #9c6a12; border-radius: 10px;
+    css.textContent = `#ct { position: fixed; z-index: 50; right: 10px; bottom: 10px; width: 330px; background: #fff; border: 2px solid #9c6a12; border-radius: 10px;
       padding: 8px 12px; font: 400 17px "Source Sans 3", sans-serif; color: #1d1d1f; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
       #ct .ct-row { margin: 4px 0; } #ct .ct-note { margin-top: 6px; font-size: 13px; color: #6b6e73; }
       #ct button { font: inherit; font-size: 17px; padding: 4px 12px; border: 1px solid #9c6a12; color: #fff; background: #9c6a12; border-radius: 6px; cursor: pointer; }
       #ct button:disabled { opacity: 0.4; cursor: default; }
-      body.phone #ct { position: sticky; top: 0; right: auto; width: auto; margin: 0 0 8px; font-size: 18px; }`;
+      body.phone #ct { position: sticky; top: 0; bottom: auto; right: auto; width: auto; margin: 0 0 8px; font-size: 18px; }`;
     document.head.appendChild(css);
     el = document.createElement("div"); el.id = "ct"; document.body.insertBefore(el, document.body.firstChild); render();
   }
@@ -325,7 +325,7 @@ window.Contest = (function () {
   $("clear").onclick = () => { cols = []; changed(); };
   if (framed) document.addEventListener("keydown", (e) => { if (drag) return; parent.postMessage({ deckKey: e.key }, "*"); if (e.key === " ") e.preventDefault(); });
   function setArch(arch) { cols = arch.map((n) => ({ x: undefined, nodes: Array.from({ length: n }, () => ({ y: undefined })) })); relayout(); cols.forEach((c) => { c.x = c.x0; c.nodes.forEach((nd) => { nd.y = nd.y0; }); }); }
-  Contest.init({ name: "L6 network builder", seconds: 180 });
+  Contest.init({ name: "L6 network builder", seconds: 180, onStart: () => { if (done && score !== null) Contest.record(Math.round(100 * score), `layers ${archText()}, ${nNeurons()} neurons`, nNeurons()); } });
   window.scoreOf = (arch, a) => { if (a) act = a; setArch(arch); nets = []; for (let k = 0; k < STARTS; k++) { net = makeNet(sizesNow(), k); for (let s = 0; s < STEPS; s++) trainStep(net); nets.push(net); } start = STARTS - 1; done = true; return Math.round(100 * meanAcc(D.test)); };
   window.renderAt = (arch) => { const s = window.scoreOf(arch || [6, 6]); steps = STEPS; score = s / 100; showScore(); drawPlot(); drawStage(); return s; };
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { changed(); drawPlot(); requestAnimationFrame(frame); });
