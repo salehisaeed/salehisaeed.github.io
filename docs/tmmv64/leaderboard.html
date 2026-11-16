@@ -44,7 +44,7 @@
 <script>
 (function () {
   /* The live leaderboard of a classroom contest: ?contest=L5 classifier contest (or L6 network builder). The best
-     result per student from the contest service, refreshed every three seconds; IDs shortened by the service. */
+     result per student from the contest service, refreshed every three seconds; with the full LiU ID. */
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev";
   const Q = new URLSearchParams(location.search), contest = Q.get("contest") || "L5 classifier contest";
   if (Q.has("embed")) document.body.classList.add("embed");

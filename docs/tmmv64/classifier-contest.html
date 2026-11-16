@@ -78,7 +78,7 @@ window.Contest = (function () {
         <div class="ct-row"><button id="ct-send" ${best && !done ? "" : "disabled"}>${done ? "Submitted ✓" : "Submit my best"}</button></div>
         <div class="ct-msg">${msg}</div>`;
     }
-    el.innerHTML = h + `<div class="ct-note">Your LiU ID and best result are stored for the contest leaderboard of this course only.</div>`;
+    el.innerHTML = h;
     const st = el.querySelector("#ct-start"); if (st) st.onclick = start;
     const sd = el.querySelector("#ct-send"); if (sd) sd.onclick = send;
     const inp = el.querySelector("#ct-id"); if (inp) inp.onkeydown = (e) => { if (e.key === "Enter") start(); };
