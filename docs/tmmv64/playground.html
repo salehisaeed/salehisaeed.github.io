@@ -29,6 +29,7 @@
   .phone canvas { position: static; display: block; width: 100%; height: auto; aspect-ratio: 760 / 540; box-sizing: border-box; }
   .phone #ctl { position: static; width: auto; margin-top: 10px; }
   .phone button, .phone select { font-size: 18px; padding: 6px 10px; }
+  html.phone { overflow: auto; height: auto; }   /* phones: the whole page scrolls */
 </style>
 </head>
 <body>
@@ -140,7 +141,7 @@ window.Contest = (function () {
   const DW = 1200, DH = 560;
   const framed0 = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const phone = !framed0 && Math.min(screen.width || 9999, innerWidth) < 700 && screen.height > screen.width;
-  if (phone) document.body.classList.add("phone");
+  if (phone) (document.body.classList.add("phone"), document.documentElement.classList.add("phone"));
   function fit() { if (phone) return; const s = Math.min(innerWidth / DW, innerHeight / DH); $("app").style.transform = `translate(${(innerWidth - DW * s) / 2}px, 0) scale(${s})`; }
   window.addEventListener("resize", fit); fit();
   const cv = $("c"), ctx = cv.getContext("2d"), W = cv.width, H = cv.height, XR = [-3, 3], YR = [-2.13, 2.13];

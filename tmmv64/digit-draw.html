@@ -26,6 +26,7 @@
   .phone #small { display: none; }
   .phone #ctl { position: static; order: 2; width: auto; }
   .phone #v { position: static; order: 3; width: min(92vw, 420px); height: auto; }
+  html.phone { overflow: auto; height: auto; }   /* phones: the whole page scrolls */
 </style>
 </head>
 <body>
@@ -47,7 +48,7 @@
   const DW = 1280, DH = 560;
   const framed0 = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const phone = !framed0 && Math.min(screen.width || 9999, innerWidth) < 700 && screen.height > screen.width;
-  if (phone) { document.body.classList.add("phone"); $("v").setAttribute("viewBox", "880 20 380 470"); }
+  if (phone) { (document.body.classList.add("phone"), document.documentElement.classList.add("phone")); $("v").setAttribute("viewBox", "880 20 380 470"); }
   function fit() { if (phone) return; const s = Math.min(innerWidth / DW, innerHeight / DH); $("app").style.transform = `translate(${(innerWidth - DW * s) / 2}px, 0) scale(${s})`; }
   window.addEventListener("resize", fit); fit();
   const BLUE = "#0072B2", GREEN = "#009E73", INK = "#1d1d1f", MUTED = "#6b6e73";
