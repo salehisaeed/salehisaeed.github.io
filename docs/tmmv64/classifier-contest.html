@@ -64,7 +64,7 @@ window.Contest = (function () {
     for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
     return h.toString(36).toUpperCase().padStart(7, "0").slice(-6);
   }
-  let onStart = null, name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
+  let onEnd = null, onStart = null, name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
   const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
   function render() {
@@ -79,7 +79,7 @@ window.Contest = (function () {
   }
   function start() {
     state = "running"; left = seconds; best = null; render(); if (onStart) onStart();   // count the model already on screen
-    timer = setInterval(() => { left--; if (left <= 0) { clearInterval(timer); state = "over"; } render(); }, 1000);
+    timer = setInterval(() => { left--; if (left <= 0) { clearInterval(timer); state = "over"; if (onEnd) onEnd(); } render(); }, 1000);
   }
   function send() {
     if (!best) return;
@@ -89,7 +89,7 @@ window.Contest = (function () {
   }
   function init(opt) {
     if (framed) return;
-    name = opt.name; seconds = opt.seconds || 180; onStart = opt.onStart || null;
+    name = opt.name; seconds = opt.seconds || 180; onStart = opt.onStart || null; onEnd = opt.onEnd || null;
     const css = document.createElement("style");
     css.textContent = `#ct { position: fixed; z-index: 50; right: 10px; bottom: 10px; width: 330px; background: #fff; border: 2px solid #9c6a12; border-radius: 10px;
       padding: 8px 12px; font: 400 17px "Source Sans 3", sans-serif; color: #1d1d1f; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
@@ -104,7 +104,7 @@ window.Contest = (function () {
     if (state !== "running") return;
     if (!best || score > best.score || (score === best.score && size !== undefined && size < best.size)) { best = { score, method, size }; render(); }
   }
-  return { init, record, code };
+  return { init, record, code, running: () => state === "running", framed };
 })();
 </script>
 <script>
@@ -173,9 +173,9 @@ window.Contest = (function () {
     return false;
   }
   function restart() {
-    const m = $("method").value, [a, b] = PAR[m];
+    const m = $("method").value, [a, b] = PAR[m] || [null, null];
     for (const [k, d] of [["p1", a], ["p2", b]]) { $(k + "l").style.display = d ? "flex" : "none"; if (d) { $(k + "n").textContent = d[0]; Object.assign($(k), { min: d[1], max: d[2], step: d[3] }); if (!$(k).dataset.m || $(k).dataset.m !== m) { $(k).value = d[4]; $(k).dataset.m = m; } } }
-    steps = 0; busy = P.length > 0; tseed = 11;
+    steps = 0; busy = P.length > 0 && !!m; tseed = 11; model = null;
     if (m === "logistic") model = { w: [0, 0, 0] };
     if (m === "svm") model = {};
     if (m === "rbf") model = { a: P.map(() => 0), b: 0 };
@@ -213,6 +213,7 @@ window.Contest = (function () {
   }
   function predict(x, y) {
     const m = $("method").value;
+    if (!m || !model) return 0.5;
     if (m === "knn") { const k = Math.min(+$("p1").value, P.length); if (!k) return 0.5; const d = P.map((p) => [(p[0] - x) ** 2 + (p[1] - y) ** 2, p[2]]).sort((a, b) => a[0] - b[0]); let s = 0; for (let i = 0; i < k; i++) s += d[i][1]; return s / k; }
     if (m === "logistic") return sig(model.w[0] * x + model.w[1] * y + model.w[2]);
     if (m === "svm") return model.w ? sig(2 * (model.w[0] * x + model.w[1] * y + model.w[2])) : 0.5;
@@ -244,7 +245,7 @@ window.Contest = (function () {
       ctx.lineWidth = hollow ? 4 : 2; ctx.strokeStyle = p[2] ? "#7b0c18" : "#003f62"; ctx.fillStyle = hollow ? "#ffffff" : (p[2] ? "#E0162B" : "#0072B2");
       ctx.beginPath(); if (p[2]) ctx.rect(x - 9, y - 9, 18, 18); else ctx.arc(x, y, 10, 0, 2 * Math.PI); ctx.fill(); ctx.stroke(); }
     const acc = (set) => set.length ? Math.round(100 * set.filter((p) => (predict(p[0], p[1]) > 0.5) === !!p[2]).length / set.length) + " %" : "–";
-    $("tr").textContent = acc(P); $("te").textContent = acc(Q);
+    $("tr").textContent = model ? acc(P) : "–"; $("te").textContent = model ? acc(Q) : "–";
     for (const k of ["p1", "p2"]) { const v = +$(k).value, m = $("method").value; $(k + "t").textContent = (/log/.test($(k + "n").textContent) ? Math.pow(10, v).toPrecision(2) : v); }
     $("noiset").textContent = (+$("noise").value).toFixed(2);
     if (CONTEST && !busy && model && Q.length) {          // a finished model on the contest data: report it
@@ -306,10 +307,16 @@ window.Contest = (function () {
   });
   window.points = () => [P.length, Q.length, P[0] ? P[0].slice(0, 2) : null];
   if (CONTEST) {
+    // the contest starts empty: no method chosen, untuned starting settings, and locked until Start on a phone
+    const o = document.createElement("option"); o.value = ""; o.textContent = "Choose a method"; $("method").insertBefore(o, $("method").firstChild); $("method").value = "";
+    PAR.knn[0][4] = 1; PAR.rbf[0][4] = 0; PAR.rbf[1][4] = -1; PAR.forest[0][4] = 3; PAR.forest[1][4] = 3;
+    const lock = (on) => { for (const id of ["method", "p1", "p2", "go"]) $(id).disabled = on; };
+    if (!Contest.framed) lock(true);
     for (const id of ["data", "noise"]) $(id).closest("label").style.display = "none";
     $("cb").closest(".row").style.display = "none";
     $("hint").textContent = "The test points are hidden. Press Start, try methods and settings, and submit your best test score before time is up";
-    Contest.init({ name: "L5 classifier contest", seconds: 240, onStart: () => draw() });
+    Contest.init({ name: "L5 classifier contest", seconds: 180, onStart: () => { lock(false); draw(); }, onEnd: () => lock(true) });
+    restart();
   }
   window.renderAt = () => { $("method").value = "forest"; $("method").dispatchEvent(new Event("input")); let g = 0; while (trainStep() && g++ < 3000); busy = false; draw(); };
   load(); (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { draw(); requestAnimationFrame(loop); });
