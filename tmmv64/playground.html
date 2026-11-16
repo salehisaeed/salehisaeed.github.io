@@ -35,7 +35,7 @@
 <div id="app">
   <canvas id="c" width="1520" height="1080"></canvas>
   <div id="ctl">
-    <label>Data <select id="data"><option value="contest">Contest, noisy moons</option><option value="moons">Two moons</option><option value="rings">Two rings</option><option value="blobs">Two overlapping clouds</option><option value="xor">Four corners</option><option value="diag">A diagonal border</option><option value="rare">A rare class (1 in 10)</option><option value="empty">Empty, draw your own</option></select></label>
+    <label>Data <select id="data"><option value="moons">Two moons</option><option value="rings">Two rings</option><option value="blobs">Two overlapping clouds</option><option value="xor">Four corners</option><option value="diag">A diagonal border</option><option value="rare">A rare class (1 in 10)</option><option value="empty">Empty, draw your own</option></select></label>
     <label>Noise <input type="range" id="noise" min="0" max="1" step="0.02" value="0.25"> <span class="v" id="noiset"></span></label>
     <label>Method <select id="method"><option value="knn">Nearest neighbors</option><option value="logistic">Logistic regression</option><option value="svm">SVM, straight</option><option value="rbf">SVM, curved (kernel)</option><option value="tree">Decision tree</option><option value="forest">Random forest</option></select></label>
     <label id="p1l"><span id="p1n"></span> <input type="range" id="p1"> <span class="v" id="p1t"></span></label>
@@ -112,6 +112,7 @@ window.Contest = (function () {
   /* A classifier playground: data sets, six methods, their main parameter, live training (logistic regression and the
      SVMs by gradient steps, trees split by split, forests tree by tree), training and test accuracy. Plain JavaScript. */
   const $ = (id) => document.getElementById(id);
+  const D = {}, CONTEST = D.mode === "contest";     // contest: one fixed data set, test points hidden, no editing
   const DW = 1200, DH = 560;
   const framed0 = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const phone = !framed0 && Math.min(screen.width || 9999, innerWidth) < 700 && screen.height > screen.width;
@@ -121,14 +122,16 @@ window.Contest = (function () {
   const cv = $("c"), ctx = cv.getContext("2d"), W = cv.width, H = cv.height, XR = [-3, 3], YR = [-2.13, 2.13];
   const toPx = (x, y) => [W * (x - XR[0]) / (XR[1] - XR[0]), H * (1 - (y - YR[0]) / (YR[1] - YR[0]))];
   let seed = 3; const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+  let tseed = 11; const trand = () => { tseed = (tseed * 1664525 + 1013904223) >>> 0; return tseed / 4294967296; };
   const gauss = () => { const u = Math.max(rnd(), 1e-12), v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
   let P = [], Q = [];                                  // training and test points: [x, y, class 0/1]
   function make(kind, noise) {
-    const pts = [], n = 260;
+    const pts = [], n = CONTEST ? 540 : 260;
     for (let i = 0; i < n; i++) {
       let c = i % 2, x, y;
       if (kind === "diag") { x = -2.4 + 4.8 * rnd(); y = -1.9 + 3.8 * rnd(); c = (x + y + 0.25 * noise * 4 * gauss() > 0) ? 1 : 0; pts.push([x, y, c]); continue; }
       if (kind === "rare") { c = i % 10 === 0 ? 1 : 0; x = c ? 0.9 : -0.4; y = c ? 0.5 : -0.2; const s = 0.55 + noise; pts.push([x + s * gauss(), y + s * gauss(), c]); continue; }
+      if (kind === "spirals") { const u = rnd(), th = (0.25 + 1.75 * Math.sqrt(u)) * Math.PI * D.turns, r = 2.2 * th / (2 * Math.PI * D.turns); x = r * Math.cos(th + c * Math.PI); y = r * Math.sin(th + c * Math.PI); const s = D.noise; pts.push([x + s * gauss(), y + s * gauss(), rnd() < (D.flip || 0) ? 1 - c : c]); continue; }
       if (kind === "moons") { const t = Math.PI * rnd(); x = c ? 1 - Math.cos(t) - 0.5 : Math.cos(t) - 0.5; y = c ? 0.3 - Math.sin(t) : Math.sin(t) - 0.2; x *= 1.6; y *= 1.6; }
       else if (kind === "rings") { const t = 2 * Math.PI * rnd(), r = c ? 1.3 + 0.4 * rnd() : 0.6 * Math.sqrt(rnd()); x = r * Math.cos(t); y = r * Math.sin(t); }
       else if (kind === "blobs") { x = c ? 0.7 : -0.7; y = c ? 0.3 : -0.3; }
@@ -138,11 +141,8 @@ window.Contest = (function () {
     }
     return pts;
   }
-  let CONTEST = false;                                 // contest: noisy moons, fixed noise, test points hidden, no editing
-  function load() { seed = 3; const k = $("data").value; CONTEST = k === "contest";
-    $("noise").disabled = CONTEST; if (CONTEST) $("noise").value = 0.55; for (const id of ["cb", "cr", "rm", "clr"]) $(id).disabled = CONTEST;
-    $("hint").textContent = CONTEST ? "Contest. The test points are hidden. Highest test score wins; a tie goes to the simpler model" : "Hollow points are test points, never seen by the method. Change one thing at a time and watch the boundary";
-    const all = k === "empty" ? [] : make(CONTEST ? "moons" : k, CONTEST ? 0.55 : +$("noise").value);
+  function load() { seed = 3; const k = CONTEST ? "spirals" : $("data").value;
+    const all = k === "empty" ? [] : make(k, CONTEST ? D.noise : +$("noise").value);
     P = all.filter((_, i) => i % 3 !== 0); Q = all.filter((_, i) => i % 3 === 0); restart(); }
   // ---------------- methods
   const PAR = { knn: [["Neighbors k", 1, 40, 1, 7], null], logistic: [["Learning rate", 0.05, 2, 0.05, 0.5], null],
@@ -175,7 +175,7 @@ window.Contest = (function () {
   function restart() {
     const m = $("method").value, [a, b] = PAR[m];
     for (const [k, d] of [["p1", a], ["p2", b]]) { $(k + "l").style.display = d ? "flex" : "none"; if (d) { $(k + "n").textContent = d[0]; Object.assign($(k), { min: d[1], max: d[2], step: d[3] }); if (!$(k).dataset.m || $(k).dataset.m !== m) { $(k).value = d[4]; $(k).dataset.m = m; } } }
-    steps = 0; busy = P.length > 0;
+    steps = 0; busy = P.length > 0; tseed = 11;
     if (m === "logistic") model = { w: [0, 0, 0] };
     if (m === "svm") model = {};
     if (m === "rbf") model = { a: P.map(() => 0), b: 0 };
@@ -200,13 +200,13 @@ window.Contest = (function () {
         if (d) { model.al[i] = a1; for (let k = 0; k < 3; k++) model.v[k] += d * y * z[k]; md = Math.max(md, Math.abs(d)); } }
       model.w = model.v; steps += 1; return md > 1e-6 && steps < 400; }
     if (m === "rbf") { const C = Math.pow(10, +$("p1").value), gam = Math.pow(10, +$("p2").value);
-      for (let it = 0; it < 60; it++) { const i = Math.floor(Math.random() * n), y = P[i][2] ? 1 : -1; let s = model.b;
+      for (let it = 0; it < 60; it++) { const i = Math.floor(trand() * n), y = P[i][2] ? 1 : -1; let s = model.b;
         for (let k = 0; k < n; k++) if (model.a[k]) s += model.a[k] * Math.exp(-gam * ((P[k][0] - P[i][0]) ** 2 + (P[k][1] - P[i][1]) ** 2));
         if (y * s < 1) { model.a[i] += 0.02 * C * y; model.b += 0.01 * C * y; } for (let k = 0; k < n; k++) model.a[k] *= 0.9995; }
       steps += 60; return steps < 9000; }
     if (m === "tree") { const ok = growStep(model, +$("p1").value); steps += ok; return ok; }
     if (m === "forest") { const nt = +$("p1").value, md = +$("p2").value;
-      if (!model.cur) { if (model.trees.length >= nt) return false; const bs = P.map(() => P[Math.floor(Math.random() * n)]); model.cur = { T: leaf(bs) }; }
+      if (!model.cur) { if (model.trees.length >= nt) return false; const bs = P.map(() => P[Math.floor(trand() * n)]); model.cur = { T: leaf(bs) }; }
       let ok = true; for (let q = 0; q < 4 && ok; q++) ok = growStep(model.cur, md);
       if (!ok) { model.trees.push(model.cur.T); model.cur = null; } return true; }
     return false;
@@ -299,8 +299,18 @@ window.Contest = (function () {
     $("clr").click(); $("method").value = "rbf"; $("method").dispatchEvent(new Event("input")); trainStep(); draw(); out.push(["empty rbf", "ok"]);
     return out;
   };
+  window.scoreGrid = (list) => list.map(([m, v1, v2]) => {   // for choosing the contest: test score of each setting
+    $("method").value = m; restart(); if (v1 !== undefined) $("p1").value = v1; if (v2 !== undefined) $("p2").value = v2; restart();
+    let g = 0; while (trainStep() && g++ < 40000); busy = false;
+    return [m, v1, v2, Math.round(1000 * Q.filter((p) => (predict(p[0], p[1]) > 0.5) === !!p[2]).length / Q.length) / 10];
+  });
   window.points = () => [P.length, Q.length, P[0] ? P[0].slice(0, 2) : null];
-  Contest.init({ name: "L5 classifiers", seconds: 180, onStart: () => draw() });
+  if (CONTEST) {
+    for (const id of ["data", "noise"]) $(id).closest("label").style.display = "none";
+    $("cb").closest(".row").style.display = "none";
+    $("hint").textContent = "The test points are hidden. Press Start, try methods and settings, and submit your best test score before time is up";
+    Contest.init({ name: "L5 classifier contest", seconds: 240, onStart: () => draw() });
+  }
   window.renderAt = () => { $("method").value = "forest"; $("method").dispatchEvent(new Event("input")); let g = 0; while (trainStep() && g++ < 3000); busy = false; draw(); };
   load(); (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { draw(); requestAnimationFrame(loop); });
 })();
