@@ -47,6 +47,66 @@
     <div class="muted" id="hint">Hollow points are test points, never seen by the method. Change one thing at a time and watch the boundary</div>
   </div>
 </div>
+<script>/* Contest bar for the interactive pages used as classroom contests (lecture 5 playground, lecture 6 network
+   builder). Shown only when a page is opened on its own (a phone after the QR code), never inside the slides.
+   A countdown starts with the student's Start; during it the page reports results with Contest.record(); the bar
+   keeps the best one; Submit opens the course's Microsoft Form (LiU login, so the form knows who submits) with the
+   contest, the method and setting, the test score and a check code filled in. The check code lets the teacher see a
+   score that was typed instead of earned: tools/contest_check.py recomputes it.
+   Inlined into a page by the build scripts at the placeholder of the same name. */
+window.Contest = (function () {
+  const FORM = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=7Bg_kSZ_X0yoFnhP6aWO3aTUqdGx74hLvfs9vFelF9BUOFRHTDhQTE5KSk9ZS0pRRU9aVElZTlo1Qy4u";
+  const FIELD = { contest: "ra9aab6920d9646cfb01a6281364d840b", method: "r477119bc01644705bd524c4e70b648fb",
+                  score: "ra27589b9760a46e381acce29aa703a79", code: "r1f2207c7cfbb4b729e658884e80a05f2" };
+  const SALT = "tmmv64-contest-2026";
+  function code(contest, score, method) {          // FNV-1a, 32 bits, six characters
+    let h = 0x811c9dc5; const s = `${contest}|${score}|${method}|${SALT}`;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return h.toString(36).toUpperCase().padStart(7, "0").slice(-6);
+  }
+  let name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
+  const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
+  const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+  function render() {
+    if (!el) return;
+    const head = state === "idle" ? `<b>Contest</b> · ${mmss(seconds)}` : state === "running" ? `<b>Time left ${mmss(left)}</b>` : "<b>Time is up.</b> Submit your best now";
+    const b = best ? `Your best: <b>${best.score} %</b> · ${best.method}` : (state === "running" ? "Train a model to get a test score" : "");
+    el.innerHTML = `<div class="ct-row">${head}${state === "idle" ? ' <button id="ct-start">Start</button>' : ""}</div>` +
+      (state !== "idle" ? `<div class="ct-row">${b}</div><div class="ct-row"><button id="ct-send" ${best ? "" : "disabled"}>Submit my best</button></div>` : "") +
+      `<div class="ct-note">Your result is recorded with your LiU login for the contest leaderboard.</div>`;
+    const st = el.querySelector("#ct-start"); if (st) st.onclick = start;
+    const sd = el.querySelector("#ct-send"); if (sd) sd.onclick = send;
+  }
+  function start() {
+    state = "running"; left = seconds; best = null; render();
+    timer = setInterval(() => { left--; if (left <= 0) { clearInterval(timer); state = "over"; } render(); }, 1000);
+  }
+  function send() {
+    if (!best) return;
+    const q = { [FIELD.contest]: name, [FIELD.method]: best.method, [FIELD.score]: String(best.score), [FIELD.code]: code(name, best.score, best.method) };
+    const url = FORM + Object.entries(q).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join("");
+    const w = window.open(url, "_blank"); if (!w) location.href = url;
+  }
+  function init(opt) {
+    if (framed) return;
+    name = opt.name; seconds = opt.seconds || 180;
+    const css = document.createElement("style");
+    css.textContent = `#ct { position: fixed; z-index: 50; right: 10px; top: 10px; width: 330px; background: #fff; border: 2px solid #9c6a12; border-radius: 10px;
+      padding: 8px 12px; font: 400 17px "Source Sans 3", sans-serif; color: #1d1d1f; box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+      #ct .ct-row { margin: 4px 0; } #ct .ct-note { margin-top: 6px; font-size: 13px; color: #6b6e73; }
+      #ct button { font: inherit; font-size: 17px; padding: 4px 12px; border: 1px solid #9c6a12; color: #fff; background: #9c6a12; border-radius: 6px; cursor: pointer; }
+      #ct button:disabled { opacity: 0.4; cursor: default; }
+      body.phone #ct { position: sticky; top: 0; right: auto; width: auto; margin: 0 0 8px; font-size: 18px; }`;
+    document.head.appendChild(css);
+    el = document.createElement("div"); el.id = "ct"; document.body.insertBefore(el, document.body.firstChild); render();
+  }
+  function record(score, method, size) {            // a finished result; ties go to the smaller size (simpler model)
+    if (state !== "running") return;
+    if (!best || score > best.score || (score === best.score && size !== undefined && size < best.size)) { best = { score, method, size }; render(); }
+  }
+  return { init, record, code };
+})();
+</script>
 <script>
 (function () {
   /* A classifier playground: data sets, six methods, their main parameter, live training (logistic regression and the
@@ -187,6 +247,11 @@
     $("tr").textContent = acc(P); $("te").textContent = acc(Q);
     for (const k of ["p1", "p2"]) { const v = +$(k).value, m = $("method").value; $(k + "t").textContent = (/log/.test($(k + "n").textContent) ? Math.pow(10, v).toPrecision(2) : v); }
     $("noiset").textContent = (+$("noise").value).toFixed(2);
+    if (CONTEST && !busy && model && Q.length) {          // a finished model on the contest data: report it
+      const te = Math.round(100 * Q.filter((p) => (predict(p[0], p[1]) > 0.5) === !!p[2]).length / Q.length), m = $("method");
+      const par = ["p1", "p2"].filter((k) => $(k + "l").style.display !== "none" && $(k + "n").textContent).map((k) => `${$(k + "n").textContent} = ${$(k + "t").textContent}`);
+      Contest.record(te, [m.options[m.selectedIndex].text].concat(par).join(", "));
+    }
   }
   let addClass = 0, last = 0;
   function loop(now) {
@@ -235,6 +300,7 @@
     return out;
   };
   window.points = () => [P.length, Q.length, P[0] ? P[0].slice(0, 2) : null];
+  Contest.init({ name: "L5 classifiers", seconds: 180 });
   window.renderAt = () => { $("method").value = "forest"; $("method").dispatchEvent(new Event("input")); let g = 0; while (trainStep() && g++ < 3000); busy = false; draw(); };
   load(); (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { draw(); requestAnimationFrame(loop); });
 })();
