@@ -28,9 +28,10 @@
   .phone #app { position: static; width: auto; height: auto; transform: none !important; padding: 8px; }
   .phone svg { position: static; display: block; width: 100%; height: auto; }
   .phone #ctl { position: static; width: auto; margin: 4px 0; }
-  .phone .row { flex-wrap: wrap; }
-  .phone .mode { width: 22%; }
-  .phone .mode img { width: 64px; height: 64px; }
+  .phone .row { flex-wrap: nowrap; gap: 3px; }                          /* one row of eight per axis: all on one screen */
+  .phone .mode { width: calc((100% - 21px) / 8); font-size: 14px; }
+  .phone .mode img { width: 100%; height: auto; aspect-ratio: 1; border-width: 2px; box-sizing: border-box; }
+  .phone #ctl > div:last-child { margin-top: 6px !important; font-size: 16px; color: #6b6e73; }
   html.phone { overflow: auto; height: auto; }   /* phones: the whole page scrolls */
 </style>
 </head>
