@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard</title>
+<style>
+  :root { --ink: #1d1d1f; --muted: #6b6e73; --gold: #9c6a12; --paper: #f7f6f2; --line: #e3e0d8; --blue: #1d5a85; }
+  html, body { margin: 0; height: 100%; background: var(--paper); color: var(--ink); font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif; }
+  #wrap { max-width: 1100px; margin: 0 auto; padding: 22px 28px; }
+  h1 { margin: 0; font-size: 44px; color: var(--blue); }
+  .sub { color: var(--muted); font-size: 22px; margin: 4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 30px; }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td.r { width: 70px; color: var(--muted); text-align: right; }
+  td.s { width: 150px; text-align: right; font-weight: 700; }
+  td.m { color: var(--muted); font-size: 22px; white-space: normal; }
+  tr.top td.s, tr.top td.w { color: var(--gold); }
+  tr.top td.r { color: var(--gold); font-weight: 700; }
+  tr.new { animation: flash 2.5s ease-out; }
+  @keyframes flash { from { background: #f8e6a8; } to { background: transparent; } }
+  .empty { font-size: 28px; color: var(--muted); padding: 40px 0; text-align: center; }
+  @media (max-width: 700px) { h1 { font-size: 30px; } table { font-size: 20px; } td.m { font-size: 15px; } td.s { width: 80px; } }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h1 id="title">Leaderboard</h1>
+  <div class="sub" id="sub">Waiting for results …</div>
+  <table id="t"></table>
+</div>
+<script>
+(function () {
+  /* The live leaderboard of a classroom contest: ?contest=L5 classifier contest (or L6 network builder). The best
+     result per student from the contest service, refreshed every three seconds; IDs shortened by the service. */
+  const SERVICE = "https://tmmv64-contest.salehi144.workers.dev";
+  const contest = new URLSearchParams(location.search).get("contest") || "L5 classifier contest";
+  const TITLE = { "L5 classifier contest": "The classifier contest", "L6 network builder": "The network builder contest" };
+  document.getElementById("title").textContent = TITLE[contest] || contest;
+  let seen = new Set();
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  async function load() {
+    try {
+      const r = await fetch(`${SERVICE}/board?contest=${encodeURIComponent(contest)}`, { cache: "no-store" });
+      const d = await r.json();
+      document.getElementById("sub").textContent = d.n ? `${d.n} ${d.n === 1 ? "student" : "students"} · best result each · test points` : "No results yet. Scan, press Start, submit your best";
+      const now = new Set();
+      document.getElementById("t").innerHTML = d.rows.length ? d.rows.slice(0, 15).map((x, i) => {
+        const key = x.who + "|" + x.score; now.add(key);
+        return `<tr class="${i < 3 ? "top" : ""} ${seen.size && !seen.has(key) ? "new" : ""}"><td class="r">${i + 1}</td><td class="w">${esc(x.who)}</td><td class="s">${x.score} %</td><td class="m">${esc(x.method)}</td></tr>`;
+      }).join("") : "";
+      seen = now;
+    } catch (e) { document.getElementById("sub").textContent = "No connection to the contest service. Retrying …"; }
+  }
+  load(); setInterval(load, 3000);
+})();
+</script>
+</body>
+</html>
