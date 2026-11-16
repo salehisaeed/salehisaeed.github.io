@@ -51,18 +51,15 @@
    builder). Shown only when a page is opened on its own (a phone after the QR code), never inside the slides.
    A countdown starts with the student's Start; during it the page reports results with Contest.record(); the bar
    keeps the best one; Submit opens the course's Microsoft Form (LiU login, so the form knows who submits) with the
-   contest, the method and setting, the test score and a check code filled in. The check code lets the teacher see a
-   score that was typed instead of earned: tools/contest_check.py recomputes it.
+   contest, the method and setting, the test score and a check code filled in. The check code lets the leaderboard ignore a score
+   that was changed in the form: Excel recomputes it (REST(score * 7919 + 48611; 99991)), so does tools/contest_check.py.
    Inlined into a page by the build scripts at the placeholder of the same name. */
 window.Contest = (function () {
   const FORM = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=7Bg_kSZ_X0yoFnhP6aWO3aTUqdGx74hLvfs9vFelF9BUOFRHTDhQTE5KSk9ZS0pRRU9aVElZTlo1Qy4u";
   const FIELD = { contest: "ra9aab6920d9646cfb01a6281364d840b", method: "r477119bc01644705bd524c4e70b648fb",
                   score: "ra27589b9760a46e381acce29aa703a79", code: "r1f2207c7cfbb4b729e658884e80a05f2" };
-  const SALT = "tmmv64-contest-2026";
-  function code(contest, score, method) {          // FNV-1a, 32 bits, six characters
-    let h = 0x811c9dc5; const s = `${contest}|${score}|${method}|${SALT}`;
-    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
-    return h.toString(36).toUpperCase().padStart(7, "0").slice(-6);
+  function code(contest, score, method) {          // a code Excel can check: (score * 7919 + 48611) mod 99991
+    return String((Math.round(score) * 7919 + 48611) % 99991);
   }
   let onEnd = null, onStart = null, name = "", seconds = 180, left = 0, state = "idle", best = null, timer = null, el = null;
   const framed = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
