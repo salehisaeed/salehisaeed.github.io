@@ -267,8 +267,9 @@ window.Contest = (function () {
     $("noiset").textContent = (+$("noise").value).toFixed(2);
     if (CONTEST && !busy && model && Q.length) {          // a finished model on the contest data: report it
       const te = Math.round(100 * Q.filter((p) => (predict(p[0], p[1]) > 0.5) === !!p[2]).length / Q.length), m = $("method");
-      const par = ["p1", "p2"].filter((k) => $(k + "l").style.display !== "none" && $(k + "n").textContent).map((k) => `${$(k + "n").textContent} = ${$(k + "t").textContent}`);
-      Contest.record(te, [m.options[m.selectedIndex].text].concat(par).join(", "));
+      const SHORT = { knn: "Nearest neighbors", logistic: "Logistic regression", svm: "Straight SVM", rbf: "Curved SVM", tree: "Decision tree", forest: "Random forest" };
+      const sym = (txt) => txt.replace(/\s*\(log\)/, "").replace(/^(Neighbors|Penalty|Reach)\s+/, "").replace(/^Largest depth/, "depth").replace(/^Trees/, "trees").replace(/^Learning rate/, "rate");
+      Contest.record(te, [SHORT[m.value] || m.value].concat(["p1", "p2"].filter((k) => $(k + "l").style.display !== "none" && $(k + "n").textContent).map((k) => `${sym($(k + "n").textContent)} = ${$(k + "t").textContent}`)).join(", "));
     }
   }
   let addClass = 0, last = 0;

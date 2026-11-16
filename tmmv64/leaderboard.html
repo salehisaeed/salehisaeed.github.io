@@ -9,6 +9,8 @@
   :root { --ink: #1d1d1f; --muted: #6b6e73; --gold: #9c6a12; --paper: #f7f6f2; --line: #e3e0d8; --blue: #1d5a85; }
   html, body { margin: 0; height: 100%; background: var(--paper); color: var(--ink); font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif; }
   #wrap { max-width: 1100px; margin: 0 auto; padding: 22px 28px; }
+  body.embed #wrap { max-width: none; padding: 6px 10px; } body.embed h1 { display: none; } body.embed .sub { font-size: 26px; margin: 0 0 10px; }
+  body.embed table { font-size: 40px; } body.embed td { padding: 10px 14px; } body.embed td.m { font-size: 28px; } body.embed td.s { width: 190px; } body.embed td.r { width: 80px; }
   h1 { margin: 0; font-size: 44px; color: var(--blue); }
   .sub { color: var(--muted); font-size: 22px; margin: 4px 0 16px; }
   table { width: 100%; border-collapse: collapse; font-size: 30px; }
@@ -35,7 +37,8 @@
   /* The live leaderboard of a classroom contest: ?contest=L5 classifier contest (or L6 network builder). The best
      result per student from the contest service, refreshed every three seconds; IDs shortened by the service. */
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev";
-  const contest = new URLSearchParams(location.search).get("contest") || "L5 classifier contest";
+  const Q = new URLSearchParams(location.search), contest = Q.get("contest") || "L5 classifier contest";
+  if (Q.has("embed")) document.body.classList.add("embed");
   const TITLE = { "L5 classifier contest": "The classifier contest", "L6 network builder": "The network builder contest" };
   document.getElementById("title").textContent = TITLE[contest] || contest;
   let seen = new Set();
@@ -46,7 +49,7 @@
       const d = await r.json();
       document.getElementById("sub").textContent = d.n ? `${d.n} ${d.n === 1 ? "student" : "students"} · best result each · test points` : "No results yet. Scan, press Start, submit your best";
       const now = new Set();
-      document.getElementById("t").innerHTML = d.rows.length ? d.rows.slice(0, 15).map((x, i) => {
+      document.getElementById("t").innerHTML = d.rows.length ? d.rows.slice(0, Q.has("embed") ? 8 : 15).map((x, i) => {
         const key = x.who + "|" + x.score; now.add(key);
         return `<tr class="${i < 3 ? "top" : ""} ${seen.size && !seen.has(key) ? "new" : ""}"><td class="r">${i + 1}</td><td class="w">${esc(x.who)}</td><td class="s">${x.score} %</td><td class="m">${esc(x.method)}</td></tr>`;
       }).join("") : "";
