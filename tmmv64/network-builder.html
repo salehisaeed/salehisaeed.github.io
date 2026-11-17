@@ -394,6 +394,15 @@ window.Contest = (function () {
   function setArch(arch) { cols = arch.map((n) => ({ x: undefined, nodes: Array.from({ length: n }, () => ({ y: undefined })) })); relayout(); cols.forEach((c) => { c.x = c.x0; c.nodes.forEach((nd) => { nd.y = nd.y0; }); }); }
   Contest.init({ name: "L6 network builder", seconds: 180, veil: true, onStart: () => { if (done && score !== null) Contest.record(pct(score), `layers ${archText()}, ${nNeurons()} neurons`, nNeurons()); } });
   window.scoreOf = (arch, a, base) => { SEEDBASE = base === undefined ? CONTEST_BASE : base; if (a) act = a; setArch(arch); trainedSizes = sizesNow().join(","); nets = []; for (let k = 0; k < STARTS; k++) { net = makeNet(sizesNow(), k); for (let s = 0; s < STEPS; s++) trainStep(net); nets.push(net); } start = STARTS - 1; done = true; const r = pct(meanAcc(D.test)); SEEDBASE = CONTEST_BASE; return r; };
+  window.plotOf = (arch, base) => {                             // for the slide on starting weights: the regions, strong, and small training points
+    const v = window.scoreOf(arch, 'tanh', base); pg.clearRect(0, 0, PW, PH);
+    for (let a = 0; a < GX; a++) for (let b = 0; b < GY; b++) {
+      const x = -1.1 + 2.2 * (a + 0.5) / GX, y = 0.825 - 1.65 * (b + 0.5) / GY, q = prob(x, y), al = 0.25 + 0.5 * Math.min(1, 2 * Math.abs(q - 0.5)), col = q > 0.5 ? [0, 114, 178] : [224, 22, 43];
+      pg.fillStyle = `rgb(${col.map((c) => Math.round(255 + (c - 255) * al)).join(",")})`; pg.fillRect(a * PW / GX, b * PH / GY, PW / GX + 1, PH / GY + 1);
+    }
+    D.train.forEach(([x, y, c]) => { pg.beginPath(); pg.arc(px(x), py(y), 5, 0, 2 * Math.PI); pg.fillStyle = c > 0.5 ? CA : CB; pg.fill(); pg.lineWidth = 1.2; pg.strokeStyle = "white"; pg.stroke(); });
+    return v;
+  };
   window.renderAt = (arch) => { const s = window.scoreOf(arch || [6, 6]); steps = STEPS; score = meanAcc(D.test); showScore(); drawPlot(); drawStage(); return s; };
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { changed(); drawPlot(); requestAnimationFrame(frame); });
 })();
