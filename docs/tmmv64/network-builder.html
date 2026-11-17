@@ -15,7 +15,10 @@
   #stage { position: absolute; left: 0; top: 0; width: 790px; height: 600px; touch-action: none; }
   #side { position: absolute; left: 812px; top: 4px; width: 460px; }
   #plot { width: 460px; height: 345px; display: block; border: 1px solid #c9c5bb; border-radius: 6px; background: #fff; }
-  #score { margin-top: 10px; font-size: 30px; font-weight: 700; }
+  #score { margin-top: 10px; font-size: 30px; font-weight: 700; transform-origin: 0 50%; }
+  #score.pop { animation: pop 0.7s ease-out; }
+  @keyframes pop { 0% { transform: scale(1); } 30% { transform: scale(1.12); color: #6a3d9a; } 100% { transform: scale(1); } }
+  .muted2 { color: #6b6e73; font-size: 18px; }
   #score .n { color: #6a3d9a; }
   #sub { font-size: 19px; color: #6b6e73; min-height: 26px; }
   #bar { height: 8px; background: #e6e3dc; border-radius: 4px; margin: 6px 0 8px; overflow: hidden; }
@@ -41,7 +44,7 @@
     <div id="score" data-raw></div>
     <div id="bar"><div></div></div>
     <div id="sub" data-raw></div>
-    <div class="row"><span>Activation</span><button data-act="tanh" class="on">tanh</button><button data-act="relu">ReLU</button><button id="clear">Clear</button></div>
+    <div class="row"><span class="muted2">Every neuron: tanh</span><button id="clear">Clear all neurons</button></div>
     <div class="row" id="best" data-raw></div>
   </div>
 </div>
@@ -215,6 +218,7 @@ window.Contest = (function () {
     g.stroke();
   }
   function drawStage() {
+    const now = performance.now(), training = net && !done && !drag && nNeurons() > 0;
     g.clearRect(0, 0, SW, SH);
     cols.forEach((c, k) => {                                     // the layers
       const on = hover && hover.join === k;
@@ -234,23 +238,43 @@ window.Contest = (function () {
         const w = Wl ? Wl[j][i] : 0.5, m = Math.min(1, Math.abs(w) / 2);
         g.strokeStyle = w >= 0 ? PUR : ORA; g.globalAlpha = 0.25 + 0.75 * m; g.lineWidth = 2.2;
         g.beginPath(); g.moveTo(p[0], p[1]); g.lineTo(q[0], q[1]); g.stroke();
+        if (training) {                                          // a pulse runs along every connection, layer after layer
+          const f = ((now / 900 - c * 0.35 + ((i * 7 + j * 3) % 10) * 0.03) % 1 + 1) % 1;
+          g.globalAlpha = 0.9 * Math.sin(Math.PI * f); g.fillStyle = w >= 0 ? PUR : ORA;
+          g.beginPath(); g.arc(p[0] + (q[0] - p[0]) * f, p[1] + (q[1] - p[1]) * f, 3.6, 0, 2 * Math.PI); g.fill();
+        }
       }));
     }
     g.globalAlpha = 1;
     const math = (s, x, y, size) => { g.fillStyle = INK; g.font = `italic ${size}px KaTeX_Math`; g.textAlign = "center"; g.fillText(s, x, y); };
     [[XIN, YMID - 50, "0"], [XIN, YMID + 50, "1"]].forEach(([x, y, i]) => { circ(x, y, INC, INK, 2); math("x", x - 3, y + 6, 22); g.font = "15px KaTeX_Main"; g.fillText(i, x + 8, y + 12); });
-    cols.forEach((c) => c.nodes.forEach((nd) => { circ(c.x, nd.y, HIDC, PUR, 2.6); glyph(c.x, nd.y, PUR); }));
+    cols.forEach((c, k) => c.nodes.forEach((nd, j) => {
+      if (training) { g.globalAlpha = 0.16 + 0.12 * Math.sin(now / 220 + k * 1.3 + j * 0.7); g.fillStyle = PUR; g.beginPath(); g.arc(c.x, nd.y, R + 9, 0, 2 * Math.PI); g.fill(); g.globalAlpha = 1; }
+      circ(c.x, nd.y, HIDC, PUR, 2.6); glyph(c.x, nd.y, PUR);
+    }));
+    const ring = (now - doneT) / 900;                            // the score has arrived: a ring spreads from the output
+    if (ring >= 0 && ring < 1) { g.globalAlpha = 1 - ring; g.strokeStyle = PUR; g.lineWidth = 4; g.beginPath(); g.arc(XOUT, YMID, R + 6 + 40 * ring, 0, 2 * Math.PI); g.stroke(); g.globalAlpha = 1; }
     circ(XOUT, YMID, OUTC, INK, 2); math("y", XOUT, YMID + 7, 23);
     g.fillStyle = MUTED; g.font = "17px 'Source Sans 3'"; g.textAlign = "center"; g.fillText("Inputs", XIN, YMID + 100); g.fillText("Output", XOUT, YMID + 50);
-    g.fillStyle = "#f1eee6"; g.strokeStyle = "#d9d6cc"; g.lineWidth = 1.5; g.beginPath(); g.roundRect(TRAYN[0] - 45, TRAYN[1] - 36, 470, 72, 14); g.fill(); g.stroke();
-    circ(TRAYN[0], TRAYN[1], HIDC, PUR, 2.6); glyph(TRAYN[0], TRAYN[1], PUR);
-    g.fillStyle = INK; g.font = "19px 'Source Sans 3'"; g.textAlign = "left"; g.fillText("Drop beside a layer to join it,", TRAYN[0] + 36, TRAYN[1] - 4);
-    g.fillStyle = MUTED; g.font = "16px 'Source Sans 3'"; g.fillText("between layers for a new one. Tap twice to remove", TRAYN[0] + 36, TRAYN[1] + 18);
+    g.fillStyle = "#f4effa"; g.strokeStyle = PUR; g.lineWidth = 2.4; g.setLineDash([9, 6]); g.lineDashOffset = -now / 40;
+    g.beginPath(); g.roundRect(TRAYN[0] - 48, TRAYN[1] - 38, 490, 76, 16); g.fill(); g.stroke(); g.setLineDash([]); g.lineDashOffset = 0;
+    const bob = drag ? 0 : 3 * Math.sin(now / 320);
+    g.globalAlpha = 0.18 + 0.1 * Math.sin(now / 320); g.fillStyle = PUR; g.beginPath(); g.arc(TRAYN[0], TRAYN[1] + bob, R + 8, 0, 2 * Math.PI); g.fill(); g.globalAlpha = 1;
+    circ(TRAYN[0], TRAYN[1] + bob, HIDC, PUR, 3); glyph(TRAYN[0], TRAYN[1] + bob, PUR);
+    g.fillStyle = PUR; g.font = "700 20px 'Source Sans 3'"; g.textAlign = "left"; g.fillText("Drag a neuron into the network", TRAYN[0] + 38, TRAYN[1] - 4);
+    g.fillStyle = MUTED; g.font = "16px 'Source Sans 3'"; g.fillText("Beside a layer: join it · between: new layer · tap twice: remove", TRAYN[0] + 38, TRAYN[1] + 19);
+    if (!cols.length && !drag) {                                 // empty network: a dashed arrow from the tray to the middle
+      const u = (now / 1400) % 1, ax = TRAYN[0] + 40, ay = TRAYN[1] - 44, bx = (XIN + XOUT) / 2, by = YMID + 40;
+      g.strokeStyle = PUR; g.lineWidth = 2.4; g.setLineDash([6, 6]); g.globalAlpha = 0.75;
+      g.beginPath(); g.moveTo(ax, ay); g.quadraticCurveTo(ax + 10, by, bx, by); g.stroke(); g.setLineDash([]);
+      const t = u, mx = (1 - t) * (1 - t) * ax + 2 * (1 - t) * t * (ax + 10) + t * t * bx, my = (1 - t) * (1 - t) * ay + 2 * (1 - t) * t * by + t * t * by;
+      g.globalAlpha = 0.6 * Math.sin(Math.PI * u); circ(mx, my, HIDC, PUR, 2.6); g.globalAlpha = 1;
+    }
     if (drag) { circ(drag.x, drag.y, HIDC, PUR, 3); glyph(drag.x, drag.y, PUR); }
   }
   // ---------------------------------------------------------------- the network and training
   const sizesNow = () => [2, ...cols.map((c) => c.nodes.length), 1];
-  let net = null, nets = [], start = 0, steps = 0, done = false, score = null, seed = 1;
+  let net = null, nets = [], start = 0, steps = 0, done = false, score = null, seed = 1, doneT = -1e9;
   const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
   /* Every number below is computed with + - * / and Math.sqrt only, which all browsers round the same way, so a network
      gets the same score on every phone and laptop (Math.exp, tanh, log, cos and pow may differ in the last digit between
@@ -357,7 +381,7 @@ window.Contest = (function () {
       for (let i = 0; i < PER_FRAME && steps < STEPS; i++) { trainStep(net); steps++; }
       if (steps >= STEPS) {
         if (start + 1 < STARTS) { start++; steps = 0; net = makeNet(sizesNow(), start); nets.push(net); }
-        else { done = true; score = meanAcc(D.test); record(); }
+        else { done = true; score = meanAcc(D.test); record(); doneT = performance.now(); const el = $("score"); el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
       }
       showScore(); drawPlot();
     }
