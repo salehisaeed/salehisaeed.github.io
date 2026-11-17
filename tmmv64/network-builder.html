@@ -153,13 +153,13 @@ window.Contest = (function () {
   window.addEventListener("resize", fit); fit();
   const INK = "#1d1d1f", MUTED = "#6b6e73", PUR = "#6a3d9a", ORA = "#ef8a17", INC = "#dce8f4", HIDC = "#fbf7ee", OUTC = "#f6e3d2";
   const CA = "#0072B2", CB = "#E0162B";                       // the two classes
-  const STEPS = 2000, STARTS = 3, LR = 0.02, PER_FRAME = 60;
-  const CONTEST_BASE = 15000045;                               // the contest's fixed starts (set 15 of the statistics on the caveat slide)
+  const STEPS = 2000, STARTS = 1, LR = 0.02, PER_FRAME = 60;   // one training per score: one network, one seed
+  const CONTEST_BASE = 6000018;                                // the contest seed: set 6 of the 11 in the statistics (1000003 j)
   let SEEDBASE = CONTEST_BASE;
   /* ?show=6-7-5: the slide on starting weights. The network is fixed (no tray); slide step k trains it again, live, from
      the set of starts bases[k] (15 = the contest's), and the scores are listed under it. */
   const QS = new URLSearchParams(location.search), SHOW = QS.get("show") ? QS.get("show").split("-").map(Number) : null;
-  const SHOWB = (QS.get("bases") || "15,1,4,9,2,7").split(",").map((v) => 1000003 * Number(v)), RUNS = [];
+  const SHOWB = (QS.get("bases") || "6,0,1,2,3,4").split(",").map((v) => 1000003 * Number(v)), RUNS = [];
   let showK = 0, SHOWN = 0;                                 // other starts only for the statistics of the lecture (scoreOf)
   // ---------------------------------------------------------------- the stage
   // Layers grow from where neurons are dropped: beside a layer, a neuron joins it; between two layers, before the
@@ -228,7 +228,7 @@ window.Contest = (function () {
     g.stroke();
   }
   function drawStage() {
-    const now = performance.now(), training = net && !done && !drag && nNeurons() > 0;
+    const now = performance.now(), training = !SHOW && net && !done && !drag && nNeurons() > 0;
     g.clearRect(0, 0, SW, SH);
     cols.forEach((c, k) => {                                     // the layers
       const on = hover && hover.join === k;
@@ -262,7 +262,7 @@ window.Contest = (function () {
       if (training) { g.globalAlpha = 0.16 + 0.12 * Math.sin(now / 220 + k * 1.3 + j * 0.7); g.fillStyle = PUR; g.beginPath(); g.arc(c.x, nd.y, R + 9, 0, 2 * Math.PI); g.fill(); g.globalAlpha = 1; }
       circ(c.x, nd.y, HIDC, PUR, 2.6); glyph(c.x, nd.y, PUR);
     }));
-    const ring = (now - doneT) / 900;                            // the score has arrived: a ring spreads from the output
+    const ring = SHOW ? 9 : (now - doneT) / 900;                            // the score has arrived: a ring spreads from the output
     if (ring >= 0 && ring < 1) { g.globalAlpha = 1 - ring; g.strokeStyle = PUR; g.lineWidth = 4; g.beginPath(); g.arc(XOUT, YMID, R + 6 + 40 * ring, 0, 2 * Math.PI); g.stroke(); g.globalAlpha = 1; }
     circ(XOUT, YMID, OUTC, INK, 2); math("y", XOUT, YMID + 7, 23);
     g.fillStyle = MUTED; g.font = "17px 'Source Sans 3'"; g.textAlign = "center"; g.fillText("Inputs", XIN, YMID + 100); g.fillText("Output", XOUT, YMID + 50);
@@ -354,10 +354,10 @@ window.Contest = (function () {
     const n = nNeurons(), nn = `${n} neuron${n === 1 ? "" : "s"}`;
     if (done) {
       $("score").innerHTML = `Test: ${K(pct(score).toFixed(1))} %, with <span class="n">${nn}</span>`;
-      $("sub").innerHTML = `Layers ${archK()} · training points ${K(pct(meanAcc(D.train)).toFixed(1))} % · mean of ${K(STARTS)} starts`;
+      $("sub").innerHTML = `Layers ${archK()} · training points ${K(pct(meanAcc(D.train)).toFixed(1))} %`;
     } else {
       $("score").innerHTML = `Training … <span class="n">${nn}</span>`;
-      $("sub").innerHTML = `Layers ${archK()} · start ${K(start + 1)} of ${K(STARTS)}`;
+      $("sub").innerHTML = `Layers ${archK()} · training`;
     }
     $("bar").firstChild.style.width = `${100 * (done ? 1 : (start + steps / STEPS) / STARTS)}%`;
     if (SHOW) { $("best").innerHTML = RUNS.slice(0, SHOWN + 1).map((v, k) => `<div class="run${k === SHOWN ? " now" : ""}"><span>Training ${K(k + 1)}</span><b>${K(v.toFixed(1))} %</b></div>`).join(""); return; }
@@ -433,18 +433,36 @@ window.Contest = (function () {
     RUNS[i] = window.scoreOf(SHOW, "tanh", SHOWB[i]); RUNNETS[i] = nets.slice(); [nets, net] = keep;
   }
   function showStep(k) {                                         // the slide: the result of training i, no training shown
+    $("sub").style.display = ""; $("bar").style.display = "";
     showK = Math.max(0, Math.min(SHOWB.length - 1, k));
     for (let i = 0; i <= showK; i++) compute(i);
     nets = RUNNETS[showK]; net = nets[nets.length - 1]; done = true; steps = STEPS; start = STARTS - 1; trainedSizes = sizesNow().join(",");
     score = meanAcc(D.test); SHOWN = showK; showScore(); drawPlot();
-    doneT = performance.now(); const el = $("score"); el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop");
   }
-  if (SHOW) addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.animStep === "number") showStep(d.animStep); });
+  /* the last step of the slide: the scores of many trainings of the same network, as a histogram with mean and sd */
+  const MANY = 40, MANYS = [];
+  function many(i) { if (MANYS[i] !== undefined) return; const keep = [nets, net]; MANYS[i] = window.scoreOf(SHOW, "tanh", 1000003 * (100 + i)); [nets, net] = keep; }
+  function statStep() {
+    for (let i = 0; i < MANY; i++) many(i);
+    const v = RUNS.slice(0, SHOWB.length).concat(MANYS), n = v.length, m = v.reduce((a, b) => a + b, 0) / n, sd = Math.sqrt(v.reduce((a, b) => a + (b - m) ** 2, 0) / n);
+    const lo = 70, hi = 92, W = 440, H = 112, x = (u) => 20 + (u - lo) / (hi - lo) * (W - 40), bins = {};
+    v.forEach((u) => { const b = Math.floor(u); bins[b] = (bins[b] || 0) + 1; });
+    const top = Math.max(...Object.values(bins)), o = [];
+    for (const b in bins) { const h = bins[b] / top * (H - 50); o.push(`<rect x="${x(+b) + 1}" y="${H - 28 - h}" width="${(W - 40) / (hi - lo) - 2}" height="${h}" fill="#6a3d9a" opacity="0.55"/>`); }
+    o.push(`<line x1="20" x2="${W - 20}" y1="${H - 28}" y2="${H - 28}" stroke="#9a968c"/>`);
+    for (let t = 70; t <= 90; t += 5) o.push(`<text x="${x(t)}" y="${H - 8}" text-anchor="middle" style="font:16px KaTeX_Main" fill="#6b6e73">${t}</text>`);
+    o.push(`<line x1="${x(m - sd)}" x2="${x(m + sd)}" y1="10" y2="10" stroke="#1d1d1f" stroke-width="3"/><circle cx="${x(m)}" cy="10" r="5.5" fill="#1d1d1f"/>`);
+    $("sub").style.display = "none"; $("bar").style.display = "none";
+    $("best").innerHTML = `<div style="grid-column:1 / -1"><svg width="${W}" height="${H}" style="display:block">${o.join("")}</svg>` +
+      `<div style="font-size:20px">${K(n)} trainings: mean ${K(m.toFixed(1))} %, standard deviation ${K(sd.toFixed(1))} %</div>` +
+      `<div style="font-size:17px;color:#6b6e73">Many valleys in the loss: more in the next lecture</div></div>`;
+  }
+  if (SHOW) addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.animStep !== "number") return; if (d.animStep >= SHOWB.length) { showStep(SHOWB.length - 1); statStep(); } else showStep(d.animStep); });
   if (SHOW) document.body.classList.add("show");
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
     if (SHOW) {                                                  // the first result at once, the others in the background
       setArch(SHOW); showStep(0); requestAnimationFrame(frame);
-      let i = 1; const next = () => { if (i < SHOWB.length) { compute(i++); setTimeout(next, 30); } }; setTimeout(next, 300);
+      let i = 1, j = 0; const next = () => { if (i < SHOWB.length) { compute(i++); setTimeout(next, 30); } else if (j < MANY) { many(j++); setTimeout(next, 30); } }; setTimeout(next, 300);
       return;
     }
     changed(); drawPlot(); requestAnimationFrame(frame); });
