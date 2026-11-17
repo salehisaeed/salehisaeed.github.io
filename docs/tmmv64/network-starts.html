@@ -16,7 +16,7 @@
   #head { position: absolute; left: 0; top: 0; width: 1240px; height: 34px; font-size: 19px; color: var(--muted); }
   #head span { position: absolute; top: 6px; }
   #rows { position: absolute; left: 0; top: 36px; width: 1240px; }
-  .row { position: absolute; left: 0; width: 1240px; height: var(--rh, 27px); transition: transform 1.6s cubic-bezier(.45, 0, .25, 1); }
+  .row { position: absolute; left: 0; width: 1240px; height: var(--rh, 27px); transition: transform 1.6s cubic-bezier(.45, 0, .25, 1), opacity 0.8s; }
   .row.band { background: var(--band); }
   .row span { position: absolute; top: 50%; transform: translateY(-50%); font-size: var(--fs, 19px); white-space: nowrap; }
   .rk { left: 0; width: 34px; text-align: right; color: var(--muted); }
@@ -56,7 +56,7 @@
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev", CONTEST = "L6 network builder";
   const Q = new URLSearchParams(location.search), DEMO = Q.has("demo"), BOARD = Q.has("board");   // ?board: the leaderboard only, no statistics, no click
   const $ = (id) => document.getElementById(id), NS = "http://www.w3.org/2000/svg";
-  const W = 1240, H = 560, MAXR = 30, X0 = 60, X1 = 92, LW = 740;
+  const W = 1240, H = 560, MAXR = 60, SHOWN = 20, X0 = 45, X1 = 96, LW = 740;   // all students ranked, the top 20 shown
   let ROWH = 27;                                               // smaller when many students, so all of them fit
   function fit() { const s = Math.min(innerWidth / W, innerHeight / H); $("app").style.transform = `translate(${(innerWidth - W * s) / 2}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
@@ -78,12 +78,13 @@
     if (PART[key].filter((x) => x !== undefined).length === OTHERS.length) { LIVE[key] = PART[key]; rows.forEach((r) => { if (r.arch.join("-") === key) r.st = stats(r.arch); }); render(); }
     pump(); }
   function axis() {
-    const top = 36 + Math.max(rows.length, 1) * ROWH + 4; $("axis").style.top = top + "px";
+    const top = 36 + Math.max(Math.min(rows.length, SHOWN), 1) * ROWH + 4; $("axis").style.top = top + "px";
     let o = `<line x1="0" x2="${LW}" y1="0" y2="0" stroke="#9a968c"/>`;
-    for (let v = 60; v <= 90; v += 5) o += `<line x1="${lx(v)}" x2="${lx(v)}" y1="0" y2="6" stroke="#9a968c"/><text x="${lx(v)}" y="24" text-anchor="middle" font-size="17" fill="#6b6e73">${v}</text>`;
+    for (let v = 50; v <= 90; v += 10) o += `<line x1="${lx(v)}" x2="${lx(v)}" y1="0" y2="6" stroke="#9a968c"/><text x="${lx(v)}" y="24" text-anchor="middle" font-size="17" fill="#6b6e73">${v}</text>`;
     $("axis").innerHTML = o + `<text x="${LW / 2}" y="40" text-anchor="middle" font-size="17" fill="#1d1d1f" style="font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif">Test score (%)</text>`;
     $("legend").style.top = (top + 50) + "px";
-    $("legend").innerHTML = `<span style="color:var(--gold)">◆</span> the contest: one training, the contest's seed` + (step ? ` &nbsp;·&nbsp; <span style="color:var(--grey)">●</span> ten other trainings, other seeds &nbsp;·&nbsp; <span style="color:var(--pur)">●</span> mean ± one standard deviation` : "");
+    const more = rows.length > SHOWN ? ` &nbsp;·&nbsp; ${rows.length - SHOWN} more students below` : "";
+    $("legend").innerHTML = `<span style="color:var(--gold)">◆</span> the contest` + (step ? ` &nbsp;·&nbsp; <span style="color:var(--grey)">●</span> ten other trainings &nbsp;·&nbsp; <span style="color:var(--pur)">●</span> mean ± standard deviation` : ", one training with the contest's seed") + more;
   }
   function lane(r) {
     let o = "";
@@ -96,18 +97,18 @@
   }
   function render() {
     document.body.classList.toggle("s1", step >= 1);
-    ROWH = Math.max(15, Math.min(27, Math.floor(440 / Math.max(rows.length, 1))));
+    ROWH = Math.max(21, Math.min(27, Math.floor(440 / Math.max(Math.min(rows.length, SHOWN), 1))));
     document.documentElement.style.setProperty("--rh", ROWH + "px"); document.documentElement.style.setProperty("--fs", Math.min(19, ROWH - 6) + "px");
     const key = (r) => (step ? (r.st ? Math.round(10 * r.st.m) : -1) : Math.round(10 * r.score));   // the number shown, to one decimal
     const order = rows.slice().sort((a, b) => step ? (key(b) - key(a)) || (b.score - a.score) : 0);
     rows.forEach((r) => { r.pos = step ? order.indexOf(r) : r.i; });
     let place = 0, prev = null;                                  // equal numbers share a place; places count without gaps
     rows.slice().sort((a, b) => a.pos - b.pos).forEach((r) => { if (key(r) !== prev) { place++; prev = key(r); } r.place = place; });
-    const box = $("rows"); box.style.height = rows.length * ROWH + "px";
+    const box = $("rows"); box.style.height = Math.min(rows.length, SHOWN) * ROWH + "px";
     rows.forEach((r) => {
       if (!r.el) { r.el = document.createElement("div"); r.el.className = "row"; r.el.style.top = "0px"; box.appendChild(r.el); }
       r.el.classList.toggle("band", r.pos % 2 === 0); r.el.classList.toggle("top", r.place <= 3);
-      r.el.style.transform = `translateY(${r.pos * ROWH}px)`;
+      r.el.style.transform = `translateY(${Math.min(r.pos, SHOWN) * ROWH}px)`; r.el.style.opacity = r.pos < SHOWN ? "1" : "0";
       const num = step ? (r.st ? `${r.st.m.toFixed(1)} ± ${r.st.sd.toFixed(1)}` : (PART[r.arch.join("-")] ? "training …" : "–")) : `${r.score.toFixed(1)} %`;
       const MED = [["#d4a72c", "#fbf3d6"], ["#9aa3ab", "#eef1f3"], ["#b0703c", "#f6e7da"]][r.place - 1];
       const rank = MED ? `<svg class="medal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="${MED[0]}"/><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="1.4"/><text x="12" y="16.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${r.place}</text></svg>` : `<span class="rk">${r.place}</span>`;
@@ -121,7 +122,7 @@
   }
   function setRows(list) {
     const old = new Map(rows.map((r) => [r.who, r]));
-    rows = list.slice(0, MAXR).map((x, i) => { const r = old.get(x.who) || { who: x.who }; Object.assign(r, { i, score: +x.score, arch: archOf(x.method), first: +x.score === +list[0].score }); r.st = stats(r.arch); want(r.arch); return r; });
+    rows = list.slice().sort((a, b) => b.score - a.score).slice(0, MAXR).map((x, i) => { const r = old.get(x.who) || { who: x.who }; Object.assign(r, { i, score: +x.score, arch: archOf(x.method), first: +x.score === Math.max(...list.map((y) => +y.score)) }); r.st = stats(r.arch); want(r.arch); return r; });
     old.forEach((r, k) => { if (!rows.includes(r) && r.el) r.el.remove(); });
     render();
   }
@@ -130,6 +131,7 @@
     try { const res = await fetch(`${SERVICE}/board?contest=${encodeURIComponent(CONTEST)}`, { cache: "no-store" }); const d = await res.json(); setRows(d.rows); }
     catch (e) { $("msg").textContent = "No connection to the contest service. Retrying …"; }
   }
+  window.__setRows = (l) => setRows(l);                            // for testing with many students
   function go(k) { step = Math.max(0, Math.min(1, k)); render(); if (!step) load(); }
   if (!BOARD) {
     addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.animStep === "number") go(d.animStep); });

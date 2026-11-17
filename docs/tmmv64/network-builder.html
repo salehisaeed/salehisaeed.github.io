@@ -440,29 +440,32 @@ window.Contest = (function () {
     score = meanAcc(D.test); SHOWN = showK; showScore(); drawPlot();
   }
   /* the last step of the slide: the scores of many trainings of the same network, as a histogram with mean and sd */
-  const MANY = 40, MANYS = [];
-  function many(i) { if (MANYS[i] !== undefined) return; const keep = [nets, net]; MANYS[i] = window.scoreOf(SHOW, "tanh", 1000003 * (100 + i)); [nets, net] = keep; }
+  /* the last step of the slide: 500 more trainings of the network (computed in advance, make_animations.py), as a
+     histogram with mean and standard deviation; the contest's score as a gold diamond */
+  const HIST = [77.8,74.3,83.0,74.5,82.5,85.0,80.0,78.3,84.0,76.3,84.3,73.5,84.5,85.8,81.0,84.0,81.0,79.0,78.3,77.8,84.5,85.3,68.3,64.5,84.0,71.5,77.5,81.5,75.3,80.0,81.3,75.5,75.5,74.8,62.0,83.0,75.3,76.8,81.8,71.3,83.8,80.5,87.8,79.0,89.0,70.5,84.0,83.3,83.5,74.8,68.8,77.0,86.5,81.8,84.8,71.3,88.0,74.3,70.8,78.3,78.8,71.8,81.3,76.5,71.0,83.0,87.3,76.8,85.3,63.3,72.0,81.3,82.0,79.5,86.0,82.3,87.3,85.5,82.3,76.3,75.5,82.5,82.5,83.5,70.8,87.5,79.5,85.0,78.3,86.0,65.3,83.3,82.0,81.3,76.3,86.3,86.3,84.5,84.5,87.8,83.0,83.8,78.8,84.5,83.8,82.8,78.5,84.0,82.8,78.3,82.3,85.0,81.0,81.5,76.5,80.5,76.0,79.3,86.0,76.0,87.0,63.3,86.0,79.5,78.5,84.3,79.8,85.5,82.3,83.8,74.0,82.8,65.3,86.8,81.5,77.8,81.3,79.0,83.3,76.3,85.3,73.3,79.8,85.8,85.5,76.5,75.5,57.3,83.0,84.8,74.5,82.3,80.0,76.5,89.0,53.8,51.0,79.0,60.0,80.5,85.3,82.5,84.3,78.8,84.3,80.0,84.8,71.8,83.8,86.3,79.3,76.3,73.8,70.8,80.3,87.8,87.3,81.3,80.3,79.5,85.3,75.5,88.0,82.5,82.3,88.5,83.3,86.8,82.0,70.5,79.0,65.0,70.3,74.8,84.5,81.3,85.0,77.3,83.0,84.0,85.0,81.5,81.0,88.0,76.8,57.3,79.0,82.0,77.5,77.0,90.3,81.8,74.3,70.5,83.3,77.5,79.0,86.0,83.0,71.0,81.3,79.3,72.0,83.8,85.5,86.3,87.0,80.0,82.5,73.3,83.0,84.3,88.5,76.0,81.8,80.0,83.8,89.3,80.0,77.8,78.0,83.0,82.3,76.8,82.3,73.5,82.3,83.5,83.5,74.5,85.5,81.8,81.3,82.8,72.5,77.8,79.5,77.5,77.3,81.0,67.5,86.5,73.0,65.0,82.8,82.3,80.0,64.8,86.3,77.8,81.5,69.8,85.8,83.3,82.5,85.3,82.8,82.3,63.5,78.8,79.0,73.5,84.3,84.0,77.0,86.3,62.3,80.0,90.5,73.5,82.5,66.8,77.8,64.8,80.0,80.5,85.3,73.0,84.3,71.0,79.8,76.8,85.8,85.3,62.0,64.3,82.8,84.8,83.0,69.5,85.0,85.5,85.8,75.3,80.3,87.0,65.5,83.0,82.8,77.5,83.3,83.5,79.8,81.8,77.3,83.3,69.3,76.3,76.3,83.5,82.8,87.0,75.8,76.8,84.5,60.3,78.3,85.8,84.0,84.8,80.8,80.0,84.0,86.0,65.8,85.8,71.8,80.5,80.5,83.0,82.0,69.3,81.5,78.5,67.8,76.5,62.8,83.8,82.0,86.0,84.3,81.3,76.5,65.3,79.3,85.8,83.0,84.3,77.5,87.0,91.5,85.8,76.8,80.3,77.8,65.5,59.5,82.0,73.5,87.8,78.3,79.8,78.5,85.0,79.5,82.8,86.0,79.3,76.0,61.3,63.3,89.8,83.5,84.8,75.8,86.5,79.8,88.0,64.5,80.0,83.5,85.5,81.8,79.8,82.5,83.8,60.8,84.3,81.0,79.0,87.0,79.8,80.5,84.5,83.8,76.8,79.8,63.0,83.5,74.3,79.8,81.5,80.5,77.0,86.0,82.5,86.3,49.8,63.8,80.0,79.0,83.3,76.0,82.3,76.8,82.3,85.5,85.5,79.0,69.8,86.3,78.0,78.3,66.8,85.8,86.3,80.8,84.8,61.8,79.3,85.8,87.0,77.0,70.5,87.5,79.0,80.0,85.5,80.8,76.3,74.5,72.5,76.5,87.0,75.8,82.3,80.5,89.0,81.0,87.3,83.0,77.8,78.0,82.3,76.3,87.5,68.0,87.8,81.0,83.5,88.5,66.0,85.8,84.0,81.3,81.0,71.5,85.5,82.5,77.3,87.3,79.0,72.8,82.8,85.0,84.8,79.0,85.3,77.3,84.0];
   function statStep() {
-    for (let i = 0; i < MANY; i++) many(i);
-    const v = RUNS.slice(0, SHOWB.length).concat(MANYS), n = v.length, m = v.reduce((a, b) => a + b, 0) / n, sd = Math.sqrt(v.reduce((a, b) => a + (b - m) ** 2, 0) / n);
-    const lo = 70, hi = 92, W = 440, H = 112, x = (u) => 20 + (u - lo) / (hi - lo) * (W - 40), bins = {};
-    v.forEach((u) => { const b = Math.floor(u); bins[b] = (bins[b] || 0) + 1; });
-    const top = Math.max(...Object.values(bins)), o = [];
-    for (const b in bins) { const h = bins[b] / top * (H - 50); o.push(`<rect x="${x(+b) + 1}" y="${H - 28 - h}" width="${(W - 40) / (hi - lo) - 2}" height="${h}" fill="#6a3d9a" opacity="0.55"/>`); }
+    const v = HIST, n = v.length, m = v.reduce((a, b) => a + b, 0) / n, sd = Math.sqrt(v.reduce((a, b) => a + (b - m) ** 2, 0) / n);
+    const lo = 46, hi = 96, W = 440, H = 120, x = (u) => 20 + (u - lo) / (hi - lo) * (W - 40), bins = {};
+    v.forEach((u) => { const b = 2 * Math.floor(u / 2); bins[b] = (bins[b] || 0) + 1; });
+    const top = Math.max(...Object.values(bins)), o = [], bw = 2 * (W - 40) / (hi - lo);
+    for (const b in bins) { const h = bins[b] / top * (H - 52); o.push(`<rect x="${f1(x(+b) + 0.5)}" y="${f1(H - 28 - h)}" width="${f1(bw - 1)}" height="${f1(h)}" fill="#6a3d9a" opacity="0.6"/>`); }
     o.push(`<line x1="20" x2="${W - 20}" y1="${H - 28}" y2="${H - 28}" stroke="#9a968c"/>`);
-    for (let t = 70; t <= 90; t += 5) o.push(`<text x="${x(t)}" y="${H - 8}" text-anchor="middle" style="font:16px KaTeX_Main" fill="#6b6e73">${t}</text>`);
-    o.push(`<line x1="${x(m - sd)}" x2="${x(m + sd)}" y1="10" y2="10" stroke="#1d1d1f" stroke-width="3"/><circle cx="${x(m)}" cy="10" r="5.5" fill="#1d1d1f"/>`);
+    for (let t = 50; t <= 90; t += 10) o.push(`<text x="${x(t)}" y="${H - 8}" text-anchor="middle" style="font:16px KaTeX_Main" fill="#6b6e73">${t}</text>`);
+    o.push(`<line x1="${x(m - sd)}" x2="${x(m + sd)}" y1="12" y2="12" stroke="#1d1d1f" stroke-width="3"/><circle cx="${x(m)}" cy="12" r="5.5" fill="#1d1d1f"/>`);
+    const c = RUNS[0], xc = x(c);
+    o.push(`<path d="M${xc} ${H - 40} l8 8 l-8 8 l-8 -8 z" fill="#c98a00" stroke="#1d1d1f" stroke-width="1.2"/>`);
     $("sub").style.display = "none"; $("bar").style.display = "none";
     $("best").innerHTML = `<div style="grid-column:1 / -1"><svg width="${W}" height="${H}" style="display:block">${o.join("")}</svg>` +
-      `<div style="font-size:20px">${K(n)} trainings: mean ${K(m.toFixed(1))} %, standard deviation ${K(sd.toFixed(1))} %</div>` +
-      `<div style="font-size:17px;color:#6b6e73">Many valleys in the loss: more in the next lecture</div></div>`;
+      `<div style="font-size:20px">${K(n)} more trainings: ${K(m.toFixed(1))} ± ${K(sd.toFixed(1))} %</div>` +
+      `<div style="font-size:17px;color:#6b6e73"><span style="color:#c98a00">◆</span> the contest, ${K(c.toFixed(1))} %. Many valleys in the loss</div></div>`;
   }
+  const f1 = (v) => v.toFixed(1);
   if (SHOW) addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.animStep !== "number") return; if (d.animStep >= SHOWB.length) { showStep(SHOWB.length - 1); statStep(); } else showStep(d.animStep); });
   if (SHOW) document.body.classList.add("show");
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
     if (SHOW) {                                                  // the first result at once, the others in the background
       setArch(SHOW); showStep(0); requestAnimationFrame(frame);
-      let i = 1, j = 0; const next = () => { if (i < SHOWB.length) { compute(i++); setTimeout(next, 30); } else if (j < MANY) { many(j++); setTimeout(next, 30); } }; setTimeout(next, 300);
+      let i = 1; const next = () => { if (i < SHOWB.length) { compute(i++); setTimeout(next, 30); } }; setTimeout(next, 300);
       return;
     }
     changed(); drawPlot(); requestAnimationFrame(frame); });
