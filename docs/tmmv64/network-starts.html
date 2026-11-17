@@ -13,15 +13,16 @@
   #head { position: absolute; left: 0; top: 0; width: 1240px; height: 34px; font-size: 19px; color: var(--muted); }
   #head span { position: absolute; top: 6px; }
   #rows { position: absolute; left: 0; top: 36px; width: 1240px; }
-  .row { position: absolute; left: 0; width: 1240px; height: 27px; transition: transform 1.6s cubic-bezier(.45, 0, .25, 1); }
+  .row { position: absolute; left: 0; width: 1240px; height: var(--rh, 27px); transition: transform 1.6s cubic-bezier(.45, 0, .25, 1); }
   .row.band { background: var(--band); }
-  .row span { position: absolute; top: 1px; font-size: 19px; white-space: nowrap; }
+  .row span { position: absolute; top: 50%; transform: translateY(-50%); font-size: var(--fs, 19px); white-space: nowrap; }
   .rk { left: 0; width: 34px; text-align: right; color: var(--muted); }
   .who { left: 48px; width: 120px; }
   .arch { left: 176px; width: 150px; font-weight: 600; }
   .num { left: 1100px; width: 140px; text-align: right; font-weight: 700; }
   .row.top .rk, .row.top .who { color: var(--gold); font-weight: 700; }
-  svg.lane { position: absolute; left: 340px; top: 0; width: 740px; height: 27px; overflow: visible; }
+  svg.lane { position: absolute; left: 340px; top: 0; width: 740px; height: var(--rh, 27px); overflow: visible; }
+  .row span.rk, .row span.num { transform: translateY(-50%); }
   .stat { opacity: 0; transition: opacity 0.8s; }
   body.s1 .stat { opacity: 1; }
   #axis { position: absolute; left: 340px; width: 740px; height: 48px; overflow: visible; }
@@ -50,7 +51,8 @@
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev", CONTEST = "L6 network builder";
   const Q = new URLSearchParams(location.search), DEMO = Q.has("demo");
   const $ = (id) => document.getElementById(id), NS = "http://www.w3.org/2000/svg";
-  const W = 1240, H = 560, ROWH = 27, MAXR = 16, X0 = 60, X1 = 92, LW = 740;
+  const W = 1240, H = 560, MAXR = 30, X0 = 60, X1 = 92, LW = 740;
+  let ROWH = 27;                                               // smaller when many students, so all of them fit
   function fit() { const s = Math.min(innerWidth / W, innerHeight / H); $("app").style.transform = `translate(${(innerWidth - W * s) / 2}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
   const lx = (v) => Math.max(0, Math.min(LW, (v - X0) / (X1 - X0) * LW));
@@ -89,15 +91,20 @@
   }
   function render() {
     document.body.classList.toggle("s1", step >= 1);
-    const order = rows.slice().sort((a, b) => step ? ((b.st ? b.st.m : -1) - (a.st ? a.st.m : -1)) || (b.score - a.score) : 0);
+    ROWH = Math.max(15, Math.min(27, Math.floor(440 / Math.max(rows.length, 1))));
+    document.documentElement.style.setProperty("--rh", ROWH + "px"); document.documentElement.style.setProperty("--fs", Math.min(19, ROWH - 6) + "px");
+    const key = (r) => (step ? (r.st ? Math.round(10 * r.st.m) : -1) : Math.round(10 * r.score));   // the number shown, to one decimal
+    const order = rows.slice().sort((a, b) => step ? (key(b) - key(a)) || (b.score - a.score) : 0);
     rows.forEach((r) => { r.pos = step ? order.indexOf(r) : r.i; });
+    let place = 0, prev = null;                                  // equal numbers share a place; places count without gaps
+    rows.slice().sort((a, b) => a.pos - b.pos).forEach((r) => { if (key(r) !== prev) { place++; prev = key(r); } r.place = place; });
     const box = $("rows"); box.style.height = rows.length * ROWH + "px";
     rows.forEach((r) => {
       if (!r.el) { r.el = document.createElement("div"); r.el.className = "row"; r.el.style.top = "0px"; box.appendChild(r.el); }
-      r.el.classList.toggle("band", r.pos % 2 === 0); r.el.classList.toggle("top", r.pos < 3);
+      r.el.classList.toggle("band", r.pos % 2 === 0); r.el.classList.toggle("top", r.place <= 3);
       r.el.style.transform = `translateY(${r.pos * ROWH}px)`;
       const num = step ? (r.st ? `${r.st.m.toFixed(1)} ± ${r.st.sd.toFixed(1)}` : (PART[r.arch.join("-")] ? "training …" : "–")) : `${r.score.toFixed(1)} %`;
-      r.el.innerHTML = `<span class="rk">${r.pos + 1}</span><span class="who">${esc(r.who)}</span><span class="arch">${r.arch.length ? r.arch.join(" + ") : "none"}</span><svg class="lane" viewBox="0 0 ${LW} ${ROWH}">${lane(r)}</svg><span class="num">${num}</span>`;
+      r.el.innerHTML = `<span class="rk">${r.place}</span><span class="who">${esc(r.who)}</span><span class="arch">${r.arch.length ? r.arch.join(" + ") : "none"}</span><svg class="lane" viewBox="0 0 ${LW} ${ROWH}">${lane(r)}</svg><span class="num">${num}</span>`;
     });
     $("lanehead").textContent = step ? "Ten other sets of starts for the same network" : "The contest score, from one fixed set of starts";
     $("numhead").textContent = step ? "Mean ± sd (%)" : "Contest";
@@ -106,7 +113,7 @@
   }
   function setRows(list) {
     const old = new Map(rows.map((r) => [r.who, r]));
-    rows = list.slice(0, MAXR).map((x, i) => { const r = old.get(x.who) || { who: x.who }; Object.assign(r, { i, score: +x.score, arch: archOf(x.method), first: i === 0 }); r.st = stats(r.arch); want(r.arch); return r; });
+    rows = list.slice(0, MAXR).map((x, i) => { const r = old.get(x.who) || { who: x.who }; Object.assign(r, { i, score: +x.score, arch: archOf(x.method), first: +x.score === +list[0].score }); r.st = stats(r.arch); want(r.arch); return r; });
     old.forEach((r, k) => { if (!rows.includes(r) && r.el) r.el.remove(); });
     render();
   }
