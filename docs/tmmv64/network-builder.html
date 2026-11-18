@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Build a network by hand</title>
 <style>
@@ -268,12 +269,11 @@ window.Contest = (function () {
     g.fillStyle = MUTED; g.font = "17px 'Source Sans 3'"; g.textAlign = "center"; g.fillText("Inputs", XIN, YMID + 100); g.fillText("Output", XOUT, YMID + 50);
     if (SHOW) { if (drag) {} return; }
     g.fillStyle = "#f4effa"; g.strokeStyle = PUR; g.lineWidth = 2.4; g.setLineDash([9, 6]); g.lineDashOffset = -now / 40;
-    g.beginPath(); g.roundRect(TRAYN[0] - 48, TRAYN[1] - 38, 490, 76, 16); g.fill(); g.stroke(); g.setLineDash([]); g.lineDashOffset = 0;
+    g.beginPath(); g.roundRect(TRAYN[0] - 48, TRAYN[1] - 38, 410, 76, 16); g.fill(); g.stroke(); g.setLineDash([]); g.lineDashOffset = 0;
     const bob = drag ? 0 : 3 * Math.sin(now / 320);
     g.globalAlpha = 0.18 + 0.1 * Math.sin(now / 320); g.fillStyle = PUR; g.beginPath(); g.arc(TRAYN[0], TRAYN[1] + bob, R + 8, 0, 2 * Math.PI); g.fill(); g.globalAlpha = 1;
     circ(TRAYN[0], TRAYN[1] + bob, HIDC, PUR, 3); glyph(TRAYN[0], TRAYN[1] + bob, PUR);
-    g.fillStyle = PUR; g.font = "700 20px 'Source Sans 3'"; g.textAlign = "left"; g.fillText("Drag a neuron into the network", TRAYN[0] + 38, TRAYN[1] - 4);
-    g.fillStyle = MUTED; g.font = "16px 'Source Sans 3'"; g.fillText("Beside a layer: join it · between: new layer · tap twice: remove", TRAYN[0] + 38, TRAYN[1] + 19);
+    g.fillStyle = PUR; g.font = "700 22px 'Source Sans 3'"; g.textAlign = "left"; g.fillText("Drag a neuron into the network", TRAYN[0] + 38, TRAYN[1] + 7);
     if (!cols.length && !drag) {                                 // empty network: a dashed arrow from the tray to the middle
       const u = (now / 1400) % 1, ax = TRAYN[0] + 40, ay = TRAYN[1] - 44, bx = (XIN + XOUT) / 2, by = YMID + 40;
       g.strokeStyle = PUR; g.lineWidth = 2.4; g.setLineDash([6, 6]); g.globalAlpha = 0.75;
