@@ -21,23 +21,23 @@
   .row span { position: absolute; top: 50%; transform: translateY(-50%); font-size: var(--fs, 19px); white-space: nowrap; }
   .rk { left: 34px; width: 40px; text-align: center; color: var(--muted); }
   .who { left: 84px; width: 120px; }
-  .arch { left: 206px; width: 380px; font-weight: 600; font-size: calc(var(--fs, 19px) - 2px) !important; }
+  .arch { left: 206px; width: 440px; font-weight: 600; font-size: calc(var(--fs, 19px) - 3px) !important; overflow: hidden; text-overflow: ellipsis; }
   .num { left: 1100px; width: 140px; text-align: right; font-weight: 700; }
   .row.top .who { font-weight: 700; }
   .disc { position: absolute; left: 46px; top: 50%; transform: translateY(-50%); width: calc(var(--rh, 27px) - 3px); height: calc(var(--rh, 27px) - 3px); }
   .medal { position: absolute; left: calc(54px - (var(--rh, 27px) - 4px) * 0.4615); top: 50%; transform: translateY(-50%); width: calc((var(--rh, 27px) - 4px) * 0.923); height: calc(var(--rh, 27px) - 4px); z-index: 2; }
-  svg.lane { position: absolute; left: 600px; top: 0; width: 480px; height: var(--rh, 27px); overflow: visible; }
+  svg.lane { position: absolute; left: 670px; top: 0; width: 410px; height: var(--rh, 27px); overflow: visible; }
   .row span.rk, .row span.num { transform: translateY(-50%); }
   .stat { opacity: 0; transition: opacity 0.8s; }
   body.s1 .stat { opacity: 1; }
-  #axis { position: absolute; left: 600px; width: 480px; height: 48px; overflow: visible; }
-  #legend { position: absolute; left: 600px; width: 640px; font-size: 18px; color: var(--muted); }
+  #axis { position: absolute; left: 670px; width: 410px; height: 48px; overflow: visible; }
+  #legend { position: absolute; left: 670px; width: 570px; font-size: 18px; color: var(--muted); }
   #msg { position: absolute; left: 0; top: 200px; width: 1240px; text-align: center; font-size: 26px; color: var(--muted); }
 </style>
 </head>
 <body>
 <div id="app">
-  <div id="head"><span style="left:34px">Rank</span><span style="left:84px">Student</span><span style="left:206px">Setting</span><span style="left:600px">Test score</span><span style="right:0" id="numhead">Test</span></div>
+  <div id="head"><span style="left:34px">Rank</span><span style="left:84px">Student</span><span style="left:206px">Setting</span><span style="left:670px">Test score</span><span style="right:0" id="numhead">Test</span></div>
   <div id="rows"></div>
   <svg id="axis"></svg>
   <div id="legend"></div>
@@ -50,15 +50,15 @@
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev", CONTEST = "L7 training challenge";
   const Q = new URLSearchParams(location.search), DEMO = Q.has("demo");
   const $ = (id) => document.getElementById(id);
-  const W = 1240, H = 560, MAXR = 60, SHOWN = 20, X0 = 50, X1 = 92, LW = 480;
+  const W = 1240, H = 560, MAXR = 60, SHOWN = 20, X0 = 45, X1 = 92, LW = 410;   /* the lane starts at 45 %: a 50 % diamond keeps clear of the setting */
   let ROWH = 27, rows = [];
   function fit() { const s = Math.min(innerWidth / W, innerHeight / H); $("app").style.transform = `translate(${(innerWidth - W * s) / 2}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
   const lx = (v) => Math.max(0, Math.min(LW, (v - X0) / (X1 - X0) * LW));
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const peekOf = (m) => { const g = /best peek ([\d.]+)/.exec(m || ""); return g ? +g[1] : null; };
-  const setOf = (m) => String(m || "").split(";")[0].replace(/rate /, "").replace(/batch /, "batch ").replace(/ epochs/, " epochs")
-    .replace(/, no decay/, "").replace(/, no dropout/, "").replace(/dropout /, "dropout ").split(", ").join(" · ");
+  const setOf = (m) => String(m || "").split(";")[0].replace(/rate /, "").replace(/batch /, "batch ").replace(/ epochs/, " ep")
+    .replace(/, no decay/, "").replace(/, no dropout/, "").replace(/dropout /, "p ").split(", ").join(" · ");
   function axis() {
     const top = 36 + Math.max(Math.min(rows.length, SHOWN), 1) * ROWH + 4; $("axis").style.top = top + "px";
     let o = `<line x1="0" x2="${LW}" y1="0" y2="0" stroke="#9a968c"/>`;
@@ -86,6 +86,8 @@
       r.el.style.background = MED ? MED[1] : "";
       r.el.innerHTML = `${rank}<span class="who">${esc(r.who)}</span><span class="arch">${esc(r.set)}</span><svg class="lane" viewBox="0 0 ${LW} ${ROWH}">${lane(r)}</svg><span class="num">${r.score.toFixed(1)} %</span>`;
     });
+    rows.forEach((r) => { const s = r.el.querySelector(".arch"); let f = parseFloat(getComputedStyle(s).fontSize);   /* a long setting shrinks to fit */
+      while (s.scrollWidth > s.clientWidth && f > 11) { f -= 0.5; s.style.setProperty("font-size", f + "px", "important"); } });
     $("msg").textContent = rows.length ? "" : "No results yet";
     axis();
   }
@@ -109,7 +111,7 @@
   if (framed) document.addEventListener("keydown", (e) => { parent.postMessage({ deckKey: e.key }, "*"); if (e.key === " ") e.preventDefault(); });
   if (DEMO) setRows([["demo01", 86.6, "Adam, rate 0.03, batch 240, 400 epochs, λ 0.001, no dropout; best peek 86.5 %"], ["demo02", 84.2, "Adam, rate 0.01, batch 240, 800 epochs, λ 0.0005, dropout 0.05; best peek 83.0 %"],
     ["demo03", 82.8, "Adam, rate 0.01, batch 240, 200 epochs, no decay, no dropout; best peek 84.0 %"], ["demo04", 77.3, "Adam, rate 0.01, batch 240, 800 epochs, no decay, no dropout; best peek 79.0 %"],
-    ["demo05", 53.3, "SGD, rate 0.1, batch 240, 100 epochs, no decay, no dropout; no peek"]].map(([who, score, method]) => ({ who, score, method })));
+    ["demo05", 50.0, "Momentum, rate 0.00034, batch 240, 800 epochs, λ 0.00012, dropout 0.012"]].map(([who, score, method]) => ({ who, score, method })));
   else { tick(); setInterval(tick, 3000); }
 })();
 </script>
