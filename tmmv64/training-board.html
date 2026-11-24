@@ -19,24 +19,25 @@
   .row { position: absolute; left: 0; width: 1240px; height: var(--rh, 27px); transition: transform 1.6s cubic-bezier(.45, 0, .25, 1), opacity 0.8s; }
   .row.band { background: var(--band); }
   .row span { position: absolute; top: 50%; transform: translateY(-50%); font-size: var(--fs, 19px); white-space: nowrap; }
-  .rk { left: 0; width: 34px; text-align: right; color: var(--muted); }
-  .who { left: 48px; width: 120px; }
-  .arch { left: 176px; width: 400px; font-weight: 600; font-size: calc(var(--fs, 19px) - 2px) !important; }
+  .rk { left: 34px; width: 34px; text-align: right; color: var(--muted); }
+  .who { left: 84px; width: 120px; }
+  .arch { left: 206px; width: 380px; font-weight: 600; font-size: calc(var(--fs, 19px) - 2px) !important; }
   .num { left: 1100px; width: 140px; text-align: right; font-weight: 700; }
   .row.top .who { font-weight: 700; }
-  .medal { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: calc(var(--rh, 27px) - 3px); height: calc(var(--rh, 27px) - 3px); }
-  svg.lane { position: absolute; left: 590px; top: 0; width: 490px; height: var(--rh, 27px); overflow: visible; }
+  .disc { position: absolute; left: 46px; top: 50%; transform: translateY(-50%); width: calc(var(--rh, 27px) - 3px); height: calc(var(--rh, 27px) - 3px); }
+  .medal { position: absolute; left: 2px; top: 50%; transform: translateY(-50%); width: 30px; height: 33px; overflow: visible; z-index: 2; }
+  svg.lane { position: absolute; left: 600px; top: 0; width: 480px; height: var(--rh, 27px); overflow: visible; }
   .row span.rk, .row span.num { transform: translateY(-50%); }
   .stat { opacity: 0; transition: opacity 0.8s; }
   body.s1 .stat { opacity: 1; }
-  #axis { position: absolute; left: 590px; width: 490px; height: 48px; overflow: visible; }
-  #legend { position: absolute; left: 590px; width: 650px; font-size: 18px; color: var(--muted); }
+  #axis { position: absolute; left: 600px; width: 480px; height: 48px; overflow: visible; }
+  #legend { position: absolute; left: 600px; width: 640px; font-size: 18px; color: var(--muted); }
   #msg { position: absolute; left: 0; top: 200px; width: 1240px; text-align: center; font-size: 26px; color: var(--muted); }
 </style>
 </head>
 <body>
 <div id="app">
-  <div id="head"><span style="left:0">Rank</span><span style="left:48px">Student</span><span style="left:176px">Setting</span><span style="left:590px">Final score, with the best peek</span><span style="right:0" id="numhead">Final</span></div>
+  <div id="head"><span style="left:34px">Rank</span><span style="left:84px">Student</span><span style="left:206px">Setting</span><span style="left:600px">Test score</span><span style="right:0" id="numhead">Test</span></div>
   <div id="rows"></div>
   <svg id="axis"></svg>
   <div id="legend"></div>
@@ -45,12 +46,11 @@
 <script>
 (function () {
   /* The leaderboard of lecture 7's training challenge, in the look of lecture 6's board (network-starts.html):
-     each student's final (gold diamond, the trained network on 1000 hidden points) and the best peek (hollow, 200
-     test points), with the setting. ?demo: made-up students, no service. Polls only while on screen (24 Nov 2026). */
+     each student's final network and its test score (gold diamond, 400 test points), with the setting. ?demo: made-up students, no service. Polls only while on screen (24 Nov 2026). */
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev", CONTEST = "L7 training challenge";
   const Q = new URLSearchParams(location.search), DEMO = Q.has("demo");
   const $ = (id) => document.getElementById(id);
-  const W = 1240, H = 560, MAXR = 60, SHOWN = 20, X0 = 50, X1 = 92, LW = 490;
+  const W = 1240, H = 560, MAXR = 60, SHOWN = 20, X0 = 50, X1 = 92, LW = 480;
   let ROWH = 27, rows = [];
   function fit() { const s = Math.min(innerWidth / W, innerHeight / H); $("app").style.transform = `translate(${(innerWidth - W * s) / 2}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
@@ -66,11 +66,10 @@
     $("axis").innerHTML = o + `<text x="${LW / 2}" y="40" text-anchor="middle" font-size="17" fill="#1d1d1f" style="font-family:'Source Sans 3','Source Sans Pro',system-ui,sans-serif">Score (%)</text>`;
     $("legend").style.top = (top + 50) + "px";
     const more = rows.length > SHOWN ? ` &nbsp;·&nbsp; ${rows.length - SHOWN} more students below` : "";
-    $("legend").innerHTML = `<span style="color:var(--gold)">◆</span> final, 1000 hidden points &nbsp;·&nbsp; <span style="color:var(--gold)">◇</span> best peek, 200 test points` + more;
+    $("legend").innerHTML = `<span style="color:var(--gold)">◆</span> each student's final network, on the 400 test points` + more;
   }
   function lane(r) {
     const y = ROWH / 2, x = lx(r.score), d = r.first ? 9 : 7; let o = "";
-    if (r.peek !== null) { const p = lx(r.peek), e = 6; o += `<line x1="${p}" x2="${x}" y1="${y}" y2="${y}" stroke="#c98a00" stroke-opacity="0.5" stroke-width="1.5"/><path d="M${p} ${y - e} L${p + e} ${y} L${p} ${y + e} L${p - e} ${y} Z" fill="#fff" stroke="#c98a00" stroke-width="1.6"/>`; }
     return o + `<path d="M${x} ${y - d} L${x + d} ${y} L${x} ${y + d} L${x - d} ${y} Z" fill="#c98a00" stroke="${r.first ? "#1d1d1f" : "#fff"}" stroke-width="1.3"/>`;
   }
   function render() {
@@ -83,7 +82,7 @@
       r.el.classList.toggle("band", i % 2 === 0); r.el.classList.toggle("top", r.place <= 3);
       r.el.style.transform = `translateY(${Math.min(i, SHOWN) * ROWH}px)`; r.el.style.opacity = i < SHOWN ? "1" : "0";
       const MED = [["#d4a72c", "#fbf3d6"], ["#9aa3ab", "#eef1f3"], ["#b0703c", "#f6e7da"]][r.place - 1];
-      const rank = MED ? `<svg class="medal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="${MED[0]}"/><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="1.4"/><text x="12" y="16.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${r.place}</text></svg>` : `<span class="rk">${r.place}</span>`;
+      const rank = (MED ? `<svg class="medal" viewBox="0 0 24 26"><path d="M6 0 L10.5 0 L13.5 9 L9 9 Z" fill="#1d5a85"/><path d="M18 0 L13.5 0 L10.5 9 L15 9 Z" fill="#e0162b"/><circle cx="12" cy="16.5" r="8.5" fill="${MED[0]}" stroke="#fff" stroke-width="1"/><circle cx="12" cy="16.5" r="5.8" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1.2"/><path d="M12 12.6 l1.2 2.5 l2.7 0.3 l-2 1.8 l0.6 2.7 l-2.5 -1.4 l-2.5 1.4 l0.6 -2.7 l-2 -1.8 l2.7 -0.3 Z" fill="#fff" fill-opacity="0.9"/></svg>` : "") + (MED ? `<svg class="disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="${MED[0]}"/><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="1.4"/><text x="12" y="16.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${r.place}</text></svg>` : `<span class="rk">${r.place}</span>`);   /* lecture 6's numbered discs for 1 to 3 */   /* review 11: the medal at the far left, before the rank */
       r.el.style.background = MED ? MED[1] : "";
       r.el.innerHTML = `${rank}<span class="who">${esc(r.who)}</span><span class="arch">${esc(r.set)}</span><svg class="lane" viewBox="0 0 ${LW} ${ROWH}">${lane(r)}</svg><span class="num">${r.score.toFixed(1)} %</span>`;
     });
