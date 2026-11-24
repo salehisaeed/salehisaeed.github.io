@@ -25,7 +25,7 @@
   .num { left: 1100px; width: 140px; text-align: right; font-weight: 700; }
   .row.top .who { font-weight: 700; }
   .disc { position: absolute; left: 46px; top: 50%; transform: translateY(-50%); width: calc(var(--rh, 27px) - 3px); height: calc(var(--rh, 27px) - 3px); }
-  .medal { position: absolute; left: 2px; top: 50%; transform: translateY(-50%); width: 30px; height: 33px; overflow: visible; z-index: 2; }
+  .medal { position: absolute; left: 44px; top: 50%; transform: translateY(-50%); width: 30px; height: 33px; overflow: visible; z-index: 2; }
   svg.lane { position: absolute; left: 600px; top: 0; width: 480px; height: var(--rh, 27px); overflow: visible; }
   .row span.rk, .row span.num { transform: translateY(-50%); }
   .stat { opacity: 0; transition: opacity 0.8s; }
@@ -82,7 +82,7 @@
       r.el.classList.toggle("band", i % 2 === 0); r.el.classList.toggle("top", r.place <= 3);
       r.el.style.transform = `translateY(${Math.min(i, SHOWN) * ROWH}px)`; r.el.style.opacity = i < SHOWN ? "1" : "0";
       const MED = [["#d4a72c", "#fbf3d6"], ["#9aa3ab", "#eef1f3"], ["#b0703c", "#f6e7da"]][r.place - 1];
-      const rank = (MED ? `<svg class="medal" viewBox="0 0 24 26"><path d="M6 0 L10.5 0 L13.5 9 L9 9 Z" fill="#1d5a85"/><path d="M18 0 L13.5 0 L10.5 9 L15 9 Z" fill="#e0162b"/><circle cx="12" cy="16.5" r="8.5" fill="${MED[0]}" stroke="#fff" stroke-width="1"/><circle cx="12" cy="16.5" r="5.8" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1.2"/><path d="M12 12.6 l1.2 2.5 l2.7 0.3 l-2 1.8 l0.6 2.7 l-2.5 -1.4 l-2.5 1.4 l0.6 -2.7 l-2 -1.8 l2.7 -0.3 Z" fill="#fff" fill-opacity="0.9"/></svg>` : "") + (MED ? `<svg class="disc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="${MED[0]}"/><circle cx="12" cy="12" r="8" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="1.4"/><text x="12" y="16.5" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">${r.place}</text></svg>` : `<span class="rk">${r.place}</span>`);   /* lecture 6's numbered discs for 1 to 3 */   /* review 11: the medal at the far left, before the rank */
+      const rank = MED ? `<svg class="medal" viewBox="0 0 24 26"><path d="M6 0 L10.5 0 L13.5 9 L9 9 Z" fill="#1d5a85"/><path d="M18 0 L13.5 0 L10.5 9 L15 9 Z" fill="#e0162b"/><circle cx="12" cy="16.5" r="8.5" fill="${MED[0]}" stroke="#fff" stroke-width="1"/><circle cx="12" cy="16.5" r="6.3" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="1.1"/><text x="12" y="20.6" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">${r.place}</text></svg>` : `<span class="rk">${r.place}</span>`;   /* one ribbon medal with the place inside (review 11) */
       r.el.style.background = MED ? MED[1] : "";
       r.el.innerHTML = `${rank}<span class="who">${esc(r.who)}</span><span class="arch">${esc(r.set)}</span><svg class="lane" viewBox="0 0 ${LW} ${ROWH}">${lane(r)}</svg><span class="num">${r.score.toFixed(1)} %</span>`;
     });
