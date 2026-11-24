@@ -320,7 +320,7 @@ window.Contest = (function () {
   /* ---------- page fit, contest bar ---------- */
   function fit() { if (phone) return; const s = Math.min(innerWidth / 1280, innerHeight / 600); $("app").style.transform = `translate(${Math.max(0, (innerWidth - 1280 * s) / 2)}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
-  if (window.Contest && !framed) Contest.init({ name: NAME, seconds: 600, veil: true, hint: "Your final score shows here and goes to the board", sent: "On the board. That was your one final", onStart: () => { started = true; buttons(); } });
+  if (window.Contest && !framed) Contest.init({ name: NAME, seconds: 360, veil: true, hint: "Your final score shows here and goes to the board", sent: "On the board. That was your one final", onStart: () => { started = true; buttons(); } });
   drawMap(); drawCurve(); buttons();
   $("res").textContent = ""; $("msg").textContent = framed ? "Set every row, then train" : "Type your LiU ID above and press Start, then set every row";
   /* the print image and offline checks: one training, synchronously */
