@@ -19,13 +19,13 @@
   .row { position: absolute; left: 0; width: 1240px; height: var(--rh, 27px); transition: transform 1.6s cubic-bezier(.45, 0, .25, 1), opacity 0.8s; }
   .row.band { background: var(--band); }
   .row span { position: absolute; top: 50%; transform: translateY(-50%); font-size: var(--fs, 19px); white-space: nowrap; }
-  .rk { left: 34px; width: 34px; text-align: right; color: var(--muted); }
+  .rk { left: 34px; width: 40px; text-align: center; color: var(--muted); }
   .who { left: 84px; width: 120px; }
   .arch { left: 206px; width: 380px; font-weight: 600; font-size: calc(var(--fs, 19px) - 2px) !important; }
   .num { left: 1100px; width: 140px; text-align: right; font-weight: 700; }
   .row.top .who { font-weight: 700; }
   .disc { position: absolute; left: 46px; top: 50%; transform: translateY(-50%); width: calc(var(--rh, 27px) - 3px); height: calc(var(--rh, 27px) - 3px); }
-  .medal { position: absolute; left: 44px; top: 50%; transform: translateY(-50%); width: 30px; height: 33px; overflow: visible; z-index: 2; }
+  .medal { position: absolute; left: calc(54px - (var(--rh, 27px) - 4px) * 0.4615); top: 50%; transform: translateY(-50%); width: calc((var(--rh, 27px) - 4px) * 0.923); height: calc(var(--rh, 27px) - 4px); z-index: 2; }
   svg.lane { position: absolute; left: 600px; top: 0; width: 480px; height: var(--rh, 27px); overflow: visible; }
   .row span.rk, .row span.num { transform: translateY(-50%); }
   .stat { opacity: 0; transition: opacity 0.8s; }
@@ -73,8 +73,8 @@
     return o + `<path d="M${x} ${y - d} L${x + d} ${y} L${x} ${y + d} L${x - d} ${y} Z" fill="#c98a00" stroke="${r.first ? "#1d1d1f" : "#fff"}" stroke-width="1.3"/>`;
   }
   function render() {
-    ROWH = Math.max(21, Math.min(27, Math.floor(440 / Math.max(Math.min(rows.length, SHOWN), 1))));
-    document.documentElement.style.setProperty("--rh", ROWH + "px"); document.documentElement.style.setProperty("--fs", Math.min(19, ROWH - 6) + "px");
+    ROWH = Math.max(21, Math.min(36, Math.floor(440 / Math.max(Math.min(rows.length, SHOWN), 1))));   /* review 11: roomier rows */
+    document.documentElement.style.setProperty("--rh", ROWH + "px"); document.documentElement.style.setProperty("--fs", Math.min(21, ROWH - 6) + "px");
     let place = 0, prev = null; rows.forEach((r) => { const k = Math.round(10 * r.score); if (k !== prev) { place++; prev = k; } r.place = place; });
     const box = $("rows"); box.style.height = Math.min(rows.length, SHOWN) * ROWH + "px";
     rows.forEach((r, i) => {
