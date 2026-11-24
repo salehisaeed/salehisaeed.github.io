@@ -131,6 +131,12 @@
     try { const res = await fetch(`${SERVICE}/board?contest=${encodeURIComponent(CONTEST)}`, { cache: "no-store" }); const d = await res.json(); setRows(d.rows); }
     catch (e) { $("msg").textContent = "No connection to the contest service. Retrying …"; }
   }
+  /* 24 Nov 2026: the service's database has a daily read limit (exceeded on 18 Nov by boards left open). Poll only while
+     this page is on screen (the tab visible and, inside the slides, its slide the current one) and for at most 600 polls. */
+  let deckShown = true, polls = 0;
+  addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.deckShown === "boolean") { const was = deckShown; deckShown = d.deckShown; if (deckShown && !was) tick(); } });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+  function tick() { if (document.hidden || !deckShown) return; if (polls >= 600) { const s = document.getElementById("msg"); if (s) s.textContent = "Paused. Reload the page to refresh"; return; } polls++; load(); }
   window.__setRows = (l) => setRows(l);                            // for testing with many students
   function go(k) { step = Math.max(0, Math.min(1, k)); render(); if (!step) load(); }
   if (!BOARD) {
@@ -144,7 +150,7 @@
     const sc = { "6-7-5": 87.2, "8-6-8": 86.6, "8-8": 86.6, "4-7-8": 86.4, "6-7-7": 84.8, "8-7-8": 82.9, "8-8-6": 82.1, "6-6-6-6": 84.2, "8-6-4-2": 83.0, "8": 78.1, "6-6": 79.0, "4-6": 77.4, "4-4-4": 74.2, "3-4-3": 61.5 };
     const list = A.map((a, i) => ({ who: "demo" + String(i + 1).padStart(2, "0"), score: sc[a.join("-")], method: `layers ${a.join(" + ")}, ${a.reduce((s, x) => s + x, 0)} neurons` })).sort((a, b) => b.score - a.score);
     setRows(list);
-  } else { load(); setInterval(load, 3000); }
+  } else { tick(); setInterval(tick, 3000); }
 })();
 </script>
 </body>

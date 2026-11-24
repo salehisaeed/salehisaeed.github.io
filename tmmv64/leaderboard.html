@@ -48,7 +48,7 @@
   const SERVICE = "https://tmmv64-contest.salehi144.workers.dev";
   const Q = new URLSearchParams(location.search), contest = Q.get("contest") || "L5 classifier contest";
   if (Q.has("embed")) document.body.classList.add("embed");
-  const TITLE = { "L5 classifier contest": "The classifier contest", "L6 network builder": "The network builder contest" };
+  const TITLE = { "L5 classifier contest": "The classifier contest", "L6 network builder": "The network builder contest", "L7 training challenge": "The training challenge" };
   document.getElementById("title").textContent = TITLE[contest] || contest;
   let seen = new Set();
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -70,7 +70,13 @@
       seen = now;
     } catch (e) { document.getElementById("sub").textContent = "No connection to the contest service. Retrying …"; }
   }
-  load(); setInterval(load, 3000);
+  /* 24 Nov 2026: the service's database has a daily read limit (exceeded on 18 Nov by boards left open). Poll only while
+     this page is on screen (the tab visible and, inside the slides, its slide the current one) and for at most 600 polls. */
+  let deckShown = true, polls = 0;
+  addEventListener("message", (e) => { const d = e.data || {}; if (typeof d.deckShown === "boolean") { const was = deckShown; deckShown = d.deckShown; if (deckShown && !was) tick(); } });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+  function tick() { if (document.hidden || !deckShown) return; if (polls >= 600) { const s = document.getElementById("sub"); if (s) s.textContent = "Paused. Reload the page to refresh"; return; } polls++; load(); }
+  tick(); setInterval(tick, 3000);
 })();
 </script>
 </body>
