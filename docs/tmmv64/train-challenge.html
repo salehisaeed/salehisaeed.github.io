@@ -211,9 +211,9 @@ window.Contest = (function () {
         else if (opt === "mom") { mm[i] = 0.9 * mm[i] + gi; p[i] -= lr * mm[i]; }
         else { mm[i] = 0.9 * mm[i] + 0.1 * gi; ss[i] = 0.999 * ss[i] + 0.001 * gi * gi; p[i] -= lr * (mm[i] / (1 - N.b1)) / (Math.sqrt(ss[i] / (1 - N.b2)) + 1e-8); }
         if (!(p[i] > -1e6 && p[i] < 1e6)) p[i] = 0; } }
-  function epoch(N, s) { const n = TR.X.length, idx = new Int32Array(n); for (let i = 0; i < n; i++) idx[i] = i;
+  function epoch(N, s, set) { set = set || TR; const n = set.X.length, idx = new Int32Array(n); for (let i = 0; i < n; i++) idx[i] = i;
     for (let i = n - 1; i > 0; i--) { const j = Math.floor(N.rnd() * (i + 1)), t = idx[i]; idx[i] = idx[j]; idx[j] = t; }
-    for (let a = 0; a < n; a += s.bs) step(N, TR, idx, a, Math.min(n, a + s.bs), s.opt, s.lr, s.wd, s.dp || 0); }
+    for (let a = 0; a < n; a += s.bs) step(N, set, idx, a, Math.min(n, a + s.bs), s.opt, s.lr, s.wd, s.dp || 0); }
   function acc(N, set) { let r = 0; for (let i = 0; i < set.X.length; i++) if ((forward(N, set.X[i]) > 0 ? 1 : 0) === set.y[i]) r++; return r / set.X.length; }
   const pct = (v) => Math.round(1000 * v) / 10, fmt = (v) => pct(v).toFixed(1) + " %";
 
@@ -327,6 +327,15 @@ window.Contest = (function () {
   window.renderAt = () => { drawMap(); drawCurve(); buttons(); };
   window.scoreOf = (s, seeds) => { let sum = 0; for (const sd of seeds || FINAL_SEEDS) { const N = makeNet(sd); for (let e = 0; e < s.ep; e++) epoch(N, s); sum += acc(N, HD); } return pct(sum / (seeds || FINAL_SEEDS).length); };
   window.valOf = (s, seeds) => { let sum = 0; for (const sd of seeds) { const N = makeNet(sd); for (let e = 0; e < s.ep; e++) epoch(N, s); sum += acc(N, VA); } return pct(sum / seeds.length); };   /* the Optuna run of the slide "Many dials" */
+  /* the proper search of the slide "Hyperparameter search": 5-fold cross-validation on all 300 labelled points (folds of 60) */
+  window.cvOf = (s, seed) => { const X = TR.X.concat(VA.X), y = TR.y.concat(VA.y); let sum = 0;
+    for (let k = 0; k < 5; k++) { const tr = { X: [], y: [] }, va = { X: [], y: [] };
+      for (let i = 0; i < X.length; i++) { const d = Math.floor(i / 60) === k ? va : tr; d.X.push(X[i]); d.y.push(y[i]); }
+      const N = makeNet(seed || 1); for (let e = 0; e < s.ep; e++) epoch(N, s, tr); sum += acc(N, va); }
+    return pct(sum / 5); };
+  window.regionsOf = (s, nx, ny) => { const N = makeNet(1); for (let e = 0; e < s.ep; e++) epoch(N, s); const g = [];
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) g.push(forward(N, [(-1 + (i + 0.5) / nx * 2) * SC, (0.75 - (j + 0.5) / ny * 1.5) * SC]) > 0 ? 1 : 0);
+    return { g, train: acc(N, TR), val: acc(N, VA), test: acc(N, PK) }; };
   window.__set = (s) => { for (const k in s) { S[k] = s[k]; (chips[k] || []).forEach(([cv, ce]) => ce.classList.toggle("on", cv === s[k])); if (rows[k]) rows[k].classList.remove("todo", "unset"); } buttons(); };
 })();
 </script>
