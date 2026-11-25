@@ -174,13 +174,13 @@
   for (let d = 0; d < 10; d++) {
     const y = OUT.y + d * OUT.h;
     el("rect", { x: OUT.x, y, width: OUT.w, height: OUT.h - 10, fill: "#f1efe9", rx: 3 });
-    bars.push(el("rect", { x: OUT.x, y, width: 0, height: OUT.h - 10, fill: BLUE, rx: 3 }));
+    bars.push({ y, g: el("g", {}) });   /* review 12: each update draws new bars (Firefox did not repaint changed widths in the slides) */
     pct.push(txt(OUT.x + OUT.w + 8, y + 21, "", { "font-family": "KaTeX_Main", fill: INK }));
   }
   function answer() {
-    if (!hasInk) { bars.forEach((b) => b.setAttribute("width", 0)); pct.forEach((p) => p.textContent = ""); outN.forEach((o) => o.setAttribute("fill", "#f6e3d2")); return; }
+    if (!hasInk) { bars.forEach((b) => b.g.replaceChildren()); pct.forEach((p) => p.textContent = ""); outN.forEach((o) => o.setAttribute("fill", "#f6e3d2")); return; }
     x.set(drawn); forward(x); let best = 0; for (let c = 1; c < C; c++) if (z[c] > z[best]) best = c;
-    for (let d = 0; d < 10; d++) { bars[d].setAttribute("width", (OUT.w * z[d]).toFixed(1)); bars[d].setAttribute("fill", d === best ? GREEN : BLUE); outN[d].setAttribute("fill", d === best ? "#bfe6d8" : "#f6e3d2"); pct[d].textContent = (100 * z[d] < 0.5 ? "0" : Math.round(100 * z[d])) + " %"; }
+    for (let d = 0; d < 10; d++) { bars[d].g.replaceChildren(); el("rect", { x: OUT.x, y: bars[d].y, width: Math.max(0, OUT.w * z[d]).toFixed(1), height: OUT.h - 10, fill: d === best ? GREEN : BLUE, rx: 3 }, bars[d].g); outN[d].setAttribute("fill", d === best ? "#bfe6d8" : "#f6e3d2"); pct[d].textContent = (100 * z[d] < 0.5 ? "0" : Math.round(100 * z[d])) + " %"; }
   }
 
   /* ---------- running ---------- */
