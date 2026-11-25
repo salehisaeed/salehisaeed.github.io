@@ -24,15 +24,15 @@
   .phone #pad { position: static; width: min(92vw, 420px); height: min(92vw, 420px); }
   .phone #ctl { position: static; order: 2; width: auto; }
   .phone #pinfo { display: block; order: 3; font-size: 17px; color: #1d1d1f; }
-  .phone #v2 { display: block; order: 4; width: min(96vw, 520px); height: auto; }
-  .phone #v { position: static; order: 5; width: min(80vw, 380px); height: auto; }
+  .phone #v2 { display: block; order: 5; width: min(96vw, 520px); height: auto; }
+  .phone #v { position: static; order: 4; width: min(94vw, 460px); height: auto; }
 </style>
 </head>
 <body>
 <div id="app">
   <canvas id="pad" width="270" height="270"></canvas>
   <svg id="v" viewBox="0 0 1280 590"></svg>
-  <svg id="v2" viewBox="390 422 790 168"><use href="#gall"/></svg>
+  <svg id="v2" viewBox="418 428 772 160"><use href="#gall"/></svg>
   <div id="pinfo"></div>
   <div id="ctl"><button id="clear">clear</button><button id="train" class="go">train</button><button id="reset">new start</button></div>
 </div>
@@ -52,7 +52,7 @@
   const DW = 1280, DH = 590;
   const framed0 = (() => { try { return window.self !== window.top; } catch (e) { return true; } })();
   const phone = !framed0 && (new URLSearchParams(location.search).has("phone") || (Math.min(screen.width || 9999, innerWidth) < 700 && screen.height > screen.width));
-  if (phone) { document.body.classList.add("phone"); document.documentElement.classList.add("phone"); $("v").setAttribute("viewBox", "895 4 395 445"); }
+  if (phone) { document.body.classList.add("phone"); document.documentElement.classList.add("phone"); $("v").setAttribute("viewBox", "837 14 429 392");   /* review 12: the ten numbered outputs beside their bars */ }
   function fit() { if (phone) return; const s = Math.min(innerWidth / DW, innerHeight / DH); $("app").style.transform = `translate(${(innerWidth - DW * s) / 2}px, 0) scale(${s})`; }
   addEventListener("resize", fit); fit();
   const BLUE = "#0072B2", GREEN = "#009E73", RED = "#E0162B", INK = "#1d1d1f", MUTED = "#6b6e73";
@@ -136,6 +136,7 @@
   for (let j = 0; j < NH; j++) { el("circle", { cx: HX, cy: hy(j), r: 9.5, fill: "#fbf7ee", stroke: "#6a3d9a", "stroke-width": 1.8 });
     el("path", { d: `M ${HX - 6} ${hy(j) + 3} L ${HX - 1} ${hy(j) + 3} L ${HX + 6} ${hy(j) - 4}`, fill: "none", stroke: "#6a3d9a", "stroke-width": 1.5, "stroke-linecap": "round", "stroke-linejoin": "round" }); }      /* the ReLU of every hidden neuron */
   for (const yy of [hy(7) + 18, hy(7) + 25, hy(7) + 32]) el("circle", { cx: HX, cy: yy, r: 2.2, fill: "#6a3d9a" });
+  if (phone) el("rect", { x: OX - 60, y: 0, width: 60, height: 590, fill: "#fff" });   /* review 12: on phones the line ends under the outputs are covered */
   const outN = []; for (let c = 0; c < C; c++) { outN.push(el("circle", { cx: OX, cy: oy(c), r: 14, fill: "#f6e3d2", stroke: INK, "stroke-width": 1.4 }));
     txt(OX, oy(c) + 7, String(c), { fill: INK, "font-family": "KaTeX_Main", "font-size": 19, "text-anchor": "middle" }); }
   txt(IX, 420, "784 pixels", { fill: INK, "text-anchor": "middle" }); txt(HX, 420, "64 neurons, ReLU", { fill: "#6a3d9a", "text-anchor": "middle" });
@@ -164,7 +165,7 @@
   const line = el("polyline", { points: "", fill: "none", stroke: GREEN, "stroke-width": 3 });
   const big = txt(CH.x + CH.w + 14, CH.y + CH.h / 2 + 12, "", { fill: INK, "font-size": 34, "font-weight": 700, "text-anchor": "start" });
   const info0 = txt(20, 458, "", { fill: INK, "font-size": 19 });
-  const info = { set textContent(s) { info0.textContent = s; $("pinfo").textContent = s; } };
+  const info = { set textContent(s) { info0.textContent = s; $("pinfo").textContent = s + (big.textContent ? ", " + big.textContent + " of the test digits right" : ""); } };   /* review 12: the score readable on a phone */
   let pts = [];
   function plot(acc) { pts.push([CH.x + CH.w * step / STEPS, CH.y + CH.h * (1 - acc)]); line.setAttribute("points", pts.map((p) => p.join(",")).join(" ")); big.textContent = Math.round(acc * 100) + " %"; edges(); }
 
